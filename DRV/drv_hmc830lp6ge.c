@@ -299,7 +299,7 @@ void HMC830_HMC_Write(uint8_t address,uint32_t data)
     for(int i=0;i<6;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI(address & (1<<(5-i)));   // a5-a0
+        HMC830_SDI((address >> (5 - i)) & 0x01);   // a5-a0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -309,7 +309,7 @@ void HMC830_HMC_Write(uint8_t address,uint32_t data)
     for(int i=0;i<24;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI(data & (1<<(23-i)));   // d23-d0
+        HMC830_SDI((data >> (23 - i)) & 0x01);   // d23-d0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -350,7 +350,7 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     for(int i=0;i<6;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI(address & (1<<(5-i)));   // a5-a0
+        HMC830_SDI((address >> (5 - i)) & 0x01);   // a5-a0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -367,8 +367,8 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     for(int i=0;i<24;i++)
     {
         HMC830_SCK(0);
-        data |= (HMC830_SDO << (23-i));   // d23-d0
         HMC830_Delay();
+        data |= (HMC830_SDO << (23-i));   // d23-d0
         HMC830_SCK(1);
         HMC830_Delay();
     }

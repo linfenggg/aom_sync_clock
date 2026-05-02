@@ -66,6 +66,7 @@ int main(void)
 	HMC830_GPIO_Init();
 	
 	HMC830_Init(HMC830_AUTO_MODE);
+	delay_1ms(10);
 	
 	// HMC830_HMC_Write_Output_Mode(HMC830_OUTPUT_DIFFERENTIAL_MODE);
     printf("System Start\r\n");
@@ -74,15 +75,24 @@ int main(void)
 
   //para_init();
 
+  uint8_t hmc830_configured = 0;
+
   while (1)
   {
-		
-		 HMC830_HMC_Write_Freq(20, 1, 345.678, 2.54);
-    
-   delay_1ms(100);
-      
     uint32_t id = HMC830_HMC_Read_Chip_ID();
-    uint32_t lock = HMC830_HMC_Read_Lock_Detect();
+    uint32_t lock = HMC830_UNLOCKED;
+
+    if(id == HMC830_REG00H_CHIP_ID)
+    {
+        if(hmc830_configured == 0)
+        {
+            HMC830_HMC_Write_Freq(20, 1, 345.678, 2.54);
+            delay_1ms(100);
+            hmc830_configured = 1;
+        }
+
+        lock = HMC830_HMC_Read_Lock_Detect();
+    }
       
 		
    // memset(UserTxBuffer, 0, sizeof(UserTxBuffer));
