@@ -263,13 +263,18 @@ void HMC830_Init(uint8_t MODE)
     
     delay_1ms(5);
 	
-    if(MODE == HMC830_HMC_MODE)
+    if(MODE == HMC830_OPEN_MODE)
     {
+        HMC830_Delay();
+        HMC830_SCK(1);
+    }
+    else
+    {
+        // Single HMC830 should use HMC mode. AUTO mode maps here.
         HMC830_SEN(1);
         HMC830_Delay();
         HMC830_SCK(1);
     }
-    // TODO HMC830_OPEN_MODE
     
     HMC830_Delay();
 }

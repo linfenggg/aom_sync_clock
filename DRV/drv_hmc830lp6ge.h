@@ -69,8 +69,8 @@
 
 // CONFIG MODE
 #define HMC830_HMC_MODE     0
-// TODO HMC830_OPEN_MODE
-//#define HMC830_OPEN_MODE  1
+#define HMC830_OPEN_MODE    1
+#define HMC830_AUTO_MODE    2
 
 
 #define HMC830_GPIOA          GPIOA

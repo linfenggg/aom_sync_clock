@@ -65,7 +65,7 @@ int main(void)
   MX_USART1_UART_Init();
 	HMC830_GPIO_Init();
 	
-	HMC830_Init(HMC830_HMC_MODE);
+	HMC830_Init(HMC830_AUTO_MODE);
 	
 	// HMC830_HMC_Write_Output_Mode(HMC830_OUTPUT_DIFFERENTIAL_MODE);
     printf("System Start\r\n");
