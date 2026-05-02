@@ -242,11 +242,10 @@ Section Cross References
     dac.o(i.dac_voltage_output) refers to ffixui.o(.text) for __aeabi_f2uiz
     drv_hmc830lp6ge.o(i.HMC830_GPIO_Init) refers to gd32f10x_rcu.o(i.rcu_periph_clock_enable) for rcu_periph_clock_enable
     drv_hmc830lp6ge.o(i.HMC830_GPIO_Init) refers to gd32f10x_gpio.o(i.gpio_init) for gpio_init
-    drv_hmc830lp6ge.o(i.HMC830_GPIO_Init) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_GPIO_Init) refers to gd32f10x_gpio.o(i.gpio_bit_reset) for gpio_bit_reset
-    drv_hmc830lp6ge.o(i.HMC830_HMC_Read) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_HMC_Read) refers to gd32f10x_gpio.o(i.gpio_bit_reset) for gpio_bit_reset
     drv_hmc830lp6ge.o(i.HMC830_HMC_Read) refers to drv_hmc830lp6ge.o(i.HMC830_Delay) for HMC830_Delay
+    drv_hmc830lp6ge.o(i.HMC830_HMC_Read) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_HMC_Read) refers to gd32f10x_gpio.o(i.gpio_input_bit_get) for gpio_input_bit_get
     drv_hmc830lp6ge.o(i.HMC830_HMC_Read_Chip_ID) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Read) for HMC830_HMC_Read
     drv_hmc830lp6ge.o(i.HMC830_HMC_Read_Lock_Detect) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Read) for HMC830_HMC_Read
@@ -277,9 +276,9 @@ Section Cross References
     drv_hmc830lp6ge.o(i.HMC830_HMC_Test_REF50M_650M) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Write_VCO_General_Setting) for HMC830_HMC_Write_VCO_General_Setting
     drv_hmc830lp6ge.o(i.HMC830_HMC_Test_REF50M_650M) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Write_NDIV) for HMC830_HMC_Write_NDIV
     drv_hmc830lp6ge.o(i.HMC830_HMC_VCO_Write) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Write) for HMC830_HMC_Write
-    drv_hmc830lp6ge.o(i.HMC830_HMC_Write) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write) refers to gd32f10x_gpio.o(i.gpio_bit_reset) for gpio_bit_reset
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write) refers to drv_hmc830lp6ge.o(i.HMC830_Delay) for HMC830_Delay
+    drv_hmc830lp6ge.o(i.HMC830_HMC_Write) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_Charge_Pump_Current) refers to f2d.o(.text) for __aeabi_f2d
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_Charge_Pump_Current) refers to ffltui.o(.text) for __aeabi_ui2f
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_Charge_Pump_Current) refers to ddiv.o(.text) for __aeabi_ddiv
@@ -315,9 +314,9 @@ Section Cross References
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_REFDIV) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Write) for HMC830_HMC_Write
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_VCO_General_Setting) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_Write) for HMC830_HMC_Write
     drv_hmc830lp6ge.o(i.HMC830_HMC_Write_VCO_General_Setting) refers to drv_hmc830lp6ge.o(i.HMC830_HMC_VCO_Write) for HMC830_HMC_VCO_Write
-    drv_hmc830lp6ge.o(i.HMC830_Init) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_Init) refers to gd32f10x_gpio.o(i.gpio_bit_reset) for gpio_bit_reset
     drv_hmc830lp6ge.o(i.HMC830_Init) refers to systick.o(i.delay_1ms) for delay_1ms
+    drv_hmc830lp6ge.o(i.HMC830_Init) refers to gd32f10x_gpio.o(i.gpio_bit_set) for gpio_bit_set
     drv_hmc830lp6ge.o(i.HMC830_Init) refers to drv_hmc830lp6ge.o(i.HMC830_Delay) for HMC830_Delay
     exp.o(i.__softfp_exp) refers (Special) to iusefp.o(.text) for __I$use$fp
     exp.o(i.__softfp_exp) refers to exp.o(i.exp) for exp
