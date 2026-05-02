@@ -1,0 +1,361 @@
+#include "modbus_comm.h"
+#include "stdio.h"
+#include "gpio.h"
+#include "string.h"
+
+
+PDUData_TypeDef PduData;
+
+
+
+ uint16_t Laser_Mon[MOD_ADDR_INPUT_END]={0};
+ uint16_t Laser_Para[MOD_ADDR_HOLDINGD_END]={0};
+
+
+ 
+
+ sig_board_input_reg sig_mon;
+
+
+uint8_t rtu_tx_buf[256];
+
+
+
+// CRC 高位字节值表
+static const uint8_t auchCRCHi[] = {
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+    0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+    0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+    0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+    0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+    0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+    0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+    0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    0x80, 0x41, 0x00, 0xC1, 0x81, 0x40
+} ;
+// CRC 低位字节值表
+static const uint8_t auchCRCLo[] = {
+	0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06,
+	0x07, 0xC7, 0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD,
+	0x0F, 0xCF, 0xCE, 0x0E, 0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09,
+	0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9, 0x1B, 0xDB, 0xDA, 0x1A,
+	0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC, 0x14, 0xD4,
+	0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,
+	0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3,
+	0xF2, 0x32, 0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4,
+	0x3C, 0xFC, 0xFD, 0x3D, 0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A,
+	0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, 0x28, 0xE8, 0xE9, 0x29,
+	0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF, 0x2D, 0xED,
+	0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,
+	0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60,
+	0x61, 0xA1, 0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67,
+	0xA5, 0x65, 0x64, 0xA4, 0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F,
+	0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, 0x69, 0xA9, 0xA8, 0x68,
+	0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA, 0xBE, 0x7E,
+	0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,
+	0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71,
+	0x70, 0xB0, 0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92,
+	0x96, 0x56, 0x57, 0x97, 0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C,
+	0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E, 0x5A, 0x9A, 0x9B, 0x5B,
+	0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89, 0x4B, 0x8B,
+	0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,
+	0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42,
+	0x43, 0x83, 0x41, 0x81, 0x80, 0x40
+};
+
+
+
+uint8_t 	MB_RSP_03H(uint16_t start_addr,uint16_t _RegNum );
+uint8_t 	MB_RSP_04H(uint16_t start_addr,uint16_t _RegNum );
+uint8_t 	MB_RSP_06H(uint16_t start_addr,uint16_t value);
+uint8_t 	MB_RSP_10H(uint16_t start_addr,uint16_t _RegNum,uint8_t * pdata );
+
+
+/************************************************************** 
+  * 函数功能: Modbus CRC16 校验计算函数
+  * 输入参数: pushMsg:待计算的数据首地址,usDataLen:数据长度
+  * 返 回 值: CRC16 计算结果
+  * 说    明: 计算结果是高位在前,需要转换才能发送
+  *************************************************************/
+uint16_t MB_CRC16(uint8_t *_pushMsg,uint8_t _usDataLen)
+{
+    uint8_t uchCRCHi = 0xFF;
+    uint8_t uchCRCLo = 0xFF;
+    uint16_t uIndex = 0;
+    
+    while(_usDataLen--)
+    {
+        uIndex = uchCRCLo ^ *_pushMsg++;
+        uchCRCLo = uchCRCHi^auchCRCHi[uIndex];
+        uchCRCHi = auchCRCLo[uIndex];
+    }
+    return (uchCRCHi<<8|uchCRCLo);
+}
+
+
+/********************************************************************
+  * 函数功能: 正常响应
+  * 输入参数: _FunCode :功能码
+  * 返 回 值: 无
+  * 说    明: 当通信数据帧没有异常时并且成功执行之后,发送响应数据帧
+  ********************************************************************/
+uint8_t MB_RSP(Uart_Manage_t * uart_rev )
+{
+
+    uint16_t TxCount = 0, RxCount;
+    uint16_t crc_s,crc_c = 0;	
+	
+		if(uart_rev->rev_flag==0)
+		{
+			return 1;
+		}		
+		uart_rev->rev_flag= 0;
+		
+
+		
+		if(uart_rev->rev_fram[0] != MB_SLAVE_ADDR) return 2;//从机地址错误    
+	
+		RxCount = uart_rev->rec_len;
+		
+		
+//						for(uint8_t i=0;i<RxCount;i++)
+//				{
+//				
+//				printf("%x ",uart2_rev.rev_fram[i]);
+//				}
+//				printf("#1111#\r\n");
+				
+	  crc_c = MB_CRC16((uint8_t*)&uart_rev->rev_fram, RxCount-2);
+    crc_s = ((uart_rev->rev_fram[RxCount-1]<<8) | uart_rev->rev_fram[RxCount-2]);
+    
+	  if(crc_c != crc_s) 
+		{
+			return 3;
+		
+		}
+	
+	
+		PduData.SlaveAddr=uart_rev->rev_fram[0];/* 从站地址 */
+		PduData.Code=uart_rev->rev_fram[1];
+
+    PduData.RegAddr = ((uart_rev->rev_fram[2]<<8) | uart_rev->rev_fram[3]);   
+    PduData.RegNums  = ((uart_rev->rev_fram[4]<<8) | uart_rev->rev_fram[5]);
+		PduData.ValueReg=((uart_rev->rev_fram[4]<<8) | uart_rev->rev_fram[5]);
+	
+	
+    switch(PduData.Code)
+    {
+ 
+        case FUN_CODE_03H:
+        {
+            /* 读取保持寄存器 */
+					
+					if(PduData.RegAddr+PduData.RegNums>MOD_ADDR_HOLDINGD_END)break;
+					if(PduData.RegNums>125)break;
+           TxCount = MB_RSP_03H( PduData.RegAddr ,PduData.RegNums);
+        }break;
+        case FUN_CODE_04H:
+        {
+            /* 读取输入寄存器 */
+					if(PduData.RegAddr+PduData.RegNums>MOD_ADDR_INPUT_END)break;
+					if(PduData.RegNums>125)break;
+						TxCount =	MB_RSP_04H(PduData.RegAddr ,PduData.RegNums);      
+        }break;
+        case FUN_CODE_06H:
+        {
+            /* 写单个保持寄存器 */
+					if(PduData.RegAddr>=MOD_ADDR_HOLDINGD_END)break;
+          TxCount = MB_RSP_06H(PduData.RegAddr,PduData.ValueReg);
+        }
+				break;
+        case FUN_CODE_10H:
+        {
+            /* 写多个保持寄存器 */
+					if(PduData.RegAddr+PduData.RegNums>MOD_ADDR_HOLDINGD_END)break;
+					if(PduData.RegNums>125)break;
+				
+           TxCount = MB_RSP_10H(PduData.RegAddr,PduData.RegNums,uart_rev->rev_fram);
+        }break;
+				
+				default:
+					break;
+    }
+		
+	
+    crc_s = MB_CRC16((uint8_t*)&rtu_tx_buf,TxCount);
+    rtu_tx_buf[TxCount++] = crc_s;	          /* crc 低字节 */
+    rtu_tx_buf[TxCount++] = crc_s>>8;		      /* crc 高字节 */
+    uart_rev->send((uint8_t*)rtu_tx_buf, TxCount);
+		
+		
+		return 0;
+}
+
+
+
+/***************************************************************************
+  * 函数功能: 读取保持寄存器（读/写）
+  * 输入参数: _TxCount :发送计数器,_AddrOffset地址偏移量,_RegNum:寄存器数量
+  * 返 回 值: rtu_tx_buf的数组元素坐标
+  * 说    明: 读取保持寄存器的内容,并且填充rtu_tx_buf
+  **************************************************************************/
+ uint8_t MB_RSP_03H(uint16_t start_addr,uint16_t _RegNum )
+{
+		uint16_t _TxCount=0;
+	
+		rtu_tx_buf[_TxCount++]=PduData.SlaveAddr;
+		rtu_tx_buf[_TxCount++]=0x03;
+    rtu_tx_buf[_TxCount++] = _RegNum*2;    /* 填充返回寄存器数量 */
+
+
+	for (uint8_t i=0;i<_RegNum;i++)
+	{
+		rtu_tx_buf[_TxCount++]=Laser_Para[start_addr+i]>>8;
+		rtu_tx_buf[_TxCount++]=Laser_Para[start_addr+i];
+	
+	}
+    return _TxCount;
+}
+
+ uint8_t MB_RSP_04H(uint16_t start_addr,uint16_t _RegNum )
+{
+		uint16_t _TxCount=0;
+   	rtu_tx_buf[_TxCount++]=PduData.SlaveAddr;
+		rtu_tx_buf[_TxCount++]=0x04;
+    rtu_tx_buf[_TxCount++] = _RegNum*2;    /* 填充返回寄存器数量 */
+		
+		for (uint8_t i=0;i<_RegNum;i++)
+	{
+		rtu_tx_buf[_TxCount++]=Laser_Mon[start_addr+i]>>8;
+		rtu_tx_buf[_TxCount++]=Laser_Mon[start_addr+i];
+		//rtu_tx_buf[_TxCount++]=0;
+		//rtu_tx_buf[_TxCount++]=0;
+		
+		//	memcpy(rtu_tx_buf+_TxCount,Laser_Mon+(start_addr),_RegNum*2);
+	}
+		
+
+    return _TxCount;
+}
+
+
+/***************************************************************************
+  * 函数功能: 写单个保持寄存器（读/写）
+  * 输入参数: _TxCount :发送计数器,_AddrOffset:地址偏移量,
+              _RegNum: 写入数据，_AddrAbs：保持寄存器地址
+  * 返 回 值: rtu_tx_buf的数组元素坐标
+  * 说    明: 填充rtu_tx_buf
+  **************************************************************************/
+ uint8_t MB_RSP_06H(uint16_t start_addr ,uint16_t value)
+{
+		uint16_t _TxCount=0;
+   	rtu_tx_buf[_TxCount++]=PduData.SlaveAddr;
+		rtu_tx_buf[_TxCount++]=0x06;
+    rtu_tx_buf[_TxCount++] = start_addr>>8;
+    rtu_tx_buf[_TxCount++] = start_addr;	
+	
+		
+		Laser_Para[start_addr]=value;
+	
+    /* 填充返回内容 */
+    rtu_tx_buf[_TxCount++] = value>>8;
+    rtu_tx_buf[_TxCount++] = value;
+
+    return _TxCount;	
+}
+
+/***************************************************************************
+  * 函数功能: 写多个保持寄存器（读/写）
+  * 输入参数: _TxCount :发送计数器,_AddrOffset地址偏移量,
+    _RegNum:字节数量，_Datebuf:数据
+  * 返 回 值: rtu_tx_buf的数组元素坐标
+  * 说    明: 填充rtu_tx_buf
+
+  **************************************************************************/
+ uint8_t MB_RSP_10H(uint16_t start_addr,uint16_t _RegNum,uint8_t * pdata)
+{
+
+		//printf("addr=%d,reg_num=%d",start_addr,_RegNum);
+		uint16_t value;
+    /* 填充地址值 */
+		uint16_t _TxCount=0;
+	  rtu_tx_buf[_TxCount++]=PduData.SlaveAddr;
+		rtu_tx_buf[_TxCount++]=0x10;
+    rtu_tx_buf[_TxCount++] = start_addr>>8;
+    rtu_tx_buf[_TxCount++] = start_addr;
+	 rtu_tx_buf[_TxCount++] = _RegNum>>8;
+	 rtu_tx_buf[_TxCount++] = _RegNum;
+		_TxCount++;
+
+
+	for (uint8_t i=0;i<_RegNum;i++)
+	{
+		value=(uint16_t)*(pdata+_TxCount+2*i)<<8;
+		value|=((uint16_t)*(pdata+_TxCount+2*i+1));
+		Laser_Para[start_addr+i]=value;
+
+	}
+	
+    return 6;
+}
+
+void comm_led_indicate(void)
+{
+	
+	static uint16_t duty=0;
+	duty++;
+	if(duty==300)
+	{
+	//	LED_RUN_FLASH;
+		duty=0;
+	}
+
+}
+
+
+//数据更新
+void data_sync(void)
+{
+	
+
+	//拷贝数据
+
+	 memcpy(Laser_Mon,&sig_mon,sizeof(Laser_Mon));
+
+
+}
+
+void rs485_task(void)
+{
+
+			//comm_led_indicate();
+			if(MB_RSP(&uart1_rev)==0)
+			{
+//				LED_RUN_FLASH;
+			}	
+			data_sync();
+						
+		
+}
+
+
+
+
+
