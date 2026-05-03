@@ -1,45 +1,3 @@
-//#ifndef __DRV_HMC830LP6GE_H
-//#define __DRV_HMC830LP6GE_H
-
-//#include "gd32f10x.h"
-//#include <stdint.h>
-//#include <stdio.h>
-
-//// ==================== 引脚定义 ====================
-//#define HMC830_GPIOA          GPIOA
-//#define HMC830_GPIOB          GPIOB
-
-//#define HMC830_RCU_GPIOA      RCU_GPIOA
-//#define HMC830_RCU_GPIOB      RCU_GPIOB
-
-//#define HMC830_SCK_PIN        GPIO_PIN_8    // PA8
-//#define HMC830_SEN_PIN        GPIO_PIN_14   // PB14
-//#define HMC830_SDIO_PIN       GPIO_PIN_15   // PB15
-//// =================================================
-
-//#define HMC830_DEBUG   1
-
-//// 引脚控制
-//#define SEN_H()     gpio_bit_set(HMC830_GPIOB, HMC830_SEN_PIN)
-//#define SEN_L()     gpio_bit_reset(HMC830_GPIOB, HMC830_SEN_PIN)
-
-//#define SCK_H()     gpio_bit_set(HMC830_GPIOA, HMC830_SCK_PIN)
-//#define SCK_L()     gpio_bit_reset(HMC830_GPIOA, HMC830_SCK_PIN)
-
-//#define SDIO_H()    gpio_bit_set(HMC830_GPIOB, HMC830_SDIO_PIN)
-//#define SDIO_L()    gpio_bit_reset(HMC830_GPIOB, HMC830_SDIO_PIN)
-//#define SDIO_READ() gpio_input_bit_get(HMC830_GPIOB, HMC830_SDIO_PIN)
-
-//// 接口函数
-//void HMC830_GPIO_Init(void);
-//void HMC830_WriteReg(uint8_t addr, uint32_t data);
-//uint32_t HMC830_ReadReg(uint8_t addr);
-//void HMC830_SetFreq_300MHz(void);
-//void HMC830_Test(void);
-
-//#endif
-
-
 
 /**
   ******************************************************************************
@@ -69,8 +27,8 @@
 
 // CONFIG MODE
 #define HMC830_HMC_MODE     0
-#define HMC830_OPEN_MODE    1
-#define HMC830_AUTO_MODE    2
+// TODO HMC830_OPEN_MODE
+#define HMC830_OPEN_MODE  1
 
 
 #define HMC830_GPIOA          GPIOA
@@ -85,7 +43,7 @@
 #define HMC830_SDO_PIN        GPIO_PIN_1   // PB1
 
 // CONFIG GPIO
-#define HMC830_SCK(x)   ((x) == 1 ? gpio_bit_set(HMC830_GPIOA, HMC830_SCK_PIN) : gpio_bit_reset(HMC830_GPIOA, HMC830_SCK_PIN))
+#define HMC830_SCK(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOA, HMC830_SCK_PIN) : gpio_bit_reset(HMC830_GPIOA, HMC830_SCK_PIN)
 #define HMC830_SEN(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOB, HMC830_SEN_PIN) : gpio_bit_reset(HMC830_GPIOB, HMC830_SEN_PIN)
 #define HMC830_SDI(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOB, HMC830_SDI_PIN) : gpio_bit_reset(HMC830_GPIOB, HMC830_SDI_PIN)
 #define HMC830_SDO       gpio_input_bit_get(HMC830_GPIOB, HMC830_SDO_PIN)
@@ -299,7 +257,7 @@
 
 void HMC830_GPIO_Init(void);
 void HMC830_Delay(void);                                    // Delay
-void HMC830_Init(uint8_t MODE);                             // Initial (Mode Select)
+void HMC830_Init(void);                             // Initial (Mode Select)
 void HMC830_HMC_Write(uint8_t address,uint32_t data);       // HMC Mode Write
 uint32_t HMC830_HMC_Read(uint8_t address);                  // HMC Mode Read
 
@@ -324,7 +282,8 @@ void HMC830_HMC_Test_REF50M_35M(void);
 void HMC830_HMC_Test_REF50M_100M(void);
 void HMC830_HMC_Test_REF50M_425M(void);
 void HMC830_HMC_Test_REF50M_650M(void);
-
+void HMC830_HMC_Test_READ(void);
 
 
 #endif  // __HMC830_H
+

@@ -1,222 +1,9 @@
-//#include "drv_hmc830lp6ge.h"
-//#include "string.h"
 
-
-//// 短延时
-//static void delay(void)
-//{
-//    volatile uint16_t i;
-//    for(i=0;i<100;i++)__NOP();
-//}
-
-//// SDIO 输出模式
-//static void SDIO_OUT(void)
-//{
-//    gpio_init(HMC830_GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SDIO_PIN);
-//}
-
-//// SDIO 输入模式
-//static void SDIO_IN(void)
-//{
-//    gpio_init(HMC830_GPIOB, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, HMC830_SDIO_PIN);
-//}
-
-//// GPIO 初始化
-//void HMC830_GPIO_Init(void)
-//{
-//    rcu_periph_clock_enable(HMC830_RCU_GPIOA);
-//    rcu_periph_clock_enable(HMC830_RCU_GPIOB);
-
-//    // SCK(PA8)
-//    gpio_init(HMC830_GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SCK_PIN);
-//    // SEN(PB14)
-//    gpio_init(HMC830_GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SEN_PIN);
-
-//    SDIO_OUT();
-//    SEN_H();
-//    SCK_L();
-//    delay();
-//}
-
-///**
-//  * @brief  SPI 传输一个完整的 32 位帧 (符合 HMC830 Open Mode 时序)
-//  * @param  data_out: 要发送的 32 位数据 (包含 R/W 位, 地址, 数据)
-//  * @param  is_read: 是否为读操作 (true: 读, false: 写)
-//  * @retval 接收到的数据 (仅读操作时有效)
-//  */
-//static uint32_t SPI_Transfer(uint32_t data_out, bool is_read)
-//{
-//    uint32_t data_in = 0;
-
-//    // 1. 确保在第一个 SCK 上升沿前，SDIO 数据已稳定 (t_setup)
-//    //    SDIO 在 SCK 上升沿被采样，
-//    //    写操作 data_out bit31=1, 读操作 bit31=0
-//    for (int8_t i = 31; i >= 0; i--) {
-//        // 在 SCK 下降沿改变数据
-//        SCK_L();
-//        delay(); // 等待电平稳定
-
-//        // 2. 准备数据 (如果是读操作，忽略 data_out 的数据位)
-//        if (!is_read) {
-//            if (data_out & (1UL << i))
-//                SDIO_H();
-//            else
-//                SDIO_L();
-//        } else {
-//            // 读操作时，发送完命令后的数据线需由芯片控制，建议设为输入
-//            // 但为简化时序，发送命令期间仍可输出，之后转为输入
-//            if (i == 31) {
-//                // 第一个 bit 为 R/W 位，我们必须在上升沿前输出高电平来表明是读操作
-//                SDIO_H(); // R/W=1 表示读
-//            } else if (i >= 25) {
-//                // 发送地址 (6 bits)
-//                if (data_out & (1UL << i))
-//                    SDIO_H();
-//                else
-//                    SDIO_L();
-//            } else {
-//                // 读数据阶段，将 SDIO 设为输入，由芯片驱动
-//                if (i == 24) SDIO_IN(); // 在数据位开始前切换为输入
-//                // 从第 2 个时钟开始读取数据
-//                // 数据在 SCK 的下降沿由芯片输出，在下一个 SCK 上升沿被锁存
-//                // 我们已在 SCK 低电平时准备好读取
-//            }
-//        }
-//        delay();
-
-//        // 拉高 SCK，从机在此上升沿采样数据 (地址/命令)
-//        SCK_H();
-//        delay();
-
-//        // 如果处于读数据阶段，读取总线值
-//        if (is_read && i < 24) {
-//            data_in <<= 1;
-//            if (SDIO_READ())
-//                data_in |= 1;
-//        }
-//    }
-
-//    // 3. 一次传输结束，拉低 SCK
-//    SCK_L();
-
-//    // 4. 确保在 SEN 拉高前数据已被锁存 (t_hold)
-//    delay();
-
-//    // 5. 如果之前切换为输入模式，传输完后切回输出模式以备下次使用
-//    if (is_read) {
-//        SDIO_OUT();
-//    }
-
-//    return data_in;
-//}
-
-//// ==================== 【正确】写寄存器 ====================
-//void HMC830_WriteReg(uint8_t addr, uint32_t data)
-//{
-//    // 官方格式：Bit31=1(写) + 4bit地址 + 27bit数据
-//    uint32_t frame = (1UL<<31) | ((addr&0x0F)<<27) | (data&0x07FFFFFF);
-
-//#if HMC830_DEBUG
-//    printf("[HMC830] Write 0x%02X = 0x%06lX\r\n", addr, data);
-//#endif
-
-//    SDIO_OUT();
-//    SEN_L();
-//    SPI_Transfer(frame, 0);
-//    SEN_H();
-//    delay();
-//}
-
-//// ==================== 【正确】读寄存器 ====================
-//uint32_t HMC830_ReadReg(uint8_t addr)
-//{
-//    uint32_t cmd = (0UL<<31) | ((addr&0x0F)<<27); // 读命令
-//    uint32_t rx_data;
-
-//#if HMC830_DEBUG
-//    printf("[HMC830] Read 0x%02X...\r\n", addr);
-//#endif
-
-//    // 1. 发读命令
-//    SDIO_OUT();
-//    SEN_L();
-//    SPI_Transfer(cmd, 0);
-//    SEN_H();
-//    delay();
-
-//    // 2. 读回数据
-//    SDIO_IN();
-//    SEN_L();
-//    rx_data = SPI_Transfer(0, 1);
-//    SEN_H();
-//    delay();
-
-//    return rx_data & 0x07FFFFFF;
-//}
-
-//// ==================== 300MHz 官方标准配置 ====================
-//void HMC830_SetFreq_300MHz(void)
-//{
-//    printf("\r\n[HMC830] Set 300MHz...\r\n");
-
-//    HMC830_WriteReg(0x00, 0x000001); // 软复位
-//    delay();
-
-//    HMC830_WriteReg(0x02, 0x000001); // R=1
-//    HMC830_WriteReg(0x03, 0x000078); // N=120
-//    HMC830_WriteReg(0x04, 0x0160000); // 输出 8 分频
-
-//    HMC830_WriteReg(0x05, 0x0800000); // 启动 VCO 校准
-//    for(uint16_t i=0;i<1000;i++)delay();
-
-//    HMC830_WriteReg(0x05, 0x001628); // 输出使能
-//    HMC830_WriteReg(0x07, 0x00014D);
-//    HMC830_WriteReg(0x09, 0x4032AD);
-
-//    printf("[HMC830] 300MHz Config Done\r\n");
-//}
-
-//// ==================== 测试读写 ====================
-//void HMC830_Test(void)
-//{
-//    uint32_t val;
-
-//    printf("\r\n=== HMC830 TEST ===\r\n");
-
-//    HMC830_WriteReg(0x02, 0x01);
-//    val = HMC830_ReadReg(0x02);
-//    printf("R 0x02 = 0x%06lX\r\n", val);
-
-//    HMC830_WriteReg(0x03, 0x78);
-//    val = HMC830_ReadReg(0x03);
-//    printf("R 0x03 = 0x%06lX\r\n", val);
-//}
-
-
-
-/**
-  ******************************************************************************
-  * File Name          : HMC830.c
-  * Version            : v1.0
-  * Date               : 2020.04.25
-  * Description        : This file provides code for the configuration
-  *                      of HMC830.
-  *
-  * Library            : HMC830_LIB
-  * Version            : v1.0
-  * Dependency         : ---
-  * Description        : HMC830 Communication Library.
-  *
-  *                      COPYRIGHT(c) 2020 yummycarrot
-  *                      https://www.github.com/crthu
-  *
-  ******************************************************************************
-  */
 
 
 #include "drv_hmc830lp6ge.h"
 #include "string.h"
-
+#include "stdio.h"
 
 
 // GPIO 初始化
@@ -228,55 +15,50 @@ void HMC830_GPIO_Init(void)
     // SCK(PA8)
     gpio_init(HMC830_GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SCK_PIN);
 	
-    // SEN(PB14)
+    // SEN(PB15)
     gpio_init(HMC830_GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SEN_PIN);
 
 		    // SDI(PB14)
     gpio_init(HMC830_GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, HMC830_SDI_PIN);
 	
-	  // SEN(PB14)
+	  // SEN(PB1)
     gpio_init(HMC830_GPIOB, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, HMC830_SDO_PIN);
 	
-		HMC830_SCK(0)  ;
-		HMC830_SEN(0)  ;
-		HMC830_SDI(0)  ;
+		HMC830_SCK(0);
+		HMC830_SEN(0);
+		HMC830_SDI(0);
 }
 
 
 // Delay
 void HMC830_Delay(void)
 {
-    __nop();
-	__nop();
-	__nop();
-	__nop();
-	__nop();
-	__nop();
+  uint16_t delay=20;
+	for(;delay>0;delay--)
+	{
+		__NOP();
+	}
 }
 
 // Initial (Mode Select)
-void HMC830_Init(uint8_t MODE)
+void HMC830_Init(void)
 {
-    HMC830_SCK(0);
-    HMC830_SEN(0);
-    HMC830_SDI(0);
+
     
-    delay_1ms(5);
+    delay_1ms(100);
 	
-    if(MODE == HMC830_OPEN_MODE)
-    {
-        HMC830_Delay();
-        HMC830_SCK(1);
-    }
-    else
-    {
-        // Single HMC830 should use HMC mode. AUTO mode maps here.
-        HMC830_SEN(1);
-        HMC830_Delay();
-        HMC830_SCK(1);
-    }
+	
+    HMC830_SEN(1);
+	  delay_1ms(10);
+		HMC830_SCK(1);
+  	delay_1ms(10);
+	  HMC830_SEN(0);
+	  delay_1ms(10);
+		HMC830_SCK(0);
+
     
-    HMC830_Delay();
+		 delay_1ms(100);
+
 }
 
 // HMC Mode Write
@@ -299,7 +81,7 @@ void HMC830_HMC_Write(uint8_t address,uint32_t data)
     for(int i=0;i<6;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI((address >> (5 - i)) & 0x01);   // a5-a0
+        HMC830_SDI(address & (1<<(5-i)));   // a5-a0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -309,7 +91,7 @@ void HMC830_HMC_Write(uint8_t address,uint32_t data)
     for(int i=0;i<24;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI((data >> (23 - i)) & 0x01);   // d23-d0
+        HMC830_SDI(data & (1<<(23-i)));   // d23-d0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -335,7 +117,7 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     
     // Begin
     HMC830_SCK(0);
-    HMC830_SDI(0);
+    HMC830_SDI(1);
     HMC830_SEN(0);
     HMC830_Delay();
     
@@ -350,7 +132,7 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     for(int i=0;i<6;i++)
     {
         HMC830_SCK(0);
-        HMC830_SDI((address >> (5 - i)) & 0x01);   // a5-a0
+        HMC830_SDI(address & (1<<(5-i)));   // a5-a0
         HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
@@ -358,8 +140,8 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     
     // CLK8(Pos)(with CLK7 Negedge)
     HMC830_SCK(0);
-    for(uint8_t i=0;i<5;i++)
-        HMC830_Delay();
+  //  for(uint8_t i=0;i<5;i++)
+     HMC830_Delay();
     HMC830_SCK(1);
     HMC830_Delay();
     
@@ -367,8 +149,8 @@ uint32_t HMC830_HMC_Read(uint8_t address)
     for(int i=0;i<24;i++)
     {
         HMC830_SCK(0);
-        HMC830_Delay();
         data |= (HMC830_SDO << (23-i));   // d23-d0
+        HMC830_Delay();
         HMC830_SCK(1);
         HMC830_Delay();
     }
@@ -638,4 +420,17 @@ void HMC830_HMC_Test_REF50M_650M(void)
     HMC830_HMC_Write_Charge_Pump_Current(2.54, HMC830_INTEGER_MODE, 2600, 50);
     HMC830_HMC_Write_VCO_General_Setting(4, HMC830_VCO_REG02H_GAIN_3);
     HMC830_HMC_Write_NDIV(52.0);
+}
+
+void HMC830_HMC_Test_READ(void)
+{
+//	  for(uint8_t reg = 0x00; reg <= 0x13; reg++)
+//	{
+//     HMC830_HMC_Write(reg,0x01);
+//		printf("addr=%d,val=%d\r\n",reg, HMC830_HMC_Read(reg));
+//	}
+	
+	 HMC830_HMC_Write(0x01,0x01);
+
+
 }

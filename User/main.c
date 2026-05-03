@@ -46,13 +46,11 @@ OF SUCH DAMAGE.
 #include "usart.h"
 #include "gpio.h"
 #include "sys_control.h"
-#include "at24cxx.h"
+
 #include "dac.h"
 #include "ads7883.h"
 #include "flash_if.h"
-#include "drv_max5395.h"
 #include "modbus_comm.h"
-#include "drv_ads1115.h"
 #include "drv_hmc830lp6ge.h"
 
 int main(void)
@@ -63,37 +61,27 @@ int main(void)
   /* Initialize all configured peripherals */
 //  MX_GPIO_Init();
   MX_USART1_UART_Init();
+	
+	
 	HMC830_GPIO_Init();
+	HMC830_Init();
 	
-	HMC830_Init(HMC830_AUTO_MODE);
-	delay_1ms(10);
-	
-	// HMC830_HMC_Write_Output_Mode(HMC830_OUTPUT_DIFFERENTIAL_MODE);
     printf("System Start\r\n");
 
  
-
+	HMC830_HMC_Test_READ();
   //para_init();
-
-  uint8_t hmc830_configured = 0;
 
   while (1)
   {
-    uint32_t id = HMC830_HMC_Read_Chip_ID();
-    uint32_t lock = HMC830_UNLOCKED;
-
-    if(id == HMC830_REG00H_CHIP_ID)
-    {
-        if(hmc830_configured == 0)
-        {
-            HMC830_HMC_Write_Freq(20, 1, 345.678, 2.54);
-            delay_1ms(100);
-            hmc830_configured = 1;
-        }
-
-        lock = HMC830_HMC_Read_Lock_Detect();
-    }
+		
+		 HMC830_HMC_Write_Freq(20, 5, 1500, 2.54);
+    
+	
       
+    uint32_t id = HMC830_HMC_Read_Chip_ID();
+  uint32_t lock = HMC830_HMC_Read_Lock_Detect();
+ 
 		
    // memset(UserTxBuffer, 0, sizeof(UserTxBuffer));
     printf("HMC830 ID:0x%X\r\nLD:%s\r\n", id, lock == HMC830_LOCKED ? "LOCKED" : "UNLOCKED");
@@ -104,7 +92,7 @@ int main(void)
 //sys_status_update();
 
 	//printf("aa");
-	delay_1ms(1000);
+	delay_1ms(2000);
 	
   }
 }
