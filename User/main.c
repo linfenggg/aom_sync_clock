@@ -69,18 +69,19 @@ int main(void)
     printf("System Start\r\n");
 
  
-	HMC830_HMC_Test_READ();
-  //para_init();
+
+		HMC830_HMC_Test_READ();
+ 
 
   while (1)
   {
 		
-		 HMC830_HMC_Write_Freq(20, 5, 1500, 2.54);
+		 //HMC830_HMC_Write_Freq(20, 5, 300, 2.54);
     
-	
+
       
     uint32_t id = HMC830_HMC_Read_Chip_ID();
-  uint32_t lock = HMC830_HMC_Read_Lock_Detect();
+    uint32_t lock = HMC830_HMC_Read_Lock_Detect();
  
 		
    // memset(UserTxBuffer, 0, sizeof(UserTxBuffer));

@@ -33,7 +33,7 @@ void HMC830_GPIO_Init(void)
 // Delay
 void HMC830_Delay(void)
 {
-  uint16_t delay=20;
+  uint16_t delay=50;
 	for(;delay>0;delay--)
 	{
 		__NOP();
@@ -428,9 +428,44 @@ void HMC830_HMC_Test_READ(void)
 //	{
 //     HMC830_HMC_Write(reg,0x01);
 //		printf("addr=%d,val=%d\r\n",reg, HMC830_HMC_Read(reg));
+//		
 //	}
 	
-	 HMC830_HMC_Write(0x01,0x01);
 
+//	 HMC830_HMC_Write(0x01,0x03);
+	delay_1ms(10);
+//	 HMC830_HMC_Write(0x01,0x20);
+		delay_1ms(10);
+	
+		  for(uint8_t reg = 0x00; reg <= 0x13; reg++)
+	{
+ 
+		printf("addr=%d,val=%x\r\n",reg, HMC830_HMC_Read(reg));
+		
+	}
+	
+	HMC830_HMC_Write(0x01, 0x03);
+delay_1ms(5);
+
+// 2. 参考分频 R=1
+HMC830_HMC_Write(0x02, 0x000001);
+
+// 3. 整数模式 N=100
+HMC830_HMC_Write(0x05, 0x000064);   // 整数N=100
+HMC830_HMC_Write(0x06, 0x000000);   // 小数=0
+
+// 4. 输出分频 K=10
+HMC830_HMC_Write(0x0A, 0x00000A);
+
+// 5. 开启VCO + 输出
+HMC830_HMC_Write(0x04, 0x0001DF);
+HMC830_HMC_Write(0x03, 0x000433);
+
+		  for(uint8_t reg = 0x00; reg <= 0x13; reg++)
+	{
+ 
+		printf("addr=%d,val=%x\r\n",reg, HMC830_HMC_Read(reg));
+		
+	}
 
 }

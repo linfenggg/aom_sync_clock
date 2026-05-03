@@ -43,9 +43,9 @@
 #define HMC830_SDO_PIN        GPIO_PIN_1   // PB1
 
 // CONFIG GPIO
-#define HMC830_SCK(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOA, HMC830_SCK_PIN) : gpio_bit_reset(HMC830_GPIOA, HMC830_SCK_PIN)
-#define HMC830_SEN(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOB, HMC830_SEN_PIN) : gpio_bit_reset(HMC830_GPIOB, HMC830_SEN_PIN)
-#define HMC830_SDI(x)   (x)==1 ?  gpio_bit_set(HMC830_GPIOB, HMC830_SDI_PIN) : gpio_bit_reset(HMC830_GPIOB, HMC830_SDI_PIN)
+#define HMC830_SCK(x)   (x)==0 ?  gpio_bit_reset(HMC830_GPIOA, HMC830_SCK_PIN) : gpio_bit_set(HMC830_GPIOA, HMC830_SCK_PIN)
+#define HMC830_SEN(x)   (x)==0 ?  gpio_bit_reset(HMC830_GPIOB, HMC830_SEN_PIN) : gpio_bit_set(HMC830_GPIOB, HMC830_SEN_PIN)
+#define HMC830_SDI(x)   (x)==0 ?  gpio_bit_reset(HMC830_GPIOB, HMC830_SDI_PIN) : gpio_bit_set(HMC830_GPIOB, HMC830_SDI_PIN)
 #define HMC830_SDO       gpio_input_bit_get(HMC830_GPIOB, HMC830_SDO_PIN)
 
 // HMC830 Mode
