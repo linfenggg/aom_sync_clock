@@ -40,12 +40,9 @@
 .\objects\main.o: ..\DRV\usart.h
 .\objects\main.o: ..\DRV\gpio.h
 .\objects\main.o: ..\User\sys_control.h
-.\objects\main.o: ..\DRV\at24cxx.h
 .\objects\main.o: ..\DRV\dac.h
 .\objects\main.o: ..\DRV\ads7883.h
 .\objects\main.o: ..\DRV\flash_if.h
-.\objects\main.o: ..\DRV\drv_max5395.h
 .\objects\main.o: ..\User\modbus_comm.h
-.\objects\main.o: ..\DRV\drv_ads1115.h
 .\objects\main.o: ..\DRV\drv_hmc830lp6ge.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

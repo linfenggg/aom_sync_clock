@@ -36,3 +36,4 @@
 .\objects\drv_hmc830lp6ge.o: ..\USER\systick.h
 .\objects\drv_hmc830lp6ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\drv_hmc830lp6ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\drv_hmc830lp6ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -283,6 +283,7 @@ void HMC830_HMC_Test_REF50M_100M(void);
 void HMC830_HMC_Test_REF50M_425M(void);
 void HMC830_HMC_Test_REF50M_650M(void);
 void HMC830_HMC_Test_READ(void);
+void Change_HMC830_Fre(uint32_t Fout,uint8_t PowerTemp);
 
 
 #endif  // __HMC830_H

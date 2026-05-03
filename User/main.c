@@ -71,6 +71,9 @@ int main(void)
  
 
 		HMC830_HMC_Test_READ();
+		delay_1ms(2000);
+	  Change_HMC830_Fre(200*1000,15);
+		delay_1ms(2000);
  
 
   while (1)

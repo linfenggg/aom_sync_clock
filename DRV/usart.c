@@ -68,6 +68,7 @@ void MX_USART1_UART_Init(void)
 		rcu_periph_clock_enable(RCU_AF);
     /* enable USART clock */
     rcu_periph_clock_enable(RCU_USART1);
+	
 		//gpio_pin_remap_config(GPIO_USART1_REMAP,ENABLE);
 	
     /* connect port to USARTx_Tx */

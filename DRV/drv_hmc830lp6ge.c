@@ -6,6 +6,10 @@
 #include "stdio.h"
 
 
+uint32_t VCO_Reg02;
+uint32_t N_int = 0;
+uint32_t N_frac = 0;
+
 // GPIO 初始化
 void HMC830_GPIO_Init(void)
 {
@@ -61,6 +65,9 @@ void HMC830_Init(void)
 
 }
 
+
+
+
 // HMC Mode Write
 void HMC830_HMC_Write(uint8_t address,uint32_t data)
 {
@@ -108,6 +115,74 @@ void HMC830_HMC_Write(uint8_t address,uint32_t data)
     
     HMC830_SEN(0);
     HMC830_Delay();
+}
+
+
+
+void WriteToHMC830(uint8_t Reg_temp,uint32_t Data_temp)//送入地址a5 a4 a3 a2 a1 a0 ，以及24位数据
+{
+	uint8_t i;
+	uint8_t Reg_Add;//地址
+	uint32_t Reg_Data;//写入的数据:32位
+	
+	Reg_Add  = Reg_temp;
+	Reg_Data = Data_temp;
+	
+	Reg_Add=Reg_Add&0xDF;//插入一位/WR=0  后面是a5 a4 a3 a2 a1 a0  
+ HMC830_SEN(0);
+ HMC830_Delay();
+ HMC830_SEN(1);
+ HMC830_Delay();
+ HMC830_SCK(0);
+ HMC830_Delay();
+	
+	for (i = 0; i < 7; i++)		//送入地址第一位固定是RD=1，后面6位是地址，一共7位
+	{
+	 HMC830_SCK(0);
+   HMC830_Delay();
+		if((Reg_Add&0x40) == 0x40)//判断时((Reg_Add&0x40)==0x40)正确  (Reg_Add&0x40==0x40)  错误
+		{
+		 HMC830_SDI(1);
+		}
+		else 
+		{
+		HMC830_SDI(0);
+		}
+		Reg_Add = Reg_Add<<1;
+	 HMC830_Delay();
+	 HMC830_SCK(1);
+	 HMC830_Delay();		
+	}
+		
+	 HMC830_SCK(0);
+	 HMC830_Delay();
+	for (i = 0; i < 24; i++)		//读取数据
+	{
+		 HMC830_SCK(0);
+	 HMC830_Delay();
+		if((Reg_Data&0x00800000) == 0x00800000)
+		{
+			 HMC830_SDI(1);
+		}
+		else 
+		{
+		 HMC830_SDI(0);
+		}
+		Reg_Data = Reg_Data<<1;
+		 HMC830_Delay();
+		 HMC830_SCK(1);	
+		 HMC830_Delay();	
+	}
+	
+	HMC830_SCK(0);//最后要多给一个时钟信号（一个读数据总共是7+24+1=32个时钟）
+	 HMC830_Delay();
+	HMC830_SCK(1);
+ HMC830_Delay();
+HMC830_SCK(0);
+	 HMC830_Delay();
+ HMC830_SEN(0);
+	 HMC830_Delay();
+ 
 }
 
 // HMC Mode Read
@@ -468,4 +543,122 @@ HMC830_HMC_Write(0x03, 0x000433);
 		
 	}
 
+}
+
+
+
+/*
+*********************************************************************************************************
+*	函 数 名: Calc_K
+*	功能说明: 计算k值，即RF Divide ratio（VCO_Reg 02h）
+*	形    参: Fout 
+*	返 回 值: vco_fre，返回VCO的工作频率
+*	作	  者: 
+*	时	  间:
+*	备    注: 计算需要的输出分频系数，并将其倍频（范围1~62），从而实现任意点频输出。
+*********************************************************************************************************
+*/
+uint32_t Calc_K(uint32_t Fout)
+{
+	uint32_t vco_fre;
+	
+	uint32_t rfdivid = 1;	
+	uint8_t noise_con = 0;	//见VCO_Reg 02h[8]位
+	
+	if(Fout > 3000000)
+		Fout = 3000000;
+	if(Fout < 25000)
+		Fout = 25000;
+	if(Fout > 1500000) 
+	{
+		rfdivid = 1;
+	}
+	
+	rfdivid = 3000000/Fout;
+	if(rfdivid < 2)
+	{
+		rfdivid = 1;
+		noise_con = 1;
+	}
+	else if(rfdivid < 3)
+	{
+		rfdivid = 2;
+		noise_con = 1;
+	}
+	else if(rfdivid > 62)
+	{
+		rfdivid = 62;
+	}
+	else
+	{
+		rfdivid = ((rfdivid%2)==0)?(rfdivid):(rfdivid-1);
+	}
+	if(rfdivid < 3)
+	{
+		noise_con = 1;
+	}
+	else
+	{
+		noise_con = 0;
+	}
+	                                                 
+	VCO_Reg02 |= 0x000010;		//VCO_Reg02[2:0]=000,VCO_Reg02[6:3]=010,VCO_Reg02[15:7]=0,0000,0000
+	                          //VCO_Reg02[15]分频控制，分频器为1和2分频时，该位设置成1，其他分频设置成0
+	                          //VCO_Reg02[14：13] 输出增益控制分辨是最大，最大-3DBM，最大-6DBM，最大-9DBM
+	                          //VCO_Reg02[12：17]  分频器值，最大62分频
+	if(noise_con) VCO_Reg02 |= (1<<15);//根据noise_con值设置VCO_Reg02[15]位
+	else VCO_Reg02 &= ~(1<<15);
+	VCO_Reg02 |= (rfdivid<<7);	//这里求出了VCO_Reg 02h值
+	vco_fre = Fout*rfdivid;		//这里求出了VCO的工作频率
+	
+	return vco_fre;
+}
+
+/*
+*********************************************************************************************************
+*	函 数 名: Calc_N
+*	功能说明: 计算N值，包括整数部分和小数部分
+*	形    参: Fout 
+*	返 回 值:
+*	作	  者: 
+*	时	  间:
+*	备    注: 计算需要的倍频分频系数。
+*********************************************************************************************************
+*/
+void Calc_N(uint32_t  vco_fre)
+{	
+	uint32_t Fpd = 20000;	//鉴相频率50M,参考频率50M
+	double   F_frac = 0;
+	
+	N_int = (vco_fre)/Fpd;//得到reg03h值
+
+	F_frac = vco_fre;
+	F_frac = F_frac/Fpd;
+	F_frac = (F_frac-N_int)*16777216;
+	N_frac = (uint32_t)F_frac;
+}
+
+/*
+*********************************************************************************************************
+*	函 数 名: Change_HMC830_Fre
+*	功能说明: 设置输出频率
+*	形    参: Fout，输出频率值，单位：MHz 
+*	返 回 值: 无
+*	作	  者: 
+*	时	  间:
+*	备    注: 计算需要的输出分频系数，并将其倍频（范围1~62），从而实现任意点频输出。
+*********************************************************************************************************
+*/
+void Change_HMC830_Fre(uint32_t Fout,uint8_t PowerTemp)
+{	
+	uint32_t vco_fre;
+	
+	VCO_Reg02=0; 
+	vco_fre= Calc_K(Fout);
+	Calc_N(vco_fre);
+	VCO_Reg02 |= (PowerTemp<<13);	//这里求出了VCO_Reg 02h的幅度控制值
+	HMC830_HMC_Write(0x05,VCO_Reg02);
+	HMC830_HMC_Write(0x05,0);//用于打开VCO子系统中所有VCO的可用频段。只要REG05H做任何修改，这个指令必须增加在reg05命令后
+	HMC830_HMC_Write(0x03,N_int);//整数分频
+	HMC830_HMC_Write(0x04,N_frac);//小数分频	
 }
