@@ -1,0 +1,180 @@
+set_pin_assignment	{ AIRPUMP_PWM1 }	{ LOCATION = L4; }
+set_pin_assignment	{ AIRPUMP_PWM2 }	{ LOCATION = K6; }
+set_pin_assignment	{ AOM1_CLK }	{ LOCATION = C7; }
+set_pin_assignment	{ AOM1_DB[0] }	{ LOCATION = E6; }
+set_pin_assignment	{ AOM1_DB[1] }	{ LOCATION = F7; }
+set_pin_assignment	{ AOM1_DB[2] }	{ LOCATION = A6; }
+set_pin_assignment	{ AOM1_DB[3] }	{ LOCATION = B6; }
+set_pin_assignment	{ AOM1_DB[4] }	{ LOCATION = A5; }
+set_pin_assignment	{ AOM1_DB[5] }	{ LOCATION = B5; }
+set_pin_assignment	{ AOM1_DB[6] }	{ LOCATION = A4; }
+set_pin_assignment	{ AOM1_DB[7] }	{ LOCATION = C4; }
+set_pin_assignment	{ AOM1_TTL }	{ LOCATION = D14; }
+set_pin_assignment	{ AOM2_CLK }	{ LOCATION = E7;  }
+set_pin_assignment	{ AOM2_DB[0] }	{ LOCATION = A10; }
+set_pin_assignment	{ AOM2_DB[1] }	{ LOCATION = B10; }
+set_pin_assignment	{ AOM2_DB[2] }	{ LOCATION = A9; }
+set_pin_assignment	{ AOM2_DB[3] }	{ LOCATION = C9; }
+set_pin_assignment	{ AOM2_DB[4] }	{ LOCATION = A8; }
+set_pin_assignment	{ AOM2_DB[5] }	{ LOCATION = B8; }
+set_pin_assignment	{ AOM2_DB[6] }	{ LOCATION = C6; }
+set_pin_assignment	{ AOM2_DB[7] }	{ LOCATION = D6; }
+set_pin_assignment	{ AOM2_TTL }	{ LOCATION = D16; }
+set_pin_assignment	{ AOM3_CLK }	{ LOCATION = C13; }
+set_pin_assignment	{ AOM3_DB[0] }	{ LOCATION = A12; }
+set_pin_assignment	{ AOM3_DB[1] }	{ LOCATION = B12; }
+set_pin_assignment	{ AOM3_DB[2] }	{ LOCATION = D9; }
+set_pin_assignment	{ AOM3_DB[3] }	{ LOCATION = F9; }
+set_pin_assignment	{ AOM3_DB[4] }	{ LOCATION = A11; }
+set_pin_assignment	{ AOM3_DB[5] }	{ LOCATION = C11; }
+set_pin_assignment	{ AOM3_DB[6] }	{ LOCATION = C8; }
+set_pin_assignment	{ AOM3_DB[7] }	{ LOCATION = D8; }
+set_pin_assignment	{ AOM3_DB[8] }	{ LOCATION = C10; }
+set_pin_assignment	{ AOM3_DB[9] }	{ LOCATION = E10; }
+set_pin_assignment	{ AOM3_TTL }	{ LOCATION = F13; }
+set_pin_assignment	{ AOM4_CLK }	{ LOCATION = G11; }
+set_pin_assignment	{ AOM4_DB[0] }	{ LOCATION = F12; }
+set_pin_assignment	{ AOM4_DB[1] }	{ LOCATION = B16; }
+set_pin_assignment	{ AOM4_DB[2] }	{ LOCATION = B15; }
+set_pin_assignment	{ AOM4_DB[3] }	{ LOCATION = E12; }
+set_pin_assignment	{ AOM4_DB[4] }	{ LOCATION = E13; }
+set_pin_assignment	{ AOM4_DB[5] }	{ LOCATION = D11; }
+set_pin_assignment	{ AOM4_DB[6] }	{ LOCATION = D12; }
+set_pin_assignment	{ AOM4_DB[7] }	{ LOCATION = E11; }
+set_pin_assignment	{ AOM4_DB[8] }	{ LOCATION = F10; }
+set_pin_assignment	{ AOM4_DB[9] }	{ LOCATION = A13; }
+set_pin_assignment	{ AOM4_TTL }	{ LOCATION = F14; }
+set_pin_assignment	{ EXT_AD_CLK }	{ LOCATION = T5; }
+set_pin_assignment	{ EXT_AD_DATA[0] }	{ LOCATION = T4; }
+set_pin_assignment	{ EXT_AD_DATA[1] }	{ LOCATION = L3; }
+set_pin_assignment	{ EXT_AD_DATA[2] }	{ LOCATION = L1; }
+set_pin_assignment	{ EXT_AD_DATA[3] }	{ LOCATION = K5; }
+set_pin_assignment	{ EXT_AD_DATA[4] }	{ LOCATION = K3; }
+set_pin_assignment	{ EXT_AD_DATA[5] }	{ LOCATION = K2; }
+set_pin_assignment	{ EXT_AD_DATA[6] }	{ LOCATION = K1; }
+set_pin_assignment	{ EXT_AD_DATA[7] }	{ LOCATION = H1; }
+set_pin_assignment	{ EXT_AD_OE }	{ LOCATION = N6; }
+set_pin_assignment	{ EXT_ALM }	{ LOCATION = P7; }
+set_pin_assignment	{ EXT_DATA[0] }	{ LOCATION = H2; }
+set_pin_assignment	{ EXT_DATA[1] }	{ LOCATION = F1; }
+set_pin_assignment	{ EXT_DATA[2] }	{ LOCATION = F2; }
+set_pin_assignment	{ EXT_DATA[3] }	{ LOCATION = F3; }
+set_pin_assignment	{ EXT_DATA[4] }	{ LOCATION = F5; }
+set_pin_assignment	{ EXT_DATA[5] }	{ LOCATION = F6; }
+set_pin_assignment	{ EXT_DATA[6] }	{ LOCATION = F4; }
+set_pin_assignment	{ EXT_DATA[7] }	{ LOCATION = E3; }
+set_pin_assignment	{ EXT_GATE }	{ LOCATION = P12; }
+set_pin_assignment	{ EXT_GUID }	{ LOCATION = C3; }
+set_pin_assignment	{ EXT_LAT }	{ LOCATION = C2; }
+set_pin_assignment	{ EXT_PRR }	{ LOCATION = T7; }
+set_pin_assignment	{ EXT_PWM }	{ LOCATION = M9; }
+set_pin_assignment	{ EXT_STATE }	{ LOCATION = P11; }
+set_pin_assignment	{ EXT_SYNC }	{ LOCATION = P9; }
+set_pin_assignment	{ EXT_TEST }	{ LOCATION = L7; }
+set_pin_assignment	{ EXT_TRIG }	{ LOCATION = N9; }
+set_pin_assignment	{ FPGA1_DATA[0] }	{ LOCATION = H14; }
+set_pin_assignment	{ FPGA1_DATA[1] }	{ LOCATION = J11; }
+set_pin_assignment	{ FPGA1_DATA[2] }	{ LOCATION = J12; }
+set_pin_assignment	{ FPGA1_DATA[3] }	{ LOCATION = J13; }
+set_pin_assignment	{ FPGA1_DATA[4] }	{ LOCATION = K14; }
+set_pin_assignment	{ FPGA1_DATA[5] }	{ LOCATION = K12; }
+set_pin_assignment	{ FPGA1_DATA[6] }	{ LOCATION = K11; }
+set_pin_assignment	{ FPGA1_DATA[7] }	{ LOCATION = J14; }
+set_pin_assignment	{ FPGA_SW[0] }	{ LOCATION = M10; }
+set_pin_assignment	{ FPGA_SW[1] }	{ LOCATION = R9; }
+set_pin_assignment	{ FPGA_WDI }	{ LOCATION = R2; }
+set_pin_assignment	{ FREQ_PD1 }	{ LOCATION = B14; }
+set_pin_assignment	{ FREQ_PD2 }	{ LOCATION = C15; }
+set_pin_assignment	{ FREQ_PD3 }	{ LOCATION = A14; }
+set_pin_assignment	{ ICR1_A }	{ LOCATION = H5; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ ICR1_B }	{ LOCATION = H4; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ ICR2_A }	{ LOCATION = H3; }
+set_pin_assignment	{ ICR2_B }	{ LOCATION = J6; }
+set_pin_assignment	{ INTER_LOCK1 }	{ LOCATION = E2; }
+set_pin_assignment	{ INTER_LOCK2 }	{ LOCATION = G5; }
+set_pin_assignment	{ LOW_24V }	{ LOCATION = D5; }
+set_pin_assignment	{ MASTER_SPI_CS }	{ LOCATION = J16; }
+set_pin_assignment	{ MASTER_SPI_SCLK }	{ LOCATION = K15; }
+set_pin_assignment	{ MASTER_SPI_SDI }	{ LOCATION = K16; }
+set_pin_assignment	{ MCU_ERR }	{ LOCATION = H15; }
+set_pin_assignment	{ MCU_ESTOP }	{ LOCATION = H16; }
+set_pin_assignment	{ MOTOR1_ccw }	{ LOCATION = N1; }
+set_pin_assignment	{ MOTOR1_cw }	{ LOCATION = N3; }
+set_pin_assignment	{ MOTOR1_direct }	{ LOCATION = N4; }
+set_pin_assignment	{ MOTOR1_origin }	{ LOCATION = M6; }
+set_pin_assignment	{ MOTOR1_pulse }	{ LOCATION = N5; }
+set_pin_assignment	{ MOTOR2_ccw }	{ LOCATION = M1; }
+set_pin_assignment	{ MOTOR2_cw }	{ LOCATION = M2; }
+set_pin_assignment	{ MOTOR2_direct }	{ LOCATION = M3; }
+set_pin_assignment	{ MOTOR2_origin }	{ LOCATION = L5; }
+set_pin_assignment	{ MOTOR2_pulse }	{ LOCATION = M4; }
+set_pin_assignment	{ MOTOR3_ccw }	{ LOCATION = J3; }
+set_pin_assignment	{ MOTOR3_cw }	{ LOCATION = J4; }
+set_pin_assignment	{ MOTOR3_direct }	{ LOCATION = virtualIO; }
+set_pin_assignment	{ MOTOR3_origin }	{ LOCATION = J1; }
+set_pin_assignment	{ MOTOR3_pulse }	{ LOCATION = virtualIO; }
+set_pin_assignment	{ MOTOR4_ccw }	{ LOCATION = G3; }
+set_pin_assignment	{ MOTOR4_cw }	{ LOCATION = G1; }
+set_pin_assignment	{ MOTOR4_direct }	{ LOCATION = virtualIO; }
+set_pin_assignment	{ MOTOR4_origin }	{ LOCATION = G6; }
+set_pin_assignment	{ MOTOR4_pulse }	{ LOCATION = virtualIO; }
+set_pin_assignment	{ PTOTE_PD1 }	{ LOCATION = T9; }
+set_pin_assignment	{ PTOTE_PD2 }	{ LOCATION = P8; }
+set_pin_assignment	{ PTOTE_PD3 }	{ LOCATION = T6; }
+set_pin_assignment	{ PUMP_SW[0] }	{ LOCATION = M15; }
+set_pin_assignment	{ PUMP_SW[10] }	{ LOCATION = T14; }
+set_pin_assignment	{ PUMP_SW[11] }	{ LOCATION = T13; }
+set_pin_assignment	{ PUMP_SW[12] }	{ LOCATION = R12; }
+set_pin_assignment	{ PUMP_SW[13] }	{ LOCATION = T12; }
+set_pin_assignment	{ PUMP_SW[14] }	{ LOCATION = L12; }
+set_pin_assignment	{ PUMP_SW[1] }	{ LOCATION = M16; }
+set_pin_assignment	{ PUMP_SW[2] }	{ LOCATION = L14; }
+set_pin_assignment	{ PUMP_SW[3] }	{ LOCATION = L16; }
+set_pin_assignment	{ PUMP_SW[4] }	{ LOCATION = P15; }
+set_pin_assignment	{ PUMP_SW[5] }	{ LOCATION = P16; }
+set_pin_assignment	{ PUMP_SW[6] }	{ LOCATION = R15; }
+set_pin_assignment	{ PUMP_SW[7] }	{ LOCATION = R16; }
+set_pin_assignment	{ PUMP_SW[8] }	{ LOCATION = R14; }
+set_pin_assignment	{ PUMP_SW[9] }	{ LOCATION = T15; }
+set_pin_assignment	{ PANEL_KEY }	{ LOCATION = T8; }
+set_pin_assignment	{ PANEL_ESTOP }	{ LOCATION = L8; }
+set_pin_assignment	{ HEAD_ERROR }	{ LOCATION = A2; }
+set_pin_assignment	{ DOUT_TO_HEAD} { LOCATION = B2; }
+set_pin_assignment	{ SEED_TRIG1 }	{ LOCATION = C1; }
+set_pin_assignment	{ SEED_TRIG2 }	{ LOCATION = B1; }
+set_pin_assignment	{ SLAVE_SPI_CS }	{ LOCATION = N14; }
+set_pin_assignment	{ SLAVE_SPI_SCLK }	{ LOCATION = N16; }
+set_pin_assignment	{ SLAVE_SPI_SDI }	{ LOCATION = N8; }
+set_pin_assignment	{ SPI_CS }	{ LOCATION = C16; }
+set_pin_assignment	{ SPI_SCLK }	{ LOCATION = E15; }
+set_pin_assignment	{ SPI_SDI }	{ LOCATION = E16; }
+set_pin_assignment	{ SPI_SDO }	{ LOCATION = F15; }
+set_pin_assignment	{ WATER_ALM }	{ LOCATION = D1; }
+set_pin_assignment	{ clk_in }	{ LOCATION = M12; }
+set_pin_assignment	{ debug_led }	{ LOCATION = N12; }
+set_pin_assignment	{ online1_INT }	{ LOCATION = P6; }
+set_pin_assignment	{ online1_SCL }	{ LOCATION = R7; }
+set_pin_assignment	{ online1_SDA }	{ LOCATION = R5; }
+set_pin_assignment	{ online2_INT }	{ LOCATION = P2; }
+set_pin_assignment	{ online2_SCL }	{ LOCATION = P5; }
+set_pin_assignment	{ online2_SDA }	{ LOCATION = P4; }
+set_pin_assignment	{ online_prom[0] }	{ LOCATION = L13; }
+set_pin_assignment	{ online_prom[1] }	{ LOCATION = M13; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

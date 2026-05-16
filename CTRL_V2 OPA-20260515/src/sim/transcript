@@ -1,0 +1,418 @@
+# Reading E:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.mpf} 
+# Loading project tb_burst
+# Compile of tb_burst.v was successful.
+# Compile of burst.v was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_burst
+# vsim -voptargs=+acc work.tb_burst 
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+add wave -position insertpoint sim:/tb_burst/burst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: WIN10  Hostname: DESKTOP-M6TOKU0  ProcessID: 18900
+# 
+#           Attempting to use alternate WLF file "./wlft20an72".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft20an72
+# 
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# ** Error: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(128): near "]": syntax error, unexpected ']'
+# ** Error: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(137): (vlog-2730) Undefined variable: 'end_cnt'.
+# 
+# E:/altera/13.0/modelsim_ase/win32aloem/vlog failed.
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+add wave -position insertpoint  \
+sim:/tb_burst/burst/end_cnt
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module burst
+# 
+# Top level modules:
+# 	burst
+vlog -work work -O0 {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_burst
+# 
+# Top level modules:
+# 	tb_burst
+restart
+# Loading work.tb_burst
+# Loading work.burst
+# ** Warning: (vsim-3015) D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/sim/tb_burst.v(115): [PCDPC] - Port size (5 or 5) does not match connection size (4) for port 'BST_PUL_NUM'. The port definition is at: D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2121/src/burst.v(15).
+# 
+#         Region: /tb_burst/burst
+run -all

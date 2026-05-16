@@ -1,0 +1,213 @@
+standard
+***Report Model: top***
+
+IO Statistics
+#IO                       159
+  #input                   60
+  #output                  97
+  #inout                    2
+
+Utilization Statistics
+#lut                    15049   out of  19600   76.78%
+#reg                     5867   out of  19600   29.93%
+#le                     15499
+  #lut only              9632   out of  15499   62.15%
+  #reg only               450   out of  15499    2.90%
+  #lut&reg               5417   out of  15499   34.95%
+#dsp                        3   out of     29   10.34%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                      163   out of    188   86.70%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        2   out of      4   50.00%
+#gclk                       7   out of     16   43.75%
+
+
+Detailed IO Report
+
+       Name          Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+  EXT_AD_DATA[7]       INPUT         H1        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[6]       INPUT         K1        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[5]       INPUT         K2        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[4]       INPUT         K3        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[3]       INPUT         K5        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[2]       INPUT         L1        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[1]       INPUT         L3        LVCMOS33          N/A          PULLUP      NONE    
+  EXT_AD_DATA[0]       INPUT         T4        LVCMOS25          N/A          PULLUP      NONE    
+    EXT_DATA[7]        INPUT         E3        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[6]        INPUT         F4        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[5]        INPUT         F6        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[4]        INPUT         F5        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[3]        INPUT         F3        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[2]        INPUT         F2        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[1]        INPUT         F1        LVCMOS33          N/A          PULLUP      NONE    
+    EXT_DATA[0]        INPUT         H2        LVCMOS33          N/A          PULLUP      NONE    
+     EXT_GATE          INPUT        P12        LVCMOS25          N/A          PULLUP      NONE    
+     EXT_GUID          INPUT         C3        LVCMOS33          N/A          PULLUP      NONE    
+      EXT_LAT          INPUT         C2        LVCMOS33          N/A          PULLUP      NONE    
+      EXT_PRR          INPUT         T7        LVCMOS25          N/A          PULLUP      NONE    
+      EXT_PWM          INPUT         M9        LVCMOS25          N/A          PULLUP      NONE    
+     EXT_TEST          INPUT         L7        LVCMOS25          N/A          PULLUP      NONE    
+     EXT_TRIG          INPUT         N9        LVCMOS25          N/A          PULLUP      NONE    
+     FREQ_PD1          INPUT        B14        LVCMOS33          N/A          PULLUP      NONE    
+     FREQ_PD2          INPUT        C15        LVCMOS25          N/A          PULLUP      NONE    
+     FREQ_PD3          INPUT        A14        LVCMOS33          N/A          PULLUP      NONE    
+    INTER_LOCK1        INPUT         E2        LVCMOS33          N/A          PULLUP      NONE    
+    INTER_LOCK2        INPUT         G5        LVCMOS33          N/A          PULLUP      NONE    
+      LOW_24V          INPUT         D5        LVCMOS33          N/A          PULLUP      NONE    
+      MCU_ERR          INPUT        H15        LVCMOS25          N/A          PULLUP      NONE    
+     MCU_ESTOP         INPUT        H16        LVCMOS25          N/A          PULLUP      NONE    
+    MOTER1_ccw         INPUT         N1        LVCMOS33          N/A          PULLUP      NONE    
+     MOTER1_cw         INPUT         N3        LVCMOS33          N/A          PULLUP      NONE    
+   MOTER1_origin       INPUT         M6        LVCMOS25          N/A          PULLUP      NONE    
+    MOTER2_ccw         INPUT         M1        LVCMOS33          N/A          PULLUP      NONE    
+     MOTER2_cw         INPUT         M2        LVCMOS33          N/A          PULLUP      NONE    
+   MOTER2_origin       INPUT         L5        LVCMOS33          N/A          PULLUP      NONE    
+    MOTER3_ccw         INPUT         J3        LVCMOS33          N/A          PULLUP      NONE    
+     MOTER3_cw         INPUT         J4        LVCMOS33          N/A          PULLUP      NONE    
+   MOTER3_origin       INPUT         J1        LVCMOS33          N/A          PULLUP      NONE    
+    MOTER4_ccw         INPUT         G3        LVCMOS33          N/A          PULLUP      NONE    
+     MOTER4_cw         INPUT         G1        LVCMOS33          N/A          PULLUP      NONE    
+   MOTER4_origin       INPUT         G6        LVCMOS33          N/A          PULLUP      NONE    
+     PTOTE_PD1         INPUT         T9        LVCMOS25          N/A          PULLUP      NONE    
+     PTOTE_PD2         INPUT         P8        LVCMOS25          N/A          PULLUP      NONE    
+     PTOTE_PD3         INPUT         T6        LVCMOS25          N/A          PULLUP      NONE    
+     RESERVE1          INPUT         T8        LVCMOS25          N/A          PULLUP      NONE    
+     RESERVE2          INPUT         L8        LVCMOS25          N/A          PULLUP      NONE    
+    SEED_TRIG1         INPUT         C1        LVCMOS33          N/A          PULLUP      NONE    
+    SEED_TRIG2         INPUT         B1        LVCMOS33          N/A          PULLUP      NONE    
+   SLAVE_SPI_CS        INPUT        N14        LVCMOS25          N/A          PULLUP      NONE    
+  SLAVE_SPI_SCLK       INPUT        N16        LVCMOS25          N/A          PULLUP      NONE    
+   SLAVE_SPI_SDI       INPUT         N8        LVCMOS25          N/A          PULLUP      NONE    
+      SPI_CS           INPUT        C16        LVCMOS25          N/A          PULLUP      NONE    
+     SPI_SCLK          INPUT        E15        LVCMOS25          N/A          PULLUP      NONE    
+      SPI_SDI          INPUT        E16        LVCMOS25          N/A          PULLUP      NONE    
+     WATER_ALM         INPUT         D1        LVCMOS33          N/A          PULLUP      NONE    
+      clk_in           INPUT        M12        LVCMOS25          N/A          PULLUP      NONE    
+    online1_INT        INPUT         P6        LVCMOS25          N/A          PULLUP      NONE    
+    online2_INT        INPUT         P2        LVCMOS33          N/A          PULLUP      NONE    
+     AOM1_CLK         OUTPUT         C7        LVDS33_E           8            NONE       NONE    
+    AOM1_DB[7]        OUTPUT         C4        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[6]        OUTPUT         A4        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[5]        OUTPUT         B5        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[4]        OUTPUT         A5        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[3]        OUTPUT         B6        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[2]        OUTPUT         A6        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[1]        OUTPUT         F7        LVCMOS33           8            NONE       NONE    
+    AOM1_DB[0]        OUTPUT         E6        LVCMOS33           8            NONE       NONE    
+     AOM1_TTL         OUTPUT        D14        LVCMOS25           8            NONE       NONE    
+     AOM2_CLK         OUTPUT         E7        LVDS33_E           8            NONE       NONE    
+    AOM2_DB[7]        OUTPUT         D6        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[6]        OUTPUT         C6        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[5]        OUTPUT         B8        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[4]        OUTPUT         A8        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[3]        OUTPUT         C9        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[2]        OUTPUT         A9        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[1]        OUTPUT        B10        LVCMOS33           8            NONE       NONE    
+    AOM2_DB[0]        OUTPUT        A10        LVCMOS33           8            NONE       NONE    
+     AOM2_TTL         OUTPUT        D16        LVCMOS25           8            NONE       NONE    
+     AOM3_CLK         OUTPUT        C13        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[9]        OUTPUT        E10        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[8]        OUTPUT        C10        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[7]        OUTPUT         D8        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[6]        OUTPUT         C8        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[5]        OUTPUT        C11        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[4]        OUTPUT        A11        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[3]        OUTPUT         F9        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[2]        OUTPUT         D9        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[1]        OUTPUT        B12        LVCMOS33           8            NONE       NONE    
+    AOM3_DB[0]        OUTPUT        A12        LVCMOS33           8            NONE       NONE    
+     AOM3_TTL         OUTPUT        F13        LVCMOS25           8            NONE       NONE    
+     AOM4_CLK         OUTPUT        G11        LVCMOS25           8            NONE       NONE    
+    AOM4_DB[9]        OUTPUT        A13        LVCMOS33           8            NONE       NONE    
+    AOM4_DB[8]        OUTPUT        F10        LVCMOS33           8            NONE       NONE    
+    AOM4_DB[7]        OUTPUT        E11        LVCMOS33           8            NONE       NONE    
+    AOM4_DB[6]        OUTPUT        D12        LVCMOS33           8            NONE       NONE    
+    AOM4_DB[5]        OUTPUT        D11        LVCMOS33           8            NONE       NONE    
+    AOM4_DB[4]        OUTPUT        E13        LVCMOS25           8            NONE       NONE    
+    AOM4_DB[3]        OUTPUT        E12        LVCMOS25           8            NONE       NONE    
+    AOM4_DB[2]        OUTPUT        B15        LVCMOS25           8            NONE       NONE    
+    AOM4_DB[1]        OUTPUT        B16        LVCMOS25           8            NONE       NONE    
+    AOM4_DB[0]        OUTPUT        F12        LVCMOS25           8            NONE       NONE    
+     AOM4_TTL         OUTPUT        F14        LVCMOS25           8            NONE       NONE    
+    EXT_AD_CLK        OUTPUT         T5        LVCMOS25           8            NONE       NONE    
+     EXT_AD_OE        OUTPUT         N6        LVCMOS25           8            NONE       NONE    
+      EXT_ALM         OUTPUT         P7        LVCMOS25           8            NONE       NONE    
+     EXT_STATE        OUTPUT        P11        LVCMOS25           8            NONE       NONE    
+     EXT_SYNC         OUTPUT         P9        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[7]      OUTPUT        J14        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[6]      OUTPUT        K11        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[5]      OUTPUT        K12        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[4]      OUTPUT        K14        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[3]      OUTPUT        J13        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[2]      OUTPUT        J12        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[1]      OUTPUT        J11        LVCMOS25           8            NONE       NONE    
+   FPGA1_DATA[0]      OUTPUT        H14        LVCMOS25           8            NONE       NONE    
+    FPGA_SW[1]        OUTPUT         R9        LVCMOS25           8            NONE       NONE    
+    FPGA_SW[0]        OUTPUT        M10        LVCMOS25           8            NONE       NONE    
+     FPGA_WDI         OUTPUT         R2        LVCMOS33           8            NONE       NONE    
+   MASTER_SPI_CS      OUTPUT        J16        LVCMOS25           8            NONE       NONE    
+  MASTER_SPI_SCLK     OUTPUT        K15        LVCMOS25           8            NONE       NONE    
+  MASTER_SPI_SDI      OUTPUT        K16        LVCMOS25           8            NONE       NONE    
+   MOTER1_direct      OUTPUT         N4        LVCMOS33           8            NONE       NONE    
+   MOTER1_pulse       OUTPUT         N5        LVCMOS25           8            NONE       NONE    
+   MOTER2_direct      OUTPUT         M3        LVCMOS33           8            NONE       NONE    
+   MOTER2_pulse       OUTPUT         M4        LVCMOS33           8            NONE       NONE    
+   MOTER3_direct      OUTPUT         J6        LVCMOS33           8            NONE       NONE    
+   MOTER3_pulse       OUTPUT         K6        LVCMOS33           8            NONE       NONE    
+   MOTER4_direct      OUTPUT         H5        LVCMOS33           8            NONE       NONE    
+   MOTER4_pulse       OUTPUT         H4        LVCMOS33           8            NONE       NONE    
+    PUMP_SW[14]       OUTPUT        L12        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[13]       OUTPUT        T12        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[12]       OUTPUT        R12        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[11]       OUTPUT        T13        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[10]       OUTPUT        T14        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[9]        OUTPUT        T15        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[8]        OUTPUT        R14        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[7]        OUTPUT        R16        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[6]        OUTPUT        R15        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[5]        OUTPUT        P16        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[4]        OUTPUT        P15        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[3]        OUTPUT        L16        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[2]        OUTPUT        L14        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[1]        OUTPUT        M16        LVCMOS25           8            NONE       NONE    
+    PUMP_SW[0]        OUTPUT        M15        LVCMOS25           8            NONE       NONE    
+     SEED_FAN1        OUTPUT         B2        LVDS33_E           8            NONE       NONE    
+     SEED_FAN2        OUTPUT         B3        LVDS33_E           8            NONE       NONE    
+      SPI_SDO         OUTPUT        F15        LVCMOS25           8            NONE       NONE    
+     clk_160m         OUTPUT        F16        LVCMOS25           8            N/A        NONE    
+      clk_PD          OUTPUT        M14        LVCMOS25           8            N/A        NONE    
+   clk_PD_4times      OUTPUT         M7        LVCMOS25           8            N/A        NONE    
+     debug_led        OUTPUT        N12        LVCMOS25           8            NONE       NONE    
+    online1_SCL       OUTPUT         R7        LVCMOS25           8            NONE       NONE    
+    online2_SCL       OUTPUT         P5        LVCMOS25           8            NONE       NONE    
+  online_prom[1]      OUTPUT        M13        LVCMOS25           8            NONE       NONE    
+  online_prom[0]      OUTPUT        L13        LVCMOS25           8            NONE       NONE    
+    online1_SDA        INOUT         R5        LVCMOS25           8           PULLUP      NONE    
+    online2_SDA        INOUT         P4        LVCMOS25           8           PULLUP      NONE    
+
+Report Hierarchy Area:
++----------------------------------------------------------------+
+|Instance |Module |le    |lut    |ripple |seq    |bram   |dsp    |
++----------------------------------------------------------------+
+|top      |top    |15499 |12882  |2167   |5867   |0      |3      |
++----------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       9110  
+    #2          2       3676  
+    #3          3       1333  
+    #4          4       1239  
+    #5        5-10      819   
+    #6        11-50     719   
+    #7       51-100      36   
+    #8       101-500     2    
+    #9        >500       2    
+  Average     3.10            

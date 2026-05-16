@@ -1,0 +1,657 @@
+ph1_60
+13 3221 33 3057 24966 9932792 33 6
+-5.625 -2.384 top ph1_60 PH1A60GEG324 Detail 3 15 7
+clock: CRYSTAL_50M
+15 0 0 0
+
+clock: SYS_PLL/pll_inst.clkc[0]
+23 9871724 18012 2
+Setup check
+33 3
+Endpoint: core/reg160_syn_161
+33 -5.625000 1 1
+Timing path: AOM2_TTL_inst/reg5_syn_79.clk->core/reg160_syn_161
+AOM2_TTL_inst/reg5_syn_79.clk
+core/reg160_syn_161
+35 -5.625000 1.024000 6.649000 5 5
+AOM2_TTL_inst/pulse_data[1] core/sel2_syn_62986.imf
+core/sel2_syn_5612[1] alarm_mon/lock_reg_syn_34.ia
+core/sel2_syn_60454 core/sel2_syn_63139.ie
+core/sel2_syn_134[1] core/sel2_syn_63461.imf
+core/sel2_syn_35[1] core/reg160_syn_161.ie
+
+
+Endpoint: core/reg185_syn_134
+95 -5.552000 2 2
+Timing path: core/trig_reg0_reg_syn_4.clk->core/reg185_syn_134
+core/trig_reg0_reg_syn_4.clk
+core/reg185_syn_134
+97 -5.552000 1.128000 6.680000 4 4
+core/trig_reg0 AOM2_TTL_inst/AOM2_SW_n_syn_56.ie
+core/cnt_ext_sig_b1[24]_syn_10 core/cnt_ext_sig_b1[24]_syn_28.imf
+core/cnt_ext_sig_b1[24]_syn_16 alarm_mon/volt_ok_reg_syn_6.ie
+core/cnt_ext_sig_b[23]_syn_10 core/reg185_syn_134.ic
+
+Timing path: core/trig_reg0_reg_syn_4.clk->core/reg185_syn_134
+core/trig_reg0_reg_syn_4.clk
+core/reg185_syn_134
+155 -5.413000 1.128000 6.541000 4 4
+core/trig_reg1 AOM2_TTL_inst/AOM2_SW_n_syn_56.ic
+core/cnt_ext_sig_b1[24]_syn_10 core/cnt_ext_sig_b1[24]_syn_28.imf
+core/cnt_ext_sig_b1[24]_syn_16 alarm_mon/volt_ok_reg_syn_6.ie
+core/cnt_ext_sig_b[23]_syn_10 core/reg185_syn_134.ic
+
+
+Endpoint: core/reg185_syn_123
+213 -5.551000 2 2
+Timing path: core/trig_reg0_reg_syn_4.clk->core/reg185_syn_123
+core/trig_reg0_reg_syn_4.clk
+core/reg185_syn_123
+215 -5.551000 1.128000 6.679000 4 4
+core/trig_reg0 AOM2_TTL_inst/AOM2_SW_n_syn_56.ie
+core/cnt_ext_sig_b1[24]_syn_10 core/cnt_ext_sig_b1[24]_syn_28.imf
+core/cnt_ext_sig_b1[24]_syn_16 alarm_mon/volt_ok_reg_syn_6.ie
+core/cnt_ext_sig_b[23]_syn_10 core/reg185_syn_123.ic
+
+Timing path: core/trig_reg0_reg_syn_4.clk->core/reg185_syn_123
+core/trig_reg0_reg_syn_4.clk
+core/reg185_syn_123
+273 -5.412000 1.128000 6.540000 4 4
+core/trig_reg1 AOM2_TTL_inst/AOM2_SW_n_syn_56.ic
+core/cnt_ext_sig_b1[24]_syn_10 core/cnt_ext_sig_b1[24]_syn_28.imf
+core/cnt_ext_sig_b1[24]_syn_16 alarm_mon/volt_ok_reg_syn_6.ie
+core/cnt_ext_sig_b[23]_syn_10 core/reg185_syn_123.ic
+
+
+
+Hold check
+331 3
+Endpoint: alarm_mon/reg6_syn_86
+333 0.069000 1 1
+Timing path: alarm_mon/reg5_syn_83.clk->alarm_mon/reg6_syn_86
+alarm_mon/reg5_syn_83.clk
+alarm_mon/reg6_syn_86
+335 0.069000 0.724000 0.793000 0 1
+alarm_mon/PD2_freq_reg1[3] alarm_mon/reg6_syn_86.ima
+
+
+Endpoint: alarm_mon/reg4_syn_77
+381 0.111000 1 1
+Timing path: freq_cal_2/reg1_syn_80.clk->alarm_mon/reg4_syn_77
+freq_cal_2/reg1_syn_80.clk
+alarm_mon/reg4_syn_77
+383 0.111000 0.689000 0.800000 0 1
+PD2_freq[8] alarm_mon/reg4_syn_77.imb
+
+
+Endpoint: alarm_mon/reg6_syn_74
+429 0.115000 1 1
+Timing path: alarm_mon/reg5_syn_74.clk->alarm_mon/reg6_syn_74
+alarm_mon/reg5_syn_74.clk
+alarm_mon/reg6_syn_74
+431 0.115000 0.724000 0.839000 0 1
+alarm_mon/PD2_freq_reg1[11] alarm_mon/reg6_syn_74.ima
+
+
+
+
+clock: SYS_PLL/pll_inst.clkc[1]
+477 2214 212 2
+Setup check
+487 3
+Endpoint: PD1_LOW/freq_reg0_reg_syn_3
+487 -2.494000 12 3
+Timing path: core/reg162_syn_35.clk->PD1_LOW/freq_reg0_reg_syn_3
+core/reg162_syn_35.clk
+PD1_LOW/freq_reg0_reg_syn_3
+489 -2.494000 2.397000 4.891000 2 3
+core/SEED_SOURCE[3] core/sel2_syn_62741.ie
+PD1_EXP_n EXT_SYNC1_syn_1195.imf
+PD1_EXP PD1_LOW/freq_reg0_reg_syn_3.ima
+
+Timing path: core/reg162_syn_35.clk->PD1_LOW/freq_reg0_reg_syn_3
+core/reg162_syn_35.clk
+PD1_LOW/freq_reg0_reg_syn_3
+539 -2.467000 2.397000 4.864000 2 3
+core/SEED_SOURCE[2] core/sel2_syn_62741.ic
+PD1_EXP_n EXT_SYNC1_syn_1195.imf
+PD1_EXP PD1_LOW/freq_reg0_reg_syn_3.ima
+
+Timing path: core/reg162_syn_37.clk->PD1_LOW/freq_reg0_reg_syn_3
+core/reg162_syn_37.clk
+PD1_LOW/freq_reg0_reg_syn_3
+589 -2.433000 2.397000 4.830000 2 3
+core/SEED_SOURCE[1] core/sel2_syn_62741.imb
+PD1_EXP_n EXT_SYNC1_syn_1195.imf
+PD1_EXP PD1_LOW/freq_reg0_reg_syn_3.ima
+
+
+Endpoint: PD2_LOW/reg2_syn_71
+639 -1.938000 38 3
+Timing path: core/reg23_syn_55.clk->PD2_LOW/reg2_syn_71
+core/reg23_syn_55.clk
+PD2_LOW/reg2_syn_71
+641 -1.938000 2.298000 4.236000 3 3
+core/BST_PERIOD[13] PD2_LOW/lt0_syn_80.ia
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_71.imf
+
+Timing path: core/reg23_syn_64.clk->PD2_LOW/reg2_syn_71
+core/reg23_syn_64.clk
+PD2_LOW/reg2_syn_71
+691 -1.840000 2.298000 4.138000 6 6
+core/BST_PERIOD[7] PD2_LOW/lt0_syn_77.ic
+PD2_LOW/lt0_syn_61 PD2_LOW/lt0_syn_78.fci
+PD2_LOW/lt0_syn_63 PD2_LOW/lt0_syn_79.fci
+PD2_LOW/lt0_syn_65 PD2_LOW/lt0_syn_80.fci
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_71.imf
+
+Timing path: core/reg46_syn_73.clk->PD2_LOW/reg2_syn_71
+core/reg46_syn_73.clk
+PD2_LOW/reg2_syn_71
+747 -1.754000 2.298000 4.052000 8 8
+core/FIBER_AOM_FULL_OPEN_FRQ[3] PD2_LOW/lt0_syn_75.ia
+PD2_LOW/lt0_syn_57 PD2_LOW/lt0_syn_76.fci
+PD2_LOW/lt0_syn_59 PD2_LOW/lt0_syn_77.fci
+PD2_LOW/lt0_syn_61 PD2_LOW/lt0_syn_78.fci
+PD2_LOW/lt0_syn_63 PD2_LOW/lt0_syn_79.fci
+PD2_LOW/lt0_syn_65 PD2_LOW/lt0_syn_80.fci
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_71.imf
+
+
+Endpoint: PD2_LOW/reg2_syn_59
+807 -1.938000 38 3
+Timing path: core/reg23_syn_55.clk->PD2_LOW/reg2_syn_59
+core/reg23_syn_55.clk
+PD2_LOW/reg2_syn_59
+809 -1.938000 2.298000 4.236000 3 3
+core/BST_PERIOD[13] PD2_LOW/lt0_syn_80.ia
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_59.imf
+
+Timing path: core/reg23_syn_64.clk->PD2_LOW/reg2_syn_59
+core/reg23_syn_64.clk
+PD2_LOW/reg2_syn_59
+859 -1.840000 2.298000 4.138000 6 6
+core/BST_PERIOD[7] PD2_LOW/lt0_syn_77.ic
+PD2_LOW/lt0_syn_61 PD2_LOW/lt0_syn_78.fci
+PD2_LOW/lt0_syn_63 PD2_LOW/lt0_syn_79.fci
+PD2_LOW/lt0_syn_65 PD2_LOW/lt0_syn_80.fci
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_59.imf
+
+Timing path: core/reg46_syn_73.clk->PD2_LOW/reg2_syn_59
+core/reg46_syn_73.clk
+PD2_LOW/reg2_syn_59
+915 -1.754000 2.298000 4.052000 8 8
+core/FIBER_AOM_FULL_OPEN_FRQ[3] PD2_LOW/lt0_syn_75.ia
+PD2_LOW/lt0_syn_57 PD2_LOW/lt0_syn_76.fci
+PD2_LOW/lt0_syn_59 PD2_LOW/lt0_syn_77.fci
+PD2_LOW/lt0_syn_61 PD2_LOW/lt0_syn_78.fci
+PD2_LOW/lt0_syn_63 PD2_LOW/lt0_syn_79.fci
+PD2_LOW/lt0_syn_65 PD2_LOW/lt0_syn_80.fci
+PD2_LOW/lt0_syn_67 PD2_LOW/lt0_syn_81.fci
+PD2_LOW/cnt_b1_n3 PD2_LOW/reg2_syn_59.imf
+
+
+
+Hold check
+975 3
+Endpoint: core/sel2_syn_62698
+977 0.178000 1 1
+Timing path: core/sel2_syn_62820.clk->core/sel2_syn_62698
+core/sel2_syn_62820.clk
+core/sel2_syn_62698
+979 0.178000 0.722000 0.900000 0 1
+PD1_LOW/THR_L_reg0[2] core/sel2_syn_62698.imb
+
+
+Endpoint: PD_WAVE2/PD_DLY0_syn_11
+1025 0.193000 1 1
+Timing path: core/reg50_syn_88.clk->PD_WAVE2/PD_DLY0_syn_11
+core/reg50_syn_88.clk
+PD_WAVE2/PD_DLY0_syn_11
+1027 0.193000 0.597000 0.790000 0 1
+core/FREQ2_THR_L[13] PD_WAVE2/PD_DLY0_syn_11.ima
+
+
+Endpoint: core/sel2_syn_62837
+1073 0.202000 1 1
+Timing path: core/reg48_syn_86.clk->core/sel2_syn_62837
+core/reg48_syn_86.clk
+core/sel2_syn_62837
+1075 0.202000 0.661000 0.863000 0 1
+core/FREQ1_THR_L[12] core/sel2_syn_62837.ima
+
+
+
+
+clock: SYS_PLL/pll_inst.clkc[2]
+1121 3810 314 2
+Setup check
+1131 3
+Endpoint: core/sel2_syn_62748
+1131 -2.282000 1 1
+Timing path: burst/TTL_tem_reg_syn_3.clk->core/sel2_syn_62748
+burst/TTL_tem_reg_syn_3.clk
+core/sel2_syn_62748
+1133 -2.282000 2.270000 4.552000 0 1
+burst/TTL_tem core/sel2_syn_62748.ima
+
+
+Endpoint: freq_cal_1/reg1_syn_93
+1185 4.585000 18 3
+Timing path: _al_n1_syn_2130.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2130.clk
+freq_cal_1/reg1_syn_93
+1187 4.585000 11.048000 6.463000 3 4
+freq_cal_1/delay_1ms[11] freq_cal_1/enable_n_syn_17.ib
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.ceb
+
+Timing path: _al_n1_syn_2133.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2133.clk
+freq_cal_1/reg1_syn_93
+1239 5.010000 11.048000 6.038000 3 4
+freq_cal_1/delay_1ms[14] freq_cal_1/enable_n_syn_17.ie
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.ceb
+
+Timing path: _al_n1_syn_2131.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2131.clk
+freq_cal_1/reg1_syn_93
+1291 5.032000 11.048000 6.016000 3 4
+freq_cal_1/delay_1ms[12] freq_cal_1/enable_n_syn_17.ic
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.ceb
+
+
+Endpoint: freq_cal_1/reg1_syn_93
+1343 4.801000 18 3
+Timing path: _al_n1_syn_2130.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2130.clk
+freq_cal_1/reg1_syn_93
+1345 4.801000 11.048000 6.247000 3 4
+freq_cal_1/delay_1ms[11] freq_cal_1/enable_n_syn_17.ib
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.cea
+
+Timing path: _al_n1_syn_2133.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2133.clk
+freq_cal_1/reg1_syn_93
+1397 5.226000 11.048000 5.822000 3 4
+freq_cal_1/delay_1ms[14] freq_cal_1/enable_n_syn_17.ie
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.cea
+
+Timing path: _al_n1_syn_2131.clk->freq_cal_1/reg1_syn_93
+_al_n1_syn_2131.clk
+freq_cal_1/reg1_syn_93
+1449 5.248000 11.048000 5.800000 3 4
+freq_cal_1/delay_1ms[12] freq_cal_1/enable_n_syn_17.ic
+freq_cal_1/enable_n_syn_2 freq_cal_1/reg0_syn_90.ie
+freq_cal_1/enable_n_syn_4 freq_cal_1/enable_n_syn_13.ia
+freq_cal_1/delay_1ms_b_n freq_cal_1/reg1_syn_93.cea
+
+
+
+Hold check
+1501 3
+Endpoint: filter_U0/dout_reg_syn_6
+1503 0.168000 1 1
+Timing path: filter_U0/tem_reg_syn_6.clk->filter_U0/dout_reg_syn_6
+filter_U0/tem_reg_syn_6.clk
+filter_U0/dout_reg_syn_6
+1505 0.168000 0.571000 0.739000 0 1
+filter_U0/tem filter_U0/dout_reg_syn_6.ima
+
+
+Endpoint: pll_feed_dog/pll_in_reg0_reg_syn_7
+1551 0.170000 1 1
+Timing path: pll_feed_dog/pll_in_reg0_reg_syn_7.clk->pll_feed_dog/pll_in_reg0_reg_syn_7
+pll_feed_dog/pll_in_reg0_reg_syn_7.clk
+pll_feed_dog/pll_in_reg0_reg_syn_7
+1553 0.170000 0.638000 0.808000 0 1
+pll_feed_dog/pll_in_reg0 pll_feed_dog/pll_in_reg0_reg_syn_7.imb
+
+
+Endpoint: freq_cal_1/enable_reg_syn_7
+1599 0.193000 1 1
+Timing path: freq_cal_1/enable_reg_syn_7.clk->freq_cal_1/enable_reg_syn_7
+freq_cal_1/enable_reg_syn_7.clk
+freq_cal_1/enable_reg_syn_7
+1601 0.193000 0.575000 0.768000 1 1
+freq_cal_1/enable freq_cal_1/enable_reg_syn_7.ie
+
+
+
+
+clock: SYS_PLL/pll_inst.clkc[3]
+1647 2 2 2
+Setup check
+1657 1
+Endpoint: clk_PD_2divided_reg_syn_3
+1657 30.198000 1 1
+Timing path: clk_PD_2divided_reg_syn_3.clk->clk_PD_2divided_reg_syn_3
+clk_PD_2divided_reg_syn_3.clk
+clk_PD_2divided_reg_syn_3
+1659 30.198000 33.801000 3.603000 1 1
+clk_PD_2divided clk_PD_2divided_reg_syn_3.imf
+
+
+
+Hold check
+1709 1
+Endpoint: clk_PD_2divided_reg_syn_3
+1711 0.251000 1 1
+Timing path: clk_PD_2divided_reg_syn_3.clk->clk_PD_2divided_reg_syn_3
+clk_PD_2divided_reg_syn_3.clk
+clk_PD_2divided_reg_syn_3
+1713 0.251000 1.547000 1.798000 1 1
+clk_PD_2divided clk_PD_2divided_reg_syn_3.imf
+
+
+
+
+clock: pd1_4times/pll_inst.clkc[0]
+1763 37076 5508 2
+Setup check
+1773 3
+Endpoint: burst/reg17_syn_77
+1773 -0.156000 4 3
+Timing path: core/reg19_syn_34.clk->burst/reg17_syn_77
+core/reg19_syn_34.clk
+burst/reg17_syn_77
+1775 -0.156000 4.602000 4.758000 3 3
+core/AOM_CTRL_SEL[2] core/reg88_syn_55.ie
+AOM2_TTL_inst/AOM2_SW_n_syn_13 burst/trig_per_cnt_b[3]_syn_8.ic
+burst/trig_per_cnt_b[2]_syn_2 burst/reg17_syn_77.imf
+
+Timing path: core/reg19_syn_31.clk->burst/reg17_syn_77
+core/reg19_syn_31.clk
+burst/reg17_syn_77
+1831 -0.143000 4.602000 4.745000 3 3
+core/AOM_CTRL_SEL[1] core/reg88_syn_55.ia
+AOM2_TTL_inst/AOM2_SW_n_syn_13 burst/trig_per_cnt_b[3]_syn_8.ic
+burst/trig_per_cnt_b[2]_syn_2 burst/reg17_syn_77.imf
+
+Timing path: core/reg19_syn_34.clk->burst/reg17_syn_77
+core/reg19_syn_34.clk
+burst/reg17_syn_77
+1887 -0.098000 4.602000 4.700000 3 3
+core/AOM_CTRL_SEL[3] core/reg88_syn_55.ic
+AOM2_TTL_inst/AOM2_SW_n_syn_13 burst/trig_per_cnt_b[3]_syn_8.ic
+burst/trig_per_cnt_b[2]_syn_2 burst/reg17_syn_77.imf
+
+
+Endpoint: burst/reg6_syn_34
+1943 -0.144000 72 3
+Timing path: core/reg27_syn_36.clk->burst/reg6_syn_34
+core/reg27_syn_36.clk
+burst/reg6_syn_34
+1945 -0.144000 4.622000 4.766000 5 5
+core/BURST_DATA12[5] core/reg35_syn_35.ie
+burst/FIBER_AOM_DATA_tem_b[5]_syn_4 core/reg42_syn_41.imf
+burst/FIBER_AOM_DATA_tem_b[5]_syn_10 core/reg40_syn_41.imf
+burst/FIBER_AOM_DATA_tem_b7[5] core/spi/reg1_syn_331.imf
+burst/FIBER_AOM_DATA_tem_b3[5] burst/reg6_syn_34.id
+
+Timing path: core/reg42_syn_41.clk->burst/reg6_syn_34
+core/reg42_syn_41.clk
+burst/reg6_syn_34
+2005 -0.060000 4.622000 4.682000 5 5
+core/BURST_DATA7[5] core/spi/reg1_syn_579.imf
+burst/FIBER_AOM_DATA_tem_b[5]_syn_6 core/reg42_syn_41.ie
+burst/FIBER_AOM_DATA_tem_b[5]_syn_10 core/reg40_syn_41.imf
+burst/FIBER_AOM_DATA_tem_b7[5] core/spi/reg1_syn_331.imf
+burst/FIBER_AOM_DATA_tem_b3[5] burst/reg6_syn_34.id
+
+Timing path: core/reg46_syn_81.clk->burst/reg6_syn_34
+core/reg46_syn_81.clk
+burst/reg6_syn_34
+2065 -0.050000 4.622000 4.672000 11 11
+core/FIBER_AOM_FULL_OPEN_FRQ[2] burst/lt1_syn_75.ic
+burst/lt1_syn_57 burst/lt1_syn_76.fci
+burst/lt1_syn_59 burst/lt1_syn_77.fci
+burst/lt1_syn_61 burst/lt1_syn_78.fci
+burst/lt1_syn_63 burst/lt1_syn_79.fci
+burst/lt1_syn_65 burst/lt1_syn_80.fci
+burst/lt1_syn_67 burst/lt1_syn_81.fci
+burst/FIBER_AOM_DATA_tem_b2_n1 core/reg6_syn_65.ie
+burst/FIBER_AOM_DATA_tem_b[7]_syn_2 burst/FIBER_AOM_DATA_tem_b[7]_syn_75.ie
+burst/FIBER_AOM_DATA_tem_b[7]_syn_20 core/reg28_syn_28.ib
+burst/FIBER_AOM_DATA_tem_b[7]_syn_30 burst/reg6_syn_34.ia
+
+
+Endpoint: burst/REG_DAC_DATA3/mux0_syn_394
+2137 -0.093000 187 3
+Timing path: core/reg5_syn_165.clk->burst/REG_DAC_DATA3/mux0_syn_394
+core/reg5_syn_165.clk
+burst/REG_DAC_DATA3/mux0_syn_394
+2139 -0.093000 4.711000 4.804000 2 3
+core/AOM1_DLY_COARSE[5] burst/REG_DAC_DATA3/mux0_syn_394.ib
+burst/REG_DAC_DATA3/mux0_syn_397[2] burst/REG_DAC_DATA3/mux0_syn_396.muxi[2]
+burst/REG_DAC_DATA3/mux0_syn_401 burst/REG_DAC_DATA3/mux0_syn_394.f78i
+
+Timing path: core/reg5_syn_165.clk->burst/REG_DAC_DATA3/mux0_syn_394
+core/reg5_syn_165.clk
+burst/REG_DAC_DATA3/mux0_syn_394
+2195 -0.043000 4.711000 4.754000 2 3
+core/AOM1_DLY_COARSE[5] burst/REG_DAC_DATA3/mux0_syn_392.ic
+burst/REG_DAC_DATA3/mux0_syn_397[0] burst/REG_DAC_DATA3/mux0_syn_396.muxi[0]
+burst/REG_DAC_DATA3/mux0_syn_401 burst/REG_DAC_DATA3/mux0_syn_394.f78i
+
+Timing path: core/reg5_syn_165.clk->burst/REG_DAC_DATA3/mux0_syn_394
+core/reg5_syn_165.clk
+burst/REG_DAC_DATA3/mux0_syn_394
+2251 -0.034000 4.711000 4.745000 2 3
+core/AOM1_DLY_COARSE[5] burst/REG_DAC_DATA3/mux0_syn_393.ic
+burst/REG_DAC_DATA3/mux0_syn_397[1] burst/REG_DAC_DATA3/mux0_syn_396.muxi[1]
+burst/REG_DAC_DATA3/mux0_syn_401 burst/REG_DAC_DATA3/mux0_syn_394.f78i
+
+
+
+Hold check
+2307 3
+Endpoint: burst/reg1_syn_18
+2309 -2.288000 1 1
+Timing path: core/reg22_syn_42.clk->burst/reg1_syn_18
+core/reg22_syn_42.clk
+burst/reg1_syn_18
+2311 -2.288000 4.027000 1.739000 0 1
+core/BST_NUM[4] burst/reg1_syn_18.ima
+
+
+Endpoint: burst/reg3_syn_73
+2363 -2.277000 1 1
+Timing path: core/reg23_syn_61.clk->burst/reg3_syn_73
+core/reg23_syn_61.clk
+burst/reg3_syn_73
+2365 -2.277000 4.024000 1.747000 0 1
+core/BST_PERIOD[0] burst/reg3_syn_73.imb
+
+
+Endpoint: burst/reg1_syn_20
+2417 -2.273000 1 1
+Timing path: core/reg22_syn_44.clk->burst/reg1_syn_20
+core/reg22_syn_44.clk
+burst/reg1_syn_20
+2419 -2.273000 4.025000 1.752000 0 1
+core/BST_NUM[3] burst/reg1_syn_20.ima
+
+
+
+
+clock: pd1_4times/pll_inst.clkc[1]
+2471 17966 918 2
+Setup check
+2481 3
+Endpoint: reg_delay/mux0_syn_394
+2481 -0.613000 1134 3
+Timing path: core/reg19_syn_34.clk->reg_delay/mux0_syn_394
+core/reg19_syn_34.clk
+reg_delay/mux0_syn_394
+2483 -0.613000 3.668000 4.281000 5 7
+core/AOM_CTRL_SEL[2] alarm_mon/reg1_syn_75.ia
+reg_delay/dly_num[1]_dup_3 reg_delay/mux0_syn_244.imf
+reg_delay/mux0_syn_247[2] reg_delay/mux0_syn_246.muxi[2]
+reg_delay/mux0_syn_251 reg_delay/mux0_syn_244.f78i
+reg_delay/mux0_syn_1[14] reg_delay/mux0_syn_392.id
+reg_delay/mux0_syn_397[0] reg_delay/mux0_syn_396.muxi[0]
+reg_delay/mux0_syn_401 reg_delay/mux0_syn_394.f78i
+
+Timing path: core/reg19_syn_34.clk->reg_delay/mux0_syn_394
+core/reg19_syn_34.clk
+reg_delay/mux0_syn_394
+2547 -0.584000 3.668000 4.252000 5 7
+core/AOM_CTRL_SEL[2] alarm_mon/reg1_syn_93.ia
+reg_delay/dly_num[1]_dup_5 reg_delay/mux0_syn_352.imf
+reg_delay/mux0_syn_357[0] reg_delay/mux0_syn_356.muxi[0]
+reg_delay/mux0_syn_361 reg_delay/mux0_syn_354.f78i
+reg_delay/mux0_syn_1[3] reg_delay/mux0_syn_395.id
+reg_delay/mux0_syn_397[3] reg_delay/mux0_syn_396.muxi[3]
+reg_delay/mux0_syn_401 reg_delay/mux0_syn_394.f78i
+
+Timing path: core/reg19_syn_34.clk->reg_delay/mux0_syn_394
+core/reg19_syn_34.clk
+reg_delay/mux0_syn_394
+2611 -0.583000 3.668000 4.251000 5 7
+core/AOM_CTRL_SEL[2] alarm_mon/reg1_syn_75.ia
+reg_delay/dly_num[1]_dup_3 reg_delay/mux0_syn_315.ie
+reg_delay/mux0_syn_317[3] reg_delay/mux0_syn_316.muxi[3]
+reg_delay/mux0_syn_321 reg_delay/mux0_syn_314.f78i
+reg_delay/mux0_syn_1[7] reg_delay/mux0_syn_394.ie
+reg_delay/mux0_syn_397[2] reg_delay/mux0_syn_396.muxi[2]
+reg_delay/mux0_syn_401 reg_delay/mux0_syn_394.f78i
+
+
+Endpoint: AOM2_TTL_inst/reg2_syn_55
+2675 -0.555000 33 3
+Timing path: core/reg23_syn_67.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg23_syn_67.clk
+AOM2_TTL_inst/reg2_syn_55
+2677 -0.555000 3.648000 4.203000 4 5
+core/BST_PERIOD[10] AOM2_TTL_inst/lt0_syn_79.id
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.ceb
+
+Timing path: core/reg23_syn_64.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg23_syn_64.clk
+AOM2_TTL_inst/reg2_syn_55
+2737 -0.474000 3.648000 4.122000 6 7
+core/BST_PERIOD[7] AOM2_TTL_inst/lt0_syn_77.ic
+AOM2_TTL_inst/lt0_syn_61 AOM2_TTL_inst/lt0_syn_78.fci
+AOM2_TTL_inst/lt0_syn_63 AOM2_TTL_inst/lt0_syn_79.fci
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.ceb
+
+Timing path: core/reg163_syn_77.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg163_syn_77.clk
+AOM2_TTL_inst/reg2_syn_55
+2801 -0.429000 3.648000 4.077000 6 7
+core/SPACE_AOM_FULL_OPEN_FRQ[7] AOM2_TTL_inst/lt0_syn_77.ia
+AOM2_TTL_inst/lt0_syn_61 AOM2_TTL_inst/lt0_syn_78.fci
+AOM2_TTL_inst/lt0_syn_63 AOM2_TTL_inst/lt0_syn_79.fci
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.ceb
+
+
+Endpoint: AOM2_TTL_inst/reg2_syn_55
+2865 -0.555000 33 3
+Timing path: core/reg23_syn_67.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg23_syn_67.clk
+AOM2_TTL_inst/reg2_syn_55
+2867 -0.555000 3.648000 4.203000 4 5
+core/BST_PERIOD[10] AOM2_TTL_inst/lt0_syn_79.id
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.cea
+
+Timing path: core/reg23_syn_64.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg23_syn_64.clk
+AOM2_TTL_inst/reg2_syn_55
+2927 -0.474000 3.648000 4.122000 6 7
+core/BST_PERIOD[7] AOM2_TTL_inst/lt0_syn_77.ic
+AOM2_TTL_inst/lt0_syn_61 AOM2_TTL_inst/lt0_syn_78.fci
+AOM2_TTL_inst/lt0_syn_63 AOM2_TTL_inst/lt0_syn_79.fci
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.cea
+
+Timing path: core/reg163_syn_77.clk->AOM2_TTL_inst/reg2_syn_55
+core/reg163_syn_77.clk
+AOM2_TTL_inst/reg2_syn_55
+2991 -0.429000 3.648000 4.077000 6 7
+core/SPACE_AOM_FULL_OPEN_FRQ[7] AOM2_TTL_inst/lt0_syn_77.ia
+AOM2_TTL_inst/lt0_syn_61 AOM2_TTL_inst/lt0_syn_78.fci
+AOM2_TTL_inst/lt0_syn_63 AOM2_TTL_inst/lt0_syn_79.fci
+AOM2_TTL_inst/lt0_syn_65 AOM2_TTL_inst/lt0_syn_80.fci
+AOM2_TTL_inst/lt0_syn_67 AOM2_TTL_inst/lt0_syn_81.fci
+AOM2_TTL_inst/AOM2_SW_n11 AOM2_TTL_inst/cnt_b1[11]_syn_6.ie
+AOM2_TTL_inst/AOM2_SW_trig_n2_syn_2 AOM2_TTL_inst/reg2_syn_55.cea
+
+
+
+Hold check
+3055 3
+Endpoint: AOM2_TTL_inst/reg0_syn_55
+3057 -2.384000 1 1
+Timing path: core/reg10_syn_66.clk->AOM2_TTL_inst/reg0_syn_55
+core/reg10_syn_66.clk
+AOM2_TTL_inst/reg0_syn_55
+3059 -2.384000 4.020000 1.636000 0 1
+core/AOM2_HEAD_DLY[14] AOM2_TTL_inst/reg0_syn_55.ima
+
+
+Endpoint: AOM2_TTL_inst/reg0_syn_52
+3111 -2.384000 1 1
+Timing path: core/reg10_syn_69.clk->AOM2_TTL_inst/reg0_syn_52
+core/reg10_syn_69.clk
+AOM2_TTL_inst/reg0_syn_52
+3113 -2.384000 4.020000 1.636000 0 1
+core/AOM2_HEAD_DLY[15] AOM2_TTL_inst/reg0_syn_52.ima
+
+
+Endpoint: AOM2_TTL_inst/reg5_syn_81
+3165 -2.336000 1 1
+Timing path: core/AOM1_PULSE_CLR_reg_syn_6.clk->AOM2_TTL_inst/reg5_syn_81
+core/AOM1_PULSE_CLR_reg_syn_6.clk
+AOM2_TTL_inst/reg5_syn_81
+3167 -2.336000 4.025000 1.689000 1 1
+core/AOM1_PULSE_CLR AOM2_TTL_inst/reg5_syn_81.imf
+
+
+
+
+
+Timing group statistics: 
+	Clock constraints: 
+	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
+	  SYS_PLL/pll_inst.clkc[0] (50.0MHz)            25.625ns      39.024MHz        0.272ns      3749     -690.818ns
+	  pd1_4times/pll_inst.clkc[0] (32.0MHz)         31.406ns      31.841MHz        0.263ns      1409       -0.688ns
+	  pd1_4times/pll_inst.clkc[1] (128.0MHz)         8.425ns     118.694MHz        0.138ns       230      -24.309ns
+	  SYS_PLL/pll_inst.clkc[2] (100.0MHz)           12.282ns      81.420MHz        0.259ns        89       -2.282ns
+	  SYS_PLL/pll_inst.clkc[1] (160.0MHz)            8.744ns     114.364MHz        0.254ns        71      -31.314ns
+	  SYS_PLL/pll_inst.clkc[3] (32.0MHz)             1.052ns     950.570MHz        0.000ns         5        0.000ns
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+Warning: No clock constraint on 2 clock net(s): 
+	online_1/flag
+	online_1/flag_syn_32
+

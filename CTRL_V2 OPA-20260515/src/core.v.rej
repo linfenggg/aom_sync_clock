@@ -1,0 +1,184 @@
+diff a/src/core.v b/src/core.v	(rejected hunks)
+@@ -2006,21 +2006,171 @@
+ end
+ 
+ /********************12bit DAC(数字量转模拟量)*****************/
+-genvar i;  
+-    generate  
+-        for (i=0;i<15;i=i+1) begin: pump  
+-            dac_TPC112S1	pump_dac(
++//genvar i;  
++//    generate  
++//        for (i=0;i<15;i=i+1) begin:  pump 
++//            dac_TPC112S1	pump_dac(
++//				.clk_i		(clk_50m		),
++//				.rstn_i		(pll_lock		),
++//    			.AD_START	(AD_START		),
++//				.din		(wr_data[i]		),
++//				.cs			(MD_DAC_CS[i]	),
++//				.sclk		(MD_DAC_SCLK[i]	),
++//				.dout		(MD_DAC_DOUT[i]	)	//外部模拟量
++//			);   
++//        end  
++//    endgenerate 
++    
++dac_TPC112S1	pump_dac0(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[0]		),
++				.cs			(MD_DAC_CS[0]	),
++				.sclk		(MD_DAC_SCLK[0]	),
++				.dout		(MD_DAC_DOUT[0]	)	//外部模拟量
++			    );      
++                
++dac_TPC112S1	pump_dac1(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[1]		),
++				.cs			(MD_DAC_CS[1]	),
++				.sclk		(MD_DAC_SCLK[1]	),
++				.dout		(MD_DAC_DOUT[1]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac2(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[2]		),
++				.cs			(MD_DAC_CS[2]	),
++				.sclk		(MD_DAC_SCLK[2]	),
++				.dout		(MD_DAC_DOUT[2]	)	//外部模拟量
++			    );                 
++    
++dac_TPC112S1	pump_dac3(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[3]		),
++				.cs			(MD_DAC_CS[3]	),
++				.sclk		(MD_DAC_SCLK[3]	),
++				.dout		(MD_DAC_DOUT[3]	)	//外部模拟量
++			    );  
++
++dac_TPC112S1	pump_dac4(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[4]		),
++				.cs			(MD_DAC_CS[4]	),
++				.sclk		(MD_DAC_SCLK[4]	),
++				.dout		(MD_DAC_DOUT[4]	)	//外部模拟量
++			    );  
++                                    
++dac_TPC112S1	pump_dac5(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[5]		),
++				.cs			(MD_DAC_CS[5]	),
++				.sclk		(MD_DAC_SCLK[5]	),
++				.dout		(MD_DAC_DOUT[5]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac6(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[6]		),
++				.cs			(MD_DAC_CS[6]	),
++				.sclk		(MD_DAC_SCLK[6]	),
++				.dout		(MD_DAC_DOUT[6]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac7(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[7]		),
++				.cs			(MD_DAC_CS[7]	),
++				.sclk		(MD_DAC_SCLK[7]	),
++				.dout		(MD_DAC_DOUT[7]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac8(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[8]		),
++				.cs			(MD_DAC_CS[8]	),
++				.sclk		(MD_DAC_SCLK[8]	),
++				.dout		(MD_DAC_DOUT[8]	)	//外部模拟量
++			    );                                  
++               
++dac_TPC112S1	pump_dac9(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[9]		),
++				.cs			(MD_DAC_CS[9]	),
++				.sclk		(MD_DAC_SCLK[9]	),
++				.dout		(MD_DAC_DOUT[9]	)	//外部模拟量
++			    );                     
++    
++dac_TPC112S1	pump_dac10(
+ 				.clk_i		(clk_50m		),
+ 				.rstn_i		(pll_lock		),
+     			.AD_START	(AD_START		),
+-				.din		(wr_data[i]		),
+-				.cs			(MD_DAC_CS[i]	),
+-				.sclk		(MD_DAC_SCLK[i]	),
+-				.dout		(MD_DAC_DOUT[i]	)	//外部模拟量
+-			);   
+-        end  
+-    endgenerate 
++				.din		(wr_data[10]		),
++				.cs			(MD_DAC_CS[10]	),
++				.sclk		(MD_DAC_SCLK[10]	),
++				.dout		(MD_DAC_DOUT[10]	)	//外部模拟量
++			    );  
+ 
++dac_TPC112S1	pump_dac11(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[11]		),
++				.cs			(MD_DAC_CS[11]	),
++				.sclk		(MD_DAC_SCLK[11]	),
++				.dout		(MD_DAC_DOUT[11]	)	//外部模拟量
++			    );  
++                                    
++dac_TPC112S1	pump_dac12(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[12]		),
++				.cs			(MD_DAC_CS[12]	),
++				.sclk		(MD_DAC_SCLK[12]	),
++				.dout		(MD_DAC_DOUT[12]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac13(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[13]		),
++				.cs			(MD_DAC_CS[13]	),
++				.sclk		(MD_DAC_SCLK[13]	),
++				.dout		(MD_DAC_DOUT[13]	)	//外部模拟量
++			    );  
++                
++dac_TPC112S1	pump_dac14(
++				.clk_i		(clk_50m		),
++				.rstn_i		(pll_lock		),
++    			.AD_START	(AD_START		),
++				.din		(wr_data[14]		),
++				.cs			(MD_DAC_CS[14]	),
++				.sclk		(MD_DAC_SCLK[14]	),
++				.dout		(MD_DAC_DOUT[14]	)	//外部模拟量
++			    );                                   
++                                                              
+ //气泵1 速度调节：PWM信号工作频率默认20kHz，调节占空比控制速度
+ airpump_speed_adj	airpump1_speed_adj(
+ 	.clk_i			(clk_i),	//50M 20ns

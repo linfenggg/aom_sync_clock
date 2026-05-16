@@ -1,0 +1,15 @@
+{D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2105/src/cnt_delay.v} {1 {vlog -work work {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2105/src/cnt_delay.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module cnt_delay
+
+Top level modules:
+	cnt_delay
+
+} {} {}} {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2105/src/sim/tb_cnt_delay.v} {1 {vlog -work work {D:/My_Work/Fiber Laser/CTRL_BOARD/MASTER_FPGA/CTRL_BOARD_MASTER_V2105/src/sim/tb_cnt_delay.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_cnt_delay
+
+Top level modules:
+	tb_cnt_delay
+
+} {} {}}

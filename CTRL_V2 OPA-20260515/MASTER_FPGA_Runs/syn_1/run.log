@@ -1,0 +1,1551 @@
+============================================================
+   Tang Dynasty, V5.6.97693
+      Copyright (c) 2012-2024 Anlogic Inc.
+   Executable = C:/Anlogic/TD_5.6.4_Release_97.693/bin/td.exe
+   Built at =   09:59:03 Jan 17 2024
+   Run by =     Administrator
+   Run Date =   Sat May 16 19:31:26 2026
+
+   Run on =     USER-20221101UL
+============================================================
+RUN-1002 : start command "open_project MASTER_FPGA.prj"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../src/top.v
+HDL-1007 : analyze included file ../../src/parameter_def.v in ../../src/top.v(131)
+HDL-1007 : back to file '../../src/top.v' in ../../src/top.v(131)
+HDL-1007 : undeclared symbol 'INT_ENABLE', assumed default net type 'wire' in ../../src/top.v(530)
+HDL-1007 : undeclared symbol 'MASTER_SPI_CS', assumed default net type 'wire' in ../../src/top.v(684)
+HDL-1007 : undeclared symbol 'MASTER_SPI_SCLK', assumed default net type 'wire' in ../../src/top.v(685)
+HDL-1007 : undeclared symbol 'MASTER_SPI_SDI', assumed default net type 'wire' in ../../src/top.v(686)
+HDL-1007 : undeclared symbol 'SLAVE_SPI_CS', assumed default net type 'wire' in ../../src/top.v(687)
+HDL-1007 : undeclared symbol 'SLAVE_SPI_SCLK', assumed default net type 'wire' in ../../src/top.v(688)
+HDL-1007 : undeclared symbol 'SLAVE_SPI_SDI', assumed default net type 'wire' in ../../src/top.v(689)
+HDL-1007 : analyze verilog file ../../al_ip/PH1A_SYS_PLL.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../al_ip/PH1A_SYS_PLL.v(132)
+HDL-1007 : analyze verilog file ../../al_ip/PLL_BASE_FREQ.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../al_ip/PLL_BASE_FREQ.v(100)
+HDL-1007 : analyze verilog file ../../al_ip/PH1A_MULT10X18.v
+HDL-1007 : analyze verilog file ../../al_ip/PH1A_MULT8X32.v
+HDL-1007 : undeclared symbol 'open_n60', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n61', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n62', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n63', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n64', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n65', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n66', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n67', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : undeclared symbol 'open_n68', assumed default net type 'wire' in ../../al_ip/PH1A_MULT8X32.v(121)
+HDL-1007 : analyze verilog file ../../al_ip/PH1A_MULT12X2.v
+HDL-1007 : analyze verilog file ../../src/AND_DELAY.v
+HDL-1007 : analyze verilog file ../../src/AOM2_TTL.v
+HDL-1007 : analyze included file ../../src/parameter_def.v in ../../src/AOM2_TTL.v(22)
+HDL-1007 : back to file '../../src/AOM2_TTL.v' in ../../src/AOM2_TTL.v(22)
+HDL-1007 : analyze verilog file ../../src/FRENC_WATER.v
+HDL-1007 : analyze verilog file ../../src/ICR.v
+HDL-1007 : analyze verilog file ../../src/MS9714.v
+HDL-1007 : analyze verilog file ../../src/OR_GATE_16.v
+HDL-1007 : analyze verilog file ../../src/PCA9555.v
+HDL-1007 : analyze verilog file ../../src/PD_WAVE.v
+HDL-1007 : analyze verilog file ../../src/RstUnit.v
+HDL-1007 : analyze verilog file ../../src/alarm/high_alarm.v
+HDL-1007 : analyze verilog file ../../src/alarm/low_alarm.v
+HDL-1007 : analyze verilog file ../../src/alarm_mon.v
+HDL-1007 : analyze verilog file ../../src/burst.v
+HDL-1007 : analyze verilog file ../../src/calibration_aom.v
+HDL-1007 : analyze included file ../../src/parameter_def.v in ../../src/calibration_aom.v(47)
+HDL-1007 : back to file '../../src/calibration_aom.v' in ../../src/calibration_aom.v(47)
+HDL-1007 : analyze verilog file ../../src/core.v
+HDL-1007 : analyze included file ../../src/parameter_def.v in ../../src/core.v(230)
+HDL-1007 : back to file '../../src/core.v' in ../../src/core.v(230)
+HDL-1007 : analyze verilog file ../../src/data_sync.v
+HDL-1007 : analyze verilog file ../../src/feed_dog.v
+HDL-1007 : analyze verilog file ../../src/fiber_break.v
+HDL-1007 : analyze verilog file ../../src/filter.v
+HDL-1007 : analyze verilog file ../../src/freq_alarm_feed.v
+HDL-1007 : analyze verilog file ../../src/freq_cal.v
+HDL-1007 : analyze verilog file ../../src/freq_cal_AOM2.v
+HDL-1007 : analyze verilog file ../../src/led.v
+HDL-1007 : analyze verilog file ../../src/led_green.v
+HDL-1007 : analyze verilog file ../../src/motor.v
+HDL-1007 : analyze verilog file ../../src/pll_feed_dog.v
+HDL-1007 : analyze verilog file ../../src/power_lim.v
+HDL-1007 : analyze verilog file ../../src/pump_ramp.v
+HDL-1007 : analyze verilog file ../../src/reg_delay.v
+HDL-1007 : analyze verilog file ../../src/spi.v
+HDL-1007 : analyze verilog file ../../src/airpump_speed_adj.v
+HDL-1007 : analyze verilog file ../../src/Random_pulse2data.v
+HDL-1007 : analyze verilog file ../../src/adc_ADS7883.v
+HDL-1007 : analyze verilog file ../../src/dac_TPC112S1.v
+HDL-1007 : analyze verilog file ../../src/pump.v
+HDL-1007 : analyze included file ../../src/parameter_def.v in ../../src/pump.v(50)
+HDL-1007 : back to file '../../src/pump.v' in ../../src/pump.v(50)
+HDL-1007 : analyze verilog file ../../src/led_debug.v
+RUN-1001 : Project manager successfully analyzed 43 source files.
+RUN-1002 : start command "import_device ph1_60.db -package PH1A60GEG324"
+ARC-1001 : Device Initialization.
+ARC-1001 : ---------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO          |   SETTING   
+ARC-1001 : ---------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs        |    gpio    
+ARC-1001 :            jtag           |  P8/E10/E12/E11/E13  |  dedicate  
+ARC-1001 : ---------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_60.db -package PH1A60GEG324" in  10.619959s wall, 10.421875s user + 0.203125s system = 10.625000s CPU (100.0%)
+
+RUN-1004 : used memory is 698 MB, reserved memory is 620 MB, peak memory is 698 MB
+RUN-1002 : start command "elaborate -top top"
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : port 'DAC_MAX' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'AOM1_TTL' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'AOM2_TTL' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'AOM3_TTL' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'AOM4_TTL' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR2_reset' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR2_period' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR2_step_num' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR2_step_sta' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR3_reset' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR3_period' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR3_step_num' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR3_step_sta' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR4_reset' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR4_period' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR4_step_num' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : port 'MOTOR4_step_sta' remains unconnected for this instance in ../../src/top.v(503)
+HDL-1007 : elaborate module top in ../../src/top.v(10)
+HDL-1007 : elaborate module PH1A_SYS_PLL in ../../al_ip/PH1A_SYS_PLL.v(25)
+HDL-1007 : elaborate module PH1_LOGIC_BUFG in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(10591)
+HDL-1007 : elaborate module PH1_PHY_PLL(CLKC0_CPHASE=15,CLKC1_CPHASE=4,CLKC2_CPHASE=7,CLKC3_CPHASE=24,CLKC0_DIV=16,CLKC1_DIV=5,CLKC2_DIV=8,CLKC3_DIV=25,CLKC0_DUTY_INT=8,CLKC1_DUTY_INT=3,CLKC2_DUTY_INT=4,CLKC3_DUTY_INT=13,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",CLKC3_ENABLE="ENABLE",FIN="50.000000",PLL_USR_RST="ENABLE",PLL_FEED_TYPE="EXTERNAL",SSC_RNGE=0) in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(624)
+HDL-1007 : elaborate module PD_WAVE in ../../src/PD_WAVE.v(1)
+HDL-1007 : elaborate module PLL_BASE_FREQ in ../../al_ip/PLL_BASE_FREQ.v(23)
+HDL-1007 : elaborate module PH1_PHY_PLL(CLKC0_CPHASE=19,CLKC1_CPHASE=4,CLKC0_DIV=20,CLKC1_DIV=5,CLKC0_DUTY_INT=10,CLKC1_DUTY_INT=3,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FIN="50.000000",PLL_USR_RST="ENABLE",PLL_FEED_TYPE="EXTERNAL",SSC_RNGE=0) in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(624)
+HDL-1007 : elaborate module freq_alarm_feed in ../../src/freq_alarm_feed.v(1)
+HDL-1007 : elaborate module freq_cal in ../../src/freq_cal.v(1)
+HDL-1007 : elaborate module freq_cal_AOM2 in ../../src/freq_cal_AOM2.v(3)
+HDL-1007 : elaborate module feed_dog in ../../src/feed_dog.v(1)
+HDL-1007 : elaborate module reg_delay in ../../src/reg_delay.v(1)
+HDL-1007 : elaborate module pll_feed_dog in ../../src/pll_feed_dog.v(1)
+HDL-1007 : elaborate module core in ../../src/core.v(1)
+HDL-1007 : elaborate module pump in ../../src/pump.v(1)
+HDL-1007 : elaborate module pump_ramp in ../../src/pump_ramp.v(1)
+HDL-1007 : elaborate module spi in ../../src/spi.v(11)
+HDL-1007 : elaborate module dac_TPC112S1 in ../../src/dac_TPC112S1.v(9)
+HDL-1007 : elaborate module airpump_speed_adj in ../../src/airpump_speed_adj.v(1)
+HDL-5007 WARNING: actual bit length 12 differs from formal bit length 8 for port 'ANALOG_8BIT' in ../../src/top.v(565)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 8 for port 'AOM2_DATA' in ../../src/top.v(575)
+HDL-1007 : elaborate module burst in ../../src/burst.v(1)
+HDL-1007 : elaborate module AND_DELAY in ../../src/AND_DELAY.v(3)
+HDL-1007 : elaborate module OR_GATE_16 in ../../src/OR_GATE_16.v(3)
+HDL-1007 : elaborate module PH1_LOGIC_BUF in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(291)
+HDL-5007 WARNING: actual bit length 8 differs from formal bit length 6 for port 'dly_num' in ../../src/burst.v(310)
+HDL-5007 WARNING: actual bit length 12 differs from formal bit length 6 for port 'dly_num' in ../../src/burst.v(635)
+HDL-1007 : elaborate module AOM2_TTL in ../../src/AOM2_TTL.v(2)
+HDL-1007 : elaborate module fiber_break in ../../src/fiber_break.v(3)
+HDL-1007 : elaborate module alarm_mon in ../../src/alarm_mon.v(1)
+HDL-1007 : elaborate module high_alarm in ../../src/alarm/high_alarm.v(1)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(189)
+HDL-1007 : elaborate module low_alarm in ../../src/alarm/low_alarm.v(1)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(200)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(211)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(222)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(233)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(244)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(255)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(266)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(277)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(288)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 16 for port 'DB_TIME' in ../../src/alarm_mon.v(299)
+HDL-5007 Similar messages will be suppressed.
+HDL-1007 : elaborate module data_sync in ../../src/data_sync.v(1)
+HDL-1007 : elaborate module adc_ADS7883 in ../../src/adc_ADS7883.v(9)
+HDL-1007 : elaborate module PH1A_MULT12X2 in ../../al_ip/PH1A_MULT12X2.v(5)
+HDL-1007 : elaborate module PH1_PHY_DSPMULT in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(530)
+HDL-5007 WARNING: actual bit length 12 differs from formal bit length 18 for port 'a' in ../../src/top.v(931)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 4 for port 'y' in ../../src/top.v(932)
+HDL-5007 WARNING: actual bit length 14 differs from formal bit length 22 for port 'p' in ../../src/top.v(933)
+HDL-1007 : elaborate module power_lim in ../../src/power_lim.v(1)
+HDL-1007 : elaborate module PH1A_MULT10X18 in ../../al_ip/PH1A_MULT10X18.v(5)
+HDL-5007 WARNING: actual bit length 10 differs from formal bit length 18 for port 'a' in ../../src/power_lim.v(13)
+HDL-5007 WARNING: actual bit length 18 differs from formal bit length 24 for port 'y' in ../../src/power_lim.v(14)
+HDL-5007 WARNING: actual bit length 28 differs from formal bit length 42 for port 'p' in ../../src/power_lim.v(15)
+HDL-1007 : elaborate module calibration_aom in ../../src/calibration_aom.v(2)
+HDL-5007 WARNING: port 'x0' is not connected on this instance in ../../al_ip/PH1A_MULT8X32.v(87)
+HDL-1007 : port 'co' remains unconnected for this instance in ../../al_ip/PH1A_MULT8X32.v(87)
+HDL-1007 : port 'overflow' remains unconnected for this instance in ../../al_ip/PH1A_MULT8X32.v(87)
+HDL-1007 : port 'underflow' remains unconnected for this instance in ../../al_ip/PH1A_MULT8X32.v(87)
+HDL-5007 WARNING: port 'clk' is not connected on this instance in ../../al_ip/PH1A_MULT8X32.v(111)
+HDL-1007 : elaborate module PH1A_MULT8X32 in ../../al_ip/PH1A_MULT8X32.v(5)
+HDL-1007 : elaborate module PH1_PHY_DSPTADD(X1_EXTEND="YES",Z1_SHIFT="YES") in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(559)
+HDL-1007 : elaborate module PH1_PHY_DSPMREG(WIDTH=54,DYNAMIC_DATA="D") in C:/Anlogic/TD_5.6.4_Release_97.693/arch/ph1_macro.v(509)
+HDL-5007 WARNING: input port 'x0[53]' is not connected on this instance in ../../al_ip/PH1A_MULT8X32.v(95)
+HDL-5007 WARNING: input port 'clk' is not connected on this instance in ../../al_ip/PH1A_MULT8X32.v(118)
+HDL-5007 WARNING: actual bit length 10 differs from formal bit length 18 for port 'a' in ../../src/calibration_aom.v(62)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 40 for port 'y' in ../../src/calibration_aom.v(63)
+HDL-5007 WARNING: actual bit length 42 differs from formal bit length 58 for port 'p' in ../../src/calibration_aom.v(64)
+HDL-1007 : elaborate module MS9714 in ../../src/MS9714.v(1)
+HDL-1007 : elaborate module PCA9555 in ../../src/PCA9555.v(1)
+HDL-1007 : elaborate module MOTOR in ../../src/motor.v(1)
+HDL-1007 : elaborate module FRENC_WATER in ../../src/FRENC_WATER.v(5)
+HDL-1007 : elaborate module filter in ../../src/filter.v(4)
+HDL-1007 : elaborate module ICR in ../../src/ICR.v(1)
+HDL-1007 : elaborate module led_green in ../../src/led_green.v(1)
+HDL-1007 : elaborate module led in ../../src/led.v(1)
+HDL-1007 : elaborate module led_debug in ../../src/led_debug.v(1)
+HDL-5007 WARNING: net 'PD3_freq[15]' does not have a driver in ../../src/top.v(273)
+HDL-5007 WARNING: net 'PD3_LOW_ALM' does not have a driver in ../../src/top.v(295)
+HDL-5007 WARNING: net 'overflow_2' does not have a driver in ../../src/top.v(297)
+HDL-5007 WARNING: net 'overflow_3' does not have a driver in ../../src/top.v(297)
+HDL-5007 WARNING: net 'overflow_4' does not have a driver in ../../src/top.v(297)
+HDL-5007 WARNING: net 'BREAK_OUT_2' does not have a driver in ../../src/top.v(298)
+HDL-5007 WARNING: net 'BREAK_OUT_3' does not have a driver in ../../src/top.v(298)
+HDL-5007 WARNING: net 'BREAK_OUT_4' does not have a driver in ../../src/top.v(298)
+HDL-5007 WARNING: net 'SLAVE_SPI_CS' does not have a driver in ../../src/top.v(687)
+HDL-5007 WARNING: net 'SLAVE_SPI_SCLK' does not have a driver in ../../src/top.v(688)
+HDL-5007 Similar messages will be suppressed.
+HDL-1200 : Current top model is top
+HDL-1100 : Inferred 0 RAMs.
+RUN-1003 : finish command "elaborate -top top" in  1.628682s wall, 1.562500s user + 0.062500s system = 1.625000s CPU (99.8%)
+
+RUN-1004 : used memory is 871 MB, reserved memory is 811 MB, peak memory is 987 MB
+RUN-1002 : start command "export_db MASTER_FPGA_elaborate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db MASTER_FPGA_elaborate.db" in  1.527396s wall, 2.250000s user + 0.015625s system = 2.265625s CPU (148.3%)
+
+RUN-1004 : used memory is 903 MB, reserved memory is 844 MB, peak memory is 987 MB
+RUN-1002 : start command "read_adc ../../PH1A_TOP.adc"
+RUN-1002 : start command "set_pin_assignment  AIRPUMP_PWM1   LOCATION = V15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AIRPUMP_PWM2   LOCATION = V16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AIR_VALVES_CTL   LOCATION = U17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_CLK   LOCATION = U1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[0]   LOCATION = V1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[10]   LOCATION = L3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[11]   LOCATION = L1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[12]   LOCATION = M1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[13]   LOCATION = K6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[1]   LOCATION = L6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[2]   LOCATION = L5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[3]   LOCATION = K5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[4]   LOCATION = L4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[5]   LOCATION = M3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[6]   LOCATION = M2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[7]   LOCATION = N2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[8]   LOCATION = N1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_DB[9]   LOCATION = K3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM1_TTL   LOCATION = U3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_CLK   LOCATION = P2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[0]   LOCATION = R2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[10]   LOCATION = V4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[11]   LOCATION = U2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[12]   LOCATION = V2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[13]   LOCATION = U4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[1]   LOCATION = P4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[2]   LOCATION = P3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[3]   LOCATION = N5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[4]   LOCATION = P5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[5]   LOCATION = T5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[6]   LOCATION = T4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[7]   LOCATION = R3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[8]   LOCATION = T3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_DB[9]   LOCATION = V5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM2_TTL   LOCATION = N4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_CLK   LOCATION = R7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[0]   LOCATION = T6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[10]   LOCATION = N6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[11]   LOCATION = R1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[12]   LOCATION = T1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[13]   LOCATION = M4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[1]   LOCATION = U7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[2]   LOCATION = U6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[3]   LOCATION = U9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[4]   LOCATION = V9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[5]   LOCATION = V7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[6]   LOCATION = V6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[7]   LOCATION = R6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[8]   LOCATION = R5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_DB[9]   LOCATION = M6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM3_TTL   LOCATION = T8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_CLK   LOCATION = T10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[0]   LOCATION = T9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[10]   LOCATION = T11; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[11]   LOCATION = V17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[12]   LOCATION = U16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[13]   LOCATION = U18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[1]   LOCATION = U13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[2]   LOCATION = T13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[3]   LOCATION = V14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[4]   LOCATION = U14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[5]   LOCATION = V11; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[6]   LOCATION = V10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[7]   LOCATION = V12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[8]   LOCATION = U12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_DB[9]   LOCATION = U11; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  AOM4_TTL   LOCATION = R10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_AD_CS   LOCATION = D13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_AD_SCLK   LOCATION = B17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_AD_SDO   LOCATION = D12; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_ALM   LOCATION = A18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[0]   LOCATION = G13; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[1]   LOCATION = C14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[2]   LOCATION = D14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[3]   LOCATION = B14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[4]   LOCATION = B13; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[5]   LOCATION = B12; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[6]   LOCATION = C12; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_DATA[7]   LOCATION = A11; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_EXMODE   LOCATION = C15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_GATE   LOCATION = B16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_GUID   LOCATION = D15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_INMODE   LOCATION = F15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_INTLK1   LOCATION = E15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_INTLK2   LOCATION = F16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_LAT   LOCATION = B11; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_OFF   LOCATION = G16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_PRR   LOCATION = B18; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_PWM   LOCATION = A13; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_RESERVE1   LOCATION = F14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_RESERVE2   LOCATION = F13; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_STATE   LOCATION = A16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_SYNC1   LOCATION = E16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_SYNC2   LOCATION = A14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  EXT_TRIG   LOCATION = A15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  EXT_WATER_ALM   LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU10   LOCATION = N15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU11   LOCATION = N16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU12   LOCATION = P17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU5   LOCATION = P14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU6   LOCATION = N17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_MCU7   LOCATION = P18; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  FPGA_SW[0]   LOCATION = E17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  FPGA_SW[1]   LOCATION = J13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  FPGA_WDI   LOCATION = R13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  FREQ_PD1   LOCATION = R15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLDOWN; "
+RUN-1002 : start command "set_pin_assignment  FREQ_PD2   LOCATION = P15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLDOWN; "
+RUN-1002 : start command "set_pin_assignment  FREQ_PD3   LOCATION = R17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLDOWN; "
+RUN-1002 : start command "set_pin_assignment  ICR1_A   LOCATION = T14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  ICR1_B   LOCATION = T15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  ICR2_A   LOCATION = R16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  ICR2_B   LOCATION = T16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  LOW_24V   LOCATION = R11; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MCU_ERR   LOCATION = M16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MCU_ESTOP   LOCATION = M17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[0]   LOCATION = F5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[10]   LOCATION = H2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[11]   LOCATION = G1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[12]   LOCATION = F1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[13]   LOCATION = G3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[14]   LOCATION = J4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[1]   LOCATION = B6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[2]   LOCATION = A6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[3]   LOCATION = E5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[4]   LOCATION = E7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[5]   LOCATION = A3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[6]   LOCATION = B1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[7]   LOCATION = D4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[8]   LOCATION = E3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_CS[9]   LOCATION = D2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[0]   LOCATION = C6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[10]   LOCATION = C2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[11]   LOCATION = E1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[12]   LOCATION = G6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[13]   LOCATION = H4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[14]   LOCATION = J3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[1]   LOCATION = A5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[2]   LOCATION = D8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[3]   LOCATION = D7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[4]   LOCATION = C4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[5]   LOCATION = A1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[6]   LOCATION = B3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[7]   LOCATION = D3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[8]   LOCATION = F4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_DOUT[9]   LOCATION = G2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[0]   LOCATION = C5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[10]   LOCATION = C1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[11]   LOCATION = H1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[12]   LOCATION = F6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[13]   LOCATION = G4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[14]   LOCATION = J2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[1]   LOCATION = B7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[2]   LOCATION = C7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[3]   LOCATION = E6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[4]   LOCATION = B4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[5]   LOCATION = A4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[6]   LOCATION = B2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[7]   LOCATION = D5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[8]   LOCATION = F3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MD_DAC_SCLK[9]   LOCATION = E2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_ccw   LOCATION = L16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_cw   LOCATION = M14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_direct   LOCATION = L18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_enable   LOCATION = R12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_origin   LOCATION = L14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  MOTOR1_pulse   LOCATION = M18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  ONLINE_PROG[0]   LOCATION = R8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  ONLINE_PROG[1]   LOCATION = U8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PANEL_ESTOP   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  PANEL_KEY   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  PTOTE_PD1   LOCATION = G14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  PTOTE_PD2   LOCATION = H14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  PTOTE_PD3   LOCATION = D17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[0]   LOCATION = G17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[10]   LOCATION = J18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[11]   LOCATION = J17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[12]   LOCATION = J15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[13]   LOCATION = K15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[14]   LOCATION = K16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[1]   LOCATION = H17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[2]   LOCATION = H15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[3]   LOCATION = J14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[4]   LOCATION = C17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[5]   LOCATION = C16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[6]   LOCATION = D18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[7]   LOCATION = E18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[8]   LOCATION = F18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  PUMP_SW[9]   LOCATION = G18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  SPI_CS   LOCATION = M13; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  SPI_SCLK   LOCATION = R18; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  SPI_SDI   LOCATION = T18; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  SPI_SDO   LOCATION = N14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  TIME_SEQ_ALM_INT1   LOCATION = H5; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  TIME_SEQ_ALM_INT2   LOCATION = H6; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  TIME_SEQ_ALM_SCL   LOCATION = K1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  TIME_SEQ_ALM_SDA   LOCATION = K2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  clk_100m   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  clk_160m   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  clk_50m   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  clk_PD   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  clk_PD_4times   LOCATION = virtualIO; "
+RUN-1002 : start command "set_pin_assignment  clk_in   LOCATION = A10; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  debug_led[0]   LOCATION = D10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  debug_led[1]   LOCATION = J5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  debug_led[2]   LOCATION = C11; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  debug_led[3]   LOCATION = A9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  online1_INT   LOCATION = D9; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  online1_SCL   LOCATION = C9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  online1_SDA   LOCATION = B9; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  online2_INT   LOCATION = A8; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  online2_SCL   LOCATION = B8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  online2_SDA   LOCATION = C10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+USR-6010 WARNING: ADC constraints: top model pin DOUT_TO_HEAD has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin HEAD_ERROR has no constraint.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file C:/Anlogic/TD_5.6.4_Release_97.693/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+SYN-1012 : SanityCheck: Model "top"
+SYN-1012 : SanityCheck: Model "AOM2_TTL"
+SYN-1012 : SanityCheck: Model "freq_alarm_feed"
+SYN-1012 : SanityCheck: Model "PD_WAVE"
+SYN-1012 : SanityCheck: Model "PH1A_MULT12X2"
+SYN-1012 : SanityCheck: Model "PH1A_SYS_PLL"
+SYN-1012 : SanityCheck: Model "alarm_mon"
+SYN-1012 : SanityCheck: Model "high_alarm"
+SYN-1012 : SanityCheck: Model "low_alarm"
+SYN-1012 : SanityCheck: Model "MS9714"
+SYN-1012 : SanityCheck: Model "burst"
+SYN-1012 : SanityCheck: Model "AND_DELAY"
+SYN-1012 : SanityCheck: Model "OR_GATE_16"
+SYN-1012 : SanityCheck: Model "reg_delay"
+SYN-1012 : SanityCheck: Model "calibration_aom"
+SYN-1012 : SanityCheck: Model "PH1A_MULT8X32"
+SYN-1012 : SanityCheck: Model "core"
+SYN-1012 : SanityCheck: Model "airpump_speed_adj"
+SYN-1012 : SanityCheck: Model "pump"
+SYN-1012 : SanityCheck: Model "pump_ramp"
+SYN-1012 : SanityCheck: Model "dac_TPC112S1"
+SYN-1012 : SanityCheck: Model "spi"
+SYN-1012 : SanityCheck: Model "data_sync"
+SYN-1012 : SanityCheck: Model "adc_ADS7883"
+SYN-1012 : SanityCheck: Model "feed_dog"
+SYN-1012 : SanityCheck: Model "fiber_break"
+SYN-1012 : SanityCheck: Model "filter"
+SYN-1012 : SanityCheck: Model "freq_cal"
+SYN-1012 : SanityCheck: Model "freq_cal_AOM2"
+SYN-1012 : SanityCheck: Model "ICR"
+SYN-1012 : SanityCheck: Model "led_debug"
+SYN-1012 : SanityCheck: Model "led_green"
+SYN-1012 : SanityCheck: Model "led"
+SYN-1012 : SanityCheck: Model "MOTOR"
+SYN-1012 : SanityCheck: Model "PCA9555"
+SYN-1012 : SanityCheck: Model "PLL_BASE_FREQ"
+SYN-1012 : SanityCheck: Model "pll_feed_dog"
+SYN-1012 : SanityCheck: Model "power_lim"
+SYN-1012 : SanityCheck: Model "PH1A_MULT10X18"
+SYN-1012 : SanityCheck: Model "FRENC_WATER"
+SYN-1043 : Mark PLL_BASE_FREQ as IO macro for instance bufg_c1
+SYN-1043 : Mark PCA9555 as IO macro for instance SDA_i
+SYN-1043 : Mark OR_GATE_16 as IO macro for instance delay_loop[10]$dly
+SYN-1043 : Mark burst as IO macro for instance AOM1_TTL_PUL
+SYN-1043 : Mark PH1A_SYS_PLL as IO macro for instance bufg_c1
+SYN-1011 : Flatten model top
+SYN-1050 : Instances selected by 'keep_hierarchy':
+RUN-1001 : ------------------------------------------------------------------------------------------------
+RUN-1001 :            instance           |  keep_hierarchy  |   down_module    |          file(line)          
+RUN-1001 : ------------------------------------------------------------------------------------------------
+RUN-1001 :   calibration_aom/PH1A_MU...  |       true       |  PH1A_MULT8X32   |  ../../src/calibration_a...  
+RUN-1001 :    power_lim/PH1A_MULT10X18   |       true       |  PH1A_MULT10X18  |  ../../src/power_lim.v(12)   
+RUN-1001 :         PH1A_MULT18X4         |       true       |  PH1A_MULT12X2   |     ../../src/top.v(930)     
+RUN-1001 : ------------------------------------------------------------------------------------------------
+SYN-1032 : 51732/1377 useful/useless nets, 29412/545 useful/useless insts
+SYN-1001 : Optimize 1 decoder instances
+SYN-1016 : Merged 438796 instances.
+SYN-1032 : 52130/14755 useful/useless nets, 23922/1488 useful/useless insts
+SYN-1016 : Merged 7983 instances.
+SYN-5011 WARNING: Undriven pin: model "top" / inst "core/pump1/reg0_syn_2" in ../../src/pump.v(182) / pin "d"
+SYN-5011 WARNING: Undriven pin: model "top" / inst "core/pump1/reg1_syn_16" in ../../src/pump.v(159) / pin "d"
+SYN-5013 WARNING: Undriven net: model "top" / net "PD3_freq[8]" in ../../src/top.v(273)
+SYN-5014 WARNING: the net's pin: pin "d" in ../../src/alarm_mon.v(130)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[15]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[15]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[14]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[14]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[13]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[13]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[12]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[12]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[11]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[11]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[10]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[10]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[9]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[9]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[8]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[8]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[7]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[7]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[6]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[6]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[5]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[5]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[4]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[4]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[3]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[3]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[2]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[2]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[1]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[1]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/FREQ3_THR_H[0]" in ../../src/alarm_mon.v(28)
+SYN-5014 WARNING: the net's pin: pin "i0[0]" in ../../src/alarm_mon.v(179)
+SYN-5013 WARNING: Undriven net: model "top" / net "alarm_mon/U8/signal" in ../../src/alarm/high_alarm.v(8)
+SYN-5014 WARNING: the net's pin: pin "I[0]" in ../../src/alarm/high_alarm.v(24)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../src/alarm/high_alarm.v(22)
+SYN-5014 Similar messages will be suppressed.
+SYN-5013 WARNING: Undriven net: model "top" / net "core/FREQ_TRIG[1]" in ../../src/core.v(147)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/FREQ_TRIG[0]" in ../../src/core.v(147)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[17]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[16]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[15]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[14]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[13]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[12]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[11]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[10]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[9]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[8]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[7]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[6]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[5]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[4]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[3]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[2]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[1]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR2_step_sta[0]" in ../../src/core.v(89)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR3_step_sta[16]" in ../../src/core.v(93)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR3_step_sta[0]" in ../../src/core.v(93)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[17]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[16]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[15]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[14]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[13]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[12]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[11]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[10]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[9]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[8]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[7]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[6]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[5]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[4]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[3]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[2]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[1]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR4_step_sta[0]" in ../../src/core.v(97)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/MOTOR_BREAK_OUT[1]" in ../../src/core.v(99)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/TRIG_CNT[0]" in ../../src/core.v(140)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_lat2[7]" in ../../src/core.v(48)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_lat2[6]" in ../../src/core.v(48)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_lat2[5]" in ../../src/core.v(48)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_lat2[4]" in ../../src/core.v(48)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_lat2[3]" in ../../src/core.v(48)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_now2[7]" in ../../src/core.v(47)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_now2[6]" in ../../src/core.v(47)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_now2[5]" in ../../src/core.v(47)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_now2[4]" in ../../src/core.v(47)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_now2[3]" in ../../src/core.v(47)
+SYN-5014 WARNING: the net's pin: pin "i1" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_out2[5]" in ../../src/core.v(49)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5013 WARNING: Undriven net: model "top" / net "core/alarm_out2[3]" in ../../src/core.v(49)
+SYN-5014 WARNING: the net's pin: pin "i0" in ../../src/core.v(1696)
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1032 : 49842/552 useful/useless nets, 47471/648 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1032 : 49831/2 useful/useless nets, 47460/3 useful/useless insts
+SYN-1017 : Remove 9 const input seq instances
+SYN-1002 :     reg1_syn_3
+SYN-1002 :     reg1_syn_7
+SYN-1002 :     alarm_mon/reg7_syn_10
+SYN-1002 :     aom2_dac/reg0_syn_2
+SYN-1002 :     core/reg91_syn_18
+SYN-1002 :     freq_cal_2/reg3_syn_3
+SYN-1002 :     alarm_mon/reg8_syn_10
+SYN-1002 :     core/reg92_syn_18
+SYN-1002 :     alarm_mon/reg9_syn_10
+SYN-1019 : Optimized 73 mux instances.
+SYN-1021 : Optimized 229 onehot mux instances.
+SYN-1020 : Optimized 4278 distributor mux.
+SYN-1001 : Optimize 33 less-than instances
+SYN-1019 : Optimized 77 mux instances.
+SYN-1016 : Merged 9078 instances.
+SYN-1015 : Optimize round 1, 22381 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 12 inv instances.
+SYN-1032 : 42837/161 useful/useless nets, 40481/6298 useful/useless insts
+SYN-1017 : Remove 36 const input seq instances
+SYN-1002 :     AOM2_TTL_inst/reg7_syn_4
+SYN-1002 :     alarm_mon/freq3_h_alarm_reg
+SYN-1002 :     alarm_mon/reg10_syn_30
+SYN-1002 :     alarm_mon/U0/reg0_syn_10
+SYN-1002 :     alarm_mon/U10/reg0_syn_10
+SYN-1002 :     alarm_mon/U11/reg0_syn_10
+SYN-1002 :     alarm_mon/U12/reg0_syn_10
+SYN-1002 :     alarm_mon/U13/reg0_syn_10
+SYN-1002 :     alarm_mon/U14/reg0_syn_10
+SYN-1002 :     alarm_mon/U15/reg0_syn_10
+SYN-1002 :     alarm_mon/U16/reg0_syn_10
+SYN-1002 :     alarm_mon/U17/reg0_syn_10
+SYN-1002 :     alarm_mon/U18/reg0_syn_10
+SYN-1002 :     alarm_mon/U19/reg0_syn_10
+SYN-1002 :     alarm_mon/U20/reg0_syn_10
+SYN-1002 :     alarm_mon/U21/reg0_syn_10
+SYN-1002 :     alarm_mon/U22/reg0_syn_10
+SYN-1002 :     alarm_mon/U23/reg0_syn_10
+SYN-1002 :     alarm_mon/U24/reg0_syn_10
+SYN-1002 :     alarm_mon/U25/reg0_syn_10
+SYN-1002 :     alarm_mon/U26/reg0_syn_10
+SYN-1002 :     alarm_mon/U27/reg0_syn_10
+SYN-1002 :     alarm_mon/U28/reg0_syn_10
+SYN-1002 :     alarm_mon/U29/reg0_syn_10
+SYN-1002 :     alarm_mon/U30/reg0_syn_10
+SYN-1002 :     alarm_mon/U31/reg0_syn_10
+SYN-1002 :     alarm_mon/U6/reg0_syn_10
+SYN-1002 :     alarm_mon/U7/reg0_syn_10
+SYN-1002 :     alarm_mon/U9/reg0_syn_10
+SYN-1002 :     burst/reg15_syn_4
+SYN-1002 :     burst/reg18_syn_5
+SYN-1002 :     burst/reg5_syn_8
+SYN-1002 :     core/pump_A[0]$pump_dac/reg1_syn_5
+SYN-1002 :     icr_1/reg0_syn_26
+SYN-1002 :     icr_2/reg0_syn_26
+SYN-1002 :     water_flow_detection/reg1_syn_29
+SYN-1018 : Transformed 1 mux instances.
+SYN-1019 : Optimized 66 mux instances.
+SYN-1019 : Optimized 3 mux instances.
+SYN-1016 : Merged 45 instances.
+SYN-1015 : Optimize round 2, 6825 better
+SYN-1032 : 42707/2 useful/useless nets, 40351/51 useful/useless insts
+SYN-3003 : Optimized 5 equivalent DFF(s)
+SYN-3003 : Optimized 5 equivalent DFF(s)
+SYN-3003 : Optimized 5 equivalent DFF(s)
+SYN-3003 : Optimized 5 equivalent DFF(s)
+SYN-3003 : Optimized 4 equivalent DFF(s)
+SYN-3003 : Optimized 3 equivalent DFF(s)
+SYN-3003 : Optimized 1 equivalent DFF(s)
+SYN-3004 : Optimized 19 const0 DFF(s)
+SYN-3003 : Optimized 1 equivalent DFF(s)
+SYN-3003 : Optimized 1 equivalent DFF(s)
+SYN-1032 : 42564/143 useful/useless nets, 40250/52 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 3 inv instances.
+SYN-1032 : 42552/3 useful/useless nets, 40238/0 useful/useless insts
+SYN-1019 : Optimized 31 mux instances.
+SYN-1020 : Optimized 8 distributor mux.
+SYN-1016 : Merged 16 instances.
+SYN-1015 : Optimize round 1, 74 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 2 inv instances.
+SYN-1032 : 42514/2 useful/useless nets, 40200/12 useful/useless insts
+SYN-1019 : Optimized 1 mux instances.
+SYN-1016 : Merged 1 instances.
+SYN-1015 : Optimize round 2, 16 better
+SYN-1014 : Optimize round 3
+SYN-1015 : Optimize round 3, 1 better
+SYN-1014 : Optimize round 4
+SYN-1015 : Optimize round 4, 0 better
+RUN-1003 : finish command "optimize_rtl" in  41.164283s wall, 38.625000s user + 2.468750s system = 41.093750s CPU (99.8%)
+
+RUN-1004 : used memory is 961 MB, reserved memory is 926 MB, peak memory is 1407 MB
+RUN-1002 : start command "report_area -file MASTER_FPGA_rtl.area"
+RUN-1001 : standard
+***Report Model: top Device: PH1A60GEG324***
+
+IO Statistics
+#IO                       214
+  #input                   52
+  #output                 159
+  #inout                    3
+
+Gate Statistics
+#Basic gates            22083
+  #and                   6395
+  #nand                     0
+  #or                    3336
+  #nor                      0
+  #xor                      0
+  #xnor                     0
+  #buf                      0
+  #not                    498
+  #bufif1                   1
+  #MX21                  2880
+  #FADD                     0
+  #DFF                   8973
+  #LATCH                    0
+#MACRO_ADD                377
+#MACRO_EQ                 235
+#MACRO_MUX               8153
+#MACRO_OTHERS             132
+
+Report Hierarchy Area:
++-------------------------------------------------------------------+
+|Instance                |Module            |gates  |seq    |macros |
++-------------------------------------------------------------------+
+|top                     |top               |13110  |8973   |744    |
+|  AOM2_TTL_inst         |AOM2_TTL          |169    |119    |18     |
+|  PD1_LOW               |freq_alarm_feed   |25     |53     |2      |
+|  PD2_LOW               |freq_alarm_feed   |30     |53     |3      |
+|  PD_WAVE1              |PD_WAVE           |40     |0      |0      |
+|  PD_WAVE2              |PD_WAVE           |40     |0      |0      |
+|  PH1A_MULT18X4         |PH1A_MULT12X2     |0      |0      |0      |
+|    mult0_syn_47        |                  |0      |0      |0      |
+|  SYS_PLL               |PH1A_SYS_PLL      |0      |0      |4      |
+|  alarm_mon             |alarm_mon         |511    |461    |108    |
+|    U0                  |high_alarm        |11     |7      |3      |
+|    U1                  |low_alarm         |23     |19     |3      |
+|    U10                 |high_alarm        |11     |7      |3      |
+|    U11                 |high_alarm        |11     |7      |3      |
+|    U13                 |high_alarm        |11     |7      |3      |
+|    U14                 |high_alarm        |11     |7      |3      |
+|    U15                 |high_alarm        |11     |7      |3      |
+|    U16                 |high_alarm        |11     |7      |3      |
+|    U17                 |high_alarm        |11     |7      |3      |
+|    U18                 |high_alarm        |11     |7      |3      |
+|    U19                 |high_alarm        |11     |7      |3      |
+|    U2                  |low_alarm         |23     |19     |3      |
+|    U20                 |high_alarm        |11     |7      |3      |
+|    U21                 |high_alarm        |11     |7      |3      |
+|    U22                 |high_alarm        |11     |7      |3      |
+|    U23                 |high_alarm        |11     |7      |3      |
+|    U24                 |high_alarm        |11     |7      |3      |
+|    U25                 |high_alarm        |11     |7      |3      |
+|    U26                 |high_alarm        |11     |7      |3      |
+|    U27                 |high_alarm        |11     |7      |3      |
+|    U28                 |high_alarm        |11     |7      |3      |
+|    U29                 |high_alarm        |11     |7      |3      |
+|    U2_0                |low_alarm         |23     |19     |3      |
+|    U2_1                |low_alarm         |23     |19     |3      |
+|    U2_2                |low_alarm         |23     |19     |3      |
+|    U3                  |high_alarm        |23     |19     |3      |
+|    U30                 |high_alarm        |11     |7      |3      |
+|    U31                 |high_alarm        |11     |7      |3      |
+|    U4                  |low_alarm         |23     |19     |3      |
+|    U5                  |low_alarm         |23     |19     |3      |
+|    U6                  |high_alarm        |9      |7      |3      |
+|    U7                  |high_alarm        |9      |7      |3      |
+|    U9                  |high_alarm        |11     |7      |3      |
+|  aom2_dac              |MS9714            |0      |10     |0      |
+|  burst                 |burst             |1745   |2717   |163    |
+|    AND_AOM1_TTL        |AND_DELAY         |128    |0      |0      |
+|    AND_AOM3_TTL        |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_CLK         |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA0       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA1       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA2       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA3       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA4       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA5       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA6       |AND_DELAY         |128    |0      |0      |
+|    AND_DAC_DATA7       |AND_DELAY         |128    |0      |0      |
+|    AND_DELAY_TTL2DAC   |AND_DELAY         |128    |0      |0      |
+|    AOM1_TTL_PUL        |OR_GATE_16        |63     |0      |63     |
+|    AOM3_TTL_PUL1       |OR_GATE_16        |63     |0      |63     |
+|    REG_AOM1_TTL        |reg_delay         |0      |256    |0      |
+|    REG_AOM3_TTL        |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA0       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA1       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA2       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA3       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA4       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA5       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA6       |reg_delay         |0      |256    |0      |
+|    REG_DAC_DATA7       |reg_delay         |0      |256    |0      |
+|  calibration_aom       |calibration_aom   |1378   |125    |36     |
+|    PH1A_MULT8X32       |PH1A_MULT8X32     |0      |0      |0      |
+|      mult0_syn_148     |                  |0      |0      |0      |
+|      mult0_syn_93      |                  |0      |0      |0      |
+|  core                  |core              |8766   |4499   |298    |
+|    airpump1_speed_adj  |airpump_speed_adj |4      |17     |8      |
+|    airpump2_speed_adj  |airpump_speed_adj |4      |17     |8      |
+|    pump1               |pump              |573    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |8      |
+|    pump10              |pump              |574    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump11              |pump              |350    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump12              |pump              |322    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump13              |pump              |294    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump14              |pump              |266    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump15              |pump              |238    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump2               |pump              |574    |91     |12     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump3               |pump              |546    |91     |12     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump4               |pump              |518    |91     |12     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump5               |pump              |490    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump6               |pump              |462    |91     |13     |
+|      ramp              |pump_ramp         |6      |60     |9      |
+|    pump7               |pump              |434    |91     |13     |
+|......                  |......            |-      |-      |-      |
++-------------------------------------------------------------------+
+
+RUN-1002 : start command "export_db MASTER_FPGA_rtl.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db MASTER_FPGA_rtl.db" in  1.020028s wall, 1.500000s user + 0.031250s system = 1.531250s CPU (150.1%)
+
+RUN-1004 : used memory is 969 MB, reserved memory is 941 MB, peak memory is 1407 MB
+RUN-1002 : start command "read_sdc ../../MASTER_FPGA.sdc"
+RUN-1002 : start command "get_ports clk_in"
+RUN-1002 : start command "create_clock -name CRYSTAL_50M -period 20 -waveform 0 10 "
+RUN-1102 : create_clock: clock name: CRYSTAL_50M, type: 0, period: 20000, rise: 0, fall: 10000.
+RUN-1002 : start command "derive_pll_clocks"
+USR-1002 : Gen clock cmd:  create_generated_clock -name {SYS_PLL/pll_inst.clkc[0]} -source [get_ports {clk_in}] -master_clock {CRYSTAL_50M} -multiply_by 1.0000 -duty_cycle 50.0000 [get_pins {SYS_PLL/pll_inst.clkc[0]}]
+RUN-1002 : start command "get_ports clk_in"
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[0]"
+RUN-1002 : start command "create_generated_clock -name SYS_PLL/pll_inst.clkc[0] -source  -master_clock CRYSTAL_50M -multiply_by 1.0000 -duty_cycle 50.0000 "
+USR-1002 : Gen clock cmd:  create_generated_clock -name {SYS_PLL/pll_inst.clkc[1]} -source [get_ports {clk_in}] -master_clock {CRYSTAL_50M} -multiply_by 3.2000 -duty_cycle 50.0000 [get_pins {SYS_PLL/pll_inst.clkc[1]}]
+RUN-1002 : start command "get_ports clk_in"
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[1]"
+RUN-1002 : start command "create_generated_clock -name SYS_PLL/pll_inst.clkc[1] -source  -master_clock CRYSTAL_50M -multiply_by 3.2000 -duty_cycle 50.0000 "
+USR-1002 : Gen clock cmd:  create_generated_clock -name {SYS_PLL/pll_inst.clkc[2]} -source [get_ports {clk_in}] -master_clock {CRYSTAL_50M} -multiply_by 2.0000 -duty_cycle 50.0000 [get_pins {SYS_PLL/pll_inst.clkc[2]}]
+RUN-1002 : start command "get_ports clk_in"
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[2]"
+RUN-1002 : start command "create_generated_clock -name SYS_PLL/pll_inst.clkc[2] -source  -master_clock CRYSTAL_50M -multiply_by 2.0000 -duty_cycle 50.0000 "
+USR-1002 : Gen clock cmd:  create_generated_clock -name {SYS_PLL/pll_inst.clkc[3]} -source [get_ports {clk_in}] -master_clock {CRYSTAL_50M} -divide_by 1.5625 -duty_cycle 50.0000 [get_pins {SYS_PLL/pll_inst.clkc[3]}]
+RUN-1002 : start command "get_ports clk_in"
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[3]"
+RUN-1002 : start command "create_generated_clock -name SYS_PLL/pll_inst.clkc[3] -source  -master_clock CRYSTAL_50M -divide_by 1.5625 -duty_cycle 50.0000 "
+USR-1002 : Gen clock cmd:  create_generated_clock -name {pd1_4times/pll_inst.clkc[0]} -source [get_pins {SYS_PLL/pll_inst.clkc[3]}] -master_clock {SYS_PLL/pll_inst.clkc[3]} -multiply_by 1.0000 -duty_cycle 50.0000 [get_pins {pd1_4times/pll_inst.clkc[0]}]
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[3]"
+RUN-1002 : start command "get_pins pd1_4times/pll_inst.clkc[0]"
+RUN-1002 : start command "create_generated_clock -name pd1_4times/pll_inst.clkc[0] -source  -master_clock SYS_PLL/pll_inst.clkc[3] -multiply_by 1.0000 -duty_cycle 50.0000 "
+USR-1002 : Gen clock cmd:  create_generated_clock -name {pd1_4times/pll_inst.clkc[1]} -source [get_pins {SYS_PLL/pll_inst.clkc[3]}] -master_clock {SYS_PLL/pll_inst.clkc[3]} -multiply_by 4.0000 -duty_cycle 50.0000 [get_pins {pd1_4times/pll_inst.clkc[1]}]
+RUN-1002 : start command "get_pins SYS_PLL/pll_inst.clkc[3]"
+RUN-1002 : start command "get_pins pd1_4times/pll_inst.clkc[1]"
+RUN-1002 : start command "create_generated_clock -name pd1_4times/pll_inst.clkc[1] -source  -master_clock SYS_PLL/pll_inst.clkc[3] -multiply_by 4.0000 -duty_cycle 50.0000 "
+RUN-1002 : start command "optimize_gate -maparea MASTER_FPGA_gate.area"
+RUN-1001 : Open license file C:/Anlogic/TD_5.6.4_Release_97.693/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :         cascade_dsp         |    off     |       off        |        
+RUN-1001 :         cascade_eram        |    off     |       off        |        
+RUN-1001 :        gate_sim_model       |    off     |       off        |        
+RUN-1001 :        map_sim_model        |    off     |       off        |        
+RUN-1001 :         map_strategy        |     1      |        1         |        
+RUN-1001 :           opt_area          |   medium   |      medium      |        
+RUN-1001 :          opt_timing         |    auto    |       auto       |        
+RUN-1001 :         pack_effort         |   medium   |      medium      |        
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        |        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        |        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       |        
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        |        
+RUN-1001 :            report           |  standard  |     standard     |        
+RUN-1001 :           retiming          |    off     |       off        |        
+RUN-1001 : ------------------------------------------------------------------
+SYN-2001 : Map 214 IOs to PADs
+SYN-1032 : 42724/0 useful/useless nets, 40411/1 useful/useless insts
+RUN-1002 : start command "update_pll_param -module top"
+SYN-2501 : Processed 126 LOGIC_BUF instances.
+SYN-2501 : 6 BUFG to GCLK
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-5063 WARNING: P OVERFLOW UNDERFLOW of calibration_aom/PH1A_MULT8X32/mult0_syn_148/_tadd should have same DSPREG attributes.
+SYN-1032 : 42679/45 useful/useless nets, 40411/1 useful/useless insts
+SYN-1032 : 42645/88 useful/useless nets, 40410/0 useful/useless insts
+SYN-1001 : Throwback 138 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 1060 instances.
+SYN-2501 : Optimize round 1, 3289 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+USR-1006 : Generating FPGA-IP Autogen constraints ...
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[17]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[16]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[15]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[14]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[13]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[12]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[11]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[10]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[9]
+SYN-5031 WARNING: TimingDrivenOpt: Unexpected end point required time: -35 -> core/add2/o[8]
+SYN-5031 Similar messages will be suppressed.
+SYN-1030 : Map 63 macro adder
+SYN-1031 : Map 14 macro less-than
+SYN-2501 : Map 300 macro adder
+SYN-3001 : Mapper mapped 32 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 32 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 56 instances into 9 LUTs, name keeping = 44%.
+SYN-3001 : Mapper mapped 34 instances into 21 LUTs, name keeping = 4%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 32 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 34 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 48 instances into 8 LUTs, name keeping = 12%.
+SYN-3001 : Mapper mapped 34 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 32 instances into 19 LUTs, name keeping = 5%.
+SYN-3001 : Mapper mapped 24 instances into 12 LUTs, name keeping = 8%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 34 instances into 21 LUTs, name keeping = 4%.
+SYN-3001 : Mapper mapped 64 instances into 41 LUTs, name keeping = 2%.
+SYN-3001 : Mapper mapped 42 instances into 7 LUTs, name keeping = 85%.
+SYN-3001 : Mapper mapped 42 instances into 7 LUTs, name keeping = 57%.
+SYN-3001 : Mapper mapped 38 instances into 6 LUTs, name keeping = 50%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 34 instances into 6 LUTs, name keeping = 66%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 24 instances into 4 LUTs, name keeping = 25%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 24 instances into 14 LUTs, name keeping = 7%.
+SYN-3001 : Mapper mapped 48 instances into 30 LUTs, name keeping = 3%.
+SYN-3001 : Mapper mapped 40 instances into 25 LUTs, name keeping = 4%.
+SYN-3001 : Mapper mapped 36 instances into 6 LUTs, name keeping = 66%.
+SYN-3001 : Mapper mapped 48 instances into 8 LUTs, name keeping = 12%.
+SYN-3001 : Mapper mapped 48 instances into 8 LUTs, name keeping = 12%.
+SYN-3001 : Mapper mapped 50 instances into 8 LUTs, name keeping = 50%.
+SYN-3001 : Mapper mapped 64 instances into 41 LUTs, name keeping = 2%.
+SYN-3001 : Mapper mapped 36 instances into 22 LUTs, name keeping = 4%.
+SYN-3001 : Mapper mapped 36 instances into 22 LUTs, name keeping = 4%.
+SYN-3001 : Mapper mapped 54 instances into 9 LUTs, name keeping = 33%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-2501 : Inferred 5 ROM instances
+SYN-3007 : Map mux "burst/AOM1_TTL_PUL/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/AOM3_TTL_PUL1/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_AOM1_TTL/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_AOM3_TTL/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA0/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA1/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA2/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA3/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA4/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA5/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA6/mux0" with ph1 mux
+SYN-3007 : Map mux "burst/REG_DAC_DATA7/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump1/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump10/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump11/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump12/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump13/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump14/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump15/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump2/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump3/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump4/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump5/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump6/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump7/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump8/mux0" with ph1 mux
+SYN-3007 : Map mux "core/pump9/mux0" with ph1 mux
+SYN-3007 : Map mux "reg_delay/mux0" with ph1 mux
+SYN-1019 : Optimized 1558 mux instances.
+SYN-1016 : Merged 4109 instances.
+SYN-1032 : 56904/89 useful/useless nets, 54679/5 useful/useless insts
+RUN-1002 : start command "start_timer -prepack"
+TMR-2505 : Start building timing graph for model top.
+TMR-2506 : Build timing graph completely. Port num: 94, tpin num: 182149, tnet num: 56906, tinst num: 54679, tnode num: 221515, tedge num: 271626.
+TMR-2508 : Levelizing timing graph completed, there are 3408 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+RUN-1003 : finish command "start_timer -prepack" in  1.657728s wall, 1.640625s user + 0.015625s system = 1.656250s CPU (99.9%)
+
+RUN-1004 : used memory is 1188 MB, reserved memory is 1181 MB, peak memory is 1527 MB
+TMR-2503 : Start to update net delay, extr mode = 2.
+TMR-2504 : Update delay of 56906 nets completely.
+TMR-2502 : Annotate delay completely, extr mode = 2.
+TMR-3001 : Initiate 7 clocks from SDC.
+TMR-3004 : Map sdc constraints, there are 0 constraints in total.
+TMR-3003 : Constraints initiated successfully.
+TMR-3501 : Forward propagation: start to calculate arrival time...
+TMR-3502 : Backward propagation: start to calculate required time...
+TMR-3503 : Timing propagation completes.
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=6, #lut = 11786 (4.21), #lev = 14 (3.45)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=6, #lut = 11504 (4.22), #lev = 14 (3.64)
+SYN-3001 : Logic optimization runtime opt =   5.66 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 32166 instances into 11511 LUTs, name keeping = 53%.
+SYN-3001 : Mapper removed 2 lut buffers
+RUN-1002 : start command "report_area -file MASTER_FPGA_gate.area"
+RUN-1001 : standard
+***Report Model: top Device: PH1A60GEG324***
+
+IO Statistics
+#IO                       214
+  #input                   52
+  #output                 159
+  #inout                    3
+
+Utilization Statistics
+#lut                    14991
+  #lut1                   138
+  #lut2                  3208
+  #lut3                   947
+  #lut4                  1274
+  #lut5                  2288
+  #lut6                  4634
+  #1-bit adder           2502
+#reg                     8973   out of  78720   11.40%
+  #dff                   8973
+  #latch                    0
+#f7mux                    420   out of  19680    2.13%
+#f8mux                    210   out of   9840    2.13%
+#dsp                        4   out of    120    3.33%
+#eram                       0   out of    158    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#pad                      206   out of    211   97.63%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#virtual IO                 7
+#pll                        2   out of     12   16.67%
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                |Module            |logic lut |ripple  |seq     |eram    |dsp     |dram    |shifter |f7mux   |f8mux   |pll     |
++---------------------------------------------------------------------------------------------------------------------------------------+
+|top                     |top               |12489     |2502    |8973    |0       |4       |0       |0       |420     |210     |2       |
+|  AOM2_TTL_inst         |AOM2_TTL          |192       |105     |119     |0       |0       |0       |0       |0       |0       |0       |
+|  PD1_LOW               |freq_alarm_feed   |18        |35      |53      |0       |0       |0       |0       |0       |0       |0       |
+|  PD2_LOW               |freq_alarm_feed   |19        |53      |53      |0       |0       |0       |0       |0       |0       |0       |
+|  PD_WAVE1              |PD_WAVE           |25        |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|  PD_WAVE2              |PD_WAVE           |25        |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|  SYS_PLL               |PH1A_SYS_PLL      |0         |0       |0       |0       |0       |0       |0       |0       |0       |1       |
+|  alarm_mon             |alarm_mon         |464       |165     |461     |0       |0       |0       |0       |0       |0       |0       |
+|    U0                  |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U1                  |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U10                 |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U11                 |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U13                 |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U14                 |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U15                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U16                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U17                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U18                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U19                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U2                  |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U20                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U21                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U22                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U23                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U24                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U25                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U26                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U27                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U28                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U29                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U2_0                |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U2_1                |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U2_2                |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U3                  |high_alarm        |24        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U30                 |high_alarm        |9         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U31                 |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U4                  |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U5                  |low_alarm         |23        |17      |19      |0       |0       |0       |0       |0       |0       |0       |
+|    U6                  |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U7                  |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|    U9                  |high_alarm        |7         |0       |7       |0       |0       |0       |0       |0       |0       |0       |
+|  aom2_dac              |MS9714            |10        |0       |10      |0       |0       |0       |0       |0       |0       |0       |
+|  burst                 |burst             |3020      |141     |2717    |0       |0       |0       |0       |356     |178     |0       |
+|    AND_AOM1_TTL        |AND_DELAY         |172       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_AOM3_TTL        |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_CLK         |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA0       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA1       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA2       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA3       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA4       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA5       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA6       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DAC_DATA7       |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AND_DELAY_TTL2DAC   |AND_DELAY         |128       |0       |0       |0       |0       |0       |0       |0       |0       |0       |
+|    AOM1_TTL_PUL        |OR_GATE_16        |143       |0       |0       |0       |0       |0       |0       |8       |4       |0       |
+|    AOM3_TTL_PUL1       |OR_GATE_16        |189       |0       |0       |0       |0       |0       |0       |8       |4       |0       |
+|    REG_AOM1_TTL        |reg_delay         |69        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_AOM3_TTL        |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA0       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA1       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA2       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA3       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA4       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA5       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA6       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|    REG_DAC_DATA7       |reg_delay         |68        |0       |256     |0       |0       |0       |0       |34      |17      |0       |
+|  calibration_aom       |calibration_aom   |793       |23      |125     |0       |2       |0       |0       |0       |0       |0       |
+|    PH1A_MULT8X32       |PH1A_MULT8X32     |0         |0       |0       |0       |2       |0       |0       |0       |0       |0       |
+|      mult0_syn_148     |                  |0         |0       |0       |0       |1       |0       |0       |0       |0       |0       |
+|      mult0_syn_93      |                  |0         |0       |0       |0       |1       |0       |0       |0       |0       |0       |
+|  core                  |core              |6536      |1463    |4499    |0       |0       |0       |0       |30      |15      |0       |
+|    airpump1_speed_adj  |airpump_speed_adj |43        |52      |17      |0       |0       |0       |0       |0       |0       |0       |
+|    airpump2_speed_adj  |airpump_speed_adj |43        |52      |17      |0       |0       |0       |0       |0       |0       |0       |
+|    pump1               |pump              |318       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |121       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump10              |pump              |211       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |119       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump11              |pump              |216       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |130       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump12              |pump              |206       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |120       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump13              |pump              |218       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |131       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump14              |pump              |219       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |132       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump15              |pump              |249       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |133       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump2               |pump              |195       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |108       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump3               |pump              |198       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |111       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump4               |pump              |231       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |122       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump5               |pump              |225       |118     |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |105       |104     |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump6               |pump              |219       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |133       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump7               |pump              |236       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|      ramp              |pump_ramp         |135       |76      |60      |0       |0       |0       |0       |0       |0       |0       |
+|    pump8               |pump              |227       |76      |91      |0       |0       |0       |0       |2       |1       |0       |
+|......                  |......            |-         |-       |-       |-       |-       |-       |-       |-       |-       |-       |
++---------------------------------------------------------------------------------------------------------------------------------------+
+
+SYN-1001 : Packing model "top" ...
+SYN-4010 : Pack lib has 86 rtl pack models with 57 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 8973 DFF/LATCH to SEQ ...
+SYN-1001 : Remove 143 carry adders
+SYN-4009 : Pack 127 carry chain into lslice
+SYN-4012 : Packed 0 FxMUX
+RUN-1003 : finish command "optimize_gate -maparea MASTER_FPGA_gate.area" in  38.523764s wall, 37.625000s user + 0.875000s system = 38.500000s CPU (99.9%)
+
+RUN-1004 : used memory is 1064 MB, reserved memory is 1091 MB, peak memory is 1527 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model top
+RUN-1002 : start command "export_db MASTER_FPGA_gate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db MASTER_FPGA_gate.db" in  2.074751s wall, 3.390625s user + 0.015625s system = 3.406250s CPU (164.2%)
+
+RUN-1004 : used memory is 1086 MB, reserved memory is 1112 MB, peak memory is 1527 MB
+RUN-1002 : start command "backup_run_log run.log ../.logs/syn_1/td_20260516_193126.log"
+RUN-1001 : Backing up run's log file succeed.
