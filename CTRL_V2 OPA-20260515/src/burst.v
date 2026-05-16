@@ -672,7 +672,4 @@ assign FIBER_AOM4_TTL= 1'd0;
 
 //assign TTL_DIV  = FIBER_AOM3_TTL;
 
-
-//assign TTL_DIV  = FIBER_AOM3_TTL|FIBER_AOM4_TTL;
-
 endmodule 

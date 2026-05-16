@@ -1,0 +1,22 @@
+Location         : D:\FPGA\LF\regenerative amplification\CTRL_V2 OPA-20260515\MASTER_FPGA_Runs\phy_1
+Running with     : Tang Dynasty v6.0.152183
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : top
+Device           : PH1A60GEG324
+Speed            : 3
+
+Timing Mode      : manhattan
+Setup            : WNS -2807ps  TNS  -754716ps  NUM_FEPS   546
+Hold             : WNS    21ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+---------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time   |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+---------------------------------------------------------------------------------------------------
+      place      |    1     |  3m39s(98%)  |   276(98%)    |       1720        |       1721        
+  import_device  |    1     |    4s(1%)    |     3(1%)     |       1080        |       1080        
+    import_db    |    1     |    0s(0%)    |     0(0%)     |       1295        |       1295        
+    read_sdc     |    1     |    0s(0%)    |     0(0%)     |       1295        |       1295        
+---------------------------------------------------------------------------------------------------
+      total      |    4     |    3m43s     |      279      |       1720        |       1721        
+---------------------------------------------------------------------------------------------------

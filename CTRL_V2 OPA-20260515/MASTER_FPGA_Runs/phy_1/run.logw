@@ -1,0 +1,17 @@
+============================================================
+   Tang Dynasty, V6.0.152183
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = C:/Anlogic/TD_6.0.3_PHX_Release_152.183/bin/run.exe
+   Built at =   11:19:57 Dec 11 2024
+   Run by =     Administrator
+   Run Date =   Sun May 17 00:39:42 2026
+
+   Run on =     USER-20221101UL
+============================================================
+PHY-5060 CRITICAL-WARNING: Clock net candidate clk_in_dup_1 has mixed fanouts of 1 clock pins; 1 data/ctrl pins. Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate PD1_EXP_FALSE has mixed fanouts of 0 clock pins; 1 data/ctrl pins. Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate AOM2_CLK_dup_1 has mixed fanouts of 5558 clock pins; 1 data/ctrl pins. Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate PD1_EXP has mixed fanouts of 2 clock pins; 4 data/ctrl pins. Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate burst/REG_AOM1_TTL/clk_i has mixed fanouts of 2718 clock pins; 6 data/ctrl pins. Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate online_1/flag has mixed fanouts of 1 clock pins; 1 data/ctrl pins. Please check connection of the net in design.
+

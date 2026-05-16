@@ -1,0 +1,105 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        -4952                |
+|     Setup TNS             |     -1362396                |
+|     Num of violated S-EP  |          557                |
+|     Hold WNS              |          519                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         8916                |
+|     #luts                 |        10567                |
+|     #lut1                 |          133                |
+|     #lut1(~A)             |            7                |
+|     #slices               |         2917                |
+|     slices percentage     |        7.41%                |
+|     #RAMs                 |            0                |
+|     #DSPs                 |            4                |
+|     #f7mux                |        1.98%                |
+|     #MACROs               |          315                |
+|     #insts in MACRO       |         3132                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |         9056                |
+|     #keep_hier            |          151                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        45.98                |
+| dff(single fanout)->dff   |          222                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     SYS_PLL/...           |          205                |
+|     SYS_PLL/...           |           19                |
+|     pd1_4tim...           |          129                |
+|     pd1_4tim...           |          122                |
+|     Total                 |          475                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+             Clock             |  Index  |  Budget(Period)  |  Level(Quota)  |               Cell Type List                |        Reason        |  Slack  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+   SYS_PLL/pll_inst.clkc[0]    |    1    |   -112(20000)    |      6(1)      |    SEQ,LUT6,LUT6,LUT6,LUT4,LUT4,LUT6,SEQ    |  large launch delay  |  -4952  
+                               |    2    |   -112(20000)    |      5(1)      |      SEQ,LUT6,LUT4,LUT5,LUT5,LUT6,SEQ       |  large launch delay  |  -4217  
+                               |    3    |   -112(20000)    |      5(1)      |      SEQ,LUT6,LUT4,LUT5,LUT6,LUT6,SEQ       |  large launch delay  |  -4215  
+                               |    4    |   -112(20000)    |      5(1)      |      SEQ,LUT6,LUT6,LUT6,LUT6,LUT6,SEQ       |  large launch delay  |  -4211  
+                               |    5    |   -112(20000)    |      4(1)      |         SEQ,LUT6,LUT5,LUT6,LUT5,SEQ         |  large launch delay  |  -3520  
+   SYS_PLL/pll_inst.clkc[1]    |    1    |    1106(6250)    |      3(2)      |          SEQ,ADDER,ADDER,LUT6,SEQ           |  large launch delay  |  -1536  
+                               |    2    |    1106(6250)    |      3(2)      |          SEQ,ADDER,ADDER,LUT6,SEQ           |  large launch delay  |  -1536  
+                               |    3    |    1106(6250)    |      3(2)      |          SEQ,ADDER,ADDER,LUT6,SEQ           |  large launch delay  |  -1536  
+                               |    4    |    1106(6250)    |      3(2)      |          SEQ,ADDER,ADDER,LUT6,SEQ           |  large launch delay  |  -1536  
+                               |    5    |    1106(6250)    |      3(2)      |          SEQ,ADDER,ADDER,LUT6,SEQ           |  large launch delay  |  -1536  
+  pd1_4times/pll_inst.clkc[0]  |    1    |   1106(31250)    |      5(2)      |      SEQ,LUT6,LUT6,LUT5,LUT6,LUT6,SEQ       |  large launch delay  |  -3037  
+                               |    2    |   1106(31250)    |      5(2)      |      SEQ,LUT6,LUT6,LUT6,LUT5,LUT6,SEQ       |  large launch delay  |  -3037  
+                               |    3    |   1106(31250)    |      5(2)      |      SEQ,LUT6,LUT6,LUT5,LUT6,LUT6,SEQ       |  large launch delay  |  -3037  
+                               |    4    |   1106(31250)    |      5(2)      |      SEQ,LUT6,LUT6,LUT6,LUT5,LUT6,SEQ       |  large launch delay  |  -3037  
+                               |    5    |   1106(31250)    |      5(2)      |      SEQ,LUT6,LUT6,LUT6,LUT5,LUT6,SEQ       |  large launch delay  |  -3037  
+  pd1_4times/pll_inst.clkc[1]  |    1    |    148(7812)     |      5(1)      |      SEQ,LUT4,LUT5,LUT6,LUT5,LUT6,SEQ       |  large launch delay  |  -4289  
+                               |    2    |    148(7812)     |      5(1)      |      SEQ,LUT4,LUT5,LUT6,LUT5,LUT5,SEQ       |  large launch delay  |  -4031  
+                               |    3    |    148(7812)     |      4(1)      |  SEQ,LUT3,LUT6,LUT6,F78MUX,LUT6,F78MUX,SEQ  |  large launch delay  |  -4049  
+                               |    4    |    148(7812)     |      4(1)      |         SEQ,LUT4,LUT5,LUT6,LUT6,SEQ         |  large launch delay  |  -3671  
+                               |    5    |    148(7812)     |      4(1)      |         SEQ,LUT4,LUT5,LUT6,LUT6,SEQ         |  large launch delay  |  -3671  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                        |  Period             |  0     |  1    |  2    |  3    |  4     |  5    |  6    |  7    |  8    |  9  |  10  |  11  |  12  |  13  |  14  |  15  |  16
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  CRYSTAL_50M                  |  20.000ns (50MHz)   |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  SYS_PLL/pll_inst.clkc[0]     |  20.000ns (50MHz)   |  2955  |  675  |  486  |  516  |  2269  |  839  |  731  |  322  |  102  |  4  |  2   |  5   |  14  |  65  |  2   |  5   |  8
+  SYS_PLL/pll_inst.clkc[1]     |  6.250ns (160MHz)   |  68    |  3    |  3    |  31   |  1     |  0    |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  SYS_PLL/pll_inst.clkc[2]     |  10.000ns (100MHz)  |  42    |  36   |  61   |  49   |  2     |  0    |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  SYS_PLL/pll_inst.clkc[3]     |  31.250ns (32MHz)   |  0     |  1    |  0    |  0    |  0     |  0    |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  pd1_4times/pll_inst.clkc[0]  |  31.250ns (32MHz)   |  2593  |  4    |  52   |  88   |  26    |  10   |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  pd1_4times/pll_inst.clkc[1]  |  7.812ns (128MHz)   |  288   |  35   |  49   |  33   |  36    |  18   |  0    |  0    |  0    |  0  |  0   |  0   |  0   |  0   |  0   |  0   |  0
+  Total                        |  NA                 |  5946  |  754  |  651  |  717  |  2334  |  867  |  731  |  322  |  102  |  4  |  2   |  5   |  14  |  65  |  2   |  5   |  8
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++---------------------------------------------------------+
+|Inst     |Model   |Rent     |Cell     |Pin     |Term     |
++---------------------------------------------------------+
+|top      |top     |0.30     |32470    |119951  |85       |
+|  burst  |burst_9 |0.67     |14809    |38160   |1599     |
+|  core   |core_11 |0.63     |11793    |52960   |1644     |
++---------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+

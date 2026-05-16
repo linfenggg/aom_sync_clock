@@ -180,7 +180,7 @@ always @(posedge clk_i or negedge rstn_i)
 
 always @(posedge clk_i or negedge rstn_i)
 	if(!rstn_i)
-        PUMP_OR_PIR <= 15'B0;
+        PUMP_OR_PIR <= 15'd0;
     else case(PUMP_NUM)
     1:   PUMP_OR_PIR <= {14'B0,PUMP_STA_closed};
     2:   PUMP_OR_PIR <= {13'B0,PUMP_STA_closed,1'B0};
@@ -198,7 +198,7 @@ always @(posedge clk_i or negedge rstn_i)
     14:  PUMP_OR_PIR <= {1'B0,PUMP_STA_closed,13'B0};
     15:  PUMP_OR_PIR <= {PUMP_STA_closed,14'B0};
     
-    default : PUMP_OR_PIR <= 15'B0;
+    default : PUMP_OR_PIR <= 15'd0;
     endcase
 
 always @(posedge clk_i or negedge rstn_i)

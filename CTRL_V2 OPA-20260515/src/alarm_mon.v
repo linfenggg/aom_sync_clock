@@ -34,9 +34,9 @@ module alarm_mon(
 	output [31:0]	alarm_lat,	//历史告警
 	output [31:0] 	alarm_out,	//总告警，高级加低级
 	
-    input 			PANEL_KEY,  //面板钥匙开关,
-    input			PANEL_ESTOP,//面板急停开关
-    input           HEAD_ERROR,	//激光头报警信号
+//    input 			PANEL_KEY,  //面板钥匙开关,
+//   input			PANEL_ESTOP,//面板急停开关
+//    input           HEAD_ERROR,	//激光头报警信号
 	input  [31:0]	alarm_en2,	//告警屏蔽
 	output [31:0]	alarm_now2,	//当前告警
 	output [31:0]	alarm_lat2,	//历史告警
@@ -540,7 +540,7 @@ low_alarm	U2_0(
 	.EN				(alarm_en2[0]),
 	.clear			(clear),
 	.DB_TIME		(50000),
-	.signal			(PANEL_KEY),
+	.signal			(1'd1),
 	.alarm			(alarm_now2[0]),
 	.latch			(alarm_lat2[0])
 );
@@ -551,7 +551,7 @@ low_alarm	U2_1(
 	.EN				(alarm_en2[1]),
 	.clear			(clear),
 	.DB_TIME		(50000),
-	.signal			(PANEL_ESTOP),
+	.signal			(1'd1),
 	.alarm			(alarm_now2[1]),
 	.latch			(alarm_lat2[1])
 );
@@ -562,7 +562,7 @@ low_alarm	U2_2(
 	.EN				(alarm_en2[2]),
 	.clear			(clear),
 	.DB_TIME		(50000),
-	.signal			(HEAD_ERROR),
+	.signal			(1'd1),
 	.alarm			(alarm_now2[2]),
 	.latch			(alarm_lat2[2])
 );

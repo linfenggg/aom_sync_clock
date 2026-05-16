@@ -2,420 +2,427 @@ standard
 ***Report Model: top Device: PH1A60GEG324***
 
 Design Statistics
-#IO                       214
-  #input                   52
-  #output                 159
+#IO                       205   out of    211   97.16%
+  #input                   49
+  #output                 153
   #inout                    3
-#lut6                   11320   out of  39360   28.76%
-#reg                     9264
-  #slice reg             9264   out of  78720   11.77%
+#lut6                   10200   out of  39360   25.91%
+#reg                     9168
+  #slice reg             9168   out of  78720   11.65%
   #pad reg                  0
 
 Utilization Statistics
-#slice                  12932   out of  39360   32.86%
+#slice                  11382   out of  39360   28.92%
   #used ram                 0
     #dram lut               0
     #shifter lut            0
-  #used logic           12932
-    #with luts           9223
-    #with adder          2097
-    #reg only            1612
-#feedthrough             3962
-#f7mux                    420   out of  19680    2.13%
-#f8mux                    210   out of   9840    2.13%
-#dsp                        4   out of    120    3.33%
+  #used logic           11382
+    #with luts           8139
+    #with adder          2061
+    #reg only            1182
+#feedthrough             4313
+#f7mux                    390   out of  19680    1.98%
+#f8mux                    195   out of   9840    1.98%
 #eram                       0   out of    158    0.00%
   #eram20k                  0
   #fifo20k                  0
-#pad                      206   out of    211   97.63%
-#virtual IO                 7
+#dsp                        4   out of    120    3.33%
+#pad                      205   out of    211   97.16%
 #pll                        2   out of     12   16.67%
 #gclk                       7   out of     32   21.88%
 #lclk                       0   out of     24    0.00%
+#sclk                      22   out of     72   30.56%
 #mlclk                      0   out of     12    0.00%
 #ioclk                      0   out of     12    0.00%
-
-Clock Resource Statistics
-Index     ClockNet               Type            DriverType         Driver                         ClockFanout
-#1        SYS_PLL/clk0_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc0         3748
-#2        pd1_4times/clk0_buf    UserGclk        pll                pd1_4times/pll_inst.clkc0      1406
-#3        pd1_4times/clk1_buf    UserGclk        pll                pd1_4times/pll_inst.clkc1      229
-#4        SYS_PLL/clk2_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc2         88
-#5        SYS_PLL/clk1_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc1         70
-#6        online_1/flag          InferredGclk    lslice             online_1/flag_reg_syn_6.oqb    18
-#7        SYS_PLL/clk3_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc3         0
 
 
 Detailed IO Report
 
-        Name           Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
-     EXT_AD_SDO          INPUT        D12        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[7]         INPUT        A11        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[6]         INPUT        C12        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[5]         INPUT        B12        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[4]         INPUT        B13        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[3]         INPUT        B14        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[2]         INPUT        D14        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[1]         INPUT        C14        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_DATA[0]         INPUT        G13        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_EXMODE          INPUT        C15        LVCMOS33          N/A          PULLUP      NONE    
-      EXT_GATE           INPUT        B16        LVCMOS33          N/A          PULLUP      NONE    
-      EXT_GUID           INPUT        D15        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_INMODE          INPUT        F15        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_INTLK1          INPUT        E15        LVCMOS33          N/A          PULLUP      NONE    
-     EXT_INTLK2          INPUT        F16        LVCMOS33          N/A          PULLUP      NONE    
-       EXT_LAT           INPUT        B11        LVCMOS33          N/A          PULLUP      NONE    
-       EXT_OFF           INPUT        G16        LVCMOS33          N/A          PULLUP      NONE    
-       EXT_PRR           INPUT        B18        LVCMOS33          N/A          PULLUP      NONE    
-       EXT_PWM           INPUT        A13        LVCMOS33          N/A          PULLUP      NONE    
-    EXT_RESERVE1         INPUT        F14        LVCMOS33          N/A          PULLUP      NONE    
-    EXT_RESERVE2         INPUT        F13        LVCMOS33          N/A          PULLUP      NONE    
-      EXT_TRIG           INPUT        A15        LVCMOS33          N/A          PULLUP      NONE    
-    EXT_WATER_ALM        INPUT        H16        LVCMOS33          N/A          PULLUP      NONE    
-     FPGA_MCU10          INPUT        N15        LVCMOS33          N/A          PULLUP      NONE    
-     FPGA_MCU11          INPUT        N16        LVCMOS33          N/A          PULLUP      NONE    
-     FPGA_MCU12          INPUT        P17        LVCMOS33          N/A          PULLUP      NONE    
-      FPGA_MCU5          INPUT        P14        LVCMOS33          N/A          PULLUP      NONE    
-      FPGA_MCU6          INPUT        N17        LVCMOS33          N/A          PULLUP      NONE    
-      FPGA_MCU7          INPUT        P18        LVCMOS33          N/A          PULLUP      NONE    
-      FREQ_PD1           INPUT        R15        LVCMOS33          N/A         PULLDOWN     NONE    
-      FREQ_PD2           INPUT        P15        LVCMOS33          N/A         PULLDOWN     NONE    
-      FREQ_PD3           INPUT        R17        LVCMOS33          N/A         PULLDOWN     NONE    
-     HEAD_ERROR          INPUT        L13        LVCMOS33          N/A          PULLUP      NONE    
-       LOW_24V           INPUT        R11        LVCMOS33          N/A          PULLUP      NONE    
-       MCU_ERR           INPUT        M16        LVCMOS33          N/A          PULLUP      NONE    
-      MCU_ESTOP          INPUT        M17        LVCMOS33          N/A          PULLUP      NONE    
-     MOTOR1_ccw          INPUT        L16        LVCMOS33          N/A          PULLUP      NONE    
-      MOTOR1_cw          INPUT        M14        LVCMOS33          N/A          PULLUP      NONE    
-    MOTOR1_origin        INPUT        L14        LVCMOS33          N/A          PULLUP      NONE    
-      PTOTE_PD1          INPUT        G14        LVCMOS33          N/A          PULLUP      NONE    
-      PTOTE_PD2          INPUT        H14        LVCMOS33          N/A          PULLUP      NONE    
-      PTOTE_PD3          INPUT        D17        LVCMOS33          N/A          PULLUP      NONE    
-       SPI_CS            INPUT        M13        LVCMOS33          N/A          PULLUP      NONE    
-      SPI_SCLK           INPUT        R18        LVCMOS33          N/A          PULLUP      NONE    
-       SPI_SDI           INPUT        T18        LVCMOS33          N/A          PULLUP      NONE    
-  TIME_SEQ_ALM_INT1      INPUT         H5        LVCMOS33          N/A          PULLUP      NONE    
-  TIME_SEQ_ALM_INT2      INPUT         H6        LVCMOS33          N/A          PULLUP      NONE    
-       clk_in            INPUT        A10        LVCMOS33          N/A          PULLUP      NONE    
-     online1_INT         INPUT         D9        LVCMOS33          N/A          PULLUP      NONE    
-     online2_INT         INPUT         A8        LVCMOS33          N/A          PULLUP      NONE    
-    AIRPUMP_PWM1        OUTPUT        V15        LVCMOS33           8            NONE       NONE    
-    AIRPUMP_PWM2        OUTPUT        V16        LVCMOS33           8            NONE       NONE    
-   AIR_VALVES_CTL       OUTPUT        U17        LVCMOS33           8            NONE       NONE    
-      AOM1_CLK          OUTPUT         U1        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[13]        OUTPUT         K6        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[12]        OUTPUT         M1        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[11]        OUTPUT         L1        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[10]        OUTPUT         L3        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[9]         OUTPUT         K3        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[8]         OUTPUT         N1        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[7]         OUTPUT         N2        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[6]         OUTPUT         M2        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[5]         OUTPUT         M3        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[4]         OUTPUT         L4        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[3]         OUTPUT         K5        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[2]         OUTPUT         L5        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[1]         OUTPUT         L6        LVCMOS33           8            NONE       NONE    
-     AOM1_DB[0]         OUTPUT         V1        LVCMOS33           8            NONE       NONE    
-      AOM1_TTL          OUTPUT         U3        LVCMOS33           8            NONE       NONE    
-      AOM2_CLK          OUTPUT         P2        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[13]        OUTPUT         U4        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[12]        OUTPUT         V2        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[11]        OUTPUT         U2        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[10]        OUTPUT         V4        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[9]         OUTPUT         V5        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[8]         OUTPUT         T3        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[7]         OUTPUT         R3        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[6]         OUTPUT         T4        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[5]         OUTPUT         T5        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[4]         OUTPUT         P5        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[3]         OUTPUT         N5        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[2]         OUTPUT         P3        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[1]         OUTPUT         P4        LVCMOS33           8            NONE       NONE    
-     AOM2_DB[0]         OUTPUT         R2        LVCMOS33           8            NONE       NONE    
-      AOM2_TTL          OUTPUT         N4        LVCMOS33           8            NONE       NONE    
-      AOM3_CLK          OUTPUT         R7        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[13]        OUTPUT         M4        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[12]        OUTPUT         T1        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[11]        OUTPUT         R1        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[10]        OUTPUT         N6        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[9]         OUTPUT         M6        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[8]         OUTPUT         R5        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[7]         OUTPUT         R6        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[6]         OUTPUT         V6        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[5]         OUTPUT         V7        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[4]         OUTPUT         V9        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[3]         OUTPUT         U9        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[2]         OUTPUT         U6        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[1]         OUTPUT         U7        LVCMOS33           8            NONE       NONE    
-     AOM3_DB[0]         OUTPUT         T6        LVCMOS33           8            NONE       NONE    
-      AOM3_TTL          OUTPUT         T8        LVCMOS33           8            NONE       NONE    
-      AOM4_CLK          OUTPUT        T10        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[13]        OUTPUT        U18        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[12]        OUTPUT        U16        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[11]        OUTPUT        V17        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[10]        OUTPUT        T11        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[9]         OUTPUT        U11        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[8]         OUTPUT        U12        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[7]         OUTPUT        V12        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[6]         OUTPUT        V10        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[5]         OUTPUT        V11        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[4]         OUTPUT        U14        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[3]         OUTPUT        V14        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[2]         OUTPUT        T13        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[1]         OUTPUT        U13        LVCMOS33           8            NONE       NONE    
-     AOM4_DB[0]         OUTPUT         T9        LVCMOS33           8            NONE       NONE    
-      AOM4_TTL          OUTPUT        R10        LVCMOS33           8            NONE       NONE    
-      EXT_AD_CS         OUTPUT        D13        LVCMOS33           8            NONE       NONE    
-     EXT_AD_SCLK        OUTPUT        B17        LVCMOS33           8            NONE       NONE    
-       EXT_ALM          OUTPUT        A18        LVCMOS33           8            NONE       NONE    
-      EXT_STATE         OUTPUT        A16        LVCMOS33           8            NONE       NONE    
-      EXT_SYNC1         OUTPUT        E16        LVCMOS33           8            NONE       NONE    
-      EXT_SYNC2         OUTPUT        A14        LVCMOS33           8            NONE       NONE    
-     FPGA_SW[1]         OUTPUT        J13        LVCMOS33           8            NONE       NONE    
-     FPGA_SW[0]         OUTPUT        E17        LVCMOS33           8            NONE       NONE    
-      FPGA_WDI          OUTPUT        R13        LVCMOS33           8            NONE       NONE    
-       ICR1_A           OUTPUT        T14        LVCMOS33           8            NONE       NONE    
-       ICR1_B           OUTPUT        T15        LVCMOS33           8            NONE       NONE    
-       ICR2_A           OUTPUT        R16        LVCMOS33           8            NONE       NONE    
-       ICR2_B           OUTPUT        T16        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[14]       OUTPUT         J4        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[13]       OUTPUT         G3        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[12]       OUTPUT         F1        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[11]       OUTPUT         G1        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[10]       OUTPUT         H2        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[9]        OUTPUT         D2        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[8]        OUTPUT         E3        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[7]        OUTPUT         D4        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[6]        OUTPUT         B1        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[5]        OUTPUT         A3        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[4]        OUTPUT         E7        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[3]        OUTPUT         E5        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[2]        OUTPUT         A6        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[1]        OUTPUT         B6        LVCMOS33           8            NONE       NONE    
-    MD_DAC_CS[0]        OUTPUT         F5        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[14]      OUTPUT         J3        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[13]      OUTPUT         H4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[12]      OUTPUT         G6        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[11]      OUTPUT         E1        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[10]      OUTPUT         C2        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[9]       OUTPUT         G2        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[8]       OUTPUT         F4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[7]       OUTPUT         D3        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[6]       OUTPUT         B3        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[5]       OUTPUT         A1        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[4]       OUTPUT         C4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[3]       OUTPUT         D7        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[2]       OUTPUT         D8        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[1]       OUTPUT         A5        LVCMOS33           8            NONE       NONE    
-   MD_DAC_DOUT[0]       OUTPUT         C6        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[14]      OUTPUT         J2        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[13]      OUTPUT         G4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[12]      OUTPUT         F6        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[11]      OUTPUT         H1        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[10]      OUTPUT         C1        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[9]       OUTPUT         E2        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[8]       OUTPUT         F3        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[7]       OUTPUT         D5        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[6]       OUTPUT         B2        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[5]       OUTPUT         A4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[4]       OUTPUT         B4        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[3]       OUTPUT         E6        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[2]       OUTPUT         C7        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[1]       OUTPUT         B7        LVCMOS33           8            NONE       NONE    
-   MD_DAC_SCLK[0]       OUTPUT         C5        LVCMOS33           8            NONE       NONE    
-    MOTOR1_direct       OUTPUT        L18        LVCMOS33           8            NONE       NONE    
-    MOTOR1_enable       OUTPUT        R12        LVCMOS33           8            NONE       NONE    
-    MOTOR1_pulse        OUTPUT        M18        LVCMOS33           8            NONE       NONE    
-   ONLINE_PROG[1]       OUTPUT         U8        LVCMOS33           8            NONE       NONE    
-   ONLINE_PROG[0]       OUTPUT         R8        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[14]        OUTPUT        K16        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[13]        OUTPUT        K15        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[12]        OUTPUT        J15        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[11]        OUTPUT        J17        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[10]        OUTPUT        J18        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[9]         OUTPUT        G18        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[8]         OUTPUT        F18        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[7]         OUTPUT        E18        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[6]         OUTPUT        D18        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[5]         OUTPUT        C16        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[4]         OUTPUT        C17        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[3]         OUTPUT        J14        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[2]         OUTPUT        H15        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[1]         OUTPUT        H17        LVCMOS33           8            NONE       NONE    
-     PUMP_SW[0]         OUTPUT        G17        LVCMOS33           8            NONE       NONE    
-       SPI_SDO          OUTPUT        N14        LVCMOS33           8            NONE       NONE    
-  TIME_SEQ_ALM_SCL      OUTPUT         K1        LVCMOS33           8            NONE       NONE    
-    debug_led[3]        OUTPUT         A9        LVCMOS33           8            NONE       NONE    
-    debug_led[2]        OUTPUT        C11        LVCMOS33           8            NONE       NONE    
-    debug_led[1]        OUTPUT         J5        LVCMOS33           8            NONE       NONE    
-    debug_led[0]        OUTPUT        D10        LVCMOS33           8            NONE       NONE    
-     online1_SCL        OUTPUT         C9        LVCMOS33           8            NONE       NONE    
-     online2_SCL        OUTPUT         B8        LVCMOS33           8            NONE       NONE    
-  TIME_SEQ_ALM_SDA       INOUT         K2        LVCMOS33           8           PULLUP      NONE    
-     online1_SDA         INOUT         B9        LVCMOS33           8           PULLUP      NONE    
-     online2_SDA         INOUT        C10        LVCMOS33           8           PULLUP      NONE    
+        Name           Direction    Location    IOStandard    IOType    DriveStrength    PullType    PackReg  
+     EXT_AD_SDO          INPUT        D12        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[7]         INPUT        A11        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[6]         INPUT        C12        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[5]         INPUT        B12        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[4]         INPUT        B13        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[3]         INPUT        B14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[2]         INPUT        D14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[1]         INPUT        C14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_DATA[0]         INPUT        G13        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_EXMODE          INPUT        C15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      EXT_GATE           INPUT        B16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      EXT_GUID           INPUT        D15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_INMODE          INPUT        F15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_INTLK1          INPUT        E15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     EXT_INTLK2          INPUT        F16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       EXT_LAT           INPUT        B11        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       EXT_OFF           INPUT        G16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       EXT_PRR           INPUT        B18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       EXT_PWM           INPUT        A13        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    EXT_RESERVE1         INPUT        F14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    EXT_RESERVE2         INPUT        F13        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      EXT_TRIG           INPUT        A15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    EXT_WATER_ALM        INPUT        H16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     FPGA_MCU10          INPUT        N15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     FPGA_MCU11          INPUT        N16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     FPGA_MCU12          INPUT        P17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      FPGA_MCU5          INPUT        P14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      FPGA_MCU6          INPUT        N17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      FPGA_MCU7          INPUT        P18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      FREQ_PD1           INPUT        R15        LVCMOS33      HRIO          N/A         PULLDOWN     NONE    
+      FREQ_PD2           INPUT        P15        LVCMOS33      HRIO          N/A         PULLDOWN     NONE    
+      FREQ_PD3           INPUT        R17        LVCMOS33      HRIO          N/A         PULLDOWN     NONE    
+       LOW_24V           INPUT        R11        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       MCU_ERR           INPUT        M16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      MCU_ESTOP          INPUT        M17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     MOTOR1_ccw          INPUT        L16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      MOTOR1_cw          INPUT        M14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    MOTOR1_origin        INPUT        L14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      PTOTE_PD1          INPUT        G14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      PTOTE_PD2          INPUT        H14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      PTOTE_PD3          INPUT        D17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       SPI_CS            INPUT        M13        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      SPI_SCLK           INPUT        R18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       SPI_SDI           INPUT        T18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  TIME_SEQ_ALM_INT1      INPUT         H5        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  TIME_SEQ_ALM_INT2      INPUT         H6        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       clk_in            INPUT        A10        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     online1_INT         INPUT         D9        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     online2_INT         INPUT         A8        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    AIRPUMP_PWM1        OUTPUT        V15        LVCMOS33      HRIO           8            NONE       NONE    
+    AIRPUMP_PWM2        OUTPUT        V16        LVCMOS33      HRIO           8            NONE       NONE    
+   AIR_VALVES_CTL       OUTPUT        U17        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM1_CLK          OUTPUT         U1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[13]        OUTPUT         K6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[12]        OUTPUT         M1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[11]        OUTPUT         L1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[10]        OUTPUT         L3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[9]         OUTPUT         K3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[8]         OUTPUT         N1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[7]         OUTPUT         N2        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[6]         OUTPUT         M2        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[5]         OUTPUT         M3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[4]         OUTPUT         L4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[3]         OUTPUT         K5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[2]         OUTPUT         L5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[1]         OUTPUT         L6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM1_DB[0]         OUTPUT         V1        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM1_TTL          OUTPUT         U3        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM2_CLK          OUTPUT         P2        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[13]        OUTPUT         U4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[12]        OUTPUT         V2        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[11]        OUTPUT         U2        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[10]        OUTPUT         V4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[9]         OUTPUT         V5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[8]         OUTPUT         T3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[7]         OUTPUT         R3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[6]         OUTPUT         T4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[5]         OUTPUT         T5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[4]         OUTPUT         P5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[3]         OUTPUT         N5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[2]         OUTPUT         P3        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[1]         OUTPUT         P4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM2_DB[0]         OUTPUT         R2        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM2_TTL          OUTPUT         N4        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM3_CLK          OUTPUT         R7        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[13]        OUTPUT         M4        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[12]        OUTPUT         T1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[11]        OUTPUT         R1        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[10]        OUTPUT         N6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[9]         OUTPUT         M6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[8]         OUTPUT         R5        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[7]         OUTPUT         R6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[6]         OUTPUT         V6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[5]         OUTPUT         V7        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[4]         OUTPUT         V9        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[3]         OUTPUT         U9        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[2]         OUTPUT         U6        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[1]         OUTPUT         U7        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM3_DB[0]         OUTPUT         T6        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM3_TTL          OUTPUT         T8        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM4_CLK          OUTPUT        T10        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[13]        OUTPUT        U18        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[12]        OUTPUT        U16        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[11]        OUTPUT        V17        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[10]        OUTPUT        T11        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[9]         OUTPUT        U11        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[8]         OUTPUT        U12        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[7]         OUTPUT        V12        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[6]         OUTPUT        V10        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[5]         OUTPUT        V11        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[4]         OUTPUT        U14        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[3]         OUTPUT        V14        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[2]         OUTPUT        T13        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[1]         OUTPUT        U13        LVCMOS33      HRIO           8            NONE       NONE    
+     AOM4_DB[0]         OUTPUT         T9        LVCMOS33      HRIO           8            NONE       NONE    
+      AOM4_TTL          OUTPUT        R10        LVCMOS33      HRIO           8            NONE       NONE    
+      EXT_AD_CS         OUTPUT        D13        LVCMOS33      HRIO           8            NONE       NONE    
+     EXT_AD_SCLK        OUTPUT        B17        LVCMOS33      HRIO           8            NONE       NONE    
+       EXT_ALM          OUTPUT        A18        LVCMOS33      HRIO           8            NONE       NONE    
+      EXT_STATE         OUTPUT        A16        LVCMOS33      HRIO           8            NONE       NONE    
+      EXT_SYNC1         OUTPUT        E16        LVCMOS33      HRIO           8            NONE       NONE    
+      EXT_SYNC2         OUTPUT        A14        LVCMOS33      HRIO           8            NONE       NONE    
+     FPGA_SW[1]         OUTPUT        J13        LVCMOS33      HRIO           8            NONE       NONE    
+     FPGA_SW[0]         OUTPUT        E17        LVCMOS33      HRIO           8            NONE       NONE    
+      FPGA_WDI          OUTPUT        R13        LVCMOS33      HRIO           8            NONE       NONE    
+       ICR1_A           OUTPUT        T14        LVCMOS33      HRIO           8            NONE       NONE    
+       ICR1_B           OUTPUT        T15        LVCMOS33      HRIO           8            NONE       NONE    
+       ICR2_A           OUTPUT        R16        LVCMOS33      HRIO           8            NONE       NONE    
+       ICR2_B           OUTPUT        T16        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[14]       OUTPUT         J4        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[13]       OUTPUT         G3        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[12]       OUTPUT         F1        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[11]       OUTPUT         G1        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[10]       OUTPUT         H2        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[9]        OUTPUT         D2        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[8]        OUTPUT         E3        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[7]        OUTPUT         D4        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[6]        OUTPUT         B1        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[5]        OUTPUT         A3        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[4]        OUTPUT         E7        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[3]        OUTPUT         E5        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[2]        OUTPUT         A6        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[1]        OUTPUT         B6        LVCMOS33      HRIO           8            NONE       NONE    
+    MD_DAC_CS[0]        OUTPUT         F5        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[14]      OUTPUT         J3        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[13]      OUTPUT         H4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[12]      OUTPUT         G6        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[11]      OUTPUT         E1        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[10]      OUTPUT         C2        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[9]       OUTPUT         G2        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[8]       OUTPUT         F4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[7]       OUTPUT         D3        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[6]       OUTPUT         B3        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[5]       OUTPUT         A1        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[4]       OUTPUT         C4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[3]       OUTPUT         D7        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[2]       OUTPUT         D8        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[1]       OUTPUT         A5        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_DOUT[0]       OUTPUT         C6        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[14]      OUTPUT         J2        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[13]      OUTPUT         G4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[12]      OUTPUT         F6        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[11]      OUTPUT         H1        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[10]      OUTPUT         C1        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[9]       OUTPUT         E2        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[8]       OUTPUT         F3        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[7]       OUTPUT         D5        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[6]       OUTPUT         B2        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[5]       OUTPUT         A4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[4]       OUTPUT         B4        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[3]       OUTPUT         E6        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[2]       OUTPUT         C7        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[1]       OUTPUT         B7        LVCMOS33      HRIO           8            NONE       NONE    
+   MD_DAC_SCLK[0]       OUTPUT         C5        LVCMOS33      HRIO           8            NONE       NONE    
+    MOTOR1_direct       OUTPUT        L18        LVCMOS33      HRIO           8            NONE       NONE    
+    MOTOR1_enable       OUTPUT        R12        LVCMOS33      HRIO           8            NONE       NONE    
+    MOTOR1_pulse        OUTPUT        M18        LVCMOS33      HRIO           8            NONE       NONE    
+   ONLINE_PROG[1]       OUTPUT         U8        LVCMOS33      HRIO           8            NONE       NONE    
+   ONLINE_PROG[0]       OUTPUT         R8        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[14]        OUTPUT        K16        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[13]        OUTPUT        K15        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[12]        OUTPUT        J15        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[11]        OUTPUT        J17        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[10]        OUTPUT        J18        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[9]         OUTPUT        G18        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[8]         OUTPUT        F18        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[7]         OUTPUT        E18        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[6]         OUTPUT        D18        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[5]         OUTPUT        C16        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[4]         OUTPUT        C17        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[3]         OUTPUT        J14        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[2]         OUTPUT        H15        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[1]         OUTPUT        H17        LVCMOS33      HRIO           8            NONE       NONE    
+     PUMP_SW[0]         OUTPUT        G17        LVCMOS33      HRIO           8            NONE       NONE    
+       SPI_SDO          OUTPUT        N14        LVCMOS33      HRIO           8            NONE       NONE    
+  TIME_SEQ_ALM_SCL      OUTPUT         K1        LVCMOS33      HRIO           8            NONE       NONE    
+    debug_led[3]        OUTPUT         A9        LVCMOS33      HRIO           8            NONE       NONE    
+    debug_led[2]        OUTPUT        C11        LVCMOS33      HRIO           8            NONE       NONE    
+    debug_led[1]        OUTPUT         J5        LVCMOS33      HRIO           8            NONE       NONE    
+    debug_led[0]        OUTPUT        D10        LVCMOS33      HRIO           8            NONE       NONE    
+     online1_SCL        OUTPUT         C9        LVCMOS33      HRIO           8            NONE       NONE    
+     online2_SCL        OUTPUT         B8        LVCMOS33      HRIO           8            NONE       NONE    
+  TIME_SEQ_ALM_SDA       INOUT         K2        LVCMOS33      HRIO           8           PULLUP      NONE    
+     online1_SDA         INOUT         B9        LVCMOS33      HRIO           8           PULLUP      NONE    
+     online2_SDA         INOUT        C10        LVCMOS33      HRIO           8           PULLUP      NONE    
+
+Report Clock Domain Luts:
+
+--------------------------------------------------------------------------------------------------------------------------------
+  Index   |  Name                       |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+--------------------------------------------------------------------------------------------------------------------------------
+  #1      |  SYS_PLL/pll_inst.clkc[0]   |  50MHz       |  10123          |  0                |  0             |  0      |  4
+  #2      |  SYS_PLL/pll_inst.clkc[1]   |  160MHz      |  170            |  0                |  0             |  0      |  0
+  #3      |  SYS_PLL/pll_inst.clkc[2]   |  100MHz      |  178            |  0                |  0             |  0      |  0
+  #4      |  SYS_PLL/pll_inst.clkc[3]   |  32MHz       |  1              |  0                |  0             |  0      |  0
+  #5      |  pd1_4times/pll_inst.clk... |  32MHz       |  887            |  0                |  0             |  0      |  0
+  #6      |  pd1_4times/pll_inst.clk... |  128MHz      |  315            |  0                |  0             |  0      |  0
+--------------------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet               Type            DriverType         Driver                         ClockFanout
+#1        SYS_PLL/clk0_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc0         3545
+#2        pd1_4times/clk0_buf    UserGclk        pll                pd1_4times/pll_inst.clkc0      1388
+#3        pd1_4times/clk1_buf    UserGclk        pll                pd1_4times/pll_inst.clkc1      197
+#4        SYS_PLL/clk2_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc2         77
+#5        SYS_PLL/clk1_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc1         66
+#6        online_1/flag          InferredGclk    lslice             online_1/flag_reg_syn_8.oqb    18
+#7        SYS_PLL/clk3_buf       UserGclk        pll                SYS_PLL/pll_inst.clkc3         0
 
 Report Hierarchy Area:
 +--------------------------------------------------------------------------------------------------------------------------------------------+
 |Instance                |Module            |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |
 +--------------------------------------------------------------------------------------------------------------------------------------------+
-|top                     |top               |9223      |2097    |9264    |0       |4       |0        |0           |420     |210     |2       |
-|  AOM2_TTL_inst         |AOM2_TTL          |160       |48      |116     |0       |0       |0        |0           |0       |0       |0       |
-|  PD1_LOW               |freq_alarm_feed   |23        |16      |34      |0       |0       |0        |0           |0       |0       |0       |
-|  PD2_LOW               |freq_alarm_feed   |38        |16      |37      |0       |0       |0        |0           |0       |0       |0       |
-|  PD_WAVE1              |PD_WAVE           |13        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|  PD_WAVE2              |PD_WAVE           |8         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
+|top                     |top               |8139      |2061    |9168    |0       |4       |0        |0           |390     |195     |2       |
+|  AOM2_TTL_inst         |AOM2_TTL          |97        |48      |111     |0       |0       |0        |0           |0       |0       |0       |
+|  PD1_LOW               |freq_alarm_feed   |19        |16      |50      |0       |0       |0        |0           |0       |0       |0       |
+|  PD2_LOW               |freq_alarm_feed   |37        |16      |20      |0       |0       |0        |0           |0       |0       |0       |
+|  PD_WAVE1              |PD_WAVE           |12        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|  PD_WAVE2              |PD_WAVE           |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|  PH1A_MULT18X4         |PH1A_MULT12X2     |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
+|    mult0_syn_47        |                  |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
 |  SYS_PLL               |PH1A_SYS_PLL      |0         |0       |0       |0       |0       |0        |0           |0       |0       |1       |
-|  alarm_mon             |alarm_mon         |327       |156     |462     |0       |0       |0        |0           |0       |0       |0       |
-|    U0                  |high_alarm        |5         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
-|    U1                  |low_alarm         |14        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
-|    U10                 |high_alarm        |4         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
-|    U11                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
-|    U13                 |high_alarm        |5         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
-|    U14                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
-|    U15                 |high_alarm        |5         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
-|    U16                 |high_alarm        |3         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
-|    U17                 |high_alarm        |5         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
-|    U18                 |high_alarm        |4         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
-|    U19                 |high_alarm        |3         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
+|  alarm_mon             |alarm_mon         |270       |108     |407     |0       |0       |0        |0           |0       |0       |0       |
+|    U1                  |low_alarm         |15        |16      |20      |0       |0       |0        |0           |0       |0       |0       |
 |    U2                  |low_alarm         |15        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
-|    U20                 |high_alarm        |4         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
-|    U21                 |high_alarm        |6         |0       |10      |0       |0       |0        |0           |0       |0       |0       |
-|    U22                 |high_alarm        |4         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
-|    U23                 |high_alarm        |4         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
-|    U24                 |high_alarm        |3         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
-|    U25                 |high_alarm        |5         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
-|    U26                 |high_alarm        |2         |0       |4       |0       |0       |0        |0           |0       |0       |0       |
-|    U27                 |high_alarm        |2         |0       |3       |0       |0       |0        |0           |0       |0       |0       |
-|    U28                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
-|    U29                 |high_alarm        |6         |0       |11      |0       |0       |0        |0           |0       |0       |0       |
-|    U2_0                |low_alarm         |14        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
-|    U2_1                |low_alarm         |14        |16      |18      |0       |0       |0        |0           |0       |0       |0       |
-|    U2_2                |low_alarm         |14        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
-|    U3                  |high_alarm        |22        |16      |21      |0       |0       |0        |0           |0       |0       |0       |
-|    U30                 |high_alarm        |5         |0       |9       |0       |0       |0        |0           |0       |0       |0       |
-|    U31                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
-|    U4                  |low_alarm         |14        |16      |20      |0       |0       |0        |0           |0       |0       |0       |
+|    U3                  |high_alarm        |15        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
+|    U4                  |low_alarm         |15        |16      |20      |0       |0       |0        |0           |0       |0       |0       |
 |    U5                  |low_alarm         |14        |16      |19      |0       |0       |0        |0           |0       |0       |0       |
-|    U6                  |high_alarm        |5         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U19                 |high_alarm        |5         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U27                 |high_alarm        |4         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
+|    U10                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
+|    U11                 |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
+|    U17                 |high_alarm        |4         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
+|    U16                 |high_alarm        |3         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
+|    U18                 |high_alarm        |3         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
+|    U20                 |high_alarm        |5         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
+|    U21                 |high_alarm        |5         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
+|    U22                 |high_alarm        |4         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
+|    U23                 |high_alarm        |6         |0       |10      |0       |0       |0        |0           |0       |0       |0       |
+|    U24                 |high_alarm        |4         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U26                 |high_alarm        |3         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
+|    U28                 |high_alarm        |5         |0       |10      |0       |0       |0        |0           |0       |0       |0       |
+|    U29                 |high_alarm        |4         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U30                 |high_alarm        |4         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U9                  |high_alarm        |7         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U6                  |high_alarm        |6         |0       |9       |0       |0       |0        |0           |0       |0       |0       |
+|    U0                  |high_alarm        |4         |0       |5       |0       |0       |0        |0           |0       |0       |0       |
+|    U15                 |high_alarm        |3         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
+|    U25                 |high_alarm        |2         |0       |4       |0       |0       |0        |0           |0       |0       |0       |
+|    U13                 |high_alarm        |6         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U14                 |high_alarm        |5         |0       |7       |0       |0       |0        |0           |0       |0       |0       |
+|    U31                 |high_alarm        |5         |0       |6       |0       |0       |0        |0           |0       |0       |0       |
 |    U7                  |high_alarm        |6         |0       |8       |0       |0       |0        |0           |0       |0       |0       |
-|    U9                  |high_alarm        |7         |0       |9       |0       |0       |0        |0           |0       |0       |0       |
-|  aom2_dac              |MS9714            |6         |0       |10      |0       |0       |0        |0           |0       |0       |0       |
-|  burst                 |burst             |1982      |73      |2717    |0       |0       |0        |0           |356     |178     |0       |
-|    AND_AOM1_TTL        |AND_DELAY         |105       |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|  burst                 |burst             |2104      |73      |2717    |0       |0       |0        |0           |356     |178     |0       |
+|    AND_AOM1_TTL        |AND_DELAY         |101       |0       |0       |0       |0       |0        |0           |0       |0       |0       |
 |    AND_AOM3_TTL        |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_CLK         |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA0       |AND_DELAY         |63        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA1       |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA2       |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA3       |AND_DELAY         |63        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA4       |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA5       |AND_DELAY         |58        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA6       |AND_DELAY         |62        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DAC_DATA7       |AND_DELAY         |63        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AND_DELAY_TTL2DAC   |AND_DELAY         |65        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
-|    AOM1_TTL_PUL        |OR_GATE_16        |81        |0       |0       |0       |0       |0        |0           |8       |4       |0       |
-|    AOM3_TTL_PUL1       |OR_GATE_16        |123       |0       |0       |0       |0       |0        |0           |8       |4       |0       |
-|    REG_AOM1_TTL        |reg_delay         |83        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_AOM3_TTL        |reg_delay         |72        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    AND_DAC_CLK         |AND_DELAY         |61        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA0       |AND_DELAY         |75        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA1       |AND_DELAY         |42        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA2       |AND_DELAY         |56        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA3       |AND_DELAY         |64        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA4       |AND_DELAY         |75        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA5       |AND_DELAY         |69        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DAC_DATA7       |AND_DELAY         |9         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AND_DELAY_TTL2DAC   |AND_DELAY         |67        |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    AOM1_TTL_PUL        |OR_GATE_16        |80        |0       |0       |0       |0       |0        |0           |8       |4       |0       |
+|    AOM3_TTL_PUL1       |OR_GATE_16        |119       |0       |0       |0       |0       |0        |0           |8       |4       |0       |
+|    REG_AOM1_TTL        |reg_delay         |109       |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_AOM3_TTL        |reg_delay         |84        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
 |    REG_DAC_DATA0       |reg_delay         |68        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA1       |reg_delay         |69        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA2       |reg_delay         |68        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA3       |reg_delay         |68        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA4       |reg_delay         |71        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA5       |reg_delay         |84        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA6       |reg_delay         |69        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|    REG_DAC_DATA7       |reg_delay         |69        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|  calibration_aom       |calibration_aom   |401       |10      |125     |0       |2       |0        |0           |0       |0       |0       |
+|    REG_DAC_DATA1       |reg_delay         |68        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA2       |reg_delay         |69        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA3       |reg_delay         |72        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA4       |reg_delay         |70        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA5       |reg_delay         |73        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA6       |reg_delay         |168       |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|    REG_DAC_DATA7       |reg_delay         |196       |0       |256     |0       |0       |0        |0           |34      |17      |0       |
+|  calibration_aom       |calibration_aom   |141       |20      |123     |0       |2       |0        |0           |0       |0       |0       |
 |    PH1A_MULT8X32       |PH1A_MULT8X32     |0         |0       |0       |0       |2       |0        |0           |0       |0       |0       |
 |      mult0_syn_148     |                  |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
 |      mult0_syn_93      |                  |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
-|  core                  |core              |5133      |1316    |4820    |0       |0       |0        |0           |30      |15      |0       |
-|    airpump1_speed_adj  |airpump_speed_adj |33        |49      |17      |0       |0       |0        |0           |0       |0       |0       |
-|    airpump2_speed_adj  |airpump_speed_adj |33        |49      |17      |0       |0       |0        |0           |0       |0       |0       |
-|    pump1               |pump              |149       |72      |88      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |74        |72      |59      |0       |0       |0        |0           |0       |0       |0       |
-|    pump10              |pump              |132       |72      |73      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |67        |72      |41      |0       |0       |0        |0           |0       |0       |0       |
-|    pump11              |pump              |133       |72      |82      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |75        |72      |51      |0       |0       |0        |0           |0       |0       |0       |
-|    pump12              |pump              |148       |72      |115     |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |88        |72      |84      |0       |0       |0        |0           |0       |0       |0       |
-|    pump13              |pump              |150       |72      |96      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |91        |72      |62      |0       |0       |0        |0           |0       |0       |0       |
-|    pump14              |pump              |144       |72      |93      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |80        |72      |60      |0       |0       |0        |0           |0       |0       |0       |
-|    pump15              |pump              |145       |72      |90      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |65        |72      |60      |0       |0       |0        |0           |0       |0       |0       |
-|    pump2               |pump              |108       |72      |81      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |56        |72      |51      |0       |0       |0        |0           |0       |0       |0       |
-|    pump3               |pump              |116       |72      |80      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |57        |72      |49      |0       |0       |0        |0           |0       |0       |0       |
-|    pump4               |pump              |134       |72      |110     |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |63        |72      |79      |0       |0       |0        |0           |0       |0       |0       |
-|    pump5               |pump              |148       |72      |78      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |73        |72      |46      |0       |0       |0        |0           |0       |0       |0       |
-|    pump6               |pump              |151       |72      |105     |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |87        |72      |74      |0       |0       |0        |0           |0       |0       |0       |
-|    pump7               |pump              |133       |72      |87      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |69        |72      |58      |0       |0       |0        |0           |0       |0       |0       |
-|    pump8               |pump              |127       |72      |89      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |67        |72      |56      |0       |0       |0        |0           |0       |0       |0       |
-|    pump9               |pump              |119       |72      |93      |0       |0       |0        |0           |2       |1       |0       |
-|      ramp              |pump_ramp         |61        |72      |61      |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[0]$pump_dac  |dac_TPC112S1      |21        |0       |10      |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[10]$pump_dac |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
+|  core                  |core              |4541      |1318    |4812    |0       |0       |0        |0           |0       |0       |0       |
+|    airpump1_speed_adj  |airpump_speed_adj |27        |50      |17      |0       |0       |0        |0           |0       |0       |0       |
+|    airpump2_speed_adj  |airpump_speed_adj |27        |50      |17      |0       |0       |0        |0           |0       |0       |0       |
+|    pump1               |pump              |154       |72      |91      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |59        |72      |60      |0       |0       |0        |0           |0       |0       |0       |
+|    pump10              |pump              |97        |72      |77      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |42        |72      |48      |0       |0       |0        |0           |0       |0       |0       |
+|    pump11              |pump              |105       |72      |72      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |49        |72      |43      |0       |0       |0        |0           |0       |0       |0       |
+|    pump12              |pump              |116       |72      |94      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |71        |72      |66      |0       |0       |0        |0           |0       |0       |0       |
+|    pump13              |pump              |117       |72      |98      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |58        |72      |67      |0       |0       |0        |0           |0       |0       |0       |
+|    pump14              |pump              |122       |72      |100     |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |68        |72      |65      |0       |0       |0        |0           |0       |0       |0       |
+|    pump15              |pump              |131       |72      |88      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |55        |72      |56      |0       |0       |0        |0           |0       |0       |0       |
+|    pump2               |pump              |125       |72      |77      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |50        |72      |47      |0       |0       |0        |0           |0       |0       |0       |
+|    pump3               |pump              |117       |72      |76      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |50        |72      |46      |0       |0       |0        |0           |0       |0       |0       |
+|    pump4               |pump              |139       |72      |106     |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |66        |72      |76      |0       |0       |0        |0           |0       |0       |0       |
+|    pump5               |pump              |135       |72      |90      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |75        |72      |60      |0       |0       |0        |0           |0       |0       |0       |
+|    pump6               |pump              |122       |72      |101     |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |63        |72      |71      |0       |0       |0        |0           |0       |0       |0       |
+|    pump7               |pump              |109       |72      |108     |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |53        |72      |74      |0       |0       |0        |0           |0       |0       |0       |
+|    pump8               |pump              |106       |72      |89      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |53        |72      |58      |0       |0       |0        |0           |0       |0       |0       |
+|    pump9               |pump              |131       |72      |93      |0       |0       |0        |0           |0       |0       |0       |
+|      ramp              |pump_ramp         |72        |72      |63      |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[0]$pump_dac  |dac_TPC112S1      |17        |0       |9       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[10]$pump_dac |dac_TPC112S1      |3         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
 |    pump_A[11]$pump_dac |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[12]$pump_dac |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[12]$pump_dac |dac_TPC112S1      |3         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
 |    pump_A[13]$pump_dac |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[14]$pump_dac |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[1]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[2]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[3]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[4]$pump_dac  |dac_TPC112S1      |9         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[5]$pump_dac  |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[6]$pump_dac  |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[7]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[8]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    pump_A[9]$pump_dac  |dac_TPC112S1      |5         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|    spi                 |spi               |173       |0       |266     |0       |0       |0        |0           |0       |0       |0       |
-|  data_sync             |data_sync         |8         |0       |26      |0       |0       |0        |0           |0       |0       |0       |
-|  ext_adc               |adc_ADS7883       |19        |0       |22      |0       |0       |0        |0           |0       |0       |0       |
-|  feed_dog              |feed_dog          |3         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
-|  fiber_break           |fiber_break       |57        |38      |41      |0       |0       |0        |0           |0       |0       |0       |
-|  filter_U0             |filter            |2         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
-|  freq_cal_1            |freq_cal          |23        |17      |49      |0       |0       |0        |0           |0       |0       |0       |
-|  freq_cal_2            |freq_cal_AOM2     |31        |16      |42      |0       |0       |0        |0           |0       |0       |0       |
-|  icr_1                 |ICR               |25        |24      |30      |0       |0       |0        |0           |0       |0       |0       |
-|  icr_2                 |ICR               |22        |24      |30      |0       |0       |0        |0           |0       |0       |0       |
-|  led_debug             |led_debug         |10        |0       |10      |0       |0       |0        |0           |0       |0       |0       |
-|  led_green             |led_green         |58        |25      |63      |0       |0       |0        |0           |0       |0       |0       |
-|  led_red               |led               |10        |0       |11      |0       |0       |0        |0           |0       |0       |0       |
-|  motor_1               |MOTOR             |145       |68      |77      |0       |0       |0        |0           |0       |0       |0       |
-|  online_1              |PCA9555           |92        |0       |46      |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[14]$pump_dac |dac_TPC112S1      |4         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[1]$pump_dac  |dac_TPC112S1      |4         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[2]$pump_dac  |dac_TPC112S1      |5         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[3]$pump_dac  |dac_TPC112S1      |4         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[4]$pump_dac  |dac_TPC112S1      |3         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[5]$pump_dac  |dac_TPC112S1      |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[6]$pump_dac  |dac_TPC112S1      |4         |0       |0       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[8]$pump_dac  |dac_TPC112S1      |5         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[9]$pump_dac  |dac_TPC112S1      |5         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|    spi                 |spi               |172       |0       |253     |0       |0       |0        |0           |0       |0       |0       |
+|    pump_A[7]$pump_dac  |dac_TPC112S1      |1         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|  feed_dog              |feed_dog          |3         |0       |2       |0       |0       |0        |0           |0       |0       |0       |
+|  fiber_break           |fiber_break       |41        |38      |43      |0       |0       |0        |0           |0       |0       |0       |
+|  freq_cal_1            |freq_cal          |24        |17      |48      |0       |0       |0        |0           |0       |0       |0       |
+|  freq_cal_2            |freq_cal_AOM2     |22        |16      |45      |0       |0       |0        |0           |0       |0       |0       |
+|  icr_1                 |ICR               |23        |24      |30      |0       |0       |0        |0           |0       |0       |0       |
+|  icr_2                 |ICR               |25        |24      |29      |0       |0       |0        |0           |0       |0       |0       |
+|  led_debug             |led_debug         |11        |0       |13      |0       |0       |0        |0           |0       |0       |0       |
+|  led_green             |led_green         |56        |25      |61      |0       |0       |0        |0           |0       |0       |0       |
+|  led_red               |led               |9         |0       |10      |0       |0       |0        |0           |0       |0       |0       |
+|  motor_1               |MOTOR             |79        |68      |77      |0       |0       |0        |0           |0       |0       |0       |
+|  online_1              |PCA9555           |55        |0       |46      |0       |0       |0        |0           |0       |0       |0       |
 |  pd1_4times            |PLL_BASE_FREQ     |0         |0       |0       |0       |0       |0        |0           |0       |0       |1       |
-|  pll_feed_dog          |pll_feed_dog      |8         |0       |12      |0       |0       |0        |0           |0       |0       |0       |
-|  power_lim             |power_lim         |3         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
+|  pll_feed_dog          |pll_feed_dog      |9         |0       |12      |0       |0       |0        |0           |0       |0       |0       |
+|  power_lim             |power_lim         |6         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
 |    PH1A_MULT10X18      |PH1A_MULT10X18    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
 |      mult0_syn_47      |                  |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
-|  reg_delay             |reg_delay         |72        |0       |256     |0       |0       |0        |0           |34      |17      |0       |
-|  water_flow_detection  |FRENC_WATER       |58        |59      |97      |0       |0       |0        |0           |0       |0       |0       |
-|  PH1A_MULT18X4         |PH1A_MULT12X2     |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
-|    mult0_syn_47        |                  |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |
+|  reg_delay             |reg_delay         |90        |0       |239     |0       |0       |0        |0           |34      |17      |0       |
+|  water_flow_detection  |FRENC_WATER       |61        |59      |92      |0       |0       |0        |0           |0       |0       |0       |
+|  ext_adc               |adc_ADS7883       |21        |0       |24      |0       |0       |0        |0           |0       |0       |0       |
+|  filter_U0             |filter            |1         |0       |1       |0       |0       |0        |0           |0       |0       |0       |
+|  aom2_dac              |MS9714            |6         |0       |9       |0       |0       |0        |0           |0       |0       |0       |
+|  data_sync             |data_sync         |15        |0       |26      |0       |0       |0        |0           |0       |0       |0       |
 +--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
-   Index     Fanout     Nets   
-    #1          1       13582  
-    #2          2       7118   
-    #3          3       2301   
-    #4          4        775   
-    #5        5-10       864   
-    #6        11-50      741   
-    #7       51-100      38    
-    #8       101-500      5    
-    #9        >500        1    
-  Average     2.52             
+   Index     Fanout    Nets   
+    #1         1       15032  
+    #2         2       7282   
+    #3         3       2148   
+    #4         4        467   
+    #5        5-10      805   
+    #6       11-50      546   
+    #7       51-100     42    
+    #8        >500       1    
+  Average     2.26            

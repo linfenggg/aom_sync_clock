@@ -73,10 +73,10 @@ module top(
     input				EXT_RESERVE1,	//预留
     input				EXT_RESERVE2,	//预留
     /***************双光子/风冷/水冷分体式机型相关信号(隔离)**************/
-    input 				PANEL_KEY,  	//钥匙开关
-	input 				PANEL_ESTOP,	//急停开关
-    input				HEAD_ERROR,		//激光头硬件报警信号
-    output reg 			DOUT_TO_HEAD,	//给到激光头的硬件控制信号，预留       
+  //  input 				PANEL_KEY,  	//钥匙开关
+//	input 				PANEL_ESTOP,	//急停开关
+  //  input				HEAD_ERROR,		//激光头硬件报警信号
+//    output reg 			DOUT_TO_HEAD,	//给到激光头的硬件控制信号，预留       
 	/*****************电机控制及限位开关采集信号(隔离)*******************/
 	input 				MOTOR1_cw,		//电机顺时针限位报警信号，1报警
 	input 				MOTOR1_ccw,     //电机逆时针限位报警信号，1报警
@@ -121,14 +121,17 @@ module top(
     input				FPGA_MCU11,	//预留
     input				FPGA_MCU12,	//预留
 	//debug调试用接口，需要信号打出时再配置
-	output 				clk_50m,		//50MHz系统时钟，用于常规信号及通信总线全局时钟
-    output 				clk_100m,		//100MHz系统时钟
-	output 				clk_160m,		//160MHz系统时钟，用于PD1和PD2测频报警的时序逻辑电路时钟
-	output 				clk_PD,
-	output 				clk_PD_4times,
+	
     output [3:0]		debug_led				
 );
 `include "parameter_def.v"
+
+
+	wire 				clk_50m;		//50MHz系统时钟，用于常规信号及通信总线全局时钟
+    wire 				clk_100m;		//100MHz系统时钟
+	wire 				clk_160m;		//160MHz系统时钟，用于PD1和PD2测频报警的时序逻辑电路时钟
+	wire 				clk_PD;
+	wire 				clk_PD_4times;
 
 wire 			pll_reset; 		//PLL复位信号，高电平复位
 wire 			pll_lock;		//锁相环锁相(PLL产生目标频率所需要的时间大概为15ms)后，该信号由低-->高
@@ -517,8 +520,8 @@ core	core(
 	.EXT_PRR				(EXT_PRR	),
 	.EXT_SYNC2				(EXT_SYNC2	),
 	.EXT_GUID				(EXT_GUID	),
-	.PANEL_KEY				(PANEL_KEY	),  
-	.PANEL_ESTOP			(PANEL_ESTOP),
+//	.PANEL_KEY				(PANEL_KEY	),  
+//	.PANEL_ESTOP			(PANEL_ESTOP),
 	.EXT_DATA				(EXT_DATA	),
 	.EXT_LAT				(EXT_LAT	),
 	.WATER_ALM				(EXT_WATER_ALM	),
@@ -895,9 +898,9 @@ alarm_mon	alarm_mon(
 	.alarm_now			(alarm_now),	//当前告警
 	.alarm_lat			(alarm_lat),	//历史告警
 	.alarm_out			(alarm_out),	//总告警，高级加低级
-	.PANEL_KEY		    (PANEL_KEY),
-    .PANEL_ESTOP		(PANEL_ESTOP),
-    .HEAD_ERROR			(HEAD_ERROR),
+//	.PANEL_KEY		    (PANEL_KEY),
+  //  .PANEL_ESTOP		(PANEL_ESTOP),
+//    .HEAD_ERROR			(HEAD_ERROR),
     .alarm_en2			(alarm_en2	),	
 	.alarm_now2			(alarm_now2	),
 	.alarm_lat2			(alarm_lat2	),

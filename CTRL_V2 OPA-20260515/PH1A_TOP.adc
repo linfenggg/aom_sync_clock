@@ -166,8 +166,6 @@ set_pin_assignment	{ MOTOR1_origin }	{ LOCATION = L14; IOSTANDARD = LVCMOS33; PU
 set_pin_assignment	{ MOTOR1_pulse }	{ LOCATION = M18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ ONLINE_PROG[0] }	{ LOCATION = R8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ ONLINE_PROG[1] }	{ LOCATION = U8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
-set_pin_assignment	{ PANEL_ESTOP }	{ LOCATION = virtualIO; }
-set_pin_assignment	{ PANEL_KEY }	{ LOCATION = virtualIO; }
 set_pin_assignment	{ PTOTE_PD1 }	{ LOCATION = G14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
 set_pin_assignment	{ PTOTE_PD2 }	{ LOCATION = H14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
 set_pin_assignment	{ PTOTE_PD3 }	{ LOCATION = D17; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
@@ -194,11 +192,6 @@ set_pin_assignment	{ TIME_SEQ_ALM_INT1 }	{ LOCATION = H5; IOSTANDARD = LVCMOS33;
 set_pin_assignment	{ TIME_SEQ_ALM_INT2 }	{ LOCATION = H6; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
 set_pin_assignment	{ TIME_SEQ_ALM_SCL }	{ LOCATION = K1; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ TIME_SEQ_ALM_SDA }	{ LOCATION = K2; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
-set_pin_assignment	{ clk_100m }	{ LOCATION = virtualIO; }
-set_pin_assignment	{ clk_160m }	{ LOCATION = virtualIO; }
-set_pin_assignment	{ clk_50m }	{ LOCATION = virtualIO; }
-set_pin_assignment	{ clk_PD }	{ LOCATION = virtualIO; }
-set_pin_assignment	{ clk_PD_4times }	{ LOCATION = virtualIO; }
 set_pin_assignment	{ clk_in }	{ LOCATION = A10; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
 set_pin_assignment	{ debug_led[0] }	{ LOCATION = D10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ debug_led[1] }	{ LOCATION = J5; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
@@ -210,6 +203,8 @@ set_pin_assignment	{ online1_SDA }	{ LOCATION = B9; IOSTANDARD = LVCMOS33; DRIVE
 set_pin_assignment	{ online2_INT }	{ LOCATION = A8; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
 set_pin_assignment	{ online2_SCL }	{ LOCATION = B8; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ online2_SDA }	{ LOCATION = C10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+
+
 
 
 

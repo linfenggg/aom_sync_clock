@@ -15,8 +15,8 @@ module core(
 	input					EXT_PRR			,
 	input					EXT_SYNC2		,
 	input					EXT_GUID		,
-	input 					PANEL_KEY		,  
-	input 					PANEL_ESTOP		,
+//	input 					PANEL_KEY		,  
+//	input 					PANEL_ESTOP		,
 	input [7:0]				EXT_DATA		,
 	input					EXT_LAT			,
 	input 					WATER_ALM		,
@@ -1739,7 +1739,7 @@ always @(posedge clk_i or negedge rstn_i)
 	//	ID_FREQ3_THR_H			:	RDData <= FREQ3_THR_H		;
 	//	ID_FREQ3_THR_L			:	RDData <= FREQ3_THR_L		;
 		ID_FREQ_ALARM_DLY		:	RDData <= FREQ_ALARM_DLY	;
-		ID_EXTER_IO				:	RDData <= {EXT_SIG_TO_LOCK,PANEL_ESTOP,PANEL_KEY,WATER_ALM,EXT_STATE,1'b0,1'b0,EXT_LAT,EXT_PRR,EXT_TRIG,EXT_PWM,EXT_GATE}	;
+		ID_EXTER_IO				:	RDData <= {EXT_SIG_TO_LOCK,1'b0,1'b0,WATER_ALM,EXT_STATE,1'b0,1'b0,EXT_LAT,EXT_PRR,EXT_TRIG,EXT_PWM,EXT_GATE}	;
 		ID_EXTER_8BIT			:	RDData <= EXT_DATA		;
 		ID_AOM2_DLY_COARSE		:	RDData <= AOM2_DLY_COARSE	;	
 		ID_AOM2_DLY_FREE_TRIG	:	RDData <= AOM2_DLY_FREE_TRIG	;

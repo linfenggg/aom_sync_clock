@@ -2,80 +2,76 @@ standard
 ***Report Model: top Device: PH1A60GEG324***
 
 IO Statistics
-#IO                       214
-  #input                   52
-  #output                 159
+#IO                       160
+  #input                   30
+  #output                 127
   #inout                    3
 
 Gate Statistics
-#Basic gates            22083
-  #and                   6395
+#Basic gates            19887
+  #and                   5602
   #nand                     0
-  #or                    3336
+  #or                    3171
   #nor                      0
   #xor                      0
   #xnor                     0
   #buf                      0
-  #not                    498
+  #not                    943
   #bufif1                   1
-  #MX21                  2880
+  #MX21                  1254
   #FADD                     0
-  #DFF                   8973
+  #DFF                   8916
   #LATCH                    0
-#MACRO_ADD                377
-#MACRO_EQ                 235
-#MACRO_MUX               8153
+#MACRO_ADD                337
+#MACRO_EQ                 403
+#MACRO_MUX               2749
 #MACRO_OTHERS             132
 
 Report Hierarchy Area:
 +-------------------------------------------------------------------+
 |Instance                |Module            |gates  |seq    |macros |
 +-------------------------------------------------------------------+
-|top                     |top               |13110  |8973   |744    |
-|  AOM2_TTL_inst         |AOM2_TTL          |169    |119    |18     |
-|  PD1_LOW               |freq_alarm_feed   |25     |53     |2      |
+|top                     |top               |10971  |8916   |872    |
+|  AOM2_TTL_inst         |AOM2_TTL          |115    |119    |18     |
+|  PD1_LOW               |freq_alarm_feed   |26     |53     |2      |
 |  PD2_LOW               |freq_alarm_feed   |30     |53     |3      |
 |  PD_WAVE1              |PD_WAVE           |40     |0      |0      |
 |  PD_WAVE2              |PD_WAVE           |40     |0      |0      |
 |  PH1A_MULT18X4         |PH1A_MULT12X2     |0      |0      |0      |
 |    mult0_syn_47        |                  |0      |0      |0      |
 |  SYS_PLL               |PH1A_SYS_PLL      |0      |0      |4      |
-|  alarm_mon             |alarm_mon         |511    |461    |108    |
-|    U0                  |high_alarm        |11     |7      |3      |
-|    U1                  |low_alarm         |23     |19     |3      |
-|    U10                 |high_alarm        |11     |7      |3      |
-|    U11                 |high_alarm        |11     |7      |3      |
-|    U13                 |high_alarm        |11     |7      |3      |
-|    U14                 |high_alarm        |11     |7      |3      |
-|    U15                 |high_alarm        |11     |7      |3      |
-|    U16                 |high_alarm        |11     |7      |3      |
-|    U17                 |high_alarm        |11     |7      |3      |
-|    U18                 |high_alarm        |11     |7      |3      |
-|    U19                 |high_alarm        |11     |7      |3      |
-|    U2                  |low_alarm         |23     |19     |3      |
-|    U20                 |high_alarm        |11     |7      |3      |
-|    U21                 |high_alarm        |11     |7      |3      |
-|    U22                 |high_alarm        |11     |7      |3      |
-|    U23                 |high_alarm        |11     |7      |3      |
-|    U24                 |high_alarm        |11     |7      |3      |
-|    U25                 |high_alarm        |11     |7      |3      |
-|    U26                 |high_alarm        |11     |7      |3      |
-|    U27                 |high_alarm        |11     |7      |3      |
-|    U28                 |high_alarm        |11     |7      |3      |
-|    U29                 |high_alarm        |11     |7      |3      |
-|    U2_0                |low_alarm         |23     |19     |3      |
-|    U2_1                |low_alarm         |23     |19     |3      |
-|    U2_2                |low_alarm         |23     |19     |3      |
-|    U3                  |high_alarm        |23     |19     |3      |
-|    U30                 |high_alarm        |11     |7      |3      |
-|    U31                 |high_alarm        |11     |7      |3      |
-|    U4                  |low_alarm         |23     |19     |3      |
-|    U5                  |low_alarm         |23     |19     |3      |
+|  alarm_mon             |alarm_mon         |469    |404    |97     |
+|    U0                  |high_alarm        |12     |7      |3      |
+|    U1                  |low_alarm         |24     |19     |3      |
+|    U10                 |high_alarm        |12     |7      |3      |
+|    U11                 |high_alarm        |12     |7      |3      |
+|    U13                 |high_alarm        |12     |7      |3      |
+|    U14                 |high_alarm        |12     |7      |3      |
+|    U15                 |high_alarm        |12     |7      |3      |
+|    U16                 |high_alarm        |12     |7      |3      |
+|    U17                 |high_alarm        |12     |7      |3      |
+|    U18                 |high_alarm        |12     |7      |3      |
+|    U19                 |high_alarm        |12     |7      |3      |
+|    U2                  |low_alarm         |24     |19     |3      |
+|    U20                 |high_alarm        |12     |7      |3      |
+|    U21                 |high_alarm        |12     |7      |3      |
+|    U22                 |high_alarm        |12     |7      |3      |
+|    U23                 |high_alarm        |12     |7      |3      |
+|    U24                 |high_alarm        |12     |7      |3      |
+|    U25                 |high_alarm        |12     |7      |3      |
+|    U26                 |high_alarm        |12     |7      |3      |
+|    U27                 |high_alarm        |12     |7      |3      |
+|    U28                 |high_alarm        |12     |7      |3      |
+|    U29                 |high_alarm        |12     |7      |3      |
+|    U3                  |high_alarm        |24     |19     |3      |
+|    U30                 |high_alarm        |12     |7      |3      |
+|    U31                 |high_alarm        |12     |7      |3      |
+|    U4                  |low_alarm         |24     |19     |3      |
+|    U5                  |low_alarm         |24     |19     |3      |
 |    U6                  |high_alarm        |9      |7      |3      |
 |    U7                  |high_alarm        |9      |7      |3      |
-|    U9                  |high_alarm        |11     |7      |3      |
-|  aom2_dac              |MS9714            |0      |10     |0      |
-|  burst                 |burst             |1745   |2717   |163    |
+|    U9                  |high_alarm        |12     |7      |3      |
+|  burst                 |burst             |1763   |2717   |162    |
 |    AND_AOM1_TTL        |AND_DELAY         |128    |0      |0      |
 |    AND_AOM3_TTL        |AND_DELAY         |128    |0      |0      |
 |    AND_DAC_CLK         |AND_DELAY         |128    |0      |0      |
@@ -100,44 +96,44 @@ Report Hierarchy Area:
 |    REG_DAC_DATA5       |reg_delay         |0      |256    |0      |
 |    REG_DAC_DATA6       |reg_delay         |0      |256    |0      |
 |    REG_DAC_DATA7       |reg_delay         |0      |256    |0      |
-|  calibration_aom       |calibration_aom   |1378   |125    |36     |
+|  calibration_aom       |calibration_aom   |1254   |125    |28     |
 |    PH1A_MULT8X32       |PH1A_MULT8X32     |0      |0      |0      |
 |      mult0_syn_148     |                  |0      |0      |0      |
 |      mult0_syn_93      |                  |0      |0      |0      |
-|  core                  |core              |8766   |4499   |298    |
-|    airpump1_speed_adj  |airpump_speed_adj |4      |17     |8      |
-|    airpump2_speed_adj  |airpump_speed_adj |4      |17     |8      |
-|    pump1               |pump              |573    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |8      |
-|    pump10              |pump              |574    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump11              |pump              |350    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump12              |pump              |322    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump13              |pump              |294    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump14              |pump              |266    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump15              |pump              |238    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump2               |pump              |574    |91     |12     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump3               |pump              |546    |91     |12     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump4               |pump              |518    |91     |12     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump5               |pump              |490    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump6               |pump              |462    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump7               |pump              |434    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump8               |pump              |406    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump9               |pump              |378    |91     |13     |
-|      ramp              |pump_ramp         |6      |60     |9      |
-|    pump_A[0]$pump_dac  |dac_TPC112S1      |11     |10     |11     |
+|  core                  |core              |6821   |4499   |452    |
+|    airpump1_speed_adj  |airpump_speed_adj |9      |17     |8      |
+|    airpump2_speed_adj  |airpump_speed_adj |9      |17     |8      |
+|    pump1               |pump              |575    |91     |11     |
+|      ramp              |pump_ramp         |25     |60     |7      |
+|    pump10              |pump              |575    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump11              |pump              |351    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump12              |pump              |323    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump13              |pump              |295    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump14              |pump              |267    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump15              |pump              |239    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump2               |pump              |575    |91     |9      |
+|      ramp              |pump_ramp         |25     |60     |7      |
+|    pump3               |pump              |547    |91     |9      |
+|      ramp              |pump_ramp         |25     |60     |7      |
+|    pump4               |pump              |519    |91     |9      |
+|      ramp              |pump_ramp         |25     |60     |7      |
+|    pump5               |pump              |492    |91     |10     |
+|      ramp              |pump_ramp         |26     |60     |8      |
+|    pump6               |pump              |463    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump7               |pump              |435    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump8               |pump              |407    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump9               |pump              |379    |91     |12     |
+|      ramp              |pump_ramp         |27     |60     |9      |
+|    pump_A[0]$pump_dac  |dac_TPC112S1      |31     |10     |11     |
 |    pump_A[10]$pump_dac |dac_TPC112S1      |1      |1      |0      |
 |    pump_A[11]$pump_dac |dac_TPC112S1      |1      |1      |0      |
 |    pump_A[12]$pump_dac |dac_TPC112S1      |1      |1      |0      |
@@ -152,26 +148,27 @@ Report Hierarchy Area:
 |    pump_A[7]$pump_dac  |dac_TPC112S1      |1      |1      |0      |
 |    pump_A[8]$pump_dac  |dac_TPC112S1      |1      |1      |0      |
 |    pump_A[9]$pump_dac  |dac_TPC112S1      |1      |1      |0      |
-|    spi                 |spi               |50     |92     |3      |
+|    spi                 |spi               |17     |92     |3      |
 |  data_sync             |data_sync         |2      |26     |0      |
-|  ext_adc               |adc_ADS7883       |33     |22     |2      |
-|  feed_dog              |feed_dog          |1      |17     |2      |
+|  ext_adc               |adc_ADS7883       |25     |22     |2      |
+|  feed_dog              |feed_dog          |2      |17     |2      |
 |  fiber_break           |fiber_break       |13     |40     |7      |
 |  filter_U0             |filter            |0      |2      |0      |
 |  freq_cal_1            |freq_cal          |4      |56     |4      |
-|  freq_cal_2            |freq_cal_AOM2     |25     |55     |5      |
-|  icr_1                 |ICR               |13     |30     |3      |
-|  icr_2                 |ICR               |13     |30     |3      |
+|  freq_cal_2            |freq_cal_AOM2     |9      |55     |4      |
+|  icr_1                 |ICR               |9      |30     |3      |
+|  icr_2                 |ICR               |9      |30     |3      |
 |  led_debug             |led_debug         |1      |21     |2      |
 |  led_green             |led_green         |23     |85     |9      |
 |  led_red               |led               |8      |18     |2      |
-|  motor_1               |MOTOR             |140    |77     |25     |
-|  online_1              |PCA9555           |21     |46     |10     |
+|  motor_1               |MOTOR             |150    |77     |25     |
+|  online_1              |PCA9555           |60     |46     |9      |
 |  pd1_4times            |PLL_BASE_FREQ     |0      |0      |2      |
-|  pll_feed_dog          |pll_feed_dog      |16     |12     |2      |
+|  pll_feed_dog          |pll_feed_dog      |15     |12     |2      |
 |  power_lim             |power_lim         |0      |0      |0      |
 |    PH1A_MULT10X18      |PH1A_MULT10X18    |0      |0      |0      |
 |      mult0_syn_47      |                  |0      |0      |0      |
 |  reg_delay             |reg_delay         |0      |256    |0      |
-|  water_flow_detection  |FRENC_WATER       |2      |93     |4      |
+|  water_flow_detection  |FRENC_WATER       |4      |93     |4      |
+|  aom2_dac              |MS9714            |0      |10     |0      |
 +-------------------------------------------------------------------+
