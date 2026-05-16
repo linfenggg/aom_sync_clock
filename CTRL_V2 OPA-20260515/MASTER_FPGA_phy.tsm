@@ -1,0 +1,1328 @@
+eagle_20
+12 1068 953 14886 2511632 14 0
+-160.395 0.019 top eagle_20 BGA256X Detail 10 3
+clock: clk_100m
+12 4246 298 2
+Setup check
+22 3
+Endpoint: freq_cal_1/add0/ucin_al_u6015
+22 5.429000 18 3
+Timing path: freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk->freq_cal_1/add0/ucin_al_u6015
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk
+freq_cal_1/add0/ucin_al_u6015
+24 5.429000 12.032000 6.603000 3 4
+freq_cal_1/delay_1ms[3] freq_cal_1/reg2_b15.d[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/add0/ucin_al_u6015.ce
+
+Timing path: freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk->freq_cal_1/add0/ucin_al_u6015
+freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk
+freq_cal_1/add0/ucin_al_u6015
+63 5.631000 12.032000 6.401000 3 4
+freq_cal_1/delay_1ms[4] freq_cal_1/reg2_b15.c[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/add0/ucin_al_u6015.ce
+
+Timing path: freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk->freq_cal_1/add0/ucin_al_u6015
+freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk
+freq_cal_1/add0/ucin_al_u6015
+102 6.283000 12.032000 5.749000 2 3
+freq_cal_1/delay_1ms[11] core/reg36_b16|core/reg36_b21.b[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/add0/ucin_al_u6015.ce
+
+
+Endpoint: freq_cal_1/reg2_b2
+139 5.718000 18 3
+Timing path: freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk->freq_cal_1/reg2_b2
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk
+freq_cal_1/reg2_b2
+141 5.718000 12.032000 6.314000 3 4
+freq_cal_1/delay_1ms[3] freq_cal_1/reg2_b15.d[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg2_b2.ce
+
+Timing path: freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk->freq_cal_1/reg2_b2
+freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk
+freq_cal_1/reg2_b2
+180 5.920000 12.032000 6.112000 3 4
+freq_cal_1/delay_1ms[4] freq_cal_1/reg2_b15.c[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg2_b2.ce
+
+Timing path: freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk->freq_cal_1/reg2_b2
+freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk
+freq_cal_1/reg2_b2
+219 6.572000 12.032000 5.460000 2 3
+freq_cal_1/delay_1ms[11] core/reg36_b16|core/reg36_b21.b[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg2_b2.ce
+
+
+Endpoint: freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+256 5.734000 23 3
+Timing path: freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk->freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.clk
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+258 5.734000 12.160000 6.426000 4 4
+freq_cal_1/delay_1ms[3] freq_cal_1/reg2_b15.d[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.d[0]
+
+Timing path: freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk->freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+freq_cal_1/reg1_b4|freq_cal_1/reg1_b6.clk
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+297 5.808000 12.160000 6.352000 4 4
+freq_cal_1/delay_1ms[4] freq_cal_1/reg2_b15.c[0]
+_al_u2972_o core/reg36_b16|core/reg36_b21.a[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.d[0]
+
+Timing path: freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk->freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+freq_cal_1/reg1_b11|freq_cal_1/reg1_b12.clk
+freq_cal_1/reg1_b13|freq_cal_1/reg1_b3
+336 6.567000 12.160000 5.593000 3 3
+freq_cal_1/delay_1ms[11] core/reg36_b16|core/reg36_b21.b[0]
+_al_u2973_o core/reg36_b17|core/reg36_b9.b[0]
+freq_cal_1/n6 freq_cal_1/reg1_b13|freq_cal_1/reg1_b3.d[0]
+
+
+
+Hold check
+373 3
+Endpoint: freq_cal_1/reg2_b0|freq_cal_1/reg2_b1
+375 0.335000 1 1
+Timing path: freq_cal_1/reg0_b1|freq_cal_1/reg0_b2.clk->freq_cal_1/reg2_b0|freq_cal_1/reg2_b1
+freq_cal_1/reg0_b1|freq_cal_1/reg0_b2.clk
+freq_cal_1/reg2_b0|freq_cal_1/reg2_b1
+377 0.335000 2.178000 2.513000 0 1
+freq_cal_1/fx_cnt[1] freq_cal_1/reg2_b0|freq_cal_1/reg2_b1.mi[0]
+
+
+Endpoint: freq_cal_1/add0/ucin_al_u6015
+410 0.335000 1 1
+Timing path: freq_cal_1/reg0_b5|freq_cal_1/reg0_b6.clk->freq_cal_1/add0/ucin_al_u6015
+freq_cal_1/reg0_b5|freq_cal_1/reg0_b6.clk
+freq_cal_1/add0/ucin_al_u6015
+412 0.335000 2.178000 2.513000 0 1
+freq_cal_1/fx_cnt[6] freq_cal_1/add0/ucin_al_u6015.mi[1]
+
+
+Endpoint: freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+445 0.419000 11 3
+Timing path: core/reg87_b1|core/reg87_b2.clk->freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+core/reg87_b1|core/reg87_b2.clk
+freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+447 0.419000 2.350000 2.769000 1 1
+PD1_PULSE_LV[2] freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg.e[0]
+
+Timing path: core/reg87_b3.clk->freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+core/reg87_b3.clk
+freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+480 0.556000 2.350000 2.906000 1 1
+PD1_PULSE_LV[3] freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg.a[0]
+
+Timing path: alarm_mon/lt1_0|alarm_mon/lt1_cin.clk->freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+alarm_mon/lt1_0|alarm_mon/lt1_cin.clk
+freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg
+513 0.805000 2.350000 3.155000 2 2
+PD1_PULSE_LV[0] core/reg93_b7|core/reg93_b3.c[1]
+_al_u5398_o freq_cal_1/fx_reg1_reg|freq_cal_1/fx_reg0_reg.d[0]
+
+
+
+
+clock: clk_160m
+548 2350 284 2
+Setup check
+558 3
+Endpoint: PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+558 -4.049000 18 3
+Timing path: core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+560 -4.049000 3.201000 7.250000 4 6
+core/PUMP1_DATA_out[1] core/lt0_2|lt0_1.a[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[0]
+
+Timing path: core/_al_u3627|core/pump1/ramp/reg1_b2.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/_al_u3627|core/pump1/ramp/reg1_b2.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+603 -4.022000 3.201000 7.223000 4 6
+core/PUMP1_DATA_out[2] core/lt0_2|lt0_1.a[1]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[0]
+
+Timing path: core/reg104_b2|core/reg104_b1.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/reg104_b2|core/reg104_b1.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+646 -3.893000 3.201000 7.094000 4 6
+core/PUMP1_DATA[1] core/lt0_2|lt0_1.b[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[0]
+
+
+Endpoint: PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+689 -4.049000 18 3
+Timing path: core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk->PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk
+PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+691 -4.049000 3.201000 7.250000 4 6
+core/PUMP1_DATA_out[1] core/lt0_2|lt0_1.a[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b10|PD1_LOW/reg1_b9.d[0]
+
+Timing path: core/_al_u3627|core/pump1/ramp/reg1_b2.clk->PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+core/_al_u3627|core/pump1/ramp/reg1_b2.clk
+PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+734 -4.022000 3.201000 7.223000 4 6
+core/PUMP1_DATA_out[2] core/lt0_2|lt0_1.a[1]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b10|PD1_LOW/reg1_b9.d[0]
+
+Timing path: core/reg104_b2|core/reg104_b1.clk->PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+core/reg104_b2|core/reg104_b1.clk
+PD1_LOW/reg1_b10|PD1_LOW/reg1_b9
+777 -3.893000 3.201000 7.094000 4 6
+core/PUMP1_DATA[1] core/lt0_2|lt0_1.b[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b10|PD1_LOW/reg1_b9.d[0]
+
+
+Endpoint: PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+820 -4.049000 18 3
+Timing path: core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/pump1/ramp/reg1_b1|alarm_mon/lock_reg_hfnopt2_0.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+822 -4.049000 3.201000 7.250000 4 6
+core/PUMP1_DATA_out[1] core/lt0_2|lt0_1.a[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[1]
+
+Timing path: core/_al_u3627|core/pump1/ramp/reg1_b2.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/_al_u3627|core/pump1/ramp/reg1_b2.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+865 -4.022000 3.201000 7.223000 4 6
+core/PUMP1_DATA_out[2] core/lt0_2|lt0_1.a[1]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[1]
+
+Timing path: core/reg104_b2|core/reg104_b1.clk->PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+core/reg104_b2|core/reg104_b1.clk
+PD1_LOW/reg1_b7|PD1_LOW/reg1_b8
+908 -3.893000 3.201000 7.094000 4 6
+core/PUMP1_DATA[1] core/lt0_2|lt0_1.b[0]
+core/lt0_c3 core/lt0_4|lt0_3.fci
+core/lt0_c5 core/lt0_6|lt0_5.fci
+core/lt0_c7 core/lt0_cout|lt0_7.fci
+core/n52 core/reg110_b5|core/reg110_b1.d[1]
+SEED_OK PD1_LOW/reg1_b7|PD1_LOW/reg1_b8.d[1]
+
+
+
+Hold check
+951 3
+Endpoint: core/pump7/ramp/lt1_0|pump7/ramp/lt1_cin
+953 0.019000 1 1
+Timing path: core/reg26_b11|core/reg26_b9.clk->core/pump7/ramp/lt1_0|pump7/ramp/lt1_cin
+core/reg26_b11|core/reg26_b9.clk
+core/pump7/ramp/lt1_0|pump7/ramp/lt1_cin
+955 0.019000 2.484000 2.503000 0 1
+FREQ1_THR_L[9] core/pump7/ramp/lt1_0|pump7/ramp/lt1_cin.mi[1]
+
+
+Endpoint: PD2_LOW/reg0_b14|PD2_LOW/reg2_b13
+988 0.019000 1 1
+Timing path: alarm_mon/lt2_0|alarm_mon/lt2_cin.clk->PD2_LOW/reg0_b14|PD2_LOW/reg2_b13
+alarm_mon/lt2_0|alarm_mon/lt2_cin.clk
+PD2_LOW/reg0_b14|PD2_LOW/reg2_b13
+990 0.019000 2.484000 2.503000 0 1
+FREQ2_THR_L[13] PD2_LOW/reg0_b14|PD2_LOW/reg2_b13.mi[0]
+
+
+Endpoint: PD2_LOW/reg2_b7|PD2_LOW/reg2_b2
+1023 0.019000 1 1
+Timing path: PD2_LOW/lt0_0|PD2_LOW/lt0_cin.clk->PD2_LOW/reg2_b7|PD2_LOW/reg2_b2
+PD2_LOW/lt0_0|PD2_LOW/lt0_cin.clk
+PD2_LOW/reg2_b7|PD2_LOW/reg2_b2
+1025 0.019000 2.484000 2.503000 0 1
+FREQ2_THR_L[2] PD2_LOW/reg2_b7|PD2_LOW/reg2_b2.mi[0]
+
+
+
+
+clock: clk_50m
+1058 2505036 14304 4
+Setup check
+1068 3
+Endpoint: core/_al_u5921|core/reg140_b6
+1068 -160.395000 120566 3
+Timing path: core/reg98_b1|core/reg98_b0.clk->core/_al_u5921|core/reg140_b6
+core/reg98_b1|core/reg98_b0.clk
+core/_al_u5921|core/reg140_b6
+1070 -160.395000 22.032000 182.427000 296 296
+AOM_CTRL_SEL[0] burst/reg12_b3|burst/reg12_b0.c[1]
+_al_u2322_o _al_u2325|core/reg131_b7.d[1]
+burst/FIBER_AOM_TTL_out _al_u1504|core/reg134_b2.d[0]
+burst/AND_GATE_16/t1 core/reg135_b2|core/reg135_b4.d[1]
+burst/AND_GATE_16/t2 _al_u6056.d[0]
+burst/AND_GATE_16/t3 _al_u6057|core/reg131_b3.d[1]
+burst/AND_GATE_16/t4 _al_u6058|core/reg132_b3.d[1]
+burst/AND_GATE_16/t5 core/reg130_b3|core/reg130_b0.d[0]
+burst/AND_GATE_16/t6 _al_u6060|core/reg131_b4.d[1]
+burst/AND_GATE_16/t7 core/reg103_b2|core/reg103_b8.c[1]
+burst/AND_GATE_16/t8 _al_u6062|core/reg129_b4.b[1]
+burst/AND_GATE_16/t9 core/reg103_b6|core/reg103_b1.d[0]
+burst/AND_GATE_16/t10 core/reg103_b0|core/reg103_b3.d[1]
+burst/AND_GATE_16/t11 _al_u6036|core/reg132_b4.c[1]
+burst/AND_GATE_16/t12 _al_u6062|core/reg129_b4.d[0]
+burst/AND_GATE_16/t13 _al_u6036|core/reg132_b4.d[0]
+burst/AND_GATE_16/t14 core/reg133_b2|core/reg133_b4.d[1]
+burst/AND_GATE_16/t15 core/reg135_b1|core/reg135_b0.d[0]
+burst/AND_GATE_16/t16 core/reg134_b1|core/reg134_b0.d[0]
+burst/AND_GATE_16/t17 core/reg135_b1|core/reg135_b0.d[1]
+burst/AND_GATE_16/t18 core/reg130_b1.d[0]
+burst/AND_GATE_16/t19 core/reg28_b2|core/reg28_b3.d[0]
+burst/AND_GATE_16/t20 core/reg134_b1|core/reg134_b0.d[1]
+burst/AND_GATE_16/t21 core/reg129_b2|core/reg129_b1.d[0]
+burst/AND_GATE_16/t22 core/reg28_b2|core/reg28_b3.d[1]
+burst/AND_GATE_16/t23 core/reg132_b6|core/reg132_b0.d[1]
+burst/AND_GATE_16/t24 core/reg132_b5|core/reg132_b7.d[1]
+burst/AND_GATE_16/t25 core/reg135_b6|core/reg135_b5.d[0]
+burst/AND_GATE_16/t26 core/reg28_b5|core/reg28_b7.d[0]
+burst/AND_GATE_16/t27 core/reg136_b5.d[0]
+burst/AND_GATE_16/t28 core/reg134_b5|core/reg134_b6.d[1]
+burst/OR_GATE_16/t29 core/reg129_b7.d[0]
+_al_u2912_o core/reg126_b4|core/reg126_b1.d[0]
+_al_u2934_o core/reg134_b5|core/reg134_b6.d[0]
+burst/FIBER_AOM_TTL_1 core/reg127_b5|core/reg127_b7.d[1]
+burst/FIBER_AOM_TTL_2 _al_u1785.d[0]
+burst/AND_DELAY_1/t1 _al_u3878|core/reg125_b1_hfnopt2_4.d[0]
+burst/AND_DELAY_1/t2 _al_u4470|_al_u1541.d[0]
+burst/AND_DELAY_1/t3 _al_u1708|_al_u1752.d[0]
+burst/AND_DELAY_1/t4 _al_u1708|_al_u1752.a[1]
+burst/AND_DELAY_1/t5 _al_u3877|_al_u1663.d[0]
+burst/AND_DELAY_1/t6 _al_u1609|_al_u1619.d[0]
+burst/AND_DELAY_1/t7 _al_u1609|_al_u1619.a[1]
+burst/AND_DELAY_1/t8 _al_u1600|_al_u1604.d[0]
+burst/AND_DELAY_1/t9 _al_u1600|_al_u1604.a[1]
+burst/AND_DELAY_1/t10 _al_u1591|_al_u1595.d[0]
+burst/AND_DELAY_1/t11 _al_u1591|_al_u1595.a[1]
+burst/AND_DELAY_1/t12 _al_u1582|_al_u1587.d[0]
+burst/AND_DELAY_1/t13 _al_u1582|_al_u1587.a[1]
+burst/AND_DELAY_1/t14 _al_u3872|_al_u1578.c[0]
+burst/AND_DELAY_1/t15 _al_u3881|_al_u1573.d[0]
+burst/AND_DELAY_1/t16 _al_u3868|_al_u1569.d[0]
+burst/AND_DELAY_1/t17 _al_u1560|_al_u1565.c[0]
+burst/AND_DELAY_1/t18 _al_u1560|_al_u1565.a[1]
+burst/AND_DELAY_1/t19 _al_u1551|_al_u1556.d[0]
+burst/AND_DELAY_1/t20 _al_u1551|_al_u1556.a[1]
+burst/AND_DELAY_1/t21 _al_u3866|core/reg125_b1.a[0]
+burst/AND_DELAY_1/t22 _al_u3867|_al_u1543.d[0]
+burst/AND_DELAY_1/t23 _al_u3870|_al_u1538.d[0]
+burst/AND_DELAY_1/t24 _al_u1534|_al_u1780.d[1]
+burst/AND_DELAY_1/t25 _al_u3865|_al_u1784.d[0]
+burst/AND_DELAY_1/t26 _al_u1534|_al_u1780.d[0]
+burst/AND_DELAY_1/t27 _al_u3862|_al_u1776.d[0]
+burst/AND_DELAY_1/t28 _al_u1767|_al_u1771.b[0]
+burst/AND_DELAY_1/t29 _al_u1767|_al_u1771.d[1]
+burst/AND_DELAY_1/t30 _al_u1660|_al_u1762.d[0]
+burst/AND_DELAY_1/t31 _al_u1679|_al_u1758.d[0]
+burst/AND_DELAY_1/t32 _al_u3858|_al_u1754.d[0]
+burst/AND_DELAY_1/t33 _al_u3857|_al_u1749.d[0]
+burst/AND_DELAY_1/t34 _al_u1740|_al_u1745.d[0]
+burst/AND_DELAY_1/t35 _al_u1740|_al_u1745.a[1]
+burst/AND_DELAY_1/t36 _al_u1732|_al_u1736.d[0]
+burst/AND_DELAY_1/t37 _al_u1732|_al_u1736.a[1]
+burst/AND_DELAY_1/t38 _al_u3856|_al_u1727.d[0]
+burst/AND_DELAY_1/t39 _al_u3859|_al_u1723.d[0]
+burst/AND_DELAY_1/t40 _al_u1705|_al_u1718.d[0]
+burst/AND_DELAY_1/t41 _al_u1710|_al_u1714.d[0]
+burst/AND_DELAY_1/t42 _al_u1710|_al_u1714.a[1]
+burst/AND_DELAY_1/t43 _al_u1705|_al_u1718.d[1]
+burst/AND_DELAY_1/t44 _al_u1696|_al_u1701.d[0]
+burst/AND_DELAY_1/t45 _al_u1696|_al_u1701.a[1]
+burst/AND_DELAY_1/t46 _al_u3852|_al_u1692.d[0]
+burst/AND_DELAY_1/t47 _al_u1683|_al_u1688.d[0]
+burst/AND_DELAY_1/t48 _al_u1683|_al_u1688.a[1]
+burst/AND_DELAY_1/t49 _al_u1679|_al_u1758.d[1]
+burst/AND_DELAY_1/t50 _al_u1669|_al_u1673.d[0]
+burst/AND_DELAY_1/t51 _al_u1669|_al_u1673.a[1]
+burst/AND_DELAY_1/t52 _al_u3850|_al_u1665.d[0]
+burst/AND_DELAY_1/t53 _al_u1660|_al_u1762.d[1]
+burst/AND_DELAY_1/t54 _al_u3848|_al_u1656.d[0]
+burst/AND_DELAY_1/t55 _al_u1647|_al_u1651.d[0]
+burst/AND_DELAY_1/t56 _al_u1647|_al_u1651.a[1]
+burst/AND_DELAY_1/t57 _al_u3845|_al_u1643.d[0]
+burst/AND_DELAY_1/t58 _al_u1638|_al_u3883.d[1]
+burst/AND_DELAY_1/t59 _al_u3844|_al_u1634.d[0]
+burst/AND_DELAY_1/t60 _al_u3801|_al_u1629.c[0]
+burst/AND_DELAY_1/t61 _al_u1625|core/reg125_b1_hfnopt2_0.d[1]
+burst/AND_DELAY_1/t62 _al_u1621|_al_u3843.d[1]
+burst/AND_DELAY_1/t63 _al_u1616|_al_u3884.d[1]
+burst/AND_DELAY_1/t64 _al_u3838|_al_u1674.d[0]
+burst/AND_DELAY_1/t65 _al_u3839|_al_u1574.c[0]
+burst/AND_DELAY_1/t66 _al_u3840|_al_u1530.d[0]
+burst/AND_DELAY_1/t67 _al_u3836|_al_u1741.d[0]
+burst/AND_DELAY_1/t68 _al_u1652|_al_u1697.c[0]
+burst/AND_DELAY_1/t69 _al_u1652|_al_u1697.a[1]
+burst/AND_DELAY_1/t70 _al_u1608|_al_u1612.d[0]
+burst/AND_DELAY_1/t71 _al_u1608|_al_u1612.a[1]
+burst/AND_DELAY_1/t72 _al_u1594|_al_u1603.d[0]
+burst/AND_DELAY_1/t73 _al_u1586|_al_u1599.d[0]
+burst/AND_DELAY_1/t74 _al_u1594|_al_u1603.d[1]
+burst/AND_DELAY_1/t75 _al_u3832|_al_u1590.d[0]
+burst/AND_DELAY_1/t76 _al_u1586|_al_u1599.d[1]
+burst/AND_DELAY_1/t77 _al_u1581|_al_u3885.d[1]
+burst/AND_DELAY_1/t78 _al_u1572|_al_u1577.d[0]
+burst/AND_DELAY_1/t79 _al_u1572|_al_u1577.a[1]
+burst/AND_DELAY_1/t80 _al_u1559|_al_u1568.d[0]
+burst/AND_DELAY_1/t81 _al_u1564|_al_u3828.d[1]
+burst/AND_DELAY_1/t82 _al_u1559|_al_u1568.d[1]
+burst/AND_DELAY_1/t83 _al_u3826|_al_u1555.d[0]
+burst/AND_DELAY_1/t84 _al_u1546|_al_u1550.d[0]
+burst/AND_DELAY_1/t85 _al_u1546|_al_u1550.a[1]
+burst/AND_DELAY_1/t86 _al_u3827|_al_u1542.d[0]
+burst/AND_DELAY_1/t87 _al_u3830|_al_u1537.c[0]
+burst/AND_DELAY_1/t88 _al_u1533|_al_u1783.d[1]
+burst/AND_DELAY_1/t89 _al_u1533|_al_u1783.d[0]
+burst/AND_DELAY_1/t90 _al_u1775|_al_u1779.d[0]
+burst/AND_DELAY_1/t91 _al_u1775|_al_u1779.a[1]
+burst/AND_DELAY_1/t92 _al_u1766|_al_u1770.d[0]
+burst/AND_DELAY_1/t93 _al_u1766|_al_u1770.d[1]
+burst/AND_DELAY_1/t94 _al_u3823|_al_u1761.d[0]
+burst/AND_DELAY_1/t95 _al_u3820|_al_u1757.d[0]
+burst/AND_DELAY_1/t96 _al_u3818|_al_u1753.b[0]
+burst/AND_DELAY_1/t97 _al_u1744|_al_u1748.d[0]
+burst/AND_DELAY_1/t98 _al_u1744|_al_u1748.a[1]
+burst/AND_DELAY_1/t99 _al_u1735|_al_u1739.d[0]
+burst/AND_DELAY_1/t100 _al_u1735|_al_u1739.d[1]
+burst/AND_DELAY_1/t101 _al_u1722|_al_u1731.d[0]
+burst/AND_DELAY_1/t102 _al_u3816|_al_u1726.b[0]
+burst/AND_DELAY_1/t103 _al_u1722|_al_u1731.c[1]
+burst/AND_DELAY_1/t104 _al_u3817|_al_u1717.d[0]
+burst/AND_DELAY_1/t105 _al_u3814|_al_u1713.d[0]
+burst/AND_DELAY_1/t106 _al_u1704|_al_u1709.d[0]
+burst/AND_DELAY_1/t107 _al_u1704|_al_u1709.a[1]
+burst/AND_DELAY_1/t108 _al_u1695|_al_u1700.a[0]
+burst/AND_DELAY_1/t109 _al_u1695|_al_u1700.a[1]
+burst/AND_DELAY_1/t110 _al_u3812|_al_u1691.d[0]
+burst/AND_DELAY_1/t111 _al_u1682|_al_u1687.d[0]
+burst/AND_DELAY_1/t112 _al_u1682|_al_u1687.a[1]
+burst/AND_DELAY_1/t113 _al_u1672|_al_u1678.d[0]
+burst/AND_DELAY_1/t114 _al_u1672|_al_u1678.a[1]
+burst/AND_DELAY_1/t115 _al_u3807|_al_u1668.d[0]
+burst/AND_DELAY_1/t116 _al_u1659|_al_u1664.d[0]
+burst/AND_DELAY_1/t117 _al_u1659|_al_u1664.a[1]
+burst/AND_DELAY_1/t118 _al_u3806|_al_u1655.d[0]
+burst/AND_DELAY_1/t119 _al_u1646|_al_u1650.d[0]
+burst/AND_DELAY_1/t120 _al_u1646|_al_u1650.d[1]
+burst/AND_DELAY_1/t121 _al_u3804|_al_u1642.d[0]
+burst/AND_DELAY_1/t122 _al_u3805|_al_u1637.d[0]
+burst/AND_DELAY_1/t123 _al_u3809|_al_u1633.d[0]
+burst/AND_DELAY_1/t124 _al_u1628|_al_u3810.d[1]
+burst/AND_DELAY_1/t125 _al_u3802|_al_u1624.d[0]
+burst/AND_DELAY_1/t126 _al_u3803|_al_u1620.b[0]
+burst/AND_DELAY_1/t127 _al_u3769|_al_u1615.d[0]
+burst/AND_DELAY_1/t128 _al_u3796|_al_u1607.d[0]
+burst/AND_DELAY_1/t129 _al_u3797|_al_u1563.b[0]
+burst/AND_DELAY_1/t130 _al_u3763|_al_u1774.b[0]
+burst/AND_DELAY_1/t131 _al_u1636|_al_u1730.d[0]
+burst/AND_DELAY_1/t132 _al_u1645|_al_u1686.d[0]
+burst/AND_DELAY_1/t133 _al_u1611|_al_u1641.d[0]
+burst/AND_DELAY_1/t134 _al_u1611|_al_u1641.a[1]
+burst/AND_DELAY_1/t135 _al_u1606|_al_u1649.d[1]
+burst/AND_DELAY_1/t136 _al_u1602|_al_u1662.d[1]
+burst/AND_DELAY_1/t137 _al_u3792|_al_u1598.d[0]
+burst/AND_DELAY_1/t138 _al_u1593|_al_u1667.d[1]
+burst/AND_DELAY_1/t139 _al_u1589|_al_u1677.d[1]
+burst/AND_DELAY_1/t140 _al_u1580|_al_u1584.a[0]
+burst/AND_DELAY_1/t141 _al_u1580|_al_u1584.a[1]
+burst/AND_DELAY_1/t142 _al_u3789|_al_u1576.c[0]
+burst/AND_DELAY_1/t143 _al_u1567|_al_u1571.d[0]
+burst/AND_DELAY_1/t144 _al_u1567|_al_u1571.d[1]
+burst/AND_DELAY_1/t145 _al_u1558|_al_u1562.d[0]
+burst/AND_DELAY_1/t146 _al_u1558|_al_u1562.a[1]
+burst/AND_DELAY_1/t147 _al_u3782|_al_u1554.d[0]
+burst/AND_DELAY_1/t148 _al_u1549|_al_u1760.d[1]
+burst/AND_DELAY_1/t149 _al_u1545|_al_u1765.d[1]
+burst/AND_DELAY_1/t150 _al_u1540|_al_u1769.d[1]
+burst/AND_DELAY_1/t151 _al_u1536|_al_u1773.d[1]
+burst/AND_DELAY_1/t152 _al_u1532|_al_u1782.c[1]
+burst/AND_DELAY_1/t153 _al_u1532|_al_u1782.d[0]
+burst/AND_DELAY_1/t154 _al_u3784|_al_u1778.d[0]
+burst/AND_DELAY_1/t155 _al_u1536|_al_u1773.d[0]
+burst/AND_DELAY_1/t156 _al_u1540|_al_u1769.d[0]
+burst/AND_DELAY_1/t157 _al_u1545|_al_u1765.d[0]
+burst/AND_DELAY_1/t158 _al_u1549|_al_u1760.d[0]
+burst/AND_DELAY_1/t159 _al_u1725|_al_u1756.d[0]
+burst/AND_DELAY_1/t160 _al_u1729|_al_u1751.d[0]
+burst/AND_DELAY_1/t161 _al_u1738|_al_u1747.d[0]
+burst/AND_DELAY_1/t162 _al_u3773|_al_u1743.d[0]
+burst/AND_DELAY_1/t163 _al_u1738|_al_u1747.d[1]
+burst/AND_DELAY_1/t164 _al_u1716|_al_u1734.d[0]
+burst/AND_DELAY_1/t165 _al_u1729|_al_u1751.c[1]
+burst/AND_DELAY_1/t166 _al_u1725|_al_u1756.d[1]
+burst/AND_DELAY_1/t167 _al_u3775|core/reg125_b1_hfnopt2_3.d[0]
+burst/AND_DELAY_1/t168 _al_u1716|_al_u1734.d[1]
+burst/AND_DELAY_1/t169 _al_u3771|_al_u1712.d[0]
+burst/AND_DELAY_1/t170 _al_u3772|_al_u1707.b[0]
+burst/AND_DELAY_1/t171 _al_u3788|_al_u1703.d[0]
+burst/AND_DELAY_1/t172 _al_u1699|_al_u3770.d[1]
+burst/AND_DELAY_1/t173 _al_u1690|_al_u1694.d[0]
+burst/AND_DELAY_1/t174 _al_u1690|_al_u1694.a[1]
+burst/AND_DELAY_1/t175 _al_u3790|_al_u1685.c[0]
+burst/AND_DELAY_1/t176 _al_u3766|_al_u1681.d[0]
+burst/AND_DELAY_1/t177 _al_u1589|_al_u1677.d[0]
+burst/AND_DELAY_1/t178 _al_u3767|_al_u1671.b[0]
+burst/AND_DELAY_1/t179 _al_u1593|_al_u1667.d[0]
+burst/AND_DELAY_1/t180 _al_u1602|_al_u1662.a[0]
+burst/AND_DELAY_1/t181 _al_u1654|_al_u1658.b[0]
+burst/AND_DELAY_1/t182 _al_u1654|_al_u1658.a[1]
+burst/AND_DELAY_1/t183 _al_u1606|_al_u1649.d[0]
+burst/AND_DELAY_1/t184 _al_u1645|_al_u1686.d[1]
+burst/AND_DELAY_1/t185 _al_u3794|_al_u1640.d[0]
+burst/AND_DELAY_1/t186 _al_u1636|_al_u1730.b[1]
+burst/AND_DELAY_1/t187 _al_u1627|_al_u1632.d[0]
+burst/AND_DELAY_1/t188 _al_u1627|_al_u1632.d[1]
+burst/AND_DELAY_1/t189 _al_u3760|_al_u1623.d[0]
+burst/AND_DELAY_1/t190 _al_u3761|_al_u1618.d[0]
+burst/AND_DELAY_1/t191 _al_u1596|_al_u1614.d[0]
+burst/AND_DELAY_1/t192 _al_u1596|_al_u1614.a[1]
+burst/AND_DELAY_1/t193 _al_u3755|_al_u1552.a[0]
+burst/AND_DELAY_1/t194 _al_u1719|_al_u1763.d[0]
+burst/AND_DELAY_1/t195 _al_u1719|_al_u1763.a[1]
+burst/AND_DELAY_1/t196 _al_u1630|_al_u1675.c[0]
+burst/AND_DELAY_1/t197 _al_u1630|_al_u1675.d[1]
+burst/AND_DELAY_1/t198 _al_u1605|_al_u1610.d[0]
+burst/AND_DELAY_1/t199 _al_u1605|_al_u1610.a[1]
+burst/AND_DELAY_1/t200 _al_u1597|_al_u1601.d[0]
+burst/AND_DELAY_1/t201 _al_u1597|_al_u1601.d[1]
+burst/AND_DELAY_1/t202 _al_u3752|_al_u1592.b[0]
+burst/AND_DELAY_1/t203 _al_u1583|_al_u1588.d[0]
+burst/AND_DELAY_1/t204 _al_u1583|_al_u1588.a[1]
+burst/AND_DELAY_1/t205 _al_u3749|_al_u1579.a[0]
+burst/AND_DELAY_1/t206 _al_u3750|_al_u1575.d[0]
+burst/AND_DELAY_1/t207 _al_u3744|_al_u1570.d[0]
+burst/AND_DELAY_1/t208 _al_u1561|_al_u1566.d[0]
+burst/AND_DELAY_1/t209 _al_u1561|_al_u1566.a[1]
+burst/AND_DELAY_1/t210 _al_u1553|_al_u1557.d[0]
+burst/AND_DELAY_1/t211 _al_u1553|_al_u1557.a[1]
+burst/AND_DELAY_1/t212 _al_u1535|_al_u1548.d[0]
+burst/AND_DELAY_1/t213 _al_u1539|_al_u1544.b[0]
+burst/AND_DELAY_1/t214 _al_u1539|_al_u1544.a[1]
+burst/AND_DELAY_1/t215 _al_u1535|_al_u1548.c[1]
+burst/AND_DELAY_1/t216 _al_u1531|_al_u1781.d[1]
+burst/AND_DELAY_1/t217 _al_u1531|_al_u1781.a[0]
+burst/AND_DELAY_1/t218 _al_u1772|_al_u1777.d[0]
+burst/AND_DELAY_1/t219 _al_u1772|_al_u1777.a[1]
+burst/AND_DELAY_1/t220 _al_u1764|_al_u1768.d[0]
+burst/AND_DELAY_1/t221 _al_u1764|_al_u1768.a[1]
+burst/AND_DELAY_1/t222 _al_u1755|_al_u1759.d[0]
+burst/AND_DELAY_1/t223 _al_u1755|_al_u1759.d[1]
+burst/AND_DELAY_1/t224 _al_u1746|_al_u1750.d[0]
+burst/AND_DELAY_1/t225 _al_u1746|_al_u1750.d[1]
+burst/AND_DELAY_1/t226 _al_u3732|_al_u1742.c[0]
+burst/AND_DELAY_1/t227 _al_u1733|_al_u1737.d[0]
+burst/AND_DELAY_1/t228 _al_u1733|_al_u1737.a[1]
+burst/AND_DELAY_1/t229 _al_u3730|_al_u1728.d[0]
+burst/AND_DELAY_1/t230 _al_u1720|_al_u1724.b[0]
+burst/AND_DELAY_1/t231 _al_u1720|_al_u1724.a[1]
+burst/AND_DELAY_1/t232 _al_u3728|_al_u1715.d[0]
+burst/AND_DELAY_1/t233 _al_u1706|_al_u1711.d[0]
+burst/AND_DELAY_1/t234 _al_u1706|_al_u1711.a[1]
+burst/AND_DELAY_1/t235 _al_u1698|_al_u1702.d[0]
+burst/AND_DELAY_1/t236 _al_u1698|_al_u1702.a[1]
+burst/AND_DELAY_1/t237 _al_u3726|_al_u1693.d[0]
+burst/AND_DELAY_1/t238 _al_u3727|_al_u1689.b[0]
+burst/AND_DELAY_1/t239 _al_u1680|_al_u1684.d[0]
+burst/AND_DELAY_1/t240 _al_u1680|_al_u1684.a[1]
+burst/AND_DELAY_1/t241 _al_u1670|_al_u1676.c[0]
+burst/AND_DELAY_1/t242 _al_u1670|_al_u1676.a[1]
+burst/AND_DELAY_1/t243 _al_u1661|_al_u1666.d[0]
+burst/AND_DELAY_1/t244 _al_u1661|_al_u1666.a[1]
+burst/AND_DELAY_1/t245 _al_u3721|_al_u1657.a[0]
+burst/AND_DELAY_1/t246 _al_u3722|_al_u1653.d[0]
+burst/AND_DELAY_1/t247 _al_u1644|_al_u1648.d[0]
+burst/AND_DELAY_1/t248 _al_u1644|_al_u1648.a[1]
+burst/AND_DELAY_1/t249 _al_u1635|_al_u1639.d[0]
+burst/AND_DELAY_1/t250 _al_u1635|_al_u1639.d[1]
+burst/AND_DELAY_1/t251 _al_u1631|_al_u3717.d[1]
+burst/AND_DELAY_1/t252 _al_u1613|_al_u1626.d[0]
+burst/AND_DELAY_1/t253 _al_u1617|_al_u1622.d[0]
+burst/AND_DELAY_1/t254 _al_u1617|_al_u1622.a[1]
+burst/AND_DELAY_1/t255 _al_u1631|_al_u3717.a[0]
+_al_u3717_o _al_u3737|core/reg125_b1_hfnopt2_1.c[1]
+_al_u3737_o _al_u1581|_al_u3885.d[0]
+AOM1_TTL_pad _al_u5491|core/_al_u5204.d[1]
+EXT_SYNC_pad core/_al_u5872|core/reg31_b2.d[1]
+core/_al_u5872_o core/_al_u5921|core/reg140_b6.d[0]
+
+Timing path: core/reg98_b1|core/reg98_b0.clk->core/_al_u5921|core/reg140_b6
+core/reg98_b1|core/reg98_b0.clk
+core/_al_u5921|core/reg140_b6
+1693 -160.348000 22.032000 182.380000 296 296
+AOM_CTRL_SEL[1] burst/reg12_b3|burst/reg12_b0.d[1]
+_al_u2322_o _al_u2325|core/reg131_b7.d[1]
+burst/FIBER_AOM_TTL_out _al_u1504|core/reg134_b2.d[0]
+burst/AND_GATE_16/t1 core/reg135_b2|core/reg135_b4.d[1]
+burst/AND_GATE_16/t2 _al_u6056.d[0]
+burst/AND_GATE_16/t3 _al_u6057|core/reg131_b3.d[1]
+burst/AND_GATE_16/t4 _al_u6058|core/reg132_b3.d[1]
+burst/AND_GATE_16/t5 core/reg130_b3|core/reg130_b0.d[0]
+burst/AND_GATE_16/t6 _al_u6060|core/reg131_b4.d[1]
+burst/AND_GATE_16/t7 core/reg103_b2|core/reg103_b8.c[1]
+burst/AND_GATE_16/t8 _al_u6062|core/reg129_b4.b[1]
+burst/AND_GATE_16/t9 core/reg103_b6|core/reg103_b1.d[0]
+burst/AND_GATE_16/t10 core/reg103_b0|core/reg103_b3.d[1]
+burst/AND_GATE_16/t11 _al_u6036|core/reg132_b4.c[1]
+burst/AND_GATE_16/t12 _al_u6062|core/reg129_b4.d[0]
+burst/AND_GATE_16/t13 _al_u6036|core/reg132_b4.d[0]
+burst/AND_GATE_16/t14 core/reg133_b2|core/reg133_b4.d[1]
+burst/AND_GATE_16/t15 core/reg135_b1|core/reg135_b0.d[0]
+burst/AND_GATE_16/t16 core/reg134_b1|core/reg134_b0.d[0]
+burst/AND_GATE_16/t17 core/reg135_b1|core/reg135_b0.d[1]
+burst/AND_GATE_16/t18 core/reg130_b1.d[0]
+burst/AND_GATE_16/t19 core/reg28_b2|core/reg28_b3.d[0]
+burst/AND_GATE_16/t20 core/reg134_b1|core/reg134_b0.d[1]
+burst/AND_GATE_16/t21 core/reg129_b2|core/reg129_b1.d[0]
+burst/AND_GATE_16/t22 core/reg28_b2|core/reg28_b3.d[1]
+burst/AND_GATE_16/t23 core/reg132_b6|core/reg132_b0.d[1]
+burst/AND_GATE_16/t24 core/reg132_b5|core/reg132_b7.d[1]
+burst/AND_GATE_16/t25 core/reg135_b6|core/reg135_b5.d[0]
+burst/AND_GATE_16/t26 core/reg28_b5|core/reg28_b7.d[0]
+burst/AND_GATE_16/t27 core/reg136_b5.d[0]
+burst/AND_GATE_16/t28 core/reg134_b5|core/reg134_b6.d[1]
+burst/OR_GATE_16/t29 core/reg129_b7.d[0]
+_al_u2912_o core/reg126_b4|core/reg126_b1.d[0]
+_al_u2934_o core/reg134_b5|core/reg134_b6.d[0]
+burst/FIBER_AOM_TTL_1 core/reg127_b5|core/reg127_b7.d[1]
+burst/FIBER_AOM_TTL_2 _al_u1785.d[0]
+burst/AND_DELAY_1/t1 _al_u3878|core/reg125_b1_hfnopt2_4.d[0]
+burst/AND_DELAY_1/t2 _al_u4470|_al_u1541.d[0]
+burst/AND_DELAY_1/t3 _al_u1708|_al_u1752.d[0]
+burst/AND_DELAY_1/t4 _al_u1708|_al_u1752.a[1]
+burst/AND_DELAY_1/t5 _al_u3877|_al_u1663.d[0]
+burst/AND_DELAY_1/t6 _al_u1609|_al_u1619.d[0]
+burst/AND_DELAY_1/t7 _al_u1609|_al_u1619.a[1]
+burst/AND_DELAY_1/t8 _al_u1600|_al_u1604.d[0]
+burst/AND_DELAY_1/t9 _al_u1600|_al_u1604.a[1]
+burst/AND_DELAY_1/t10 _al_u1591|_al_u1595.d[0]
+burst/AND_DELAY_1/t11 _al_u1591|_al_u1595.a[1]
+burst/AND_DELAY_1/t12 _al_u1582|_al_u1587.d[0]
+burst/AND_DELAY_1/t13 _al_u1582|_al_u1587.a[1]
+burst/AND_DELAY_1/t14 _al_u3872|_al_u1578.c[0]
+burst/AND_DELAY_1/t15 _al_u3881|_al_u1573.d[0]
+burst/AND_DELAY_1/t16 _al_u3868|_al_u1569.d[0]
+burst/AND_DELAY_1/t17 _al_u1560|_al_u1565.c[0]
+burst/AND_DELAY_1/t18 _al_u1560|_al_u1565.a[1]
+burst/AND_DELAY_1/t19 _al_u1551|_al_u1556.d[0]
+burst/AND_DELAY_1/t20 _al_u1551|_al_u1556.a[1]
+burst/AND_DELAY_1/t21 _al_u3866|core/reg125_b1.a[0]
+burst/AND_DELAY_1/t22 _al_u3867|_al_u1543.d[0]
+burst/AND_DELAY_1/t23 _al_u3870|_al_u1538.d[0]
+burst/AND_DELAY_1/t24 _al_u1534|_al_u1780.d[1]
+burst/AND_DELAY_1/t25 _al_u3865|_al_u1784.d[0]
+burst/AND_DELAY_1/t26 _al_u1534|_al_u1780.d[0]
+burst/AND_DELAY_1/t27 _al_u3862|_al_u1776.d[0]
+burst/AND_DELAY_1/t28 _al_u1767|_al_u1771.b[0]
+burst/AND_DELAY_1/t29 _al_u1767|_al_u1771.d[1]
+burst/AND_DELAY_1/t30 _al_u1660|_al_u1762.d[0]
+burst/AND_DELAY_1/t31 _al_u1679|_al_u1758.d[0]
+burst/AND_DELAY_1/t32 _al_u3858|_al_u1754.d[0]
+burst/AND_DELAY_1/t33 _al_u3857|_al_u1749.d[0]
+burst/AND_DELAY_1/t34 _al_u1740|_al_u1745.d[0]
+burst/AND_DELAY_1/t35 _al_u1740|_al_u1745.a[1]
+burst/AND_DELAY_1/t36 _al_u1732|_al_u1736.d[0]
+burst/AND_DELAY_1/t37 _al_u1732|_al_u1736.a[1]
+burst/AND_DELAY_1/t38 _al_u3856|_al_u1727.d[0]
+burst/AND_DELAY_1/t39 _al_u3859|_al_u1723.d[0]
+burst/AND_DELAY_1/t40 _al_u1705|_al_u1718.d[0]
+burst/AND_DELAY_1/t41 _al_u1710|_al_u1714.d[0]
+burst/AND_DELAY_1/t42 _al_u1710|_al_u1714.a[1]
+burst/AND_DELAY_1/t43 _al_u1705|_al_u1718.d[1]
+burst/AND_DELAY_1/t44 _al_u1696|_al_u1701.d[0]
+burst/AND_DELAY_1/t45 _al_u1696|_al_u1701.a[1]
+burst/AND_DELAY_1/t46 _al_u3852|_al_u1692.d[0]
+burst/AND_DELAY_1/t47 _al_u1683|_al_u1688.d[0]
+burst/AND_DELAY_1/t48 _al_u1683|_al_u1688.a[1]
+burst/AND_DELAY_1/t49 _al_u1679|_al_u1758.d[1]
+burst/AND_DELAY_1/t50 _al_u1669|_al_u1673.d[0]
+burst/AND_DELAY_1/t51 _al_u1669|_al_u1673.a[1]
+burst/AND_DELAY_1/t52 _al_u3850|_al_u1665.d[0]
+burst/AND_DELAY_1/t53 _al_u1660|_al_u1762.d[1]
+burst/AND_DELAY_1/t54 _al_u3848|_al_u1656.d[0]
+burst/AND_DELAY_1/t55 _al_u1647|_al_u1651.d[0]
+burst/AND_DELAY_1/t56 _al_u1647|_al_u1651.a[1]
+burst/AND_DELAY_1/t57 _al_u3845|_al_u1643.d[0]
+burst/AND_DELAY_1/t58 _al_u1638|_al_u3883.d[1]
+burst/AND_DELAY_1/t59 _al_u3844|_al_u1634.d[0]
+burst/AND_DELAY_1/t60 _al_u3801|_al_u1629.c[0]
+burst/AND_DELAY_1/t61 _al_u1625|core/reg125_b1_hfnopt2_0.d[1]
+burst/AND_DELAY_1/t62 _al_u1621|_al_u3843.d[1]
+burst/AND_DELAY_1/t63 _al_u1616|_al_u3884.d[1]
+burst/AND_DELAY_1/t64 _al_u3838|_al_u1674.d[0]
+burst/AND_DELAY_1/t65 _al_u3839|_al_u1574.c[0]
+burst/AND_DELAY_1/t66 _al_u3840|_al_u1530.d[0]
+burst/AND_DELAY_1/t67 _al_u3836|_al_u1741.d[0]
+burst/AND_DELAY_1/t68 _al_u1652|_al_u1697.c[0]
+burst/AND_DELAY_1/t69 _al_u1652|_al_u1697.a[1]
+burst/AND_DELAY_1/t70 _al_u1608|_al_u1612.d[0]
+burst/AND_DELAY_1/t71 _al_u1608|_al_u1612.a[1]
+burst/AND_DELAY_1/t72 _al_u1594|_al_u1603.d[0]
+burst/AND_DELAY_1/t73 _al_u1586|_al_u1599.d[0]
+burst/AND_DELAY_1/t74 _al_u1594|_al_u1603.d[1]
+burst/AND_DELAY_1/t75 _al_u3832|_al_u1590.d[0]
+burst/AND_DELAY_1/t76 _al_u1586|_al_u1599.d[1]
+burst/AND_DELAY_1/t77 _al_u1581|_al_u3885.d[1]
+burst/AND_DELAY_1/t78 _al_u1572|_al_u1577.d[0]
+burst/AND_DELAY_1/t79 _al_u1572|_al_u1577.a[1]
+burst/AND_DELAY_1/t80 _al_u1559|_al_u1568.d[0]
+burst/AND_DELAY_1/t81 _al_u1564|_al_u3828.d[1]
+burst/AND_DELAY_1/t82 _al_u1559|_al_u1568.d[1]
+burst/AND_DELAY_1/t83 _al_u3826|_al_u1555.d[0]
+burst/AND_DELAY_1/t84 _al_u1546|_al_u1550.d[0]
+burst/AND_DELAY_1/t85 _al_u1546|_al_u1550.a[1]
+burst/AND_DELAY_1/t86 _al_u3827|_al_u1542.d[0]
+burst/AND_DELAY_1/t87 _al_u3830|_al_u1537.c[0]
+burst/AND_DELAY_1/t88 _al_u1533|_al_u1783.d[1]
+burst/AND_DELAY_1/t89 _al_u1533|_al_u1783.d[0]
+burst/AND_DELAY_1/t90 _al_u1775|_al_u1779.d[0]
+burst/AND_DELAY_1/t91 _al_u1775|_al_u1779.a[1]
+burst/AND_DELAY_1/t92 _al_u1766|_al_u1770.d[0]
+burst/AND_DELAY_1/t93 _al_u1766|_al_u1770.d[1]
+burst/AND_DELAY_1/t94 _al_u3823|_al_u1761.d[0]
+burst/AND_DELAY_1/t95 _al_u3820|_al_u1757.d[0]
+burst/AND_DELAY_1/t96 _al_u3818|_al_u1753.b[0]
+burst/AND_DELAY_1/t97 _al_u1744|_al_u1748.d[0]
+burst/AND_DELAY_1/t98 _al_u1744|_al_u1748.a[1]
+burst/AND_DELAY_1/t99 _al_u1735|_al_u1739.d[0]
+burst/AND_DELAY_1/t100 _al_u1735|_al_u1739.d[1]
+burst/AND_DELAY_1/t101 _al_u1722|_al_u1731.d[0]
+burst/AND_DELAY_1/t102 _al_u3816|_al_u1726.b[0]
+burst/AND_DELAY_1/t103 _al_u1722|_al_u1731.c[1]
+burst/AND_DELAY_1/t104 _al_u3817|_al_u1717.d[0]
+burst/AND_DELAY_1/t105 _al_u3814|_al_u1713.d[0]
+burst/AND_DELAY_1/t106 _al_u1704|_al_u1709.d[0]
+burst/AND_DELAY_1/t107 _al_u1704|_al_u1709.a[1]
+burst/AND_DELAY_1/t108 _al_u1695|_al_u1700.a[0]
+burst/AND_DELAY_1/t109 _al_u1695|_al_u1700.a[1]
+burst/AND_DELAY_1/t110 _al_u3812|_al_u1691.d[0]
+burst/AND_DELAY_1/t111 _al_u1682|_al_u1687.d[0]
+burst/AND_DELAY_1/t112 _al_u1682|_al_u1687.a[1]
+burst/AND_DELAY_1/t113 _al_u1672|_al_u1678.d[0]
+burst/AND_DELAY_1/t114 _al_u1672|_al_u1678.a[1]
+burst/AND_DELAY_1/t115 _al_u3807|_al_u1668.d[0]
+burst/AND_DELAY_1/t116 _al_u1659|_al_u1664.d[0]
+burst/AND_DELAY_1/t117 _al_u1659|_al_u1664.a[1]
+burst/AND_DELAY_1/t118 _al_u3806|_al_u1655.d[0]
+burst/AND_DELAY_1/t119 _al_u1646|_al_u1650.d[0]
+burst/AND_DELAY_1/t120 _al_u1646|_al_u1650.d[1]
+burst/AND_DELAY_1/t121 _al_u3804|_al_u1642.d[0]
+burst/AND_DELAY_1/t122 _al_u3805|_al_u1637.d[0]
+burst/AND_DELAY_1/t123 _al_u3809|_al_u1633.d[0]
+burst/AND_DELAY_1/t124 _al_u1628|_al_u3810.d[1]
+burst/AND_DELAY_1/t125 _al_u3802|_al_u1624.d[0]
+burst/AND_DELAY_1/t126 _al_u3803|_al_u1620.b[0]
+burst/AND_DELAY_1/t127 _al_u3769|_al_u1615.d[0]
+burst/AND_DELAY_1/t128 _al_u3796|_al_u1607.d[0]
+burst/AND_DELAY_1/t129 _al_u3797|_al_u1563.b[0]
+burst/AND_DELAY_1/t130 _al_u3763|_al_u1774.b[0]
+burst/AND_DELAY_1/t131 _al_u1636|_al_u1730.d[0]
+burst/AND_DELAY_1/t132 _al_u1645|_al_u1686.d[0]
+burst/AND_DELAY_1/t133 _al_u1611|_al_u1641.d[0]
+burst/AND_DELAY_1/t134 _al_u1611|_al_u1641.a[1]
+burst/AND_DELAY_1/t135 _al_u1606|_al_u1649.d[1]
+burst/AND_DELAY_1/t136 _al_u1602|_al_u1662.d[1]
+burst/AND_DELAY_1/t137 _al_u3792|_al_u1598.d[0]
+burst/AND_DELAY_1/t138 _al_u1593|_al_u1667.d[1]
+burst/AND_DELAY_1/t139 _al_u1589|_al_u1677.d[1]
+burst/AND_DELAY_1/t140 _al_u1580|_al_u1584.a[0]
+burst/AND_DELAY_1/t141 _al_u1580|_al_u1584.a[1]
+burst/AND_DELAY_1/t142 _al_u3789|_al_u1576.c[0]
+burst/AND_DELAY_1/t143 _al_u1567|_al_u1571.d[0]
+burst/AND_DELAY_1/t144 _al_u1567|_al_u1571.d[1]
+burst/AND_DELAY_1/t145 _al_u1558|_al_u1562.d[0]
+burst/AND_DELAY_1/t146 _al_u1558|_al_u1562.a[1]
+burst/AND_DELAY_1/t147 _al_u3782|_al_u1554.d[0]
+burst/AND_DELAY_1/t148 _al_u1549|_al_u1760.d[1]
+burst/AND_DELAY_1/t149 _al_u1545|_al_u1765.d[1]
+burst/AND_DELAY_1/t150 _al_u1540|_al_u1769.d[1]
+burst/AND_DELAY_1/t151 _al_u1536|_al_u1773.d[1]
+burst/AND_DELAY_1/t152 _al_u1532|_al_u1782.c[1]
+burst/AND_DELAY_1/t153 _al_u1532|_al_u1782.d[0]
+burst/AND_DELAY_1/t154 _al_u3784|_al_u1778.d[0]
+burst/AND_DELAY_1/t155 _al_u1536|_al_u1773.d[0]
+burst/AND_DELAY_1/t156 _al_u1540|_al_u1769.d[0]
+burst/AND_DELAY_1/t157 _al_u1545|_al_u1765.d[0]
+burst/AND_DELAY_1/t158 _al_u1549|_al_u1760.d[0]
+burst/AND_DELAY_1/t159 _al_u1725|_al_u1756.d[0]
+burst/AND_DELAY_1/t160 _al_u1729|_al_u1751.d[0]
+burst/AND_DELAY_1/t161 _al_u1738|_al_u1747.d[0]
+burst/AND_DELAY_1/t162 _al_u3773|_al_u1743.d[0]
+burst/AND_DELAY_1/t163 _al_u1738|_al_u1747.d[1]
+burst/AND_DELAY_1/t164 _al_u1716|_al_u1734.d[0]
+burst/AND_DELAY_1/t165 _al_u1729|_al_u1751.c[1]
+burst/AND_DELAY_1/t166 _al_u1725|_al_u1756.d[1]
+burst/AND_DELAY_1/t167 _al_u3775|core/reg125_b1_hfnopt2_3.d[0]
+burst/AND_DELAY_1/t168 _al_u1716|_al_u1734.d[1]
+burst/AND_DELAY_1/t169 _al_u3771|_al_u1712.d[0]
+burst/AND_DELAY_1/t170 _al_u3772|_al_u1707.b[0]
+burst/AND_DELAY_1/t171 _al_u3788|_al_u1703.d[0]
+burst/AND_DELAY_1/t172 _al_u1699|_al_u3770.d[1]
+burst/AND_DELAY_1/t173 _al_u1690|_al_u1694.d[0]
+burst/AND_DELAY_1/t174 _al_u1690|_al_u1694.a[1]
+burst/AND_DELAY_1/t175 _al_u3790|_al_u1685.c[0]
+burst/AND_DELAY_1/t176 _al_u3766|_al_u1681.d[0]
+burst/AND_DELAY_1/t177 _al_u1589|_al_u1677.d[0]
+burst/AND_DELAY_1/t178 _al_u3767|_al_u1671.b[0]
+burst/AND_DELAY_1/t179 _al_u1593|_al_u1667.d[0]
+burst/AND_DELAY_1/t180 _al_u1602|_al_u1662.a[0]
+burst/AND_DELAY_1/t181 _al_u1654|_al_u1658.b[0]
+burst/AND_DELAY_1/t182 _al_u1654|_al_u1658.a[1]
+burst/AND_DELAY_1/t183 _al_u1606|_al_u1649.d[0]
+burst/AND_DELAY_1/t184 _al_u1645|_al_u1686.d[1]
+burst/AND_DELAY_1/t185 _al_u3794|_al_u1640.d[0]
+burst/AND_DELAY_1/t186 _al_u1636|_al_u1730.b[1]
+burst/AND_DELAY_1/t187 _al_u1627|_al_u1632.d[0]
+burst/AND_DELAY_1/t188 _al_u1627|_al_u1632.d[1]
+burst/AND_DELAY_1/t189 _al_u3760|_al_u1623.d[0]
+burst/AND_DELAY_1/t190 _al_u3761|_al_u1618.d[0]
+burst/AND_DELAY_1/t191 _al_u1596|_al_u1614.d[0]
+burst/AND_DELAY_1/t192 _al_u1596|_al_u1614.a[1]
+burst/AND_DELAY_1/t193 _al_u3755|_al_u1552.a[0]
+burst/AND_DELAY_1/t194 _al_u1719|_al_u1763.d[0]
+burst/AND_DELAY_1/t195 _al_u1719|_al_u1763.a[1]
+burst/AND_DELAY_1/t196 _al_u1630|_al_u1675.c[0]
+burst/AND_DELAY_1/t197 _al_u1630|_al_u1675.d[1]
+burst/AND_DELAY_1/t198 _al_u1605|_al_u1610.d[0]
+burst/AND_DELAY_1/t199 _al_u1605|_al_u1610.a[1]
+burst/AND_DELAY_1/t200 _al_u1597|_al_u1601.d[0]
+burst/AND_DELAY_1/t201 _al_u1597|_al_u1601.d[1]
+burst/AND_DELAY_1/t202 _al_u3752|_al_u1592.b[0]
+burst/AND_DELAY_1/t203 _al_u1583|_al_u1588.d[0]
+burst/AND_DELAY_1/t204 _al_u1583|_al_u1588.a[1]
+burst/AND_DELAY_1/t205 _al_u3749|_al_u1579.a[0]
+burst/AND_DELAY_1/t206 _al_u3750|_al_u1575.d[0]
+burst/AND_DELAY_1/t207 _al_u3744|_al_u1570.d[0]
+burst/AND_DELAY_1/t208 _al_u1561|_al_u1566.d[0]
+burst/AND_DELAY_1/t209 _al_u1561|_al_u1566.a[1]
+burst/AND_DELAY_1/t210 _al_u1553|_al_u1557.d[0]
+burst/AND_DELAY_1/t211 _al_u1553|_al_u1557.a[1]
+burst/AND_DELAY_1/t212 _al_u1535|_al_u1548.d[0]
+burst/AND_DELAY_1/t213 _al_u1539|_al_u1544.b[0]
+burst/AND_DELAY_1/t214 _al_u1539|_al_u1544.a[1]
+burst/AND_DELAY_1/t215 _al_u1535|_al_u1548.c[1]
+burst/AND_DELAY_1/t216 _al_u1531|_al_u1781.d[1]
+burst/AND_DELAY_1/t217 _al_u1531|_al_u1781.a[0]
+burst/AND_DELAY_1/t218 _al_u1772|_al_u1777.d[0]
+burst/AND_DELAY_1/t219 _al_u1772|_al_u1777.a[1]
+burst/AND_DELAY_1/t220 _al_u1764|_al_u1768.d[0]
+burst/AND_DELAY_1/t221 _al_u1764|_al_u1768.a[1]
+burst/AND_DELAY_1/t222 _al_u1755|_al_u1759.d[0]
+burst/AND_DELAY_1/t223 _al_u1755|_al_u1759.d[1]
+burst/AND_DELAY_1/t224 _al_u1746|_al_u1750.d[0]
+burst/AND_DELAY_1/t225 _al_u1746|_al_u1750.d[1]
+burst/AND_DELAY_1/t226 _al_u3732|_al_u1742.c[0]
+burst/AND_DELAY_1/t227 _al_u1733|_al_u1737.d[0]
+burst/AND_DELAY_1/t228 _al_u1733|_al_u1737.a[1]
+burst/AND_DELAY_1/t229 _al_u3730|_al_u1728.d[0]
+burst/AND_DELAY_1/t230 _al_u1720|_al_u1724.b[0]
+burst/AND_DELAY_1/t231 _al_u1720|_al_u1724.a[1]
+burst/AND_DELAY_1/t232 _al_u3728|_al_u1715.d[0]
+burst/AND_DELAY_1/t233 _al_u1706|_al_u1711.d[0]
+burst/AND_DELAY_1/t234 _al_u1706|_al_u1711.a[1]
+burst/AND_DELAY_1/t235 _al_u1698|_al_u1702.d[0]
+burst/AND_DELAY_1/t236 _al_u1698|_al_u1702.a[1]
+burst/AND_DELAY_1/t237 _al_u3726|_al_u1693.d[0]
+burst/AND_DELAY_1/t238 _al_u3727|_al_u1689.b[0]
+burst/AND_DELAY_1/t239 _al_u1680|_al_u1684.d[0]
+burst/AND_DELAY_1/t240 _al_u1680|_al_u1684.a[1]
+burst/AND_DELAY_1/t241 _al_u1670|_al_u1676.c[0]
+burst/AND_DELAY_1/t242 _al_u1670|_al_u1676.a[1]
+burst/AND_DELAY_1/t243 _al_u1661|_al_u1666.d[0]
+burst/AND_DELAY_1/t244 _al_u1661|_al_u1666.a[1]
+burst/AND_DELAY_1/t245 _al_u3721|_al_u1657.a[0]
+burst/AND_DELAY_1/t246 _al_u3722|_al_u1653.d[0]
+burst/AND_DELAY_1/t247 _al_u1644|_al_u1648.d[0]
+burst/AND_DELAY_1/t248 _al_u1644|_al_u1648.a[1]
+burst/AND_DELAY_1/t249 _al_u1635|_al_u1639.d[0]
+burst/AND_DELAY_1/t250 _al_u1635|_al_u1639.d[1]
+burst/AND_DELAY_1/t251 _al_u1631|_al_u3717.d[1]
+burst/AND_DELAY_1/t252 _al_u1613|_al_u1626.d[0]
+burst/AND_DELAY_1/t253 _al_u1617|_al_u1622.d[0]
+burst/AND_DELAY_1/t254 _al_u1617|_al_u1622.a[1]
+burst/AND_DELAY_1/t255 _al_u1631|_al_u3717.a[0]
+_al_u3717_o _al_u3737|core/reg125_b1_hfnopt2_1.c[1]
+_al_u3737_o _al_u1581|_al_u3885.d[0]
+AOM1_TTL_pad _al_u5491|core/_al_u5204.d[1]
+EXT_SYNC_pad core/_al_u5872|core/reg31_b2.d[1]
+core/_al_u5872_o core/_al_u5921|core/reg140_b6.d[0]
+
+Timing path: core/reg98_b1|core/reg98_b0.clk->core/_al_u5921|core/reg140_b6
+core/reg98_b1|core/reg98_b0.clk
+core/_al_u5921|core/reg140_b6
+2316 -160.265000 22.032000 182.297000 296 296
+AOM_CTRL_SEL[0] burst/reg12_b3|burst/reg12_b0.c[1]
+_al_u2322_o _al_u2325|core/reg131_b7.d[1]
+burst/FIBER_AOM_TTL_out _al_u1504|core/reg134_b2.d[0]
+burst/AND_GATE_16/t1 core/reg135_b2|core/reg135_b4.d[1]
+burst/AND_GATE_16/t2 _al_u6056.d[0]
+burst/AND_GATE_16/t3 _al_u6057|core/reg131_b3.d[1]
+burst/AND_GATE_16/t4 _al_u6058|core/reg132_b3.d[1]
+burst/AND_GATE_16/t5 core/reg130_b3|core/reg130_b0.d[0]
+burst/AND_GATE_16/t6 _al_u6060|core/reg131_b4.d[1]
+burst/AND_GATE_16/t7 core/reg103_b2|core/reg103_b8.c[1]
+burst/AND_GATE_16/t8 _al_u6062|core/reg129_b4.b[1]
+burst/AND_GATE_16/t9 core/reg103_b6|core/reg103_b1.d[0]
+burst/AND_GATE_16/t10 core/reg103_b0|core/reg103_b3.d[1]
+burst/AND_GATE_16/t11 _al_u6036|core/reg132_b4.c[1]
+burst/AND_GATE_16/t12 _al_u6062|core/reg129_b4.d[0]
+burst/AND_GATE_16/t13 _al_u6036|core/reg132_b4.d[0]
+burst/AND_GATE_16/t14 core/reg133_b2|core/reg133_b4.d[1]
+burst/AND_GATE_16/t15 core/reg135_b1|core/reg135_b0.d[0]
+burst/AND_GATE_16/t16 core/reg134_b1|core/reg134_b0.d[0]
+burst/AND_GATE_16/t17 core/reg135_b1|core/reg135_b0.d[1]
+burst/AND_GATE_16/t18 core/reg130_b1.d[0]
+burst/AND_GATE_16/t19 core/reg28_b2|core/reg28_b3.d[0]
+burst/AND_GATE_16/t20 core/reg134_b1|core/reg134_b0.d[1]
+burst/AND_GATE_16/t21 core/reg129_b2|core/reg129_b1.d[0]
+burst/AND_GATE_16/t22 core/reg28_b2|core/reg28_b3.d[1]
+burst/AND_GATE_16/t23 core/reg132_b6|core/reg132_b0.d[1]
+burst/AND_GATE_16/t24 core/reg132_b5|core/reg132_b7.d[1]
+burst/AND_GATE_16/t25 core/reg135_b6|core/reg135_b5.d[0]
+burst/AND_GATE_16/t26 core/reg28_b5|core/reg28_b7.d[0]
+burst/AND_GATE_16/t27 core/reg136_b5.d[0]
+burst/AND_GATE_16/t28 core/reg134_b5|core/reg134_b6.d[1]
+burst/OR_GATE_16/t29 core/reg129_b7.d[0]
+_al_u2912_o core/reg132_b5|core/reg132_b7.d[0]
+_al_u2916_o core/reg136_b3|core/reg136_b7.c[0]
+burst/FIBER_AOM_TTL_0 core/reg127_b5|core/reg127_b7.c[1]
+burst/FIBER_AOM_TTL_2 _al_u1785.d[0]
+burst/AND_DELAY_1/t1 _al_u3878|core/reg125_b1_hfnopt2_4.d[0]
+burst/AND_DELAY_1/t2 _al_u4470|_al_u1541.d[0]
+burst/AND_DELAY_1/t3 _al_u1708|_al_u1752.d[0]
+burst/AND_DELAY_1/t4 _al_u1708|_al_u1752.a[1]
+burst/AND_DELAY_1/t5 _al_u3877|_al_u1663.d[0]
+burst/AND_DELAY_1/t6 _al_u1609|_al_u1619.d[0]
+burst/AND_DELAY_1/t7 _al_u1609|_al_u1619.a[1]
+burst/AND_DELAY_1/t8 _al_u1600|_al_u1604.d[0]
+burst/AND_DELAY_1/t9 _al_u1600|_al_u1604.a[1]
+burst/AND_DELAY_1/t10 _al_u1591|_al_u1595.d[0]
+burst/AND_DELAY_1/t11 _al_u1591|_al_u1595.a[1]
+burst/AND_DELAY_1/t12 _al_u1582|_al_u1587.d[0]
+burst/AND_DELAY_1/t13 _al_u1582|_al_u1587.a[1]
+burst/AND_DELAY_1/t14 _al_u3872|_al_u1578.c[0]
+burst/AND_DELAY_1/t15 _al_u3881|_al_u1573.d[0]
+burst/AND_DELAY_1/t16 _al_u3868|_al_u1569.d[0]
+burst/AND_DELAY_1/t17 _al_u1560|_al_u1565.c[0]
+burst/AND_DELAY_1/t18 _al_u1560|_al_u1565.a[1]
+burst/AND_DELAY_1/t19 _al_u1551|_al_u1556.d[0]
+burst/AND_DELAY_1/t20 _al_u1551|_al_u1556.a[1]
+burst/AND_DELAY_1/t21 _al_u3866|core/reg125_b1.a[0]
+burst/AND_DELAY_1/t22 _al_u3867|_al_u1543.d[0]
+burst/AND_DELAY_1/t23 _al_u3870|_al_u1538.d[0]
+burst/AND_DELAY_1/t24 _al_u1534|_al_u1780.d[1]
+burst/AND_DELAY_1/t25 _al_u3865|_al_u1784.d[0]
+burst/AND_DELAY_1/t26 _al_u1534|_al_u1780.d[0]
+burst/AND_DELAY_1/t27 _al_u3862|_al_u1776.d[0]
+burst/AND_DELAY_1/t28 _al_u1767|_al_u1771.b[0]
+burst/AND_DELAY_1/t29 _al_u1767|_al_u1771.d[1]
+burst/AND_DELAY_1/t30 _al_u1660|_al_u1762.d[0]
+burst/AND_DELAY_1/t31 _al_u1679|_al_u1758.d[0]
+burst/AND_DELAY_1/t32 _al_u3858|_al_u1754.d[0]
+burst/AND_DELAY_1/t33 _al_u3857|_al_u1749.d[0]
+burst/AND_DELAY_1/t34 _al_u1740|_al_u1745.d[0]
+burst/AND_DELAY_1/t35 _al_u1740|_al_u1745.a[1]
+burst/AND_DELAY_1/t36 _al_u1732|_al_u1736.d[0]
+burst/AND_DELAY_1/t37 _al_u1732|_al_u1736.a[1]
+burst/AND_DELAY_1/t38 _al_u3856|_al_u1727.d[0]
+burst/AND_DELAY_1/t39 _al_u3859|_al_u1723.d[0]
+burst/AND_DELAY_1/t40 _al_u1705|_al_u1718.d[0]
+burst/AND_DELAY_1/t41 _al_u1710|_al_u1714.d[0]
+burst/AND_DELAY_1/t42 _al_u1710|_al_u1714.a[1]
+burst/AND_DELAY_1/t43 _al_u1705|_al_u1718.d[1]
+burst/AND_DELAY_1/t44 _al_u1696|_al_u1701.d[0]
+burst/AND_DELAY_1/t45 _al_u1696|_al_u1701.a[1]
+burst/AND_DELAY_1/t46 _al_u3852|_al_u1692.d[0]
+burst/AND_DELAY_1/t47 _al_u1683|_al_u1688.d[0]
+burst/AND_DELAY_1/t48 _al_u1683|_al_u1688.a[1]
+burst/AND_DELAY_1/t49 _al_u1679|_al_u1758.d[1]
+burst/AND_DELAY_1/t50 _al_u1669|_al_u1673.d[0]
+burst/AND_DELAY_1/t51 _al_u1669|_al_u1673.a[1]
+burst/AND_DELAY_1/t52 _al_u3850|_al_u1665.d[0]
+burst/AND_DELAY_1/t53 _al_u1660|_al_u1762.d[1]
+burst/AND_DELAY_1/t54 _al_u3848|_al_u1656.d[0]
+burst/AND_DELAY_1/t55 _al_u1647|_al_u1651.d[0]
+burst/AND_DELAY_1/t56 _al_u1647|_al_u1651.a[1]
+burst/AND_DELAY_1/t57 _al_u3845|_al_u1643.d[0]
+burst/AND_DELAY_1/t58 _al_u1638|_al_u3883.d[1]
+burst/AND_DELAY_1/t59 _al_u3844|_al_u1634.d[0]
+burst/AND_DELAY_1/t60 _al_u3801|_al_u1629.c[0]
+burst/AND_DELAY_1/t61 _al_u1625|core/reg125_b1_hfnopt2_0.d[1]
+burst/AND_DELAY_1/t62 _al_u1621|_al_u3843.d[1]
+burst/AND_DELAY_1/t63 _al_u1616|_al_u3884.d[1]
+burst/AND_DELAY_1/t64 _al_u3838|_al_u1674.d[0]
+burst/AND_DELAY_1/t65 _al_u3839|_al_u1574.c[0]
+burst/AND_DELAY_1/t66 _al_u3840|_al_u1530.d[0]
+burst/AND_DELAY_1/t67 _al_u3836|_al_u1741.d[0]
+burst/AND_DELAY_1/t68 _al_u1652|_al_u1697.c[0]
+burst/AND_DELAY_1/t69 _al_u1652|_al_u1697.a[1]
+burst/AND_DELAY_1/t70 _al_u1608|_al_u1612.d[0]
+burst/AND_DELAY_1/t71 _al_u1608|_al_u1612.a[1]
+burst/AND_DELAY_1/t72 _al_u1594|_al_u1603.d[0]
+burst/AND_DELAY_1/t73 _al_u1586|_al_u1599.d[0]
+burst/AND_DELAY_1/t74 _al_u1594|_al_u1603.d[1]
+burst/AND_DELAY_1/t75 _al_u3832|_al_u1590.d[0]
+burst/AND_DELAY_1/t76 _al_u1586|_al_u1599.d[1]
+burst/AND_DELAY_1/t77 _al_u1581|_al_u3885.d[1]
+burst/AND_DELAY_1/t78 _al_u1572|_al_u1577.d[0]
+burst/AND_DELAY_1/t79 _al_u1572|_al_u1577.a[1]
+burst/AND_DELAY_1/t80 _al_u1559|_al_u1568.d[0]
+burst/AND_DELAY_1/t81 _al_u1564|_al_u3828.d[1]
+burst/AND_DELAY_1/t82 _al_u1559|_al_u1568.d[1]
+burst/AND_DELAY_1/t83 _al_u3826|_al_u1555.d[0]
+burst/AND_DELAY_1/t84 _al_u1546|_al_u1550.d[0]
+burst/AND_DELAY_1/t85 _al_u1546|_al_u1550.a[1]
+burst/AND_DELAY_1/t86 _al_u3827|_al_u1542.d[0]
+burst/AND_DELAY_1/t87 _al_u3830|_al_u1537.c[0]
+burst/AND_DELAY_1/t88 _al_u1533|_al_u1783.d[1]
+burst/AND_DELAY_1/t89 _al_u1533|_al_u1783.d[0]
+burst/AND_DELAY_1/t90 _al_u1775|_al_u1779.d[0]
+burst/AND_DELAY_1/t91 _al_u1775|_al_u1779.a[1]
+burst/AND_DELAY_1/t92 _al_u1766|_al_u1770.d[0]
+burst/AND_DELAY_1/t93 _al_u1766|_al_u1770.d[1]
+burst/AND_DELAY_1/t94 _al_u3823|_al_u1761.d[0]
+burst/AND_DELAY_1/t95 _al_u3820|_al_u1757.d[0]
+burst/AND_DELAY_1/t96 _al_u3818|_al_u1753.b[0]
+burst/AND_DELAY_1/t97 _al_u1744|_al_u1748.d[0]
+burst/AND_DELAY_1/t98 _al_u1744|_al_u1748.a[1]
+burst/AND_DELAY_1/t99 _al_u1735|_al_u1739.d[0]
+burst/AND_DELAY_1/t100 _al_u1735|_al_u1739.d[1]
+burst/AND_DELAY_1/t101 _al_u1722|_al_u1731.d[0]
+burst/AND_DELAY_1/t102 _al_u3816|_al_u1726.b[0]
+burst/AND_DELAY_1/t103 _al_u1722|_al_u1731.c[1]
+burst/AND_DELAY_1/t104 _al_u3817|_al_u1717.d[0]
+burst/AND_DELAY_1/t105 _al_u3814|_al_u1713.d[0]
+burst/AND_DELAY_1/t106 _al_u1704|_al_u1709.d[0]
+burst/AND_DELAY_1/t107 _al_u1704|_al_u1709.a[1]
+burst/AND_DELAY_1/t108 _al_u1695|_al_u1700.a[0]
+burst/AND_DELAY_1/t109 _al_u1695|_al_u1700.a[1]
+burst/AND_DELAY_1/t110 _al_u3812|_al_u1691.d[0]
+burst/AND_DELAY_1/t111 _al_u1682|_al_u1687.d[0]
+burst/AND_DELAY_1/t112 _al_u1682|_al_u1687.a[1]
+burst/AND_DELAY_1/t113 _al_u1672|_al_u1678.d[0]
+burst/AND_DELAY_1/t114 _al_u1672|_al_u1678.a[1]
+burst/AND_DELAY_1/t115 _al_u3807|_al_u1668.d[0]
+burst/AND_DELAY_1/t116 _al_u1659|_al_u1664.d[0]
+burst/AND_DELAY_1/t117 _al_u1659|_al_u1664.a[1]
+burst/AND_DELAY_1/t118 _al_u3806|_al_u1655.d[0]
+burst/AND_DELAY_1/t119 _al_u1646|_al_u1650.d[0]
+burst/AND_DELAY_1/t120 _al_u1646|_al_u1650.d[1]
+burst/AND_DELAY_1/t121 _al_u3804|_al_u1642.d[0]
+burst/AND_DELAY_1/t122 _al_u3805|_al_u1637.d[0]
+burst/AND_DELAY_1/t123 _al_u3809|_al_u1633.d[0]
+burst/AND_DELAY_1/t124 _al_u1628|_al_u3810.d[1]
+burst/AND_DELAY_1/t125 _al_u3802|_al_u1624.d[0]
+burst/AND_DELAY_1/t126 _al_u3803|_al_u1620.b[0]
+burst/AND_DELAY_1/t127 _al_u3769|_al_u1615.d[0]
+burst/AND_DELAY_1/t128 _al_u3796|_al_u1607.d[0]
+burst/AND_DELAY_1/t129 _al_u3797|_al_u1563.b[0]
+burst/AND_DELAY_1/t130 _al_u3763|_al_u1774.b[0]
+burst/AND_DELAY_1/t131 _al_u1636|_al_u1730.d[0]
+burst/AND_DELAY_1/t132 _al_u1645|_al_u1686.d[0]
+burst/AND_DELAY_1/t133 _al_u1611|_al_u1641.d[0]
+burst/AND_DELAY_1/t134 _al_u1611|_al_u1641.a[1]
+burst/AND_DELAY_1/t135 _al_u1606|_al_u1649.d[1]
+burst/AND_DELAY_1/t136 _al_u1602|_al_u1662.d[1]
+burst/AND_DELAY_1/t137 _al_u3792|_al_u1598.d[0]
+burst/AND_DELAY_1/t138 _al_u1593|_al_u1667.d[1]
+burst/AND_DELAY_1/t139 _al_u1589|_al_u1677.d[1]
+burst/AND_DELAY_1/t140 _al_u1580|_al_u1584.a[0]
+burst/AND_DELAY_1/t141 _al_u1580|_al_u1584.a[1]
+burst/AND_DELAY_1/t142 _al_u3789|_al_u1576.c[0]
+burst/AND_DELAY_1/t143 _al_u1567|_al_u1571.d[0]
+burst/AND_DELAY_1/t144 _al_u1567|_al_u1571.d[1]
+burst/AND_DELAY_1/t145 _al_u1558|_al_u1562.d[0]
+burst/AND_DELAY_1/t146 _al_u1558|_al_u1562.a[1]
+burst/AND_DELAY_1/t147 _al_u3782|_al_u1554.d[0]
+burst/AND_DELAY_1/t148 _al_u1549|_al_u1760.d[1]
+burst/AND_DELAY_1/t149 _al_u1545|_al_u1765.d[1]
+burst/AND_DELAY_1/t150 _al_u1540|_al_u1769.d[1]
+burst/AND_DELAY_1/t151 _al_u1536|_al_u1773.d[1]
+burst/AND_DELAY_1/t152 _al_u1532|_al_u1782.c[1]
+burst/AND_DELAY_1/t153 _al_u1532|_al_u1782.d[0]
+burst/AND_DELAY_1/t154 _al_u3784|_al_u1778.d[0]
+burst/AND_DELAY_1/t155 _al_u1536|_al_u1773.d[0]
+burst/AND_DELAY_1/t156 _al_u1540|_al_u1769.d[0]
+burst/AND_DELAY_1/t157 _al_u1545|_al_u1765.d[0]
+burst/AND_DELAY_1/t158 _al_u1549|_al_u1760.d[0]
+burst/AND_DELAY_1/t159 _al_u1725|_al_u1756.d[0]
+burst/AND_DELAY_1/t160 _al_u1729|_al_u1751.d[0]
+burst/AND_DELAY_1/t161 _al_u1738|_al_u1747.d[0]
+burst/AND_DELAY_1/t162 _al_u3773|_al_u1743.d[0]
+burst/AND_DELAY_1/t163 _al_u1738|_al_u1747.d[1]
+burst/AND_DELAY_1/t164 _al_u1716|_al_u1734.d[0]
+burst/AND_DELAY_1/t165 _al_u1729|_al_u1751.c[1]
+burst/AND_DELAY_1/t166 _al_u1725|_al_u1756.d[1]
+burst/AND_DELAY_1/t167 _al_u3775|core/reg125_b1_hfnopt2_3.d[0]
+burst/AND_DELAY_1/t168 _al_u1716|_al_u1734.d[1]
+burst/AND_DELAY_1/t169 _al_u3771|_al_u1712.d[0]
+burst/AND_DELAY_1/t170 _al_u3772|_al_u1707.b[0]
+burst/AND_DELAY_1/t171 _al_u3788|_al_u1703.d[0]
+burst/AND_DELAY_1/t172 _al_u1699|_al_u3770.d[1]
+burst/AND_DELAY_1/t173 _al_u1690|_al_u1694.d[0]
+burst/AND_DELAY_1/t174 _al_u1690|_al_u1694.a[1]
+burst/AND_DELAY_1/t175 _al_u3790|_al_u1685.c[0]
+burst/AND_DELAY_1/t176 _al_u3766|_al_u1681.d[0]
+burst/AND_DELAY_1/t177 _al_u1589|_al_u1677.d[0]
+burst/AND_DELAY_1/t178 _al_u3767|_al_u1671.b[0]
+burst/AND_DELAY_1/t179 _al_u1593|_al_u1667.d[0]
+burst/AND_DELAY_1/t180 _al_u1602|_al_u1662.a[0]
+burst/AND_DELAY_1/t181 _al_u1654|_al_u1658.b[0]
+burst/AND_DELAY_1/t182 _al_u1654|_al_u1658.a[1]
+burst/AND_DELAY_1/t183 _al_u1606|_al_u1649.d[0]
+burst/AND_DELAY_1/t184 _al_u1645|_al_u1686.d[1]
+burst/AND_DELAY_1/t185 _al_u3794|_al_u1640.d[0]
+burst/AND_DELAY_1/t186 _al_u1636|_al_u1730.b[1]
+burst/AND_DELAY_1/t187 _al_u1627|_al_u1632.d[0]
+burst/AND_DELAY_1/t188 _al_u1627|_al_u1632.d[1]
+burst/AND_DELAY_1/t189 _al_u3760|_al_u1623.d[0]
+burst/AND_DELAY_1/t190 _al_u3761|_al_u1618.d[0]
+burst/AND_DELAY_1/t191 _al_u1596|_al_u1614.d[0]
+burst/AND_DELAY_1/t192 _al_u1596|_al_u1614.a[1]
+burst/AND_DELAY_1/t193 _al_u3755|_al_u1552.a[0]
+burst/AND_DELAY_1/t194 _al_u1719|_al_u1763.d[0]
+burst/AND_DELAY_1/t195 _al_u1719|_al_u1763.a[1]
+burst/AND_DELAY_1/t196 _al_u1630|_al_u1675.c[0]
+burst/AND_DELAY_1/t197 _al_u1630|_al_u1675.d[1]
+burst/AND_DELAY_1/t198 _al_u1605|_al_u1610.d[0]
+burst/AND_DELAY_1/t199 _al_u1605|_al_u1610.a[1]
+burst/AND_DELAY_1/t200 _al_u1597|_al_u1601.d[0]
+burst/AND_DELAY_1/t201 _al_u1597|_al_u1601.d[1]
+burst/AND_DELAY_1/t202 _al_u3752|_al_u1592.b[0]
+burst/AND_DELAY_1/t203 _al_u1583|_al_u1588.d[0]
+burst/AND_DELAY_1/t204 _al_u1583|_al_u1588.a[1]
+burst/AND_DELAY_1/t205 _al_u3749|_al_u1579.a[0]
+burst/AND_DELAY_1/t206 _al_u3750|_al_u1575.d[0]
+burst/AND_DELAY_1/t207 _al_u3744|_al_u1570.d[0]
+burst/AND_DELAY_1/t208 _al_u1561|_al_u1566.d[0]
+burst/AND_DELAY_1/t209 _al_u1561|_al_u1566.a[1]
+burst/AND_DELAY_1/t210 _al_u1553|_al_u1557.d[0]
+burst/AND_DELAY_1/t211 _al_u1553|_al_u1557.a[1]
+burst/AND_DELAY_1/t212 _al_u1535|_al_u1548.d[0]
+burst/AND_DELAY_1/t213 _al_u1539|_al_u1544.b[0]
+burst/AND_DELAY_1/t214 _al_u1539|_al_u1544.a[1]
+burst/AND_DELAY_1/t215 _al_u1535|_al_u1548.c[1]
+burst/AND_DELAY_1/t216 _al_u1531|_al_u1781.d[1]
+burst/AND_DELAY_1/t217 _al_u1531|_al_u1781.a[0]
+burst/AND_DELAY_1/t218 _al_u1772|_al_u1777.d[0]
+burst/AND_DELAY_1/t219 _al_u1772|_al_u1777.a[1]
+burst/AND_DELAY_1/t220 _al_u1764|_al_u1768.d[0]
+burst/AND_DELAY_1/t221 _al_u1764|_al_u1768.a[1]
+burst/AND_DELAY_1/t222 _al_u1755|_al_u1759.d[0]
+burst/AND_DELAY_1/t223 _al_u1755|_al_u1759.d[1]
+burst/AND_DELAY_1/t224 _al_u1746|_al_u1750.d[0]
+burst/AND_DELAY_1/t225 _al_u1746|_al_u1750.d[1]
+burst/AND_DELAY_1/t226 _al_u3732|_al_u1742.c[0]
+burst/AND_DELAY_1/t227 _al_u1733|_al_u1737.d[0]
+burst/AND_DELAY_1/t228 _al_u1733|_al_u1737.a[1]
+burst/AND_DELAY_1/t229 _al_u3730|_al_u1728.d[0]
+burst/AND_DELAY_1/t230 _al_u1720|_al_u1724.b[0]
+burst/AND_DELAY_1/t231 _al_u1720|_al_u1724.a[1]
+burst/AND_DELAY_1/t232 _al_u3728|_al_u1715.d[0]
+burst/AND_DELAY_1/t233 _al_u1706|_al_u1711.d[0]
+burst/AND_DELAY_1/t234 _al_u1706|_al_u1711.a[1]
+burst/AND_DELAY_1/t235 _al_u1698|_al_u1702.d[0]
+burst/AND_DELAY_1/t236 _al_u1698|_al_u1702.a[1]
+burst/AND_DELAY_1/t237 _al_u3726|_al_u1693.d[0]
+burst/AND_DELAY_1/t238 _al_u3727|_al_u1689.b[0]
+burst/AND_DELAY_1/t239 _al_u1680|_al_u1684.d[0]
+burst/AND_DELAY_1/t240 _al_u1680|_al_u1684.a[1]
+burst/AND_DELAY_1/t241 _al_u1670|_al_u1676.c[0]
+burst/AND_DELAY_1/t242 _al_u1670|_al_u1676.a[1]
+burst/AND_DELAY_1/t243 _al_u1661|_al_u1666.d[0]
+burst/AND_DELAY_1/t244 _al_u1661|_al_u1666.a[1]
+burst/AND_DELAY_1/t245 _al_u3721|_al_u1657.a[0]
+burst/AND_DELAY_1/t246 _al_u3722|_al_u1653.d[0]
+burst/AND_DELAY_1/t247 _al_u1644|_al_u1648.d[0]
+burst/AND_DELAY_1/t248 _al_u1644|_al_u1648.a[1]
+burst/AND_DELAY_1/t249 _al_u1635|_al_u1639.d[0]
+burst/AND_DELAY_1/t250 _al_u1635|_al_u1639.d[1]
+burst/AND_DELAY_1/t251 _al_u1631|_al_u3717.d[1]
+burst/AND_DELAY_1/t252 _al_u1613|_al_u1626.d[0]
+burst/AND_DELAY_1/t253 _al_u1617|_al_u1622.d[0]
+burst/AND_DELAY_1/t254 _al_u1617|_al_u1622.a[1]
+burst/AND_DELAY_1/t255 _al_u1631|_al_u3717.a[0]
+_al_u3717_o _al_u3737|core/reg125_b1_hfnopt2_1.c[1]
+_al_u3737_o _al_u1581|_al_u3885.d[0]
+AOM1_TTL_pad _al_u5491|core/_al_u5204.d[1]
+EXT_SYNC_pad core/_al_u5872|core/reg31_b2.d[1]
+core/_al_u5872_o core/_al_u5921|core/reg140_b6.d[0]
+
+
+Endpoint: alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+2939 -1.451000 1 1
+Timing path: PD1_LOW/alarm_out_reg.clk->alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+PD1_LOW/alarm_out_reg.clk
+alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+2941 -1.451000 3.110000 4.561000 2 2
+PD1_LOW_ALM _al_u1977|FRENC_WATER/reg1_b11.d[1]
+alarm_mon/U6/mux2_b0_sel_is_3_o alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6.c[1]
+
+
+Endpoint: alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+2976 -1.451000 1 1
+Timing path: PD1_LOW/alarm_out_reg.clk->alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+PD1_LOW/alarm_out_reg.clk
+alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6
+2978 -1.451000 3.110000 4.561000 2 2
+PD1_LOW_ALM _al_u1977|FRENC_WATER/reg1_b11.d[1]
+alarm_mon/U6/mux2_b0_sel_is_3_o alarm_mon/U6/reg0_b5|alarm_mon/U6/reg0_b6.c[0]
+
+
+
+Hold check
+3013 3
+Endpoint: core/reg1_b6|core/reg1_b1
+3015 0.153000 1 1
+Timing path: freq_cal_2/reg3_b1.clk->core/reg1_b6|core/reg1_b1
+freq_cal_2/reg3_b1.clk
+core/reg1_b6|core/reg1_b1
+3017 0.153000 2.350000 2.503000 0 1
+PD2_freq[1] core/reg1_b6|core/reg1_b1.mi[0]
+
+
+Endpoint: alarm_mon/reg2_b5|alarm_mon/reg2_b9
+3050 0.153000 1 1
+Timing path: freq_cal_2/add0/ucin_al_u6020.clk->alarm_mon/reg2_b5|alarm_mon/reg2_b9
+freq_cal_2/add0/ucin_al_u6020.clk
+alarm_mon/reg2_b5|alarm_mon/reg2_b9
+3052 0.153000 2.350000 2.503000 0 1
+PD2_freq[5] alarm_mon/reg2_b5|alarm_mon/reg2_b9.mi[1]
+
+
+Endpoint: alarm_mon/reg2_b0|alarm_mon/reg2_b14
+3085 0.153000 1 1
+Timing path: freq_cal_2/reg3_b2|freq_cal_2/reg3_b0.clk->alarm_mon/reg2_b0|alarm_mon/reg2_b14
+freq_cal_2/reg3_b2|freq_cal_2/reg3_b0.clk
+alarm_mon/reg2_b0|alarm_mon/reg2_b14
+3087 0.153000 2.350000 2.503000 0 1
+PD2_freq[0] alarm_mon/reg2_b0|alarm_mon/reg2_b14.mi[1]
+
+
+
+Recovery check
+3120 3
+Endpoint: calibration_aom/reg7_b4_shadow
+3122 15.985000 1 1
+Timing path: core/reg83_b1|core/reg83_b4.clk->calibration_aom/reg7_b4_shadow
+core/reg83_b1|core/reg83_b4.clk
+calibration_aom/reg7_b4_shadow
+3124 15.985000 21.848000 5.863000 1 2
+START_THR[4] core/reg137_b3|core/reg137_b9.d[0]
+calibration_aom/n1[4] calibration_aom/reg7_b4_shadow.sr
+
+
+Endpoint: core/_al_u6699|core/pump5/reg0_b0
+3159 16.241000 1 1
+Timing path: core/pump8/ramp/reg1_b7|core/pump5/PUMP_STA_reg.clk->core/_al_u6699|core/pump5/reg0_b0
+core/pump8/ramp/reg1_b7|core/pump5/PUMP_STA_reg.clk
+core/_al_u6699|core/pump5/reg0_b0
+3161 16.241000 21.848000 5.607000 1 2
+core/pump5_on core/_al_u3194|core/_al_u3032.d[0]
+core/pump5/n52 core/_al_u6699|core/pump5/reg0_b0.sr
+
+
+Endpoint: core/_al_u6625|core/pump5/reg0_b0_shadow
+3196 16.386000 1 1
+Timing path: core/pump8/ramp/reg1_b7|core/pump5/PUMP_STA_reg.clk->core/_al_u6625|core/pump5/reg0_b0_shadow
+core/pump8/ramp/reg1_b7|core/pump5/PUMP_STA_reg.clk
+core/_al_u6625|core/pump5/reg0_b0_shadow
+3198 16.386000 21.848000 5.462000 1 2
+core/pump5_on core/_al_u3010|core/pump8/reg1_b2.d[1]
+core/pump5/n54 core/_al_u6625|core/pump5/reg0_b0_shadow.sr
+
+
+
+Removal check
+3233 3
+Endpoint: core/_al_u7592|core/pump12/reg0_b0_shadow
+3235 0.610000 1 1
+Timing path: core/_al_u3017|core/pump12/PUMP_STA_reg.clk->core/_al_u7592|core/pump12/reg0_b0_shadow
+core/_al_u3017|core/pump12/PUMP_STA_reg.clk
+core/_al_u7592|core/pump12/reg0_b0_shadow
+3237 0.610000 2.404000 3.014000 1 2
+core/pump12_on core/_al_u3017|core/pump12/PUMP_STA_reg.d[1]
+core/pump12/n54 core/_al_u7592|core/pump12/reg0_b0_shadow.sr
+
+
+Endpoint: core/_al_u3514|core/pump1/reg0_b0_shadow
+3272 0.688000 1 1
+Timing path: core/pump1/ramp/reg1_b7|core/pump1/PUMP_STA_reg.clk->core/_al_u3514|core/pump1/reg0_b0_shadow
+core/pump1/ramp/reg1_b7|core/pump1/PUMP_STA_reg.clk
+core/_al_u3514|core/pump1/reg0_b0_shadow
+3274 0.688000 2.404000 3.092000 1 2
+core/pump1_on_tem core/_al_u3020|core/reg115_b3.d[1]
+core/pump1/n54 core/_al_u3514|core/pump1/reg0_b0_shadow.sr
+
+
+Endpoint: core/_al_u6449|core/pump15/reg0_b0_shadow
+3309 0.837000 1 1
+Timing path: core/_al_u3014|core/pump15/PUMP_STA_reg.clk->core/_al_u6449|core/pump15/reg0_b0_shadow
+core/_al_u3014|core/pump15/PUMP_STA_reg.clk
+core/_al_u6449|core/pump15/reg0_b0_shadow
+3311 0.837000 2.404000 3.241000 1 2
+core/pump15_on core/_al_u3014|core/pump15/PUMP_STA_reg.d[1]
+core/pump15/n54 core/_al_u6449|core/pump15/reg0_b0_shadow.sr
+
+
+
+
+
+Timing group statistics: 
+	Clock constraints: 
+	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
+	  clk_50m (50.0MHz)                            180.395ns           5MHz        0.399ns      3408     -198.358ns
+	  clk_100m (100.0MHz)                            4.571ns         218MHz        0.211ns        70        0.000ns
+	  clk_160m (160.0MHz)                           10.299ns          97MHz        0.128ns        60     -124.688ns
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+Warning: No clock constraint on 5 clock net(s): 
+	FREQ_PD1_pad
+	RstUnit/clkosc
+	clk_PD_4times_pad
+	clk_in_pad
+	debug_led_pad
+

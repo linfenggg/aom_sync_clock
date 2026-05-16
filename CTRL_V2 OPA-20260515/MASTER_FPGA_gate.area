@@ -1,0 +1,39 @@
+standard
+***Report Model: top***
+
+IO Statistics
+#IO                       159
+  #input                   60
+  #output                  97
+  #inout                    2
+
+LUT Statistics
+#Total_luts             14905
+  #lut4                  7922
+  #lut5                  1630
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b            5353
+
+Utilization Statistics
+#lut                    14905   out of  19600   76.05%
+#reg                     5768   out of  19600   29.43%
+#le                         0
+#dsp                        3   out of     29   10.34%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                      163   out of    188   86.70%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        2   out of      4   50.00%
+
+Report Hierarchy Area:
++---------------------------------------------------------+
+|Instance |Module |lut    |ripple |seq    |bram   |dsp    |
++---------------------------------------------------------+
+|top      |top    |9552   |5353   |5768   |0      |3      |
+|  core   |core   |5350   |2723   |3798   |0      |0      |
++---------------------------------------------------------+

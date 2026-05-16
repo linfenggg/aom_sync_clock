@@ -1,0 +1,2206 @@
+=========================================================================================================
+Auto created by Tang Dynasty v5.6.97693
+   Copyright (c) 2012-2024 Anlogic Inc.
+Sat May 16 18:50:11 2026
+=========================================================================================================
+
+
+Top Model:                top                                                             
+Device:                   ph1_60                                                          
+Timing Constraint File:   ../../MASTER_FPGA.sdc                                           
+STA Level:                Basic                                                           
+Speed Grade:              3                                                               
+
+=========================================================================================================
+Timing constraint:        clock: CRYSTAL_50M                                              
+Clock = CRYSTAL_50M, period 20ns, rising at 0ns, falling at 10ns
+
+0 endpoints analyzed totally, and 0 paths analyzed
+0 errors detected : 0 setup errors (TNS = 0), 0 hold errors (TNS = 0)
+Minimum period is 0ns
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: SYS_PLL/pll_inst.clkc[0]                                 
+Clock = SYS_PLL/pll_inst.clkc[0], period 20ns, rising at 0ns, falling at 10ns
+
+16784 endpoints analyzed totally, and 9864798 paths analyzed
+3 errors detected : 3 setup errors (TNS = -419.984), 0 hold errors (TNS = 0.000)
+Minimum period is 24.952ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point core/reg160_syn_83 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -4.952 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg5_syn_35.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               core/reg160_syn_83.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.917ns  (logic 1.709ns, net 3.208ns, 34% logic)                
+ Logic Levels:            6 ( LUT=6 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg5_syn_35.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg5_syn_35.q                                 clk2q                   0.144 r     0.144
+ core/sel2_syn_62544.d                                       net  (fanout = 3)       0.520 r     0.664
+ core/sel2_syn_62544.o                                       cell (LUT)              0.247 r     0.911
+ core/sel2_syn_62546.a                                       net  (fanout = 1)       0.448 r     1.359
+ core/sel2_syn_62546.o                                       cell (LUT)              0.247 r     1.606
+ core/sel2_syn_62548.b                                       net  (fanout = 1)       0.448 r     2.054
+ core/sel2_syn_62548.o                                       cell (LUT)              0.247 r     2.301
+ core/sel2_syn_62570.a                                       net  (fanout = 1)       0.448 r     2.749
+ core/sel2_syn_62570.o                                       cell (LUT)              0.249 r     2.998
+ core/sel2_syn_62620.a                                       net  (fanout = 1)       0.448 r     3.446
+ core/sel2_syn_62620.o                                       cell (LUT)              0.249 r     3.695
+ core/sel2_syn_62671.b                                       net  (fanout = 1)       0.448 r     4.143
+ core/sel2_syn_62671.o                                       cell (LUT)              0.247 r     4.390
+ core/reg160_syn_83.d                                        net  (fanout = 1)       0.448 r     4.838
+ core/reg160_syn_83                                          path2reg                0.079       4.917
+ Arrival time                                                                        4.917                  (6 lvl)       
+
+ core/reg160_syn_83.clk                                                              0.000       0.000
+ capture clock edge                                                                  0.032       0.032
+ cell setup                                                                         -0.067      -0.035
+ clock uncertainty                                                                  -0.000      -0.035
+ clock recovergence pessimism                                                        0.000      -0.035
+ Required time                                                                      -0.035            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.952ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point core/reg160_syn_71 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -4.952 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg5_syn_23.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               core/reg160_syn_71.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.917ns  (logic 1.709ns, net 3.208ns, 34% logic)                
+ Logic Levels:            6 ( LUT=6 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg5_syn_23.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg5_syn_23.q                                 clk2q                   0.144 r     0.144
+ core/sel2_syn_61276.a                                       net  (fanout = 3)       0.520 r     0.664
+ core/sel2_syn_61276.o                                       cell (LUT)              0.247 r     0.911
+ core/sel2_syn_61278.d                                       net  (fanout = 1)       0.448 r     1.359
+ core/sel2_syn_61278.o                                       cell (LUT)              0.249 r     1.608
+ core/sel2_syn_61282.a                                       net  (fanout = 1)       0.448 r     2.056
+ core/sel2_syn_61282.o                                       cell (LUT)              0.249 r     2.305
+ core/sel2_syn_61302.b                                       net  (fanout = 1)       0.448 r     2.753
+ core/sel2_syn_61302.o                                       cell (LUT)              0.247 r     3.000
+ core/sel2_syn_61342.b                                       net  (fanout = 1)       0.448 r     3.448
+ core/sel2_syn_61342.o                                       cell (LUT)              0.247 r     3.695
+ core/sel2_syn_61369.c                                       net  (fanout = 1)       0.448 r     4.143
+ core/sel2_syn_61369.o                                       cell (LUT)              0.247 r     4.390
+ core/reg160_syn_71.d                                        net  (fanout = 1)       0.448 r     4.838
+ core/reg160_syn_71                                          path2reg                0.079       4.917
+ Arrival time                                                                        4.917                  (6 lvl)       
+
+ core/reg160_syn_71.clk                                                              0.000       0.000
+ capture clock edge                                                                  0.032       0.032
+ cell setup                                                                         -0.067      -0.035
+ clock uncertainty                                                                  -0.000      -0.035
+ clock recovergence pessimism                                                        0.000      -0.035
+ Required time                                                                      -0.035            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.952ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point core/reg160_syn_87 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -4.259 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg5_syn_39.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               core/reg160_syn_87.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.224ns  (logic 1.464ns, net 2.760ns, 34% logic)                
+ Logic Levels:            5 ( LUT=5 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg5_syn_39.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg5_syn_39.q                                 clk2q                   0.144 r     0.144
+ core/sel2_syn_60771.a                                       net  (fanout = 3)       0.520 r     0.664
+ core/sel2_syn_60771.o                                       cell (LUT)              0.247 r     0.911
+ core/sel2_syn_60773.a                                       net  (fanout = 1)       0.448 r     1.359
+ core/sel2_syn_60773.o                                       cell (LUT)              0.249 r     1.608
+ core/sel2_syn_60777.b                                       net  (fanout = 1)       0.448 r     2.056
+ core/sel2_syn_60777.o                                       cell (LUT)              0.249 r     2.305
+ core/sel2_syn_60784.d                                       net  (fanout = 1)       0.448 r     2.753
+ core/sel2_syn_60784.o                                       cell (LUT)              0.249 r     3.002
+ core/sel2_syn_60785.d                                       net  (fanout = 1)       0.448 r     3.450
+ core/sel2_syn_60785.o                                       cell (LUT)              0.247 r     3.697
+ core/reg160_syn_87.d                                        net  (fanout = 1)       0.448 r     4.145
+ core/reg160_syn_87                                          path2reg                0.079       4.224
+ Arrival time                                                                        4.224                  (5 lvl)       
+
+ core/reg160_syn_87.clk                                                              0.000       0.000
+ capture clock edge                                                                  0.032       0.032
+ cell setup                                                                         -0.067      -0.035
+ clock uncertainty                                                                  -0.000      -0.035
+ clock recovergence pessimism                                                        0.000      -0.035
+ Required time                                                                      -0.035            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.259ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point data_sync/reg2_syn_33 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             data_sync/reg1_syn_25.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               data_sync/reg2_syn_33.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ data_sync/reg1_syn_25.clk                                   clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ data_sync/reg1_syn_25.q                                     clk2q                   0.076 r     0.076
+ data_sync/reg2_syn_33.d                                     net  (fanout = 1)       0.448 r     0.524
+ data_sync/reg2_syn_33                                       path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ data_sync/reg2_syn_33.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point data_sync/reg2_syn_31 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             data_sync/reg1_syn_23.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               data_sync/reg2_syn_31.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ data_sync/reg1_syn_23.clk                                   clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ data_sync/reg1_syn_23.q                                     clk2q                   0.076 r     0.076
+ data_sync/reg2_syn_31.d                                     net  (fanout = 1)       0.448 r     0.524
+ data_sync/reg2_syn_31                                       path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ data_sync/reg2_syn_31.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point data_sync/reg2_syn_29 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             data_sync/reg1_syn_21.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               data_sync/reg2_syn_29.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ data_sync/reg1_syn_21.clk                                   clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ data_sync/reg1_syn_21.q                                     clk2q                   0.076 r     0.076
+ data_sync/reg2_syn_29.d                                     net  (fanout = 1)       0.448 r     0.524
+ data_sync/reg2_syn_29                                       path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ data_sync/reg2_syn_29.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: SYS_PLL/pll_inst.clkc[1]                                 
+Clock = SYS_PLL/pll_inst.clkc[1], period 6.25ns, rising at 0ns, falling at 3.125ns
+
+212 endpoints analyzed totally, and 2214 paths analyzed
+9 errors detected : 9 setup errors (TNS = -33.868), 0 hold errors (TNS = 0.000)
+Minimum period is 8.133ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point PD1_LOW/freq_reg0_reg (12 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -1.883 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD1_LOW/freq_reg0_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         3.065ns  (logic 0.966ns, net 2.099ns, 31% logic)                
+ Logic Levels:            3 ( LUT=3 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_10.a                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_10.o                                          cell (LUT)              0.249 r     0.981
+ EXT_SYNC1_syn_12.a                                          net  (fanout = 1)       0.448 r     1.429
+ EXT_SYNC1_syn_12.o                                          cell (LUT)              0.247 r     1.676
+ EXT_SYNC1_syn_17.a                                          net  (fanout = 1)       0.448 r     2.124
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     2.371
+ PD1_LOW/freq_reg0_reg.d                                     net  (fanout = 6)       0.615 r     2.986
+ PD1_LOW/freq_reg0_reg                                       path2reg                0.079       3.065
+ Arrival time                                                                        3.065                  (3 lvl)       
+
+ PD1_LOW/freq_reg0_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.883ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.188 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD1_LOW/freq_reg0_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.370ns  (logic 0.719ns, net 1.651ns, 30% logic)                
+ Logic Levels:            2 ( LUT=2 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_15.b                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_15.o                                          cell (LUT)              0.249 r     0.981
+ EXT_SYNC1_syn_17.c                                          net  (fanout = 1)       0.448 r     1.429
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     1.676
+ PD1_LOW/freq_reg0_reg.d                                     net  (fanout = 6)       0.615 r     2.291
+ PD1_LOW/freq_reg0_reg                                       path2reg                0.079       2.370
+ Arrival time                                                                        2.370                  (2 lvl)       
+
+ PD1_LOW/freq_reg0_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.188ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.186 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD1_LOW/freq_reg0_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.368ns  (logic 0.717ns, net 1.651ns, 30% logic)                
+ Logic Levels:            2 ( LUT=2 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_12.c                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_12.o                                          cell (LUT)              0.247 r     0.979
+ EXT_SYNC1_syn_17.a                                          net  (fanout = 1)       0.448 r     1.427
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     1.674
+ PD1_LOW/freq_reg0_reg.d                                     net  (fanout = 6)       0.615 r     2.289
+ PD1_LOW/freq_reg0_reg                                       path2reg                0.079       2.368
+ Arrival time                                                                        2.368                  (2 lvl)       
+
+ PD1_LOW/freq_reg0_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.186ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point PD2_LOW/reg2_syn_49 (38 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -1.741 ns                                                        
+ Start Point:             core/reg23_syn_19.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_49.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.923ns  (logic 1.153ns, net 1.770ns, 39% logic)                
+ Logic Levels:            9 ( ADDER=8 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg23_syn_19.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg23_syn_19.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_74.ia                                       net  (fanout = 4)       0.556 r     0.700
+ PD2_LOW/lt0_syn_74.fco                                      cell (ADDER)            0.289 r     0.989
+ PD2_LOW/lt0_syn_75.fci                                      net  (fanout = 1)       0.000 f     0.989
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.047 r     1.036
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     1.036
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.083
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.083
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.130
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.130
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.177
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.177
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.224
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.224
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.271
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.271
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.383
+ PD2_LOW/cnt_b[15]_syn_2.a                                   net  (fanout = 16)      0.766 r     2.149
+ PD2_LOW/cnt_b[15]_syn_2.o                                   cell (LUT)              0.247 r     2.396
+ PD2_LOW/reg2_syn_49.d                                       net  (fanout = 1)       0.448 r     2.844
+ PD2_LOW/reg2_syn_49                                         path2reg                0.079       2.923
+ Arrival time                                                                        2.923                  (9 lvl)       
+
+ PD2_LOW/reg2_syn_49.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.741ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.707 ns                                                        
+ Start Point:             core/reg46_syn_36.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_49.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.889ns  (logic 1.155ns, net 1.734ns, 39% logic)                
+ Logic Levels:            9 ( ADDER=8 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_36.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_36.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_74.ib                                       net  (fanout = 3)       0.520 r     0.664
+ PD2_LOW/lt0_syn_74.fco                                      cell (ADDER)            0.291 r     0.955
+ PD2_LOW/lt0_syn_75.fci                                      net  (fanout = 1)       0.000 f     0.955
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.047 r     1.002
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     1.002
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.049
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.049
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.096
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.096
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.143
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.143
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.190
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.190
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.237
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.237
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.349
+ PD2_LOW/cnt_b[15]_syn_2.a                                   net  (fanout = 16)      0.766 r     2.115
+ PD2_LOW/cnt_b[15]_syn_2.o                                   cell (LUT)              0.247 r     2.362
+ PD2_LOW/reg2_syn_49.d                                       net  (fanout = 1)       0.448 r     2.810
+ PD2_LOW/reg2_syn_49                                         path2reg                0.079       2.889
+ Arrival time                                                                        2.889                  (9 lvl)       
+
+ PD2_LOW/reg2_syn_49.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.707ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.694 ns                                                        
+ Start Point:             core/reg23_syn_23.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_49.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.876ns  (logic 1.106ns, net 1.770ns, 38% logic)                
+ Logic Levels:            8 ( ADDER=7 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg23_syn_23.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg23_syn_23.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_75.ia                                       net  (fanout = 4)       0.556 r     0.700
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.289 r     0.989
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     0.989
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.036
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.036
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.083
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.083
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.130
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.130
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.177
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.177
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.224
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.224
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.336
+ PD2_LOW/cnt_b[15]_syn_2.a                                   net  (fanout = 16)      0.766 r     2.102
+ PD2_LOW/cnt_b[15]_syn_2.o                                   cell (LUT)              0.247 r     2.349
+ PD2_LOW/reg2_syn_49.d                                       net  (fanout = 1)       0.448 r     2.797
+ PD2_LOW/reg2_syn_49                                         path2reg                0.079       2.876
+ Arrival time                                                                        2.876                  (8 lvl)       
+
+ PD2_LOW/reg2_syn_49.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.694ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point PD2_LOW/reg2_syn_45 (38 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -1.741 ns                                                        
+ Start Point:             core/reg23_syn_19.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_45.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.923ns  (logic 1.153ns, net 1.770ns, 39% logic)                
+ Logic Levels:            9 ( ADDER=8 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg23_syn_19.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg23_syn_19.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_74.ia                                       net  (fanout = 4)       0.556 r     0.700
+ PD2_LOW/lt0_syn_74.fco                                      cell (ADDER)            0.289 r     0.989
+ PD2_LOW/lt0_syn_75.fci                                      net  (fanout = 1)       0.000 f     0.989
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.047 r     1.036
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     1.036
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.083
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.083
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.130
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.130
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.177
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.177
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.224
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.224
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.271
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.271
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.383
+ PD2_LOW/cnt_b[13]_syn_1.a                                   net  (fanout = 16)      0.766 r     2.149
+ PD2_LOW/cnt_b[13]_syn_1.o                                   cell (LUT)              0.247 r     2.396
+ PD2_LOW/reg2_syn_45.d                                       net  (fanout = 1)       0.448 r     2.844
+ PD2_LOW/reg2_syn_45                                         path2reg                0.079       2.923
+ Arrival time                                                                        2.923                  (9 lvl)       
+
+ PD2_LOW/reg2_syn_45.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.741ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.707 ns                                                        
+ Start Point:             core/reg46_syn_36.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_45.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.889ns  (logic 1.155ns, net 1.734ns, 39% logic)                
+ Logic Levels:            9 ( ADDER=8 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_36.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_36.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_74.ib                                       net  (fanout = 3)       0.520 r     0.664
+ PD2_LOW/lt0_syn_74.fco                                      cell (ADDER)            0.291 r     0.955
+ PD2_LOW/lt0_syn_75.fci                                      net  (fanout = 1)       0.000 f     0.955
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.047 r     1.002
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     1.002
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.049
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.049
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.096
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.096
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.143
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.143
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.190
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.190
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.237
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.237
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.349
+ PD2_LOW/cnt_b[13]_syn_1.a                                   net  (fanout = 16)      0.766 r     2.115
+ PD2_LOW/cnt_b[13]_syn_1.o                                   cell (LUT)              0.247 r     2.362
+ PD2_LOW/reg2_syn_45.d                                       net  (fanout = 1)       0.448 r     2.810
+ PD2_LOW/reg2_syn_45                                         path2reg                0.079       2.889
+ Arrival time                                                                        2.889                  (9 lvl)       
+
+ PD2_LOW/reg2_syn_45.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.707ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -1.694 ns                                                        
+ Start Point:             core/reg23_syn_23.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               PD2_LOW/reg2_syn_45.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         2.876ns  (logic 1.106ns, net 1.770ns, 38% logic)                
+ Logic Levels:            8 ( ADDER=7 LUT=1 )                                             
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg23_syn_23.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg23_syn_23.q                                         clk2q                   0.144 r     0.144
+ PD2_LOW/lt0_syn_75.ia                                       net  (fanout = 4)       0.556 r     0.700
+ PD2_LOW/lt0_syn_75.fco                                      cell (ADDER)            0.289 r     0.989
+ PD2_LOW/lt0_syn_76.fci                                      net  (fanout = 1)       0.000 f     0.989
+ PD2_LOW/lt0_syn_76.fco                                      cell (ADDER)            0.047 r     1.036
+ PD2_LOW/lt0_syn_77.fci                                      net  (fanout = 1)       0.000 f     1.036
+ PD2_LOW/lt0_syn_77.fco                                      cell (ADDER)            0.047 r     1.083
+ PD2_LOW/lt0_syn_78.fci                                      net  (fanout = 1)       0.000 f     1.083
+ PD2_LOW/lt0_syn_78.fco                                      cell (ADDER)            0.047 r     1.130
+ PD2_LOW/lt0_syn_79.fci                                      net  (fanout = 1)       0.000 f     1.130
+ PD2_LOW/lt0_syn_79.fco                                      cell (ADDER)            0.047 r     1.177
+ PD2_LOW/lt0_syn_80.fci                                      net  (fanout = 1)       0.000 f     1.177
+ PD2_LOW/lt0_syn_80.fco                                      cell (ADDER)            0.047 r     1.224
+ PD2_LOW/lt0_syn_81.fci                                      net  (fanout = 1)       0.000 f     1.224
+ PD2_LOW/lt0_syn_81.ofa                                      cell (ADDER)            0.112 r     1.336
+ PD2_LOW/cnt_b[13]_syn_1.a                                   net  (fanout = 16)      0.766 r     2.102
+ PD2_LOW/cnt_b[13]_syn_1.o                                   cell (LUT)              0.247 r     2.349
+ PD2_LOW/reg2_syn_45.d                                       net  (fanout = 1)       0.448 r     2.797
+ PD2_LOW/reg2_syn_45                                         path2reg                0.079       2.876
+ Arrival time                                                                        2.876                  (8 lvl)       
+
+ PD2_LOW/reg2_syn_45.clk                                                             0.000       0.000
+ capture clock edge                                                                  1.249       1.249
+ cell setup                                                                         -0.067       1.182
+ clock uncertainty                                                                  -0.000       1.182
+ clock recovergence pessimism                                                        0.000       1.182
+ Required time                                                                       1.182            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -1.694ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point PD2_LOW/reg1_syn_49 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             PD2_LOW/reg0_syn_49.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ End Point:               PD2_LOW/reg1_syn_49.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ PD2_LOW/reg0_syn_49.clk                                     clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ PD2_LOW/reg0_syn_49.q                                       clk2q                   0.076 r     0.076
+ PD2_LOW/reg1_syn_49.d                                       net  (fanout = 1)       0.448 r     0.524
+ PD2_LOW/reg1_syn_49                                         path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ PD2_LOW/reg1_syn_49.clk                                                             0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point PD2_LOW/reg1_syn_45 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             PD2_LOW/reg0_syn_45.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ End Point:               PD2_LOW/reg1_syn_45.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ PD2_LOW/reg0_syn_45.clk                                     clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ PD2_LOW/reg0_syn_45.q                                       clk2q                   0.076 r     0.076
+ PD2_LOW/reg1_syn_45.d                                       net  (fanout = 1)       0.448 r     0.524
+ PD2_LOW/reg1_syn_45                                         path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ PD2_LOW/reg1_syn_45.clk                                                             0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point PD2_LOW/reg1_syn_43 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             PD2_LOW/reg0_syn_43.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ End Point:               PD2_LOW/reg1_syn_43.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ PD2_LOW/reg0_syn_43.clk                                     clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ PD2_LOW/reg0_syn_43.q                                       clk2q                   0.076 r     0.076
+ PD2_LOW/reg1_syn_43.d                                       net  (fanout = 1)       0.448 r     0.524
+ PD2_LOW/reg1_syn_43                                         path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ PD2_LOW/reg1_syn_43.clk                                                             0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: SYS_PLL/pll_inst.clkc[2]                                 
+Clock = SYS_PLL/pll_inst.clkc[2], period 10ns, rising at 0ns, falling at 5ns
+
+314 endpoints analyzed totally, and 3810 paths analyzed
+0 errors detected : 0 setup errors (TNS = 0.000), 0 hold errors (TNS = 0.000)
+Minimum period is 9.518ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point freq_cal_2/TTL_reg0_reg (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     0.482 ns                                                        
+ Start Point:             burst/TTL_tem_reg.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ End Point:               freq_cal_2/TTL_reg0_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         0.701ns  (logic 0.223ns, net 0.478ns, 31% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ burst/TTL_tem_reg.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ burst/TTL_tem_reg.q                                         clk2q                   0.144 r     0.144
+ freq_cal_2/TTL_reg0_reg.d                                   net  (fanout = 2)       0.478 r     0.622
+ freq_cal_2/TTL_reg0_reg                                     path2reg                0.079       0.701
+ Arrival time                                                                        0.701                  (0 lvl)       
+
+ freq_cal_2/TTL_reg0_reg.clk                                                         0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.482ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point pll_feed_dog/pll_in_reg0_reg_syn_4 (12 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     4.621 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               pll_feed_dog/pll_in_reg0_reg_syn_4.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         5.312ns  (logic 1.289ns, net 4.023ns, 24% logic)                
+ Logic Levels:            5 ( LUT=3 GCLK=1 PLL=1 )                                        
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_10.a                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_10.o                                          cell (LUT)              0.249 r     0.981
+ EXT_SYNC1_syn_12.a                                          net  (fanout = 1)       0.448 r     1.429
+ EXT_SYNC1_syn_12.o                                          cell (LUT)              0.247 r     1.676
+ EXT_SYNC1_syn_17.a                                          net  (fanout = 1)       0.448 r     2.124
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     2.371
+ pd1_4times/pll_inst.refclk                                  net  (fanout = 6)       0.615 r     2.986
+ pd1_4times/pll_inst.clkc[0]                                 cell (PLL)              0.000 f     2.986
+ pd1_4times/bufg_feedback.clkin[0]                           net  (fanout = 1)       0.448 r     3.434
+ pd1_4times/bufg_feedback.clkout                             cell (GCLK)             0.323 r     3.757
+ pll_feed_dog/pll_in_reg0_reg_syn_4.d                        net  (fanout = 2725)     1.476 r     5.233
+ pll_feed_dog/pll_in_reg0_reg_syn_4                          path2reg                0.079       5.312
+ Arrival time                                                                        5.312                  (5 lvl)       
+
+ pll_feed_dog/pll_in_reg0_reg_syn_4.clk                                              0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               4.621ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     5.316 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               pll_feed_dog/pll_in_reg0_reg_syn_4.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.617ns  (logic 1.042ns, net 3.575ns, 22% logic)                
+ Logic Levels:            4 ( LUT=2 GCLK=1 PLL=1 )                                        
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_15.b                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_15.o                                          cell (LUT)              0.249 r     0.981
+ EXT_SYNC1_syn_17.c                                          net  (fanout = 1)       0.448 r     1.429
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     1.676
+ pd1_4times/pll_inst.refclk                                  net  (fanout = 6)       0.615 r     2.291
+ pd1_4times/pll_inst.clkc[0]                                 cell (PLL)              0.000 f     2.291
+ pd1_4times/bufg_feedback.clkin[0]                           net  (fanout = 1)       0.448 r     2.739
+ pd1_4times/bufg_feedback.clkout                             cell (GCLK)             0.323 r     3.062
+ pll_feed_dog/pll_in_reg0_reg_syn_4.d                        net  (fanout = 2725)     1.476 r     4.538
+ pll_feed_dog/pll_in_reg0_reg_syn_4                          path2reg                0.079       4.617
+ Arrival time                                                                        4.617                  (4 lvl)       
+
+ pll_feed_dog/pll_in_reg0_reg_syn_4.clk                                              0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               5.316ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     5.318 ns                                                        
+ Start Point:             core/reg87_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               pll_feed_dog/pll_in_reg0_reg_syn_4.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.615ns  (logic 1.040ns, net 3.575ns, 22% logic)                
+ Logic Levels:            4 ( LUT=2 GCLK=1 PLL=1 )                                        
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg87_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg87_syn_26.q                                         clk2q                   0.144 r     0.144
+ EXT_SYNC1_syn_12.c                                          net  (fanout = 5)       0.588 r     0.732
+ EXT_SYNC1_syn_12.o                                          cell (LUT)              0.247 r     0.979
+ EXT_SYNC1_syn_17.a                                          net  (fanout = 1)       0.448 r     1.427
+ EXT_SYNC1_syn_17.o                                          cell (LUT)              0.247 r     1.674
+ pd1_4times/pll_inst.refclk                                  net  (fanout = 6)       0.615 r     2.289
+ pd1_4times/pll_inst.clkc[0]                                 cell (PLL)              0.000 f     2.289
+ pd1_4times/bufg_feedback.clkin[0]                           net  (fanout = 1)       0.448 r     2.737
+ pd1_4times/bufg_feedback.clkout                             cell (GCLK)             0.323 r     3.060
+ pll_feed_dog/pll_in_reg0_reg_syn_4.d                        net  (fanout = 2725)     1.476 r     4.536
+ pll_feed_dog/pll_in_reg0_reg_syn_4                          path2reg                0.079       4.615
+ Arrival time                                                                        4.615                  (4 lvl)       
+
+ pll_feed_dog/pll_in_reg0_reg_syn_4.clk                                              0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               5.318ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point freq_cal_1/reg0_syn_43 (21 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     6.009 ns                                                        
+ Start Point:             freq_cal_1/reg0_syn_73.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               freq_cal_1/reg0_syn_43.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         3.924ns  (logic 1.215ns, net 2.709ns, 30% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ freq_cal_1/reg0_syn_73.clk                                  clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ freq_cal_1/reg0_syn_73.q                                    clk2q                   0.144 r     0.144
+ freq_cal_1/enable_n_syn_1.f                                 net  (fanout = 2)       0.478 r     0.622
+ freq_cal_1/enable_n_syn_1.o                                 cell (LUT)              0.247 r     0.869
+ freq_cal_1/enable_n_syn_3.a                                 net  (fanout = 1)       0.448 r     1.317
+ freq_cal_1/enable_n_syn_3.o                                 cell (LUT)              0.249 r     1.566
+ freq_cal_1/enable_n_syn_7.a                                 net  (fanout = 2)       0.478 r     2.044
+ freq_cal_1/enable_n_syn_7.o                                 cell (LUT)              0.247 r     2.291
+ freq_cal_1/delay_1ms_b[2]_syn_1.a                           net  (fanout = 29)      0.857 r     3.148
+ freq_cal_1/delay_1ms_b[2]_syn_1.o                           cell (LUT)              0.249 r     3.397
+ freq_cal_1/reg0_syn_43.d                                    net  (fanout = 1)       0.448 r     3.845
+ freq_cal_1/reg0_syn_43                                      path2reg                0.079       3.924
+ Arrival time                                                                        3.924                  (4 lvl)       
+
+ freq_cal_1/reg0_syn_43.clk                                                          0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               6.009ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     6.009 ns                                                        
+ Start Point:             freq_cal_1/reg0_syn_67.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               freq_cal_1/reg0_syn_43.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         3.924ns  (logic 1.215ns, net 2.709ns, 30% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ freq_cal_1/reg0_syn_67.clk                                  clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ freq_cal_1/reg0_syn_67.q                                    clk2q                   0.144 r     0.144
+ freq_cal_1/enable_n_syn_1.e                                 net  (fanout = 2)       0.478 r     0.622
+ freq_cal_1/enable_n_syn_1.o                                 cell (LUT)              0.247 r     0.869
+ freq_cal_1/enable_n_syn_3.a                                 net  (fanout = 1)       0.448 r     1.317
+ freq_cal_1/enable_n_syn_3.o                                 cell (LUT)              0.249 r     1.566
+ freq_cal_1/enable_n_syn_7.a                                 net  (fanout = 2)       0.478 r     2.044
+ freq_cal_1/enable_n_syn_7.o                                 cell (LUT)              0.247 r     2.291
+ freq_cal_1/delay_1ms_b[2]_syn_1.a                           net  (fanout = 29)      0.857 r     3.148
+ freq_cal_1/delay_1ms_b[2]_syn_1.o                           cell (LUT)              0.249 r     3.397
+ freq_cal_1/reg0_syn_43.d                                    net  (fanout = 1)       0.448 r     3.845
+ freq_cal_1/reg0_syn_43                                      path2reg                0.079       3.924
+ Arrival time                                                                        3.924                  (4 lvl)       
+
+ freq_cal_1/reg0_syn_43.clk                                                          0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               6.009ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     6.009 ns                                                        
+ Start Point:             freq_cal_1/reg0_syn_65.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               freq_cal_1/reg0_syn_43.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         3.924ns  (logic 1.215ns, net 2.709ns, 30% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ freq_cal_1/reg0_syn_65.clk                                  clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ freq_cal_1/reg0_syn_65.q                                    clk2q                   0.144 r     0.144
+ freq_cal_1/enable_n_syn_1.d                                 net  (fanout = 2)       0.478 r     0.622
+ freq_cal_1/enable_n_syn_1.o                                 cell (LUT)              0.247 r     0.869
+ freq_cal_1/enable_n_syn_3.a                                 net  (fanout = 1)       0.448 r     1.317
+ freq_cal_1/enable_n_syn_3.o                                 cell (LUT)              0.249 r     1.566
+ freq_cal_1/enable_n_syn_7.a                                 net  (fanout = 2)       0.478 r     2.044
+ freq_cal_1/enable_n_syn_7.o                                 cell (LUT)              0.247 r     2.291
+ freq_cal_1/delay_1ms_b[2]_syn_1.a                           net  (fanout = 29)      0.857 r     3.148
+ freq_cal_1/delay_1ms_b[2]_syn_1.o                           cell (LUT)              0.249 r     3.397
+ freq_cal_1/reg0_syn_43.d                                    net  (fanout = 1)       0.448 r     3.845
+ freq_cal_1/reg0_syn_43                                      path2reg                0.079       3.924
+ Arrival time                                                                        3.924                  (4 lvl)       
+
+ freq_cal_1/reg0_syn_43.clk                                                          0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.067       9.933
+ clock uncertainty                                                                  -0.000       9.933
+ clock recovergence pessimism                                                        0.000       9.933
+ Required time                                                                       9.933            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               6.009ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point freq_cal_2/fx_reg1_reg (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             freq_cal_2/fx_reg0_reg.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               freq_cal_2/fx_reg1_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ freq_cal_2/fx_reg0_reg.clk                                  clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ freq_cal_2/fx_reg0_reg.q                                    clk2q                   0.076 r     0.076
+ freq_cal_2/fx_reg1_reg.d                                    net  (fanout = 1)       0.448 r     0.524
+ freq_cal_2/fx_reg1_reg                                      path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ freq_cal_2/fx_reg1_reg.clk                                                          0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point filter_U0/dout_reg_syn_4 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             filter_U0/tem_reg_syn_4.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               filter_U0/dout_reg_syn_4.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ filter_U0/tem_reg_syn_4.clk                                 clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ filter_U0/tem_reg_syn_4.q                                   clk2q                   0.076 r     0.076
+ filter_U0/dout_reg_syn_4.d                                  net  (fanout = 1)       0.448 r     0.524
+ filter_U0/dout_reg_syn_4                                    path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ filter_U0/dout_reg_syn_4.clk                                                        0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point pll_feed_dog/pll_in_reg1_reg_syn_4 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             pll_feed_dog/pll_in_reg0_reg_syn_4.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ End Point:               pll_feed_dog/pll_in_reg1_reg_syn_4.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[2])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ pll_feed_dog/pll_in_reg0_reg_syn_4.clk                      clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ pll_feed_dog/pll_in_reg0_reg_syn_4.q                        clk2q                   0.076 r     0.076
+ pll_feed_dog/pll_in_reg1_reg_syn_4.d                        net  (fanout = 1)       0.448 r     0.524
+ pll_feed_dog/pll_in_reg1_reg_syn_4                          path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ pll_feed_dog/pll_in_reg1_reg_syn_4.clk                                              0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: SYS_PLL/pll_inst.clkc[3]                                 
+Clock = SYS_PLL/pll_inst.clkc[3], period 31.25ns, rising at 0ns, falling at 15.625ns
+
+2 endpoints analyzed totally, and 2 paths analyzed
+0 errors detected : 0 setup errors (TNS = 0.000), 0 hold errors (TNS = 0.000)
+Minimum period is 1.465ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point clk_PD_2divided_reg (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     29.785 ns                                                       
+ Start Point:             clk_PD_2divided_reg.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[3])
+ End Point:               clk_PD_2divided_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[3])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         1.398ns  (logic 0.472ns, net 0.926ns, 33% logic)                
+ Logic Levels:            1 ( LUT=1 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ clk_PD_2divided_reg.clk                                     clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ clk_PD_2divided_reg.q                                       clk2q                   0.144 r     0.144
+ clk_PD_2divided_n_syn_1.a                                   net  (fanout = 2)       0.478 r     0.622
+ clk_PD_2divided_n_syn_1.o                                   cell (LUT)              0.249 r     0.871
+ clk_PD_2divided_reg.d                                       net  (fanout = 1)       0.448 r     1.319
+ clk_PD_2divided_reg                                         path2reg                0.079       1.398
+ Arrival time                                                                        1.398                  (1 lvl)       
+
+ clk_PD_2divided_reg.clk                                                             0.000       0.000
+ capture clock edge                                                                 31.250      31.250
+ cell setup                                                                         -0.067      31.183
+ clock uncertainty                                                                  -0.000      31.183
+ clock recovergence pessimism                                                        0.000      31.183
+ Required time                                                                      31.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              29.785ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point clk_PD_2divided_reg (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      1.126 ns                                                        
+ Start Point:             clk_PD_2divided_reg.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[3])
+ End Point:               clk_PD_2divided_reg.d (rising edge triggered by clock SYS_PLL/pll_inst.clkc[3])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         1.168ns  (logic 0.242ns, net 0.926ns, 20% logic)                
+ Logic Levels:            1 ( LUT=1 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ clk_PD_2divided_reg.clk                                     clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ clk_PD_2divided_reg.q                                       clk2q                   0.076 r     0.076
+ clk_PD_2divided_n_syn_1.a                                   net  (fanout = 2)       0.478 r     0.554
+ clk_PD_2divided_n_syn_1.o                                   cell (LUT)              0.125 r     0.679
+ clk_PD_2divided_reg.d                                       net  (fanout = 1)       0.448 r     1.127
+ clk_PD_2divided_reg                                         path2reg                0.041       1.168
+ Arrival time                                                                        1.168                  (1 lvl)       
+
+ clk_PD_2divided_reg.clk                                                             0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               1.126ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: pd1_4times/pll_inst.clkc[0]                              
+Clock = pd1_4times/pll_inst.clkc[0], period 31.25ns, rising at 0ns, falling at 15.625ns
+
+5508 endpoints analyzed totally, and 37076 paths analyzed
+9 errors detected : 9 setup errors (TNS = -201.985), 0 hold errors (TNS = 0.000)
+Minimum period is 35.078ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point burst/reg6_syn_25 (72 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -3.828 ns                                                        
+ Start Point:             core/reg46_syn_36.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         5.011ns  (logic 1.902ns, net 3.109ns, 37% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_36.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_36.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.237
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.237
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.349
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.905
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.154
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.632
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.881
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.329
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.576
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.a                      net  (fanout = 8)       0.659 r     4.235
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.o                      cell (LUT)              0.249 r     4.484
+ burst/reg6_syn_25.d                                         net  (fanout = 1)       0.448 r     4.932
+ burst/reg6_syn_25                                           path2reg                0.079       5.011
+ Arrival time                                                                        5.011                  (12 lvl)      
+
+ burst/reg6_syn_25.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.828ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.781 ns                                                        
+ Start Point:             core/reg46_syn_34.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.964ns  (logic 1.855ns, net 3.109ns, 37% logic)                
+ Logic Levels:            11 ( ADDER=7 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_34.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_34.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_75.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.302
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.858
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.107
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.585
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.834
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.282
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.529
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.a                      net  (fanout = 8)       0.659 r     4.188
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.o                      cell (LUT)              0.249 r     4.437
+ burst/reg6_syn_25.d                                         net  (fanout = 1)       0.448 r     4.885
+ burst/reg6_syn_25                                           path2reg                0.079       4.964
+ Arrival time                                                                        4.964                  (11 lvl)      
+
+ burst/reg6_syn_25.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.781ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.746 ns                                                        
+ Start Point:             core/reg46_syn_38.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.929ns  (logic 1.820ns, net 3.109ns, 36% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_38.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_38.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.id                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.209 r     0.873
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.873
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     0.920
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.920
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     0.967
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     0.967
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.014
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.014
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.061
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.061
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.108
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.108
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.155
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.155
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.267
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.823
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.072
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.550
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.799
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.247
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.494
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.a                      net  (fanout = 8)       0.659 r     4.153
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_71.o                      cell (LUT)              0.249 r     4.402
+ burst/reg6_syn_25.d                                         net  (fanout = 1)       0.448 r     4.850
+ burst/reg6_syn_25                                           path2reg                0.079       4.929
+ Arrival time                                                                        4.929                  (12 lvl)      
+
+ burst/reg6_syn_25.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.746ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point burst/reg6_syn_21 (72 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -3.828 ns                                                        
+ Start Point:             core/reg46_syn_36.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_21.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         5.011ns  (logic 1.902ns, net 3.109ns, 37% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_36.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_36.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.237
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.237
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.349
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.905
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.154
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.632
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.881
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.329
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.576
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.a                      net  (fanout = 8)       0.659 r     4.235
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.o                      cell (LUT)              0.249 r     4.484
+ burst/reg6_syn_21.d                                         net  (fanout = 1)       0.448 r     4.932
+ burst/reg6_syn_21                                           path2reg                0.079       5.011
+ Arrival time                                                                        5.011                  (12 lvl)      
+
+ burst/reg6_syn_21.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.828ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.781 ns                                                        
+ Start Point:             core/reg46_syn_34.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_21.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.964ns  (logic 1.855ns, net 3.109ns, 37% logic)                
+ Logic Levels:            11 ( ADDER=7 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_34.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_34.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_75.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.302
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.858
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.107
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.585
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.834
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.282
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.529
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.a                      net  (fanout = 8)       0.659 r     4.188
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.o                      cell (LUT)              0.249 r     4.437
+ burst/reg6_syn_21.d                                         net  (fanout = 1)       0.448 r     4.885
+ burst/reg6_syn_21                                           path2reg                0.079       4.964
+ Arrival time                                                                        4.964                  (11 lvl)      
+
+ burst/reg6_syn_21.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.781ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.746 ns                                                        
+ Start Point:             core/reg46_syn_38.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_21.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.929ns  (logic 1.820ns, net 3.109ns, 36% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_38.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_38.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.id                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.209 r     0.873
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.873
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     0.920
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.920
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     0.967
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     0.967
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.014
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.014
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.061
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.061
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.108
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.108
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.155
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.155
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.267
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.823
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.072
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.550
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.799
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.247
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.494
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.a                      net  (fanout = 8)       0.659 r     4.153
+ burst/FIBER_AOM_DATA_tem_b[5]_syn_29.o                      cell (LUT)              0.249 r     4.402
+ burst/reg6_syn_21.d                                         net  (fanout = 1)       0.448 r     4.850
+ burst/reg6_syn_21                                           path2reg                0.079       4.929
+ Arrival time                                                                        4.929                  (12 lvl)      
+
+ burst/reg6_syn_21.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.746ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point burst/reg6_syn_17 (72 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -3.828 ns                                                        
+ Start Point:             core/reg46_syn_36.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_17.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         5.011ns  (logic 1.902ns, net 3.109ns, 37% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_36.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_36.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.237
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.237
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.349
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.905
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.154
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.632
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.881
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.329
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.576
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.a                      net  (fanout = 8)       0.659 r     4.235
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.o                      cell (LUT)              0.249 r     4.484
+ burst/reg6_syn_17.d                                         net  (fanout = 1)       0.448 r     4.932
+ burst/reg6_syn_17                                           path2reg                0.079       5.011
+ Arrival time                                                                        5.011                  (12 lvl)      
+
+ burst/reg6_syn_17.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.828ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.781 ns                                                        
+ Start Point:             core/reg46_syn_34.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_17.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.964ns  (logic 1.855ns, net 3.109ns, 37% logic)                
+ Logic Levels:            11 ( ADDER=7 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_34.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_34.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_75.ib                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.291 r     0.955
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.955
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     1.002
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     1.002
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.049
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.049
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.096
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.096
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.143
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.143
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.190
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.190
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.302
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.858
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.107
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.585
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.834
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.282
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.529
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.a                      net  (fanout = 8)       0.659 r     4.188
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.o                      cell (LUT)              0.249 r     4.437
+ burst/reg6_syn_17.d                                         net  (fanout = 1)       0.448 r     4.885
+ burst/reg6_syn_17                                           path2reg                0.079       4.964
+ Arrival time                                                                        4.964                  (11 lvl)      
+
+ burst/reg6_syn_17.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.781ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.746 ns                                                        
+ Start Point:             core/reg46_syn_38.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               burst/reg6_syn_17.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.929ns  (logic 1.820ns, net 3.109ns, 36% logic)                
+ Logic Levels:            12 ( ADDER=8 LUT=4 )                                            
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg46_syn_38.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg46_syn_38.q                                         clk2q                   0.144 r     0.144
+ burst/lt1_syn_74.id                                         net  (fanout = 3)       0.520 r     0.664
+ burst/lt1_syn_74.fco                                        cell (ADDER)            0.209 r     0.873
+ burst/lt1_syn_75.fci                                        net  (fanout = 1)       0.000 f     0.873
+ burst/lt1_syn_75.fco                                        cell (ADDER)            0.047 r     0.920
+ burst/lt1_syn_76.fci                                        net  (fanout = 1)       0.000 f     0.920
+ burst/lt1_syn_76.fco                                        cell (ADDER)            0.047 r     0.967
+ burst/lt1_syn_77.fci                                        net  (fanout = 1)       0.000 f     0.967
+ burst/lt1_syn_77.fco                                        cell (ADDER)            0.047 r     1.014
+ burst/lt1_syn_78.fci                                        net  (fanout = 1)       0.000 f     1.014
+ burst/lt1_syn_78.fco                                        cell (ADDER)            0.047 r     1.061
+ burst/lt1_syn_79.fci                                        net  (fanout = 1)       0.000 f     1.061
+ burst/lt1_syn_79.fco                                        cell (ADDER)            0.047 r     1.108
+ burst/lt1_syn_80.fci                                        net  (fanout = 1)       0.000 f     1.108
+ burst/lt1_syn_80.fco                                        cell (ADDER)            0.047 r     1.155
+ burst/lt1_syn_81.fci                                        net  (fanout = 1)       0.000 f     1.155
+ burst/lt1_syn_81.ofa                                        cell (ADDER)            0.112 r     1.267
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.a                       net  (fanout = 4)       0.556 r     1.823
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_1.o                       cell (LUT)              0.249 r     2.072
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.c                      net  (fanout = 2)       0.478 r     2.550
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_19.o                      cell (LUT)              0.249 r     2.799
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.b                      net  (fanout = 1)       0.448 r     3.247
+ burst/FIBER_AOM_DATA_tem_b[7]_syn_29.o                      cell (LUT)              0.247 r     3.494
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.a                      net  (fanout = 8)       0.659 r     4.153
+ burst/FIBER_AOM_DATA_tem_b[3]_syn_29.o                      cell (LUT)              0.249 r     4.402
+ burst/reg6_syn_17.d                                         net  (fanout = 1)       0.448 r     4.850
+ burst/reg6_syn_17                                           path2reg                0.079       4.929
+ Arrival time                                                                        4.929                  (12 lvl)      
+
+ burst/reg6_syn_17.clk                                                               0.000       0.000
+ capture clock edge                                                                  1.250       1.250
+ cell setup                                                                         -0.067       1.183
+ clock uncertainty                                                                  -0.000       1.183
+ clock recovergence pessimism                                                        0.000       1.183
+ Required time                                                                       1.183            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.746ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point burst/reg4_syn_49 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             burst/reg3_syn_49.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ End Point:               burst/reg4_syn_49.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ burst/reg3_syn_49.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ burst/reg3_syn_49.q                                         clk2q                   0.076 r     0.076
+ burst/reg4_syn_49.d                                         net  (fanout = 1)       0.448 r     0.524
+ burst/reg4_syn_49                                           path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ burst/reg4_syn_49.clk                                                               0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point burst/reg4_syn_47 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             burst/reg3_syn_47.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ End Point:               burst/reg4_syn_47.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ burst/reg3_syn_47.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ burst/reg3_syn_47.q                                         clk2q                   0.076 r     0.076
+ burst/reg4_syn_47.d                                         net  (fanout = 1)       0.448 r     0.524
+ burst/reg4_syn_47                                           path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ burst/reg4_syn_47.clk                                                               0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point burst/reg4_syn_45 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             burst/reg3_syn_45.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ End Point:               burst/reg4_syn_45.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[0])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ burst/reg3_syn_45.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ burst/reg3_syn_45.q                                         clk2q                   0.076 r     0.076
+ burst/reg4_syn_45.d                                         net  (fanout = 1)       0.448 r     0.524
+ burst/reg4_syn_45                                           path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ burst/reg4_syn_45.clk                                                               0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing constraint:        clock: pd1_4times/pll_inst.clkc[1]                              
+Clock = pd1_4times/pll_inst.clkc[1], period 7.812ns, rising at 0ns, falling at 3.906ns
+
+890 endpoints analyzed totally, and 16538 paths analyzed
+9 errors detected : 9 setup errors (TNS = -401.255), 0 hold errors (TNS = 0.000)
+Minimum period is 12.327ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point reg_delay/dly_out_reg (1134 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -4.515 ns                                                        
+ Start Point:             core/reg95_syn_26.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               reg_delay/dly_out_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.740ns  (logic 1.854ns, net 2.886ns, 39% logic)                
+ Logic Levels:            7 ( LUT=3 F78MUX=2 LUT6=2 )                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg95_syn_26.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg95_syn_26.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_3.b                             net  (fanout = 4)       0.556 r     0.700
+ AOM2_TTL_inst/AOM2_SW_n_syn_3.o                             cell (LUT)              0.249 r     0.949
+ AOM2_TTL_inst/state_b1[1]_syn_1.a                           net  (fanout = 2)       0.478 r     1.427
+ AOM2_TTL_inst/state_b1[1]_syn_1.o                           cell (LUT)              0.247 r     1.674
+ AOM2_SW_syn_3.a                                             net  (fanout = 2)       0.478 r     2.152
+ AOM2_SW_syn_3.o                                             cell (LUT)              0.247 r     2.399
+ reg_delay/mux0_syn_232.ia                                   net  (fanout = 2)       0.478 r     2.877
+ reg_delay/mux0_syn_232.relut6                               cell (LUT6)             0.247 r     3.124
+ reg_delay/mux0_syn_236.muxi[0]                              net  (fanout = 1)       0.000 f     3.124
+ reg_delay/mux0_syn_236.f8muxo                               cell (F78MUX)           0.132 r     3.256
+ reg_delay/mux0_syn_234.f78i                                 net  (fanout = 1)       0.000 f     3.256
+ reg_delay/mux0_syn_234.ofa                                  cell                    0.065 r     3.321
+ reg_delay/mux0_syn_392.ia                                   net  (fanout = 1)       0.448 r     3.769
+ reg_delay/mux0_syn_392.relut6                               cell (LUT6)             0.247 r     4.016
+ reg_delay/mux0_syn_396.muxi[0]                              net  (fanout = 1)       0.000 f     4.016
+ reg_delay/mux0_syn_396.f8muxo                               cell (F78MUX)           0.132 r     4.148
+ reg_delay/mux0_syn_394.f78i                                 net  (fanout = 1)       0.000 f     4.148
+ reg_delay/mux0_syn_394.ofa                                  cell                    0.065 r     4.213
+ reg_delay/dly_out_reg.d                                     net  (fanout = 1)       0.448 r     4.661
+ reg_delay/dly_out_reg                                       path2reg                0.079       4.740
+ Arrival time                                                                        4.740                  (7 lvl)       
+
+ reg_delay/dly_out_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.515ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -4.515 ns                                                        
+ Start Point:             core/reg95_syn_24.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               reg_delay/dly_out_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.740ns  (logic 1.854ns, net 2.886ns, 39% logic)                
+ Logic Levels:            7 ( LUT=3 F78MUX=2 LUT6=2 )                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg95_syn_24.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg95_syn_24.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_3.a                             net  (fanout = 4)       0.556 r     0.700
+ AOM2_TTL_inst/AOM2_SW_n_syn_3.o                             cell (LUT)              0.249 r     0.949
+ AOM2_TTL_inst/state_b1[1]_syn_1.a                           net  (fanout = 2)       0.478 r     1.427
+ AOM2_TTL_inst/state_b1[1]_syn_1.o                           cell (LUT)              0.247 r     1.674
+ AOM2_SW_syn_3.a                                             net  (fanout = 2)       0.478 r     2.152
+ AOM2_SW_syn_3.o                                             cell (LUT)              0.247 r     2.399
+ reg_delay/mux0_syn_232.ia                                   net  (fanout = 2)       0.478 r     2.877
+ reg_delay/mux0_syn_232.relut6                               cell (LUT6)             0.247 r     3.124
+ reg_delay/mux0_syn_236.muxi[0]                              net  (fanout = 1)       0.000 f     3.124
+ reg_delay/mux0_syn_236.f8muxo                               cell (F78MUX)           0.132 r     3.256
+ reg_delay/mux0_syn_234.f78i                                 net  (fanout = 1)       0.000 f     3.256
+ reg_delay/mux0_syn_234.ofa                                  cell                    0.065 r     3.321
+ reg_delay/mux0_syn_392.ia                                   net  (fanout = 1)       0.448 r     3.769
+ reg_delay/mux0_syn_392.relut6                               cell (LUT6)             0.247 r     4.016
+ reg_delay/mux0_syn_396.muxi[0]                              net  (fanout = 1)       0.000 f     4.016
+ reg_delay/mux0_syn_396.f8muxo                               cell (F78MUX)           0.132 r     4.148
+ reg_delay/mux0_syn_394.f78i                                 net  (fanout = 1)       0.000 f     4.148
+ reg_delay/mux0_syn_394.ofa                                  cell                    0.065 r     4.213
+ reg_delay/dly_out_reg.d                                     net  (fanout = 1)       0.448 r     4.661
+ reg_delay/dly_out_reg                                       path2reg                0.079       4.740
+ Arrival time                                                                        4.740                  (7 lvl)       
+
+ reg_delay/dly_out_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.515ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -4.333 ns                                                        
+ Start Point:             core/reg19_syn_28.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               reg_delay/dly_out_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.558ns  (logic 1.607ns, net 2.951ns, 35% logic)                
+ Logic Levels:            6 ( F78MUX=2 LUT6=2 LUT=2 )                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg19_syn_28.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg19_syn_28.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_1.b                             net  (fanout = 17)      0.776 r     0.920
+ AOM2_TTL_inst/AOM2_SW_n_syn_1.o                             cell (LUT)              0.249 r     1.169
+ AOM2_SW_syn_3.b                                             net  (fanout = 20)      0.801 r     1.970
+ AOM2_SW_syn_3.o                                             cell (LUT)              0.247 r     2.217
+ reg_delay/mux0_syn_232.ia                                   net  (fanout = 2)       0.478 r     2.695
+ reg_delay/mux0_syn_232.relut6                               cell (LUT6)             0.247 r     2.942
+ reg_delay/mux0_syn_236.muxi[0]                              net  (fanout = 1)       0.000 f     2.942
+ reg_delay/mux0_syn_236.f8muxo                               cell (F78MUX)           0.132 r     3.074
+ reg_delay/mux0_syn_234.f78i                                 net  (fanout = 1)       0.000 f     3.074
+ reg_delay/mux0_syn_234.ofa                                  cell                    0.065 r     3.139
+ reg_delay/mux0_syn_392.ia                                   net  (fanout = 1)       0.448 r     3.587
+ reg_delay/mux0_syn_392.relut6                               cell (LUT6)             0.247 r     3.834
+ reg_delay/mux0_syn_396.muxi[0]                              net  (fanout = 1)       0.000 f     3.834
+ reg_delay/mux0_syn_396.f8muxo                               cell (F78MUX)           0.132 r     3.966
+ reg_delay/mux0_syn_394.f78i                                 net  (fanout = 1)       0.000 f     3.966
+ reg_delay/mux0_syn_394.ofa                                  cell                    0.065 r     4.031
+ reg_delay/dly_out_reg.d                                     net  (fanout = 1)       0.448 r     4.479
+ reg_delay/dly_out_reg                                       path2reg                0.079       4.558
+ Arrival time                                                                        4.558                  (6 lvl)       
+
+ reg_delay/dly_out_reg.clk                                                           0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.333ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point AOM2_TTL_inst/AOM2_SW_reg (100 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -4.163 ns                                                        
+ Start Point:             core/reg19_syn_24.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/AOM2_SW_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.388ns  (logic 1.217ns, net 3.171ns, 27% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg19_syn_24.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg19_syn_24.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.b                             net  (fanout = 22)      0.815 r     0.959
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.o                             cell (LUT)              0.249 r     1.208
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.a                             net  (fanout = 3)       0.520 r     1.728
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.o                             cell (LUT)              0.247 r     1.975
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.a                            net  (fanout = 51)      0.940 r     2.915
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.o                            cell (LUT)              0.249 r     3.164
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.b                            net  (fanout = 1)       0.448 r     3.612
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.o                            cell (LUT)              0.249 r     3.861
+ AOM2_TTL_inst/AOM2_SW_reg.d                                 net  (fanout = 1)       0.448 r     4.309
+ AOM2_TTL_inst/AOM2_SW_reg                                   path2reg                0.079       4.388
+ Arrival time                                                                        4.388                  (4 lvl)       
+
+ AOM2_TTL_inst/AOM2_SW_reg.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.163ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -4.163 ns                                                        
+ Start Point:             core/reg19_syn_22.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/AOM2_SW_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.388ns  (logic 1.217ns, net 3.171ns, 27% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg19_syn_22.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg19_syn_22.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.a                             net  (fanout = 22)      0.815 r     0.959
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.o                             cell (LUT)              0.249 r     1.208
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.a                             net  (fanout = 3)       0.520 r     1.728
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.o                             cell (LUT)              0.247 r     1.975
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.a                            net  (fanout = 51)      0.940 r     2.915
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.o                            cell (LUT)              0.249 r     3.164
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.b                            net  (fanout = 1)       0.448 r     3.612
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.o                            cell (LUT)              0.249 r     3.861
+ AOM2_TTL_inst/AOM2_SW_reg.d                                 net  (fanout = 1)       0.448 r     4.309
+ AOM2_TTL_inst/AOM2_SW_reg                                   path2reg                0.079       4.388
+ Arrival time                                                                        4.388                  (4 lvl)       
+
+ AOM2_TTL_inst/AOM2_SW_reg.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.163ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -4.124 ns                                                        
+ Start Point:             core/reg19_syn_28.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/AOM2_SW_reg.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.349ns  (logic 1.217ns, net 3.132ns, 27% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg19_syn_28.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg19_syn_28.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.d                             net  (fanout = 17)      0.776 r     0.920
+ AOM2_TTL_inst/AOM2_SW_n_syn_5.o                             cell (LUT)              0.249 r     1.169
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.a                             net  (fanout = 3)       0.520 r     1.689
+ AOM2_TTL_inst/AOM2_SW_n_syn_8.o                             cell (LUT)              0.247 r     1.936
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.a                            net  (fanout = 51)      0.940 r     2.876
+ AOM2_TTL_inst/AOM2_SW_n_syn_48.o                            cell (LUT)              0.249 r     3.125
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.b                            net  (fanout = 1)       0.448 r     3.573
+ AOM2_TTL_inst/AOM2_SW_n_syn_53.o                            cell (LUT)              0.249 r     3.822
+ AOM2_TTL_inst/AOM2_SW_reg.d                                 net  (fanout = 1)       0.448 r     4.270
+ AOM2_TTL_inst/AOM2_SW_reg                                   path2reg                0.079       4.349
+ Arrival time                                                                        4.349                  (4 lvl)       
+
+ AOM2_TTL_inst/AOM2_SW_reg.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -4.124ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point AOM2_TTL_inst/reg3_syn_25 (8 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -3.796 ns                                                        
+ Start Point:             core/reg95_syn_30.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/reg3_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.021ns  (logic 1.215ns, net 2.806ns, 30% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg95_syn_30.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg95_syn_30.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/state_b1[0]_syn_6.b                           net  (fanout = 4)       0.556 r     0.700
+ AOM2_TTL_inst/state_b1[0]_syn_6.o                           cell (LUT)              0.249 r     0.949
+ AOM2_TTL_inst/state_b1[0]_syn_8.a                           net  (fanout = 1)       0.448 r     1.397
+ AOM2_TTL_inst/state_b1[0]_syn_8.o                           cell (LUT)              0.247 r     1.644
+ AOM2_TTL_inst/state_b1[0]_syn_10.c                          net  (fanout = 33)      0.876 r     2.520
+ AOM2_TTL_inst/state_b1[0]_syn_10.o                          cell (LUT)              0.249 r     2.769
+ AOM2_TTL_inst/sel4_syn_225.a                                net  (fanout = 2)       0.478 r     3.247
+ AOM2_TTL_inst/sel4_syn_225.o                                cell (LUT)              0.247 r     3.494
+ AOM2_TTL_inst/reg3_syn_25.d                                 net  (fanout = 1)       0.448 r     3.942
+ AOM2_TTL_inst/reg3_syn_25                                   path2reg                0.079       4.021
+ Arrival time                                                                        4.021                  (4 lvl)       
+
+ AOM2_TTL_inst/reg3_syn_25.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.796ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.796 ns                                                        
+ Start Point:             core/reg95_syn_32.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/reg3_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         4.021ns  (logic 1.215ns, net 2.806ns, 30% logic)                
+ Logic Levels:            4 ( LUT=4 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg95_syn_32.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg95_syn_32.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/state_b1[0]_syn_7.b                           net  (fanout = 4)       0.556 r     0.700
+ AOM2_TTL_inst/state_b1[0]_syn_7.o                           cell (LUT)              0.249 r     0.949
+ AOM2_TTL_inst/state_b1[0]_syn_8.b                           net  (fanout = 1)       0.448 r     1.397
+ AOM2_TTL_inst/state_b1[0]_syn_8.o                           cell (LUT)              0.247 r     1.644
+ AOM2_TTL_inst/state_b1[0]_syn_10.c                          net  (fanout = 33)      0.876 r     2.520
+ AOM2_TTL_inst/state_b1[0]_syn_10.o                          cell (LUT)              0.249 r     2.769
+ AOM2_TTL_inst/sel4_syn_225.a                                net  (fanout = 2)       0.478 r     3.247
+ AOM2_TTL_inst/sel4_syn_225.o                                cell (LUT)              0.247 r     3.494
+ AOM2_TTL_inst/reg3_syn_25.d                                 net  (fanout = 1)       0.448 r     3.942
+ AOM2_TTL_inst/reg3_syn_25                                   path2reg                0.079       4.021
+ Arrival time                                                                        4.021                  (4 lvl)       
+
+ AOM2_TTL_inst/reg3_syn_25.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.796ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -3.099 ns                                                        
+ Start Point:             core/reg95_syn_28.clk (rising edge triggered by clock SYS_PLL/pll_inst.clkc[0])
+ End Point:               AOM2_TTL_inst/reg3_syn_25.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         3.324ns  (logic 0.966ns, net 2.358ns, 29% logic)                
+ Logic Levels:            3 ( LUT=3 )                                                     
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ core/reg95_syn_28.clk                                       clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ core/reg95_syn_28.q                                         clk2q                   0.144 r     0.144
+ AOM2_TTL_inst/state_b1[0]_syn_8.f                           net  (fanout = 4)       0.556 r     0.700
+ AOM2_TTL_inst/state_b1[0]_syn_8.o                           cell (LUT)              0.247 r     0.947
+ AOM2_TTL_inst/state_b1[0]_syn_10.c                          net  (fanout = 33)      0.876 r     1.823
+ AOM2_TTL_inst/state_b1[0]_syn_10.o                          cell (LUT)              0.249 r     2.072
+ AOM2_TTL_inst/sel4_syn_225.a                                net  (fanout = 2)       0.478 r     2.550
+ AOM2_TTL_inst/sel4_syn_225.o                                cell (LUT)              0.247 r     2.797
+ AOM2_TTL_inst/reg3_syn_25.d                                 net  (fanout = 1)       0.448 r     3.245
+ AOM2_TTL_inst/reg3_syn_25                                   path2reg                0.079       3.324
+ Arrival time                                                                        3.324                  (3 lvl)       
+
+ AOM2_TTL_inst/reg3_syn_25.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.292       0.292
+ cell setup                                                                         -0.067       0.225
+ clock uncertainty                                                                  -0.000       0.225
+ clock recovergence pessimism                                                        0.000       0.225
+ Required time                                                                       0.225            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -3.099ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point AOM2_TTL_inst/reg1_syn_47 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg0_syn_47.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               AOM2_TTL_inst/reg1_syn_47.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg0_syn_47.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg0_syn_47.q                                 clk2q                   0.076 r     0.076
+ AOM2_TTL_inst/reg1_syn_47.d                                 net  (fanout = 1)       0.448 r     0.524
+ AOM2_TTL_inst/reg1_syn_47                                   path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ AOM2_TTL_inst/reg1_syn_47.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point AOM2_TTL_inst/reg1_syn_43 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg0_syn_43.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               AOM2_TTL_inst/reg1_syn_43.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg0_syn_43.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg0_syn_43.q                                 clk2q                   0.076 r     0.076
+ AOM2_TTL_inst/reg1_syn_43.d                                 net  (fanout = 1)       0.448 r     0.524
+ AOM2_TTL_inst/reg1_syn_43                                   path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ AOM2_TTL_inst/reg1_syn_43.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point AOM2_TTL_inst/reg1_syn_39 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.523 ns                                                        
+ Start Point:             AOM2_TTL_inst/reg0_syn_39.clk (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ End Point:               AOM2_TTL_inst/reg1_syn_39.d (rising edge triggered by clock pd1_4times/pll_inst.clkc[1])
+ Clock group:             CRYSTAL_50M                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.565ns  (logic 0.117ns, net 0.448ns, 20% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path
+---------------------------------------------------------------------------------------------------------
+ AOM2_TTL_inst/reg0_syn_39.clk                               clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ AOM2_TTL_inst/reg0_syn_39.q                                 clk2q                   0.076 r     0.076
+ AOM2_TTL_inst/reg1_syn_39.d                                 net  (fanout = 1)       0.448 r     0.524
+ AOM2_TTL_inst/reg1_syn_39                                   path2reg                0.041       0.565
+ Arrival time                                                                        0.565                  (0 lvl)       
+
+ AOM2_TTL_inst/reg1_syn_39.clk                                                       0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.042       0.042
+ clock uncertainty                                                                   0.000       0.042
+ clock recovergence pessimism                                                        0.000       0.042
+ Required time                                                                       0.042            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.523ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing summary:                                                                           
+---------------------------------------------------------------------------------------------------------
+Constraint path number: 9924438 (STA coverage = 87.15%)
+Timing violations: 30 setup errors, and 0 hold errors.
+Minimal setup slack: -4.952, minimal hold slack: 0.523
+
+Timing group statistics: 
+	Clock constraints: 
+	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
+	  SYS_PLL/pll_inst.clkc[0] (50.0MHz)            24.952ns      40.077MHz        0.000ns      5614     -419.984ns
+	  pd1_4times/pll_inst.clkc[0] (32.0MHz)         35.078ns      28.508MHz        0.000ns      2717     -201.985ns
+	  pd1_4times/pll_inst.clkc[1] (128.0MHz)        12.327ns      81.123MHz        0.000ns       378     -401.255ns
+	  SYS_PLL/pll_inst.clkc[2] (100.0MHz)            9.518ns     105.064MHz        0.000ns       125        0.000ns
+	  SYS_PLL/pll_inst.clkc[1] (160.0MHz)            8.133ns     122.956MHz        0.000ns       106      -33.868ns
+	  SYS_PLL/pll_inst.clkc[3] (32.0MHz)             1.465ns     682.594MHz        0.000ns         3        0.000ns
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+
+---------------------------------------------------------------------------------------------------------

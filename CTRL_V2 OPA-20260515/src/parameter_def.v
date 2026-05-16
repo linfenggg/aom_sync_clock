@@ -1,0 +1,360 @@
+parameter
+
+	
+	ID_FPGA_VER_0				= 95,	//FPGA1版本号0(只读)
+	ID_FPGA_VER_1				= 96,	//FPGA1版本号1(只读)
+	ID_FPGA_VER_2				= 97,	//FPGA1版本号2(只读)
+	
+    ID_FPGA2_VER_0				= 98,	//FPGA2版本号0(只读)
+    ID_FPGA2_VER_1				= 99,	//FPGA2版本号1(只读)
+	ID_FPGA2_VER_2				= 100,	//FPGA2版本号2(只读)
+
+	ID_AD_START					= 101,	//ADC芯片开始配置,只能写1
+	ID_WORK_MODE				= 102,	//工作模式(MCU设定)
+	ID_CHECK					= 110,	//校验寄存器，固定值0x5AA5，23205	
+	ID_INT_ENABLE				= 105,	//内控声光使能，内控gate
+	ID_EXTSIG_VALID				= 106,	//外部GATE TRIG等信号输入有效控制，1表示响应外部信号，0表示不响应
+    ID_DAC_MAX					= 109,	//APM DAC最大值	
+	ID_AOM_MAX					= 111,	//空间声光AOM DAC最大值（用于固体二级声光绝对最大值，以及光纤激光器，二级声光默认打开幅度）	
+	ID_ONLINE_PRG1				= 113,	//FPGA1在线升级标志,1升级0正常工作
+	ID_ONLINE_PRG2				= 114,	//FPGA2在线升级标志,1升级0正常工作
+	ID_TEST_IO_SEL				= 115,	/*8bit,测试IO1输出选择，0-PD1,1-PD2,2-AOM1_TTL,3-AOM3_TTL,4-TRIG,5-GATE,6-分频因子信号,7-PD1过pll信号,8-PD1原始信号,9-PD2原始信号
+										10-AOM1 DAC模拟量有无,11-AOM3 DAC模拟量有无*/
+	ID_FPGA_SW					= 116,	//FPGA_SW的状态
+	ID_SEED_FREQ				= 117,	//种子源锁模报警下限频率 
+	ID_mode_lock				= 118,	//锁模状态，1锁模，0未锁模
+	ID_PD1_PULSE_LV				= 119,	//u4，PD1脉宽展宽等级,0不展宽，1-5逐级展宽
+	ID_PD2_PULSE_LV				= 120,	//u4，PD2脉宽展宽等级,0不展宽，1-5逐级展宽
+	ID_PD3_PULSE_LV				= 121,	//预留
+	ID_PD4_PULSE_LV				= 122,	//预留
+    ID_TEST2_IO_SEL				= 123,	/*7bit,测试IO2输出选择，0-PD1,1-PD2,2-AOM1_TTL,3-AOM3_TTL,4-TRIG,5-GATE,6-分频因子信号,7-PD1过pll信号,8-PD1原始信号,9-PD2原始信号
+										10-AOM1 DAC模拟量有无,11-AOM3 DAC模拟量有无,12-主放加载完成输出信号*/
+	ID_SEED_SOURCE				= 124,  //4bit,0-外部种子源信号输入，1-FPGA内部产生的假种子源(用来代码测试) 
+	ID_INT_TRIG_PERIOD			= 125,	//FPGA内部产生的trig信号周期（频率）设置，周期=(x+1)*20ns（系统时钟50MHz）
+    ID_TRIG_SOURCE				= 126,	//4bit,trig源选择，0-外部EXT_TRIG，1-内部INT_TRIG
+    
+    ID_CNT_APM_OK_DLY			= 127,	//主放加载完成信号输出延时，32bit，x*20ns
+    ID_SPACE_AOM_LEV_CTL		= 128,	//空间声光TTL电平控制，0-低电平有效，1-高电平有效
+    //ID_SPACE_AOM_SYNCLEV_CTL	= 129,	//空间声光TTL同步信号输出电平控制，0-低电平有效，1-高电平有效
+    
+	ID_AIRPUMP1_freq			= 150,	//16bit,气泵1调速-频率设定，15-25kHz，默认20kHz，2500
+    ID_AIRPUMP1_duty			= 151,	//16bit,气泵1调速-占空比设定（占空比>20%）
+    ID_AIRPUMP2_freq			= 152,	//16bit,气泵2调速-频率设定，15-25kHz，默认20kHz，2500
+    ID_AIRPUMP2_duty			= 153,	//16bit,气泵2调速-占空比设定（占空比>20%）
+
+    ID_PD1_freq					= 216,	//PD1测量频率,单位kHz（只读）
+	ID_PD2_freq					= 217,	//PD2测量频率,单位kHz（只读）
+	ID_PD3_freq					= 218,	//PD3测量频率,单位kHz（只读）
+	ID_WATER_FREQ 				= 219,	//水流量测频，测出的是周期，(x+1)*20ns
+	
+	ID_alarm_en					= 220,	//告警使能，1开启0关闭，32bit
+	ID_clear					= 221,	//清除所有告警，1清除
+	ID_alarm_now				= 222,	//当前告警，32bit, [0]-断纤，[1]-interlock1,[2]-interlock2,[3]-24V告警,[4]-烧纤1,[5]-烧纤2,[6]-测频1低,[7]-测频2低,[8]-测频3低,
+										//[9]-PLL告警,  [10]-测频1高,[11]-测频2高,[12]-测频3高,[13]-MCU急停,[14]-MCU_ERR,[15]-pump1欠压,[16]-pump2欠压,[17]-pump3欠压,
+										//[18]-pump4欠压,[19]-pump5欠压,[20]-pump6欠压,[21]-pump7欠压,[22]-pump8欠压,[23]-pump9欠压,[24]-pump10欠压,[25]-pump11欠压
+										//[26]-pump12欠压,[27]-pump13欠压,[28]-pump14欠压,[29]-pump15欠压,[30]-24V欠压,[31]-锁模告警
+	ID_alarm_lat				= 223,	//历史告警，
+	ID_alarm_out				= 240,	//总告警，高级加低级 
+    ID_fiber_break_delay		= 224,	//断纤告警延时，u32
+	
+	ID_FREQ1_THR_H				= 225,	//频率1告警高阈值u16，单位kHz
+	ID_FREQ1_THR_L				= 226,  //频率1告警低阈值u16，周期大于(x+1)*6.25ns时告警
+	ID_FREQ2_THR_H				= 227,	//频率2告警高阈值u16，单位kHz
+	ID_FREQ2_THR_L				= 228,  //频率2告警低阈值u16，周期大于(x+1)*6.25ns时告警
+	ID_FREQ3_THR_H				= 229,	//频率3告警高阈值u16，单位kHz
+	ID_FREQ3_THR_L				= 230,  //频率3告警低阈值u16，周期大于(x+1)*6.25ns时告警
+	
+    ID_alarm_en2				= 235,	//告警使能，1开启0关闭，32bit
+	ID_alarm_now2				= 236,	//当前告警，32bit, [0]-钥匙开关未打开，[1]-硬件急停报警，[2]-激光头报警								
+	ID_alarm_lat2				= 237,	//历史告警，
+	ID_alarm_out2				= 238,	//总告警，高级加低级，32bit
+    
+	ID_FREQ_ALARM_DLY			= 307,	//测频告警延时，等于X乘以20ns，X为输入的参数
+	ID_EXTER_IO					= 308,	//外部IO状态:BIT[0]-GATE,BIT[1]-PWM,BIT[2]-TRIG,BIT[3]-PRR,BIT[4]-LATCH,BIT[5]-EXT_SYNC2,BIT[6]-EXT_SYNC1,BIT[7]-EXT_STATE,
+										//BIT[8]-水流量IO,BIT[9]-PANEL_KEY,BIT[10]-PANEL_ESTOP,BIT[11]-EXT_SIG_TO_LOCK
+	ID_EXTER_8BIT				= 309,	//8bit数据
+	//ID_AOM2_DLY					= 310,	//2级声光延时的地址在421
+	ID_ANALOG_8BIT				= 311,	//外部模拟量8bit回读
+	ID_INT_8BIT					= 312,	//内控8bit数据,改为10bit
+	ID_ONLINE_DATA1				= 313,	//16bit,在位信号
+	ID_ONLINE_DATA2				= 314,	//16bit,在位信号
+	ID_ONLINE_FPGA2				= 315,	//16bit,FPGA2的16路欠压回读
+	ID_cal_din					= 316,	//声光校准前回读
+	ID_cal_dout					= 317,	//声光校准后回读
+	ID_cal_dac_set				= 318,	//u10,校准模式下，dac直接设置输出值
+
+	ID_POWER_CTRL_SEL			= 320,	//4bit，激光功率控制选择，0-外部8bit，1-外部模拟量,2-内部设置,3-功率校准
+	ID_AOM_CTRL_SEL				= 321,	//4bit，声光控制选择,0-内部设置，1-外部gate，2-常规trigger，3-free trigger
+	//
+	ID_AOM1_DATA				= 400,	//
+	ID_AOM2_DATA				= 401,	//暂时不用，由校准后确定输出,回读为AOM2最终输出
+	ID_AOM3_DATA				= 402,	//
+	ID_AOM4_DATA				= 403,	//
+	ID_AOM1_TTL					= 404,	//暂时不用
+	ID_AOM2_TTL					= 405,	//暂时不用
+	ID_AOM3_TTL					= 406,	//暂时不用
+	ID_AOM4_TTL					= 407,	//暂时不用
+	
+    ID_AOM1_TTL2DAC_DLY			= 419,	//u8,1级声光TTL相对于并口DAC之间的延时
+	ID_AOM1_DLY_COARSE			= 420,	//u8,1级声光延时,粗调节
+	ID_AOM2_DLY_COARSE			= 421,	//u8,2级声光延时,(x+1)*种子周期，粗调节
+	ID_AOM3_DLY_COARSE			= 422,	//u8,3级声光延时,粗调节
+	ID_AOM4_DLY_COARSE			= 423,	//u8,4级声光延时,粗调节	
+	ID_AOM2_DLY_FREE_TRIG		= 424,	//U8,2级声光free trigger 模式下延时
+    ID_AOM1_DLY_FINE			= 426,	//u8,1级声光延时,细调节
+    ID_AOM2_DLY_FINE			= 427,	//u8,2级声光延时,细调节
+    ID_AOM3_DLY_FINE			= 428,	//u8,3级声光延时,细调节
+    ID_AOM4_DLY_FINE			= 429,	//u8,4级声光延时,细调节
+    
+
+	ID_PUMP1_RAMP_SPEED			= 430,	//u24,PUMP1上升1个da量的时间，(x+1)*20ns
+	ID_PUMP2_RAMP_SPEED 		= 431,	//	
+	ID_PUMP3_RAMP_SPEED 		= 432,	//	
+	ID_PUMP4_RAMP_SPEED 		= 433,	//	
+	ID_PUMP5_RAMP_SPEED 		= 434,	//	
+	ID_PUMP6_RAMP_SPEED 		= 435,	//	
+	ID_PUMP7_RAMP_SPEED 		= 436,	//	
+	ID_PUMP8_RAMP_SPEED 		= 437,	//	
+	ID_PUMP9_RAMP_SPEED 		= 438,	//	
+	ID_PUMP10_RAMP_SPEED 		= 439,	//		
+	ID_PUMP11_RAMP_SPEED 		= 440,	//		
+	ID_PUMP12_RAMP_SPEED 		= 441,	//		
+	ID_PUMP13_RAMP_SPEED 		= 442,	//		
+	ID_PUMP14_RAMP_SPEED 		= 443,	//		
+	ID_PUMP15_RAMP_SPEED 		= 444,	//		
+
+	ID_PUMP1_SW					= 450,	//第1个开的pump的开关
+	ID_PUMP2_SW					= 451,	//第2个开的pump的开关
+	ID_PUMP3_SW					= 452,	//第3个开的pump的开关
+	ID_PUMP4_SW					= 453,	//第4个开的pump的开关
+	ID_PUMP5_SW					= 454,	//第5个开的pump的开关
+	ID_PUMP6_SW					= 455,	//第6个开的pump的开关
+	ID_PUMP7_SW					= 456,	//第7个开的pump的开关
+	ID_PUMP8_SW					= 457,	//第8个开的pump的开关
+	ID_PUMP9_SW					= 458,	//第9个开的pump的开关
+	ID_PUMP10_SW				= 459,	//第10个开的pump的开关
+	ID_PUMP11_SW				= 460,	//第11个开的pump的开关
+	ID_PUMP12_SW				= 461,	//第12个开的pump的开关
+	ID_PUMP13_SW				= 462,	//第13个开的pump的开关
+	ID_PUMP14_SW				= 463,	//第14个开的pump的开关
+	ID_PUMP15_SW				= 464,	//第15个开的pump的开关
+
+	ID_PUMP_SW_SYNC				= 465,	//开关同步，暂时不用
+
+	ID_PUMP1_DATA				= 470,	//第1个开的pump数据
+	ID_PUMP2_DATA  				= 471,	//第2个开的pump数据
+	ID_PUMP3_DATA  				= 472,	//第3个开的pump数据
+	ID_PUMP4_DATA  				= 473,	//第4个开的pump数据
+	ID_PUMP5_DATA  				= 474,	//第5个开的pump数据
+	ID_PUMP6_DATA  				= 475,	//第6个开的pump数据
+	ID_PUMP7_DATA  				= 476,	//第7个开的pump数据
+	ID_PUMP8_DATA  				= 477,	//第8个开的pump数据
+	ID_PUMP9_DATA  				= 478,	//第9个开的pump数据
+	ID_PUMP10_DATA 				= 479,	//第10个开的pump数据
+	ID_PUMP11_DATA 				= 480,	//第11个开的pump数据
+	ID_PUMP12_DATA 				= 481,	//第12个开的pump数据
+	ID_PUMP13_DATA 				= 482,	//第13个开的pump数据
+	ID_PUMP14_DATA 				= 483,	//第14个开的pump数据
+	ID_PUMP15_DATA				= 484,	//第15个开的pump数据
+
+	ID_PUMP1_DATA_out			= 485,	//pump最终输出数据
+	ID_PUMP2_DATA_out  			= 486,	//pump最终输出数据
+	ID_PUMP3_DATA_out  			= 487,	//pump最终输出数据
+	ID_PUMP4_DATA_out  			= 488,	//pump最终输出数据
+	ID_PUMP5_DATA_out  			= 489,	//pump最终输出数据
+	ID_PUMP6_DATA_out  			= 490,	//pump最终输出数据
+	ID_PUMP7_DATA_out  			= 491,	//pump最终输出数据
+	ID_PUMP8_DATA_out  			= 492,	//pump最终输出数据
+	ID_PUMP9_DATA_out  			= 493,	//pump最终输出数据
+	ID_PUMP10_DATA_out			= 494,	//pump最终输出数据
+	ID_PUMP11_DATA_out			= 495,	//pump最终输出数据
+	ID_PUMP12_DATA_out			= 496,	//pump最终输出数据
+	ID_PUMP13_DATA_out			= 497,	//pump最终输出数据
+	ID_PUMP14_DATA_out			= 498,	//pump最终输出数据
+	ID_PUMP15_DATA_out			= 499,	//pump最终输出数据
+
+
+	ID_PUMP1_NUM	 			= 541,	//pump1的开启顺序。写1是第一个开，写2是第二个开，若n个泵需要同时开，则这n个泵的参数相同
+	ID_PUMP2_NUM	 			= 542,	//pump2的开启顺序。
+	ID_PUMP3_NUM	 			= 543,	//pump3的开启顺序。
+	ID_PUMP4_NUM	 			= 544,	//pump4的开启顺序。
+	ID_PUMP5_NUM	 			= 545,	//pump5的开启顺序。
+	ID_PUMP6_NUM	 			= 546,	//pump6的开启顺序。
+	ID_PUMP7_NUM	 			= 547,	//pump7的开启顺序。
+	ID_PUMP8_NUM	 			= 548,	//pump8的开启顺序。
+	ID_PUMP9_NUM	 			= 549,	//pump9的开启顺序。
+	ID_PUMP10_NUM	 			= 550,	//pump10的开启顺序。
+	ID_PUMP11_NUM	 			= 551,	//pump11的开启顺序。
+	ID_PUMP12_NUM	 			= 552,	//pump12的开启顺序。
+	ID_PUMP13_NUM	 			= 553,	//pump13的开启顺序。
+	ID_PUMP14_NUM	 			= 554,	//pump14的开启顺序。
+	ID_PUMP15_NUM	 			= 555,	//pump15的开启顺序。
+
+	ID_PUMP1_SW_out				= 560,	//1bit,PUMP1开关最终输出状态
+	ID_PUMP2_SW_out				= 561,	//1bit,PUMP2	
+	ID_PUMP3_SW_out				= 562,	//1bit,PUMP3	
+	ID_PUMP4_SW_out				= 563,	//1bit,PUMP4	
+	ID_PUMP5_SW_out				= 564,	//1bit,PUMP5	
+	ID_PUMP6_SW_out				= 565,	//1bit,PUMP6	
+	ID_PUMP7_SW_out				= 566,	//1bit,PUMP7	
+	ID_PUMP8_SW_out				= 567,	//1bit,PUMP8	
+	ID_PUMP9_SW_out				= 568,	//1bit,PUMP9	
+	ID_PUMP10_SW_out			= 569,	//1bit,PUMP10
+	ID_PUMP11_SW_out			= 570,	//1bit,PUMP11
+	ID_PUMP12_SW_out			= 571,	//1bit,PUMP12
+	ID_PUMP13_SW_out			= 572,	//1bit,PUMP13
+	ID_PUMP14_SW_out			= 573,	//1bit,PUMP14
+	ID_PUMP15_SW_out			= 574,	//1bit,PUMP15
+
+	ID_PUMP1_SUB_SPEED			= 580,	//u24,PUMP1减少1个da量的时间，(x+1)*20ns
+	ID_PUMP2_SUB_SPEED 			= 581,	//	
+	ID_PUMP3_SUB_SPEED 			= 582,	//	
+	ID_PUMP4_SUB_SPEED 			= 583,	//	
+	ID_PUMP5_SUB_SPEED 			= 584,	//	
+	ID_PUMP6_SUB_SPEED 			= 585,	//	
+	ID_PUMP7_SUB_SPEED 			= 586,	//	
+	ID_PUMP8_SUB_SPEED 			= 587,	//	
+	ID_PUMP9_SUB_SPEED 			= 588,	//	
+	ID_PUMP10_SUB_SPEED 		= 589,	//		
+	ID_PUMP11_SUB_SPEED 		= 590,	//		
+	ID_PUMP12_SUB_SPEED 		= 591,	//		
+	ID_PUMP13_SUB_SPEED 		= 592,	//		
+	ID_PUMP14_SUB_SPEED 		= 593,	//		
+	ID_PUMP15_SUB_SPEED 		= 594,	//	
+
+	//马达
+	ID_MOTOR1_reset				= 600,	//	
+	ID_MOTOR1_period			= 601,	//设置的是周期，(x+1)*2*20ns	
+	ID_MOTOR1_step_num			= 602,	//目标值
+	ID_MOTOR1_step_sta			= 603,	//当前值
+	ID_MOTOR2_reset				= 604,	//	
+	ID_MOTOR2_period			= 605,	//	
+	ID_MOTOR2_step_num			= 606,	//
+	ID_MOTOR2_step_sta			= 607,	//
+	ID_MOTOR3_reset				= 608,	//	
+	ID_MOTOR3_period			= 609,	//	
+	ID_MOTOR3_step_num			= 610,	//
+	ID_MOTOR3_step_sta			= 611,	//
+	ID_MOTOR4_reset				= 612,	//	
+	ID_MOTOR4_period			= 613,	//	
+	ID_MOTOR4_step_num			= 614,	//
+	ID_MOTOR4_step_sta			= 615,	//
+
+	ID_MOTOR_overflow			= 620,	//电机调试溢出，4BIT，对应4个电机
+	ID_MOTOR_BREAK_OUT			= 621,	//4BIT,电机断线，对应4个电机
+	
+	//
+	ID_BST_NUM					= 700,	//burst （选单）数量设置，(x+1)个，最大值为 701地址的值减3
+	ID_BST_PERIOD				= 701,  //burst （选单）周期（频率）设置，(x+1)*种子源周期
+    
+    ID_GHZ_BST_NUM              = 702,
+    ID_AOM3_FULL_OPEN           = 703,
+    ID_AOM4_FULL_OPEN           = 704,
+    
+	ID_BST_SEL					= 710,	//选单展宽（0）或缩短（1）
+	ID_BST_PUL_NUM				= 711,	//选单脉宽调节参数，8bit
+	ID_BST_END_CNT				= 712,	//free trigger后凹坑的长度，(x+1)*种子源周期
+    ID_AOM3_PUL_NUM				= 713,	//选单脉宽调节参数，8bit
+    ID_AOM4_PUL_NUM				= 714,	//选单脉宽调节参数，8bit
+
+	ID_PROT_FREQ				= 719,	//trigger模式下保护频率，设定原理和分频因子一样
+	ID_TRIG_PRE					= 720,	//trigger模式下预电流
+	ID_BURST_DATA1				= 721,	//burst数据1
+	ID_BURST_DATA2				= 722,	//burst数据2
+	ID_BURST_DATA3				= 723,	//burst数据3
+	ID_BURST_DATA4				= 724,	//burst数据4
+	ID_BURST_DATA5				= 725,	//burst数据5
+	ID_BURST_DATA6				= 726,	//burst数据6
+	ID_BURST_DATA7				= 727,	//burst数据7
+	ID_BURST_DATA8				= 728,	//burst数据8
+	ID_BURST_DATA9				= 729,	//burst数据9
+	ID_BURST_DATA10				= 730,	//burst数据10
+	ID_BURST_DATA11				= 731,	//burst数据11
+	ID_BURST_DATA12				= 732,	//burst数据12
+	ID_BURST_DATA13				= 733,	//burst数据13
+	ID_BURST_DATA14				= 734,	//burst数据14
+	ID_BURST_DATA15				= 735,	//burst数据15
+	ID_BURST_DATA16				= 736,	//burst数据16
+	ID_BURST_DATA17				= 737,	//burst数据17
+	ID_BURST_DATA18				= 738,	//burst数据18
+	ID_BURST_DATA19				= 739,	//burst数据19
+	ID_BURST_DATA20				= 740,	//burst数据20
+
+
+	//
+	ID_FREQ_DIV_NUM				= 800,	//分频因子,（x+1）分频。 0是不分频，1是二分频，2是三分频
+	ID_AOM1_PULSE_NUM			= 801,	//一级声实际光脉冲计数
+	ID_AOM1_PULSE_CLR			= 802,	//一级声光脉冲计数清零，写1清零,要写回0才正常计数
+	ID_TRIG_CNT					= 803,  //gate或者trig上升沿计数
+	ID_TRIG_CLR					= 804,	//gate或者trig上升沿计数清零，写1清零,要写回0才正常计数
+	ID_POD_DELAY				= 805,	//POD功能延时调节，匹配光从发送指令到光实际出来的延时，暂时不做
+	ID_AOM2_HEAD_DLY			= 806,	//AOM2展宽，(x+1)*种子源周期
+	//ID_AOM2_TAIL_DLY			= 807,  //AOM2尾展宽，(x+1)*种子源周期,u4,暂时不用
+	ID_SEED_SYNC_AOM1			= 808,	//pll复位信号(1有效)，种子源开启稳定后，写1，然后再写0，每次种子源重启都要这样操作
+	ID_FREQ_TRIG				= 820,	//trigger信号频率
+	ID_FREE_TRIG_AOM2_MODE		= 821,	//free trig 模式下，AOM2模式: 0-脉冲，1-常开
+
+	//校准参数
+	ID_THR1						= 900,	//校准10%段值,25
+	ID_THR2						= 901,	//校准20%段值,51
+	ID_THR3						= 902,	//校准30%段值,76
+	ID_THR4						= 903,	//校准40%段值,102
+	ID_THR5						= 904,	//校准50%段值,128
+	ID_THR6						= 905,	//校准60%段值,153
+	ID_THR7						= 906,	//校准70%段值,179
+	ID_THR8						= 907,	//校准80%段值,205
+	ID_THR9						= 908,	//校准90%段值,230
+	ID_THR10					= 909,	//校准100%段值,255
+
+	ID_K1						= 910,	//校准10% k值
+	ID_K2						= 911,	//校准20% k值
+	ID_K3						= 912,	//校准30% k值
+	ID_K4						= 913,	//校准40% k值
+	ID_K5						= 914,	//校准50% k值
+	ID_K6						= 915,	//校准60% k值
+	ID_K7						= 916,	//校准70% k值
+	ID_K8						= 917,	//校准80% k值
+	ID_K9						= 918,	//校准90% k值
+	ID_K10						= 919,	//校准100% k值
+
+	ID_P3_THR					= 920,	//3%功率段值
+	ID_P3_K						= 921,	//3%功率k值
+	ID_P6_THR					= 922,	//6%功率段值
+	ID_P6_K						= 923,	//6%功率k值
+	ID_START_THR				= 924,	//u6,功率起始段值，低于此参数为死区电压
+	ID_P92_THR					= 931,	//92%功率段值
+	ID_P92_K					= 932,	//92%功率k值
+    ID_P94_THR					= 933,	//94%功率段值
+	ID_P94_K					= 934,	//94%功率k值
+    ID_P96_THR					= 935,	//96%功率段值
+	ID_P96_K					= 936,	//96%功率k值
+    ID_P98_THR					= 937,	//98%功率段值
+	ID_P98_K					= 938,	//98%功率k值
+    
+    ID_POWER_K_SET				= 930,	//声光功率K值,15位定点数，乘以32768
+	
+	ID_LASER_TYPE				= 950,	//激光器类型，8bit，0--30~50W固体，1--120W固体，2--200W固体，16--10W光纤(控电流),17--20W光纤(控电流)，
+    									//18--20W光纤激光器(带随机噪声发生模块)，19--10W光纤(控声光)，20--20W光纤(控声光),21--双光子(无声光，控泵电流和开关),22--医美机型(控声光)
+	ID_PUMP5_IMAX				= 951,	//PUMP5电流最大值，即全光纤10W/20W APM1最大值
+    ID_ICR1_OPEN				= 952,	//ICR1状态设定,0->1上升沿滤波片进入光路
+    ID_ICR1_CLOSE				= 953,	//ICR1状态设定,0->1上升沿滤波片离开光路
+    ID_ICR2_OPEN				= 954,	//ICR2状态设定,0->1上升沿滤波片进入光路
+    ID_ICR2_CLOSE				= 955,	//ICR2状态设定,0->1上升沿滤波片离开光路
+    
+    ID_SPACE_AOM_FULL_OPEN		= 956,	//空间声光全部打开，1-全部打开，0-分频打开,用于测试
+	ID_FIBER_AOM_FULL_OPEN_FRQ	= 957,	//光纤声光全部打开选单频率，16bit
+    ID_FIBER_AOM_FULL_OPEN_EN	= 958,	//光纤声光全部打开使能
+    
+    /****内控/gate/freetrigger模式：高频下(阈值周期大于选单周期时)，空间声光套脉冲变为常开，阈值可设置****/
+    ID_SPACE_AOM_FULL_OPEN_FRQ	= 959,	//空间声光全开选单周期（频率）阈值设置，(x+1)*种子源周期，16bit
+    ID_SPACE_AOM_FULL_OPEN_EN	= 960,	//空间声光全开使能开关
+    
+    ID_POD_NUM					= 961,	//POD模式，TRIG信号触发后，输出的选单信号的数量
+    ID_POD_DATA					= 962,  //POD模式，TRIG信号触发后，输出的选单信号的波形脉冲，如果位是1，则表示输出脉冲，如果位是0，则跳过   
+    
+	//	
+	OFF			= 0,	//OFF模式
+	NORMAL		= 1,	//常规模式 
+	DEBUG 		= 3		//DEBUG模式
+;
+
